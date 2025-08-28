@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wordpress</title>
+  <!-- Fonts  -->
+  <link href="assets/css/stylesheet.css" rel="stylesheet" />
+  <!-- Custom Css -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <!-- Bootstrap -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+  <!-- CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+</head>
+<body>
+          <div class="fixedTop">
+    <!-- Sub header -->
+    <div class="sub-header d-flex justify-content-between flex-wrap gap-2">
+      <div class="d-flex gap-3">
+        <a href="tel:+91 9953171105" class="d-flex gap-1 align-items-center"><img src="assets/images/svg/phone.svg"
+            height="14" width="14" /><span class="font-12 medium text-white">+91 9953171105</span></a>
+        <a href="tel:+91 8882051105" class="d-flex gap-1 align-items-center"><img src="assets/images/svg/phone.svg"
+            height="14" width="14" /><span class="font-12 medium text-white">+91 8882051105</span></a>
+        <a href="mailto:info@rsorganisation.com" class="d-flex gap-1 align-items-center"><img
+            src="assets/images/svg/gmail.svg" height="14" width="14" /><span
+            class="font-12 medium text-white">info@rsorganisation.com</span></a>
+      </div>
+      <div class="d-flex gap-3 top-header-social-icon">
+        <a href="mailto:info@rsorganisation.com"
+          class="d-flex gap-1 align-items-center justify-content-center social-icons"><img
+            src="assets/images/svg/facebook.svg" height="16" width="16" /></a>
+        <a href="mailto:info@rsorganisation.com"
+          class="d-flex gap-1 align-items-center justify-content-center social-icons"><img
+            src="assets/images/svg/instagram.svg" height="16" width="16" /></a>
+        <a href="mailto:info@rsorganisation.com"
+          class="d-flex gap-1 align-items-center justify-content-center social-icons"><img
+            src="assets/images/svg/linkedin.svg" height="16" width="16" /></a>
+        <a href="mailto:info@rsorganisation.com"
+          class="d-flex gap-1 align-items-center justify-content-center social-icons"><img
+            src="assets/images/svg/youtube.svg" height="16" width="16" /></a>
+      </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg p-3">
+      <div class="container-fluid p-0">
+        <div class="navbar-container p-0">
+          <!-- logo -->
+          <a href="/"><img src="assets/images/svg/logo.svg" class="logo" alt="logo" /></a>
+          <!-- toggle button -->
+          <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <img src="assets/images/svg/toggle-img.svg" height="16" width="16" class="toggle-img" />
+          </button>
+        </div>
+        <!-- navbar list -->
+        <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
+          <div class="d-flex ms-auto me-0 navbar-list">
+            <ul class="navbar-nav scalable-gap-30-20 me-auto mb-2 mb-lg-0 mb-0">
+              <li class="nav-item">
+                <a href="index.html" class="active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="" href="#">Career</a>
+              </li>
+              <li class="nav-item">
+                <a class="" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="" href="#">Free Website Audit</a>
+              </li>
+            </ul>
+            <div class="d-flex align-items-center gap-3">
+              <a href="#" class="primary-btn font-16 semibold d-flex align-items-center gap-1" role="button">Request a
+                call back
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
+                  <path
+                    d="M9.7731 4L9.32484 5.49182L14.2396 6.7165L3 13.1205L3.75436 14.4444L14.994 8.04048L13.5348 12.8968L15.0536 13.2679L17.279 5.86166L9.7731 4Z"
+                    fill="white" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+<!-- section-1 -->
+<style>
+
+
+    .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 5%;
+      background: linear-gradient(135deg, #0f103f 50%, #0f103f 50%);
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .hero-text {
+      flex: 1 1 500px;
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #cbd3e6;
+      margin-bottom: 35px;
+    }
+
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(90deg, #378dff, #7fbcff);
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .hero-btn:hover {
+      background: linear-gradient(90deg, #2f6cf7, #68b9ff);
+    }
+
+    .hero-btn span {
+      margin-left: 10px;
+      font-size: 20px;
+    }
+
+    .hero-image {
+      flex: 1 1 400px;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 480px;
+    }
+
+    @media (max-width: 992px) {
+      .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+      }
+
+      .hero-text, .hero-image {
+        max-width: 100%;
+      }
+
+      .hero-text h1 {
+        font-size: 32px;
+      }
+
+      .hero-btn {
+        font-size: 15px;
+        padding: 12px 24px;
+      }
+    }
+  </style>
+  <section class="hero-section">
+  <div class="hero-text">
+    <h1 class="text-white">Best WordPress Development <br> Company in Noida</h1>
+    <p>
+A powerful website is the foundation of a successful online presence. RS Organisation stands as the best WordPress development company in Noida, offering robust, scalable, and performance-oriented WordPress solutions. Whether you need a personal blog, e-commerce platform, or corporate website, our team delivers fully customized designs with high SEO value. Trust RS Organisation for seamless development, migration, and ongoing support to enhance your brand’s digital identity.    </p>
+                          <a href="#" class="news-button" >
+        Talk To Our Experts
+
+      </a>
+  </div>
+
+  <div class="hero-image">
+    <img src="https://d1y41eupgbwbb2.cloudfront.net/images/webDevelopmentHeroImage.webp" alt="Hero Laptop Design" />
+  </div>
+</section>
+<!-- end -->
+
+<!-- logo -->
+
+
+    <div style="background: #f9fbff; padding: 40px 0; overflow: hidden;">
+ 
+  <h2 class="font-36 semibold text-center mb-0 textColor">Our Partners</h2>
+
+
+  <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();" style="display: flex; align-items: center;">
+    <img src="assets/images/png/certified3.webp" alt="Logo 3" class="rotating-logo" />
+    <img src="assets/images/png/certified2.webp" alt="Logo 2" class="rotating-logo" />
+    <img src="assets/images/png/certified1.webp" alt="Logo 1" class="rotating-logo" />
+    <img src="assets/images/png/certified3.webp" alt="Logo 3" class="rotating-logo" />
+    <img src="assets/images/png/certified2.webp" alt="Logo 2" class="rotating-logo" />
+    <img src="assets/images/png/certified1.webp" alt="Logo 1" class="rotating-logo" />
+    <img src="assets/images/png/certified3.webp" alt="Logo 3" class="rotating-logo" />
+    <img src="assets/images/png/certified2.webp" alt="Logo 2" class="rotating-logo" />
+    <img src="assets/images/png/certified1.webp" alt="Logo 1" class="rotating-logo" />
+  </marquee>
+</div>
+<!-- logo end  -->
+
+
+<!-- section 3  -->
+<style>
+.wp-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 5%;
+      background-color: linear-gradient(135deg, #ffffff 50%, #e3af3e 50%);
+      flex-wrap: wrap;
+      min-height: 100vh;
+    }
+
+    .wp-image {
+      flex: 1 1 500px;
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    .wp-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .wp-text {
+      flex: 1 1 500px;
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    .wp-text h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 20px;
+    }
+
+    .wp-text p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 992px) {
+      .wp-section {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .wp-text h2 {
+        font-size: 28px;
+      }
+
+      .wp-text, .wp-image {
+        max-width: 100%;
+      }
+    }
+  </style>
+<section class="wp-section">
+  <div class="wp-image">
+    <img src="http://t3.gstatic.com/images?q=tbn:ANd9GcRVvQDJlCo0NPHCxYomBFRyx3JANJxQnDgNjNhG9XARMhOvWZLGjUEvV65FvdQKgqyD7eBcAl2P" alt="WordPress Development" />
+  </div>
+  <div class="wp-text">
+    <h2>Trusted WordPress Development Agency in Noida</h2>
+    <p>
+      As a leading WordPress development agency in Noida, RS Organisation delivers tailored solutions that blend aesthetics, speed, and functionality. Our experienced developers and designers work closely with you to create websites that reflect your brand, drive engagement, and support conversions.
+    </p>
+    <p>
+      We specialize in building responsive websites that are mobile-friendly, SEO-ready, and user-centric. From startups to large enterprises, our WordPress development services in Noida cover every industry vertical with precision.
+    <br>
+  <br>
+</p>
+                             <a href="#" class="news-button" >
+      Share your requirements
+
+      </a>
+  </div>
+  
+</section>
+
+<!-- end  -->
+
+
+
+<!-- ----------------- -->
+
+
+
+<!-- ----------------- -->
+
+<!-- section 4 (only section code) -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+  /* Full‑width gradient background wrapper */
+  .timeline-wrapper {
+    width: 100%;
+    /* smooth transition from white to orange */
+    background: linear-gradient(135deg, #d1caca, #f9ac1d);
+    padding: 60px 0 100px;
+    box-sizing: border-box;
+    margin-top: -40px;
+  }
+
+  /* Inner container */
+  .timeline-section {
+    font-family: 'Poppins', sans-serif;
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px;
+    position: relative;
+    color: #333;
+  }
+
+  .timeline-section h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #222;
+  }
+
+  /* Vertical timeline line starts below heading */
+  .timeline-section::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    bottom: 0;
+    width: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    transform: translateX(-50%);
+  }
+
+  .timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .timeline li {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+  .timeline li:nth-child(odd) {
+    left: 0;
+    text-align: right;
+  }
+  .timeline li:nth-child(even) {
+    left: 50%;
+    text-align: left;
+  }
+
+  .timeline li::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 4px solid #ffa500;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .timeline li:nth-child(odd)::before {
+    right: -8px;
+  }
+  .timeline li:nth-child(even)::before {
+    left: -8px;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  .card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffa500;
+  }
+  .card p {
+    font-size: 14px;
+    color: #333;
+  }
+
+  @media (max-width: 768px) {
+    .timeline-section::before {
+      left: 8px;
+      top: 100px;
+    }
+    .timeline li,
+    .timeline li:nth-child(even) {
+      left: 0 !important;
+      width: 100%;
+      text-align: left;
+      padding-left: 30px;
+      padding-right: 20px;
+    }
+    .timeline li::before {
+      left: 0;
+    }
+  }
+</style>
+
+<section class="timeline-wrapper">
+  <div class="timeline-section">
+    <h2>Our Core WordPress Services</h2>
+    <ul class="timeline">
+      <li>
+        <div class="card">
+          <h3>Custom Theme & Plugin Dev</h3>
+          <p>Pixel‑perfect themes and powerful plugins built to your specs, ensuring flexibility and maintainability.</p>
+        </div>
+      </li>
+      <li>
+        <div class="card">
+          <h3>WooCommerce Integration</h3>
+          <p>Full e‑commerce setups, payment gateway integrations, and storefront optimization for maximum conversions.</p>
+        </div>
+      </li>
+      <li>
+        <div class="card">
+          <h3>Migration & Speed Optimization</h3>
+          <p>Smooth migrations with zero downtime plus aggressive caching and code‑level speed tweaks.</p>
+        </div>
+      </li>
+      <li>
+        <div class="card">
+          <h3>SEO‑Ready Architecture</h3>
+          <p>Semantic markup, clean URLs, and on‑page best practices baked in from the ground up.</p>
+        </div>
+      </li>
+      <li>
+        <div class="card">
+          <h3>Maintenance & Support</h3>
+          <p>Ongoing updates, backups, and 24/7 monitoring to keep your site secure and up‑to‑date.</p>
+        </div>
+      </li>
+      <li>
+        <div class="card">
+          <h3>Security & Backups</h3>
+          <p>Hardened server configs, malware scanning, and automated off‑site backups for peace of mind.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- end -->
+
+
+
+<br><br><br>
+
+
+<!-- section -4 -->
+<!-- Case Study Slider Section (80% width, white 5px border, blue-outlined controls) -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+  #case-study-slider {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    width: 90%;
+    height: 80vh;
+    margin: auto;
+    background: #1f1f29;
+    overflow: hidden;
+    border: 5px solid #fff;
+    box-sizing: border-box;
+    border-radius: 70px;
+
+  }
+
+  #case-study-slider .slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s ease;
+  }
+
+  #case-study-slider .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+  }
+
+  /* Left text block */
+  .slide .text {
+    flex: 1 1 45%;
+  }
+  .slide .text .logo {
+    width: 60px;
+    margin-bottom: 20px;
+  }
+  .slide .text h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .slide .text p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.85;
+    margin-bottom: 30px;
+  }
+  .slide .text .btn {
+    display: inline-flex;
+    align-items: center;
+    background: #fff;
+    color: #1f1f29;
+    padding: 12px 24px;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+  }
+  .slide .text .btn:hover {
+    background: transparent;
+    color: #fff;
+  }
+  .slide .text .btn span {
+    display: inline-block;
+    margin-left: 8px;
+    transform: rotate(-45deg);
+    font-size: 16px;
+  }
+
+  /* Right image block */
+  .slide .image {
+    flex: 1 1 45%;
+    text-align: right;
+  }
+  .slide .image .img-card {
+    display: inline-block;
+    background: #4a90e2;
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .slide .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  /* Controls wrapper with blue outline */
+  #case-study-slider .controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 16px;
+    z-index: 10;
+    background: #fff;
+    border: 3px solid #378dff;
+    border-radius: 40px;
+    padding: 6px 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  /* Prev/Next buttons */
+  .controls button {
+    background: #1f1f29;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+  }
+  .controls button:hover {
+    background: #333;
+  }
+  .controls button:focus { outline: none; }
+  .controls button svg {
+    width: 16px;
+    height: 16px;
+    fill: #fff;
+  }
+</style>
+
+<section id="case-study-slider">
+  <div class="slides">
+    <!-- Slide 1 -->
+    <div class="slide">
+      <div class="text">
+        <img src="https://via.placeholder.com/60x60?text=MC" alt="Mayoclinic Logo" class="logo">
+        <h2>Mayoclinic</h2>
+        <p>
+          Mayo Clinic is one of the most trusted healthcare organizations in the United States, offering expert medical information, research, and patient services. The website provides detailed insights on diseases, symptoms, treatments, and wellness resources, serving both patients and healthcare professionals.
+        </p>
+        <a href="#" class="btn">
+          View Case Study <span>↗</span>
+        </a>
+      </div>
+      <div class="image">
+        <div class="img-card">
+          <img src="https://via.placeholder.com/500x300?text=Mayoclinic+Screenshot" alt="Mayoclinic Screenshot">
+        </div>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="slide">
+      <div class="text">
+        <img src="https://via.placeholder.com/60x60?text=AB" alt="Another Logo" class="logo">
+        <h2>AnotherClient</h2>
+        <p>
+          Description for another client’s project goes here. Brief summary of what was delivered, outcomes, and key features of the site or app.
+        </p>
+        <a href="#" class="btn">
+          View Case Study <span>↗</span>
+        </a>
+      </div>
+      <div class="image">
+        <div class="img-card">
+          <img src="https://via.placeholder.com/500x300?text=Another+Screenshot" alt="Another Screenshot">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prev/Next -->
+  <div class="controls">
+    <button id="prevBtn" aria-label="Previous">
+      <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+    </button>
+    <button id="nextBtn" aria-label="Next">
+      <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+    </button>
+  </div>
+</section>
+
+<script>
+  (function(){
+    const slides = document.querySelector('#case-study-slider .slides');
+    const total = slides.children.length;
+    let idx = 0;
+
+    function show() {
+      slides.style.transform = `translateX(-${idx * 100}%)`;
+    }
+
+    document.getElementById('nextBtn').onclick = () => {
+      idx = (idx + 1) % total;
+      show();
+    };
+    document.getElementById('prevBtn').onclick = () => {
+      idx = (idx - 1 + total) % total;
+      show();
+    };
+
+    // Auto-advance every 5 seconds
+    setInterval(() => {
+      idx = (idx + 1) % total;
+      show();
+    }, 5000);
+  })();
+</script>
+
+ <!-- end -->
+
+
+<br>
+
+<!-- section-5 card process (with the connecting line restored) -->
+<section class="about-section5">
+  <h2>Our WordPress <span>Development Process</span></h2>
+  <p>Here’s a glimpse into our systematic 6-step WordPress development workflow at RS Organisation:</p>
+
+  <div class="process-wrapper">
+    <div class="step step-1">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828784.png" alt="Requirement Analysis">
+      <h3>Requirement Analysis</h3>
+      <p>We start by understanding your vision, goals, and business objectives. This helps us define a detailed project roadmap. We gather insights about your target audience, desired functionalities, and design expectations. This phase ensures that our output aligns perfectly with your brand identity and technical needs.</p>
+    </div>
+    <div class="step step-2">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Wireframing & UI/UX Design">
+      <h3>Wireframing & UI/UX Design</h3>
+      <p>Our UI/UX experts create wireframes that illustrate the page structure, followed by design prototypes. This ensures that every page of your website provides an intuitive and delightful user experience. We use tools like Figma and Adobe XD to craft designs that reflect your brand tone and improve engagement.</p>
+    </div>
+    <div class="step step-3">
+      <img src="https://cdn-icons-png.flaticon.com/512/2421/2421384.png" alt="WordPress Theme Development">
+      <h3>WordPress Theme Development</h3>
+      <p>After finalizing the design, our developers begin with custom theme development. Using lightweight code and the latest standards, we ensure high performance and responsiveness. Whether you need a minimalist design or a vibrant layout, we deliver pixel-perfect results optimized for all devices.</p>
+    </div>
+    <div class="step step-4">
+      <img src="https://cdn-icons-png.flaticon.com/512/535/535239.png" alt="Plugin Integration & Customization">
+      <h3>Plugin Integration & Customization</h3>
+      <p>We integrate essential plugins to expand your website’s functionality. From form builders to SEO tools and security add-ons, every feature is configured to support your goals. If needed, we develop custom plugins that are secure, scalable, and tailored specifically to your needs.</p>
+    </div>
+    <div class="step step-5">
+      <img src="https://cdn-icons-png.flaticon.com/512/5948/5948337.png" alt="Testing & QA">
+      <h3>Testing & Quality Assurance</h3>
+      <p>Before launch, we perform extensive testing — covering compatibility, responsiveness, security, and speed. Bugs, if any, are resolved immediately. We ensure that the website runs flawlessly on all major browsers and devices, guaranteeing a consistent experience for all visitors.</p>
+    </div>
+    <div class="step step-6">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828843.png" alt="Launch & Support">
+      <h3>Launch & Ongoing Support</h3>
+      <p>Once the site is approved, we deploy it on your preferred hosting platform. Post-launch, our support team provides ongoing maintenance, timely updates, and technical assistance. We also monitor your website for uptime, performance, and backup health to keep it in peak condition.</p>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .about-section5 {
+    max-width: 1400px;
+    margin: auto;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .about-section5 h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #0a2540;
+  }
+  .about-section5 h2 span {
+    color: #0a66c2;
+  }
+  .about-section5 p {
+    color: #6c757d;
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+
+  /* GRID + CONNECTOR LINES (behind the cards) */
+  .process-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .process-wrapper::before,
+  .process-wrapper::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    height: 4px;
+    background: #ccc;
+    z-index: 1;                /* behind the circles (z-index:2) */
+  }
+  /* top row line */
+  .process-wrapper::before {
+    top: calc((100% / 2) - 60px);
+  }
+  /* bottom row line */
+  .process-wrapper::after {
+    top: calc((100% / 2) + 60px);
+  }
+
+  /* CARD STYLES */
+  .step {
+    position: relative;
+    background: #fff;
+    border-radius: 30px;
+    padding: 30px 20px;
+    text-align: center;
+    border: 4px solid #ddd;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    z-index: 2;
+  }
+  .step img {
+    width: 50px;
+    margin-bottom: 15px;
+  }
+  .step h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #0a2540;
+  }
+  .step p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  /* CONNECTOR DOTS (above the bars) */
+  .step::before,
+  .step::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px; height: 20px;
+    border: 4px solid currentColor;
+    border-radius: 50%;
+    background: #fff;
+    transform: translateY(-50%);
+    z-index: 3;                /* above the bars */
+  }
+  .step::before { left: -12px; }
+  .step::after  { right: -12px; }
+
+  /* only hide the 3rd card’s right‐dot,
+     so the 6th card still shows its dot on the right */
+  .step:nth-child(3)::after { display: none; }
+
+  /* OPTIONAL: ACCENT COLORS */
+  .step-1 { border-color: #f23cae; color: #f23cae; }
+  .step-2 { border-color: #a74cf2; color: #a74cf2; }
+  .step-3 { border-color: #4b6cf2; color: #4b6cf2; }
+  .step-4 { border-color: #00b6ff; color: #00b6ff; }
+  .step-5 { border-color: #02d2c9; color: #02d2c9; }
+  .step-6 { border-color: #ffa500; color: #ffa500; }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .process-wrapper { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .process-wrapper { grid-template-columns: 1fr; }
+  }
+</style>
+<!-- end -->
+<!-- --------------- -->
+<style>
+.about_section-3 {
+  background: #f6f7f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.value-header h2 {
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+}
+.value-header span {
+  color: #0d6efd;
+}
+
+.value-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.value-card {
+  position: relative;
+  width: 320px;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 25px;
+  text-align: left;
+  z-index: 1;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.value-card::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 30px;
+  z-index: -1;
+  transition: 0.3s ease;
+}
+
+.value-card:hover::before {
+  border-color: #8a61f4;
+  box-shadow: 0 0 20px rgba(138, 97, 244, 0.5);
+}
+
+/* Purple Top-Left Bar */
+.corner-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8px;
+  width: 60px;
+  background: #8a61f4;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 4px;
+}
+
+/* Content */
+.value-card-icon {
+  font-size: 2.5rem;
+  color: #8a61f4;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.value-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  font-size: 0.98rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .value-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .value-card {
+    width: 90%;
+  }
+}
+</style>
+<section class="about_section-3">
+  <div class="value-header">
+    <h2>Why Choose <span>RS Organisation?</span></h2>
+    <p>RS Organisation is not just a WordPress development company in Noida — we’re your long-term digital partner. Our expertise, innovation, and commitment to quality set us apart from the rest.</p>
+  </div>
+<br><br>
+  <div class="value-cards">
+    <!-- WordPress Strength Cards -->
+    <div class="value-card">
+      <div class="corner-bar"></div>
+      <div class="value-card-icon">🏆</div>
+      <h3>WordPress Customization Experts Noida</h3>
+      <p>We tailor every WordPress element to meet your brand’s exact goals, beyond basic theme customizations — creating sites that stand out and convert.</p>
+    </div>
+
+
+    <div class="value-card">
+      <div class="corner-bar"></div>
+      <div class="value-card-icon">🎯</div>
+      <h3>Custom Strategy for Every Business</h3>
+      <p>We don’t believe in one-size-fits-all. Each campaign is crafted to match your unique goals — whether it’s more phone calls, store visits, or service bookings.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="corner-bar"></div>
+      <div class="value-card-icon">💰</div>
+      <h3>Affordable SEO Packages</h3>
+      <p>Our pricing is transparent and flexible. Small businesses and startups can benefit from our cost-effective packages that deliver ROI.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="corner-bar"></div>
+      <div class="value-card-icon">📞</div>
+      <h3>Dedicated Account Managers</h3>
+      <p>You get a single point of contact to track your progress, ask questions, and receive monthly performance reports — ensuring complete clarity.</p>
+    </div>
+
+ 
+
+    <div class="value-card">
+      <div class="corner-bar"></div>
+      <div class="value-card-icon">📱</div>
+      <h3>Mobile Optimization & Voice Search Ready</h3>
+      <p>We ensure your content is mobile-friendly and voice-search optimized to capture more real-time customers searching "near me".</p>
+    </div>
+
+
+
+    <div class="value-card">
+      <div class="corner-bar"></div>
+      <div class="value-card-icon">🤝</div>
+      <h3>Trusted by Local Businesses</h3>
+      <p>Dozens of Noida-based businesses have grown their visibility and customer base through our tailored local SEO solutions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ---------------- -->
+
+<!-- indusrty we sureve -->
+ 
+<section class="iwss-section">
+  <!-- Left Industry Cards -->
+  <div class="iwss-left">
+    <h2 class="iwss-title">The Industries We Serve</h2>
+    <p class="iwss-desc">
+      We are a web &amp; development and mobile application development agency that has experience in gathering client needs and then developing the best solutions to meet them. After testing, we launch our work in the market and make it taste successful for our clients by providing the best services that are accessible at affordable rates.
+    </p>
+    <div class="iwss-grid">
+      <div class="industry-card">
+        <div class="card-logo">
+          <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Healthcare">
+        </div>
+        <h4>Healthcare</h4>
+        <p class="projects">213 Projects</p>
+      </div>
+      <div class="industry-card">
+        <div class="card-logo">
+          <img src="https://cdn-icons-png.flaticon.com/512/3416/3416044.png" alt="Education">
+        </div>
+        <h4>Education / e‑Learning</h4>
+        <p class="projects">123 Projects</p>
+      </div>
+      <div class="industry-card">
+        <div class="card-logo">
+          <img src="https://cdn-icons-png.flaticon.com/512/2920/2920322.png" alt="Media">
+        </div>
+        <h4>Media &amp; Entertainment</h4>
+        <p class="projects">2040 Projects</p>
+      </div>
+      <div class="industry-card">
+        <div class="card-logo">
+          <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="E‑commerce">
+        </div>
+        <h4>E‑commerce</h4>
+        <p class="projects">103 Projects</p>
+      </div>
+      <div class="industry-card">
+        <div class="card-logo">
+          <img src="https://cdn-icons-png.flaticon.com/512/2933/2933887.png" alt="Banking">
+        </div>
+        <h4>Banking &amp; Finance</h4>
+        <p class="projects">109 Projects</p>
+      </div>
+      <div class="industry-card">
+        <div class="card-logo">
+          <img src="https://cdn-icons-png.flaticon.com/512/1087/1087929.png" alt="Travel">
+        </div>
+        <h4>Tour &amp; Travels</h4>
+        <p class="projects">110 Projects</p>
+      </div>
+      <div class="industry-card">
+        <div class="card-logo">
+          <img src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png" alt="Logistics">
+        </div>
+        <h4>Logistics</h4>
+        <p class="projects">110 Projects</p>
+      </div>
+      <div class="industry-card">
+        <div class="card-logo">
+          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Social">
+        </div>
+        <h4>Social Networking</h4>
+        <p class="projects">110 Projects</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Center Rotating Ring -->
+  <div class="iwss-center">
+    <div class="iwss-bg-ring"></div>
+    <div class="iwss-ring-container">
+      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt=""></div>
+      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/3416/3416044.png" alt=""></div>
+      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/2920/2920322.png" alt=""></div>
+      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt=""></div>
+      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/2933/2933887.png" alt=""></div>
+      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/1087/1087929.png" alt=""></div>
+      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png" alt=""></div>
+      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt=""></div>
+    </div>
+    <div class="iwss-center-logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" alt="React">
+      <p>Industries<br>We Serve</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Section Layout */
+  .iwss-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: flex-start;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  /* 1) Make sure the parent container is positioned relative: */
+.iwss-center {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+/* 2) Center the ring exactly at 50%/50% of its parent,
+      and spin around its own center: */
+.iwss-ring-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+
+  /* move its own center to the parent’s center */
+  transform: translate(-50%, -50%);
+
+  /* rotate around its center point */
+  transform-origin: center center;
+  animation: spin 20s linear infinite;
+
+  /* optional neon glow on the path */
+  border: 2px solid rgba(0, 123, 255, 0.5);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.7);
+  z-index: 1;
+}
+
+/* 3) Now place each icon around the circle at 45° increments: */
+.iwss-icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.iwss-icon:nth-child(1) { top:   0%; left: 50%; transform: translate(-50%, -50%); }
+.iwss-icon:nth-child(2) { top:  14%; left: 86%; transform: translate(-50%, -50%); }
+.iwss-icon:nth-child(3) { top:  50%; left:100%; transform: translate(-50%, -50%); }
+.iwss-icon:nth-child(4) { top:  86%; left: 86%; transform: translate(-50%, -50%); }
+.iwss-icon:nth-child(5) { top: 100%; left: 50%; transform: translate(-50%, -50%); }
+.iwss-icon:nth-child(6) { top:  86%; left: 14%; transform: translate(-50%, -50%); }
+.iwss-icon:nth-child(7) { top:  50%; left:  0%; transform: translate(-50%, -50%); }
+.iwss-icon:nth-child(8) { top:  14%; left: 14%; transform: translate(-50%, -50%); }
+
+/* 4) Keep your spin keyframe: */
+@keyframes spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
+  /* Left Side */
+  .iwss-left {
+    flex: 1 1 500px;
+  }
+  .iwss-title {
+    font-size: 2.4rem;
+    color: #0b2b4c;
+    margin-bottom: 16px;
+  }
+  .iwss-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 24px;
+    margin-left: 0px;
+  }
+
+  .iwss-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+/* ring spins with ease-in-out */
+.iwss-ring-container {
+  animation: spin 15s ease-in-out infinite;
+}
+
+/*  smoother spin */
+@keyframes spin {
+  0%   { transform: translate(-50%, -50%) rotate(0deg); }
+  50%  { transform: translate(-50%, -50%) rotate(180deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* add a tiny “pop” on each icon as it passes top */
+.iwss-icon {
+  animation: orbit-pop 4s ease-in-out infinite;
+}
+
+@keyframes orbit-pop {
+  0%,100% { transform: translate(-50%,-50%) scale(1); }
+  25%     { transform: translate(-50%,-60%) scale(1.1); } /* pop at top */
+  50%     { transform: translate(-50%,-50%) scale(1); }
+  75%     { transform: translate(-50%,-40%) scale(1.05); } /* pop at bottom */
+}
+
+  .industry-card {
+    background: #0b2b4c;
+    color: white;
+    border-radius: 12px;
+    padding: 24px 16px 16px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(11,43,76,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+
+  .industry-card::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(0,123,255,0.3), transparent 70%);
+    animation: rotateBg 6s linear infinite;
+    z-index: 0;
+  }
+
+  .industry-card:hover {
+    transform: perspective(800px) rotateX(5deg) rotateY(-5deg);
+    box-shadow: 0 10px 30px rgba(0,123,255,0.4);
+  }
+
+  .card-logo {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 12px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0,123,255,0.5);
+    z-index: 1;
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  .card-logo img {
+    width: 32px;
+    animation: spinLogo 8s linear infinite;
+  }
+
+  .industry-card h4 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    z-index: 1;
+  }
+
+  .industry-card .projects {
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 1;
+  }
+
+  /* Center Ring */
+  .iwss-center {
+    flex: 1 1 400px;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+  }
+
+  .iwss-bg-ring {
+    position: absolute;
+    top:50%; left:50%;
+    width:420px; height:420px;
+    background: radial-gradient(circle, rgba(0,123,255,0.1), transparent);
+    border-radius:50%;
+    transform: translate(-50%,-50%);
+    filter: blur(20px);
+    z-index:0;
+  }
+
+  .iwss-ring-container {
+    position: absolute;
+    top:37%; left:27%;
+    width:400px; height:400px;
+    transform: translate(-50%,-50%);
+    animation: spin 20s linear infinite;
+    z-index:2;
+  }
+
+  .iwss-icon {
+    position: absolute;
+    width:60px; height:60px;
+    background:#fff; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 4px 16px rgba(0,0,0,0.1);
+  }
+  .iwss-icon img { width:28px; }
+
+  /* icon positions */
+  .iwss-icon:nth-child(1){ top:0%; left:50%; transform:translate(-50%,-50%); }
+  .iwss-icon:nth-child(2){ top:18%; left:82%; }
+  .iwss-icon:nth-child(3){ top:50%; left:100%; }
+  .iwss-icon:nth-child(4){ top:82%; left:82%; }
+  .iwss-icon:nth-child(5){ top:100%;left:50%; }
+  .iwss-icon:nth-child(6){ top:82%; left:18%; }
+  .iwss-icon:nth-child(7){ top:50%; left:0%; }
+  .iwss-icon:nth-child(8){ top:18%; left:18%; }
+
+  .iwss-center-logo {
+    position: absolute;
+    top:85%; left:67%;
+    width:140px; height:140px;
+    background:#fff; border-radius:50%;
+    transform:translate(-50%,-50%);
+    display:flex; align-items:center; justify-content:center;
+    flex-direction:column; text-align:center;
+    box-shadow:0 4px 20px rgba(0,0,0,0.1); z-index:3;
+  }
+  .iwss-center-logo img { width:40px; margin-bottom:6px; }
+  .iwss-center-logo p { margin:0; color:#0b2b4c; font-weight:600; }
+
+  /* Animations */
+  @keyframes spin { to { transform: translate(-50%,-50%) rotate(360deg); }}
+  @keyframes rotateBg { to { transform: rotate(360deg); }}
+  @keyframes spinLogo { to { transform: rotate(360deg); }}
+  @keyframes pulse {
+    0%,100% { box-shadow:0 0 10px rgba(0,123,255,0.5); }
+    50%    { box-shadow:0 0 20px rgba(0,123,255,0.8); }
+  }
+
+  /* Responsiveness */
+  @media (max-width: 992px) {
+    .iwss-grid { grid-template-columns: repeat(2,1fr); }
+    .iwss-section { gap: 40px; }
+  }
+  @media (max-width: 600px) {
+    .iwss-grid { grid-template-columns: 1fr; }
+    .iwss-center { width: 300px; height:300px; }
+    .iwss-bg-ring { width:320px; height:320px; }
+    .iwss-ring-container {        width: 300px;
+        height: 300px;
+        left: 30px;
+        top: 10px; }
+    .iwss-center-logo { width:100px; height:100px; top:150px; left:200px; }
+    .card-logo { width:50px; height:50px; }
+  }
+</style>
+
+
+
+<!-- card section  -->
+<br><br>
+
+<!-- Swiper CSS & JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<section class="tech-slider-section">
+  <h2 class="slider-heading">OUR TECHNOLOGIES EXPERTISE</h2>
+  <p class="slider-subheading">Building Your Digital Future with Expertise and Excellence</p>
+
+  <div class="swiper techSwiper">
+    <div class="swiper-wrapper">
+
+      <!-- Sample Cards (copy as needed) -->
+      <div class="swiper-slide tech-card html">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML5">
+        <h4>HTML5</h4>
+        <p>Markup for structured web pages.</p>
+      </div>
+
+      <div class="swiper-slide tech-card css">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS3">
+        <h4>CSS3</h4>
+        <p>Stylish layouts and animations.</p>
+      </div>
+
+      <div class="swiper-slide tech-card js">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript">
+        <h4>JavaScript</h4>
+        <p>Interactive, dynamic.</p>
+      </div>
+
+      <div class="swiper-slide tech-card tailwind">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="TailwindCSS">
+        <h4>Tailwind</h4>
+        <p>Utility-first CSS framework.</p>
+      </div>
+      <div class="swiper-slide tech-card tailwind">
+        <img src="https://www.citypng.com/public/uploads/preview/high-resolution-shopify-official-logo-701751694791300uhxocgr6bv.png" alt="Shopify">
+        <h4>Shopify</h4>
+        <p>Utility CSS framework.</p>
+      </div>
+      <div class="swiper-slide tech-card tailwind">
+        <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="React">
+        <h4>React</h4>
+        <p>Utility CSS framework.</p>
+      </div>
+      <div class="swiper-slide tech-card tailwind">
+        <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="Node.js">
+        <h4>Node.js</h4>
+        <p>Utility CSS framework.</p>
+      </div>
+
+      <!-- Add all remaining cards here using same format -->
+
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+<style>
+/* Background */
+.tech-slider-section {
+  background: linear-gradient(135deg, #2a6cf1, #94c7f5);
+  padding: 60px 5%;
+  height: 75vh; /* ⬅️ Increased height by 5% */
+  border-radius: 60px;
+  text-align: center;
+}
+.slider-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.slider-subheading {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #eef1f5;
+  margin-bottom: 40px;
+}
+
+/* Card Styling */
+.tech-card {
+  padding: 25px 20px;
+  text-align: center;
+  border-radius: 20px;
+  transform: rotateY(90deg); /* 🔄 Flapped to 90 degrees */
+  transition: transform 0.6s ease, box-shadow 0.4s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  backface-visibility: hidden;
+}
+.tech-card:hover {
+  transform: rotateY(0deg); /* 🌀 Animate to flat face on hover */
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+.tech-card img {
+  height: 60px;
+  margin-bottom: 10px;
+}
+.tech-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.tech-card p {
+  font-size: 0.9rem;
+  color: #f2f2f2;
+}
+
+/* Background gradient variants */
+.tech-card.html     { background: linear-gradient(135deg, #e44d26, #f16529); }
+.tech-card.css      { background: linear-gradient(135deg, #264de4, #2965f1); }
+.tech-card.js       { background: linear-gradient(135deg, #f7df1e, #f0db4f); color: #000; }
+.tech-card.tailwind { background: linear-gradient(135deg, #06b6d4, #0ea5e9); }
+
+/* Swiper Controls */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+</style>
+
+<script>
+const swiper = new Swiper('.techSwiper', {
+  loop: true,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  breakpoints: {
+    320:   { slidesPerView: 1 },
+    576:   { slidesPerView: 2 },
+    768:   { slidesPerView: 3 },
+    1024:  { slidesPerView: 4 }
+  }
+});
+</script>
+<!-- end -->
+
+
+
+
+<br><br>
+
+<style>
+
+    /* Testimonials Slider Section */
+    .rev-slider-section {
+       background: linear-gradient(90deg, #57cff0, #c78d3b);
+      color: #fff; 
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .rev-slider-header .rev-badge {
+      border: 1px solid #ff4500;
+      padding: 5px 15px;
+      border-radius: 30px;
+      color: #ff4500;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    .rev-slider-header .rev-title {
+      font-size: 36px;
+      font-weight: bold;
+      color: #fff;
+      margin: 0 0 20px;
+    }
+    .rev-slider-header .rev-highlight { color: #ff4500; }
+
+    .rev-swiper-container {
+      width: 100%;
+      padding-bottom: 40px;
+      overflow: visible;
+    }
+    .rev-swiper-container .swiper-slide { display: flex; justify-content: center; }
+
+    .rev-card {
+      background: #121a2f;
+      padding: 30px 20px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+      width: 100%;
+      max-width: 350px;
+      box-sizing: border-box;
+    }
+    .rev-card:hover { transform: translateY(-10px); }
+    .rev-card .rev-quote { font-size: 40px; color: #ff4500; margin-bottom: 20px; }
+    .rev-card .rev-text { color: #ddd; font-size: 16px; min-height: 80px; margin:0 0 15px; }
+    .rev-stars { color: #ffc107; font-size: 18px; margin-bottom: 15px; }
+    .rev-profile { display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .rev-profile img { width: 50px; height: 50px; border-radius: 50%; }
+    .rev-info { text-align: left; }
+    .rev-info strong { display: block; font-size: 16px; }
+    .rev-info span { color: #ff4500; font-size: 14px; }
+
+    /* Pagination bullets */
+    .swiper-pagination-bullets { bottom: 10px !important; }
+    .swiper-pagination-bullet { background: #888; opacity: 1; }
+    .swiper-pagination-bullet-active { background: #ff4500; }
+
+    @media (max-width: 768px) {
+      .rev-swiper-container .swiper-slide { width: 80% !important; }
+    }
+  </style>
+
+<section class="rev-slider-section" id="testimonials">
+  <div class="rev-slider-header">
+  
+    <h2 class="rev-title">Our Clients  <span class="rev-highlight">Review</span></h2>
+  </div>
+
+<!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-3bba91a8-67ea-46be-9a2b-299ee3a35c7f" data-elfsight-app-lazy></div>
+
+</section>
+<!-- contect  -->
+<style>
+  /* Header Contact Bar */
+  .top-contact-bar {
+    background-color: #F79B31;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+
+  .top-contact-bar .left-section,
+  .top-contact-bar .right-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .top-contact-bar .icon-circle {
+    width: 48px;
+    height: 48px;
+    border: 2px dashed #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    background-color: transparent;
+    color: white;
+  }
+
+  .top-contact-bar .contact-text {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+  }
+
+  .top-contact-bar .phone-box {
+    background-color: #0a0e1a;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s ease;
+  }
+
+  /* Phone icon rotating */
+  .rotating-icon {
+    animation: spin 3s linear infinite;
+    border: 2px solid #fff;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Optional rotating card wrapper effect */
+  .phone-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 10px;
+    border-radius: 40px;
+    border: 2px solid #fff;
+    animation: card-rotate 6s linear infinite alternate;
+    transition: all 0.3s ease;
+  }
+
+  @keyframes card-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(1deg); }
+  }
+</style>
+
+<div class="top-contact-bar">
+  <div class="left-section">
+    <div class="icon-circle">💬</div>
+    <div class="contact-text">Elevating Customer Experience.</div>
+  </div>
+  <div class="right-section">
+    <div class="phone-card">
+      <div class="icon-circle rotating-icon">📞</div>
+      <div class="phone-box">+44 920 090 505</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- footer -->
+
+
+    <!-- Footer section -->
+    <footer class="footer-section text-white">
+      <div class="container-fluid">
+        <div class="row gy-4 justify-content-between">
+          <!-- Contact us -->
+          <div class="col-lg-3 col-md-6">
+            <div class="d-flex flex-column scalable-gap-24-16 footer-list">
+              <h6 class="font-18 medium mb-0">Contact-Us</h6>
+              <ul class="list-unstyled d-flex flex-column scalable-gap-16-12 mb-0 navbar-nav">
+                <li class="font-14 regular">
+                  <a class="d-flex gap-1 align-items-center justify-content-center social-icons"><img
+                      src="assets/images/svg/location.svg" height="16" width="16" /></a>
+                  B-108, B Block, Sector 63, Noida, Uttar Pradesh 201307
+                </li>
+                <li class="font-14 regular">
+                  <a class="d-flex gap-1 align-items-center justify-content-center social-icons"><img
+                      src="assets/images/svg/phone.svg" height="16" width="16" /></a>
+                  +91 9953171105
+                </li>
+                <li class="font-14 regular">
+                  <a class="d-flex gap-1 align-items-center justify-content-center social-icons"><img
+                      src="assets/images/svg/phone.svg" height="16" width="16" /></a>
+                  +91 9953171105
+                </li>
+                <li class="font-14 regular">
+                  <a class="d-flex gap-1 align-items-center justify-content-center social-icons"><img
+                      src="assets/images/svg/gmail.svg" height="16" width="16" /></a>
+                  info@rsorganisation.com
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <div class="d-flex flex-column scalable-gap-24-16  footer-list">
+              <h6 class="font-18 medium mb-0">Quick Links</h6>
+              <ul class="list-unstyled d-flex flex-column scalable-gap-16-12 mb-0 navbar-nav">
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white active">Home</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">About Us</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">Portfolio</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">Testimonials</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">Blog</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">Career</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">Sitemap</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- OUR SEO SERVICES -->
+          <div class="col-lg-2 col-md-6">
+            <div class="d-flex flex-column scalable-gap-24-16  footer-list">
+              <h6 class="font-18 medium mb-0">OUR SEO SERVICES</h6>
+              <u class="list-unstyled d-flex flex-column scalable-gap-16-12 mb-0 navbar-nav">
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">Local SEO Services</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">SEO Company in India</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">SEO Company in Dehradun</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">SEO Company in Gurgaon</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">SEO Company in Dubai</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">SEO Company in Dehradun</a>
+                </li >
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">SEO Company in Noida</a>
+                </li>
+            </div>
+          </div>
+
+          <!-- ON TRENDING SERVICES -->
+          <div class="col-lg-3 col-md-6">
+            <div class="d-flex flex-column scalable-gap-24-16">
+              <h6 class="font-18 medium mb-0">ON TRENDING SERVICES</h6>
+              <ul class="list-unstyled d-flex flex-column scalable-gap-16-12 mb-0 navbar-nav">
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">Mobile App Development</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">Website Design</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">Web Development</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link font-14 regular text-white">Digital Marketing</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- copy right -->
+        <p class="mb-0 font-16 medium text-white p-3">©2022- RS Organisation. All rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
