@@ -115,239 +115,254 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  
 
     .hero-section {
       min-height: 100vh;
-      background: linear-gradient(140deg, #1e3c72 0%, #2a5298 35%, #764ba2 100%);
+      background: #0d1117;
       position: relative;
-      display: flex;
-      align-items: center;
-      padding: 0;
       overflow: hidden;
       font-family: 'Inter', sans-serif;
+      display: flex;
     }
 
-    /* Modern Background Pattern */
-    .hero-section::before {
-      content: '';
+    /* Animated Background Mesh */
+    .mesh-background {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       background: 
-        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
-        linear-gradient(45deg, transparent 49%, rgba(255, 255, 255, 0.03) 50%, transparent 51%);
-      z-index: 1;
-    }
-
-    /* Animated Grid */
-    .grid-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-      background-size: 50px 50px;
-      animation: gridMove 20s linear infinite;
+        radial-gradient(circle at 20% 30%, rgba(255, 99, 71, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(0, 206, 209, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 60% 20%, rgba(255, 193, 7, 0.08) 0%, transparent 50%);
+      animation: meshMove 15s ease-in-out infinite;
       z-index: 1;
     }
 
     .hero-container {
-      max-width: 1400px;
       width: 100%;
-      margin: 0 auto;
-      padding: 0 2rem;
+      height: 100vh;
+      display: flex;
       position: relative;
       z-index: 10;
     }
 
-    .hero-content {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 6rem;
+    /* Split Screen Layout */
+    .left-panel {
+      flex: 1;
+      background: linear-gradient(135deg, #1a1d29 0%, #2d3748 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem;
+      position: relative;
+    }
+
+    .right-panel {
+      flex: 1;
+      background: #0d1117;
+      display: flex;
       align-items: center;
-      min-height: 100vh;
-      padding: 4rem 0;
+      justify-content: center;
+      position: relative;
     }
 
-    /* Enhanced Text Content */
-    .hero-text {
+    /* Left Panel Content */
+    .content-wrapper {
+      max-width: 500px;
       opacity: 0;
-      animation: slideUp 1.2s ease-out 0.3s forwards;
+      transform: translateX(-50px);
+      animation: slideInContent 1.5s ease-out 0.5s forwards;
     }
 
-    .hero-badge {
+    .status-badge {
       display: inline-flex;
       align-items: center;
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 0.75rem 1.5rem;
-      border-radius: 100px;
-      color: #fff;
-      font-size: 0.9rem;
+      gap: 8px;
+      background: rgba(0, 206, 209, 0.15);
+      border: 1px solid rgba(0, 206, 209, 0.3);
+      color: #00ced1;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
       font-weight: 600;
       margin-bottom: 2rem;
-      gap: 0.75rem;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
     }
 
-    .badge-dot {
+    .status-dot {
       width: 8px;
       height: 8px;
       background: #00ff88;
       border-radius: 50%;
-      animation: pulse 2s ease-in-out infinite;
+      animation: statusPulse 2s ease-in-out infinite;
     }
 
-    .hero-title {
-      font-size: clamp(3rem, 6vw, 5.5rem);
-      font-weight: 900;
+    .main-heading {
+      /* font-size: clamp(3rem, 5vw, 4.5rem); */
+      font-weight: 600;
       line-height: 1.1;
+      color: #ffffff;
       margin-bottom: 1.5rem;
-      color: #fff;
       letter-spacing: -0.02em;
     }
 
-    .title-gradient {
-      background: linear-gradient(135deg, #00ff88 0%, #00d4ff 50%, #ff6b6b 100%);
+    .heading-highlight {
+      background: linear-gradient(135deg, #ff6347, #00ced1, #ffc107);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      background-size: 200% 200%;
-      animation: gradientShift 3s ease-in-out infinite;
+      background-size: 300% 300%;
+      animation: colorShift 4s ease-in-out infinite;
     }
 
-    .hero-subtitle {
-      font-size: 1.4rem;
-      line-height: 1.6;
-      color: rgba(255, 255, 255, 0.85);
+    .description-text {
+      /* font-size: 1.2rem; */
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.8);
       margin-bottom: 3rem;
       font-weight: 400;
     }
 
-    /* Action Buttons */
-    .hero-actions {
+    .interactive-buttons {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-bottom: 4rem;
+      gap: 1rem;
+      margin-bottom: 3rem;
     }
 
-    .btn {
-      padding: 1.2rem 2.5rem;
+    .morph-button {
+      padding: 16px 32px;
       border: none;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 1.1rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
       cursor: pointer;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       overflow: hidden;
-      min-width: 200px;
-      text-align: center;
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
-      color: #1a1a1a;
-      box-shadow: 0 20px 40px rgba(0, 255, 136, 0.3);
+      background: linear-gradient(135deg, #ff6347, #ff4500);
+      color: white;
+      box-shadow: 0 8px 25px rgba(255, 99, 71, 0.4);
     }
 
     .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 25px 50px rgba(0, 255, 136, 0.4);
-      background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+      background: linear-gradient(135deg, #ff4500, #ff6347);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 12px 35px rgba(255, 99, 71, 0.6);
     }
 
     .btn-secondary {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(20px);
-      color: #fff;
-      border: 2px solid rgba(255, 255, 255, 0.2);
+      background: transparent;
+      color: #00ced1;
+      border: 2px solid #00ced1;
+      backdrop-filter: blur(10px);
     }
 
     .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.2);
-      border-color: rgba(255, 255, 255, 0.4);
-      transform: translateY(-2px);
+      background: rgba(0, 206, 209, 0.1);
+      color: white;
+      border-color: white;
     }
 
-    /* Stats Grid */
-    .stats-grid {
+    .metrics-display {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 3rem;
-      margin-top: 2rem;
+      gap: 1.5rem;
     }
 
-    .stat-card {
-      text-align: left;
-      padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(20px);
-      border-radius: 20px;
+    .metric-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
       border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
       opacity: 0;
-      transform: translateY(40px);
-      animation: fadeUp 1s ease-out forwards;
+      transform: translateY(30px);
+      animation: metricSlideUp 1s ease-out forwards;
     }
 
-    .stat-card:nth-child(1) { animation-delay: 1s; }
-    .stat-card:nth-child(2) { animation-delay: 1.2s; }
-    .stat-card:nth-child(3) { animation-delay: 1.4s; }
+    .metric-card:nth-child(1) { animation-delay: 1.5s; }
+    .metric-card:nth-child(2) { animation-delay: 1.7s; }
+    .metric-card:nth-child(3) { animation-delay: 1.9s; }
 
-    .stat-number {
+    .metric-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(0, 206, 209, 0.3);
+    }
+
+    .metric-value {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ff6347;
       display: block;
-      font-size: 2.8rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #00ff88, #00d4ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
       margin-bottom: 0.5rem;
     }
 
-    .stat-label {
-      font-size: 1rem;
+    .metric-label {
+      font-size: 0.9rem;
       color: rgba(255, 255, 255, 0.7);
       font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
-    /* Animation Container */
-    .hero-visual {
+    /* Right Panel Visual */
+    .visual-container {
       position: relative;
+      width: 600px;
+      height: 600px;
       opacity: 0;
-      animation: slideUp 1.2s ease-out 0.6s forwards;
+      transform: scale(0.8);
+      animation: visualZoomIn 1.5s ease-out 0.8s forwards;
     }
 
-    .animation-container {
-      position: relative;
-      width: 100%;
-      max-width: 600px;
-      height: 500px;
-      margin: 0 auto;
+    .morphing-shape {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 400px;
+      background: linear-gradient(45deg, #ff6347, #00ced1, #ffc107);
+      border-radius: 50%;
+      animation: morphShape 8s ease-in-out infinite;
+      opacity: 0.3;
+      filter: blur(40px);
     }
 
-    /* Main Lottie */
-    .main-animation {
-      width: 100%;
-      height: 100%;
-      filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.3));
+    .central-hub {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 300px;
+      background: rgba(13, 17, 23, 0.9);
+      backdrop-filter: blur(20px);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
     }
 
-    /* Floating Elements */
-    .floating-elements {
+    .main-lottie {
+      width: 240px;
+      height: 240px;
+    }
+
+    .data-points {
       position: absolute;
       top: 0;
       left: 0;
@@ -355,134 +370,113 @@
       height: 100%;
     }
 
-    .float-card {
+    .data-point {
       position: absolute;
-      width: 100px;
-      height: 100px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(20px);
-      border-radius: 25px;
-      padding: 20px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      width: 80px;
+      height: 80px;
+      background: rgba(13, 17, 23, 0.95);
+      backdrop-filter: blur(15px);
       border: 1px solid rgba(255, 255, 255, 0.2);
-      animation: floatAround 6s ease-in-out infinite;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      animation: orbitMove 20s linear infinite;
     }
 
-    .float-card-1 {
-      top: 15%;
-      left: -15%;
+    .data-point:hover {
+      transform: scale(1.2);
+      background: rgba(255, 99, 71, 0.2);
+      border-color: #ff6347;
+    }
+
+    .point-1 {
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
       animation-delay: 0s;
     }
 
-    .float-card-2 {
-      top: 65%;
-      right: -15%;
-      animation-delay: 2s;
-    }
-
-    .float-card-3 {
-      bottom: 15%;
-      left: 5%;
-      animation-delay: 4s;
-    }
-
-    .float-card lottie-player {
-      width: 60px;
-      height: 60px;
-    }
-
-    /* Glow Effects */
-    .glow-orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(40px);
-      animation: orbMove 8s ease-in-out infinite;
-    }
-
-    .orb-1 {
-      width: 200px;
-      height: 200px;
-      background: rgba(0, 255, 136, 0.3);
-      top: 20%;
+    .point-2 {
+      top: 50%;
       right: 10%;
-      animation-delay: 0s;
+      transform: translateY(-50%);
+      animation-delay: 5s;
     }
 
-    .orb-2 {
-      width: 150px;
-      height: 150px;
-      background: rgba(0, 212, 255, 0.2);
-      bottom: 30%;
-      left: 20%;
-      animation-delay: 4s;
+    .point-3 {
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation-delay: 10s;
+    }
+
+    .point-4 {
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+      animation-delay: 15s;
+    }
+
+    .point-icon {
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .interactive-rings {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(0, 206, 209, 0.2);
+      border-radius: 50%;
+      animation: ringPulse 6s ease-in-out infinite;
+    }
+
+    .interactive-rings::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px;
+      height: 350px;
+      border: 1px solid rgba(255, 193, 7, 0.2);
+      border-radius: 50%;
+      animation: ringPulse 6s ease-in-out infinite reverse;
     }
 
     /* Animations */
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(60px);
+    @keyframes slideInContent {
+      to {
+        opacity: 1;
+        transform: translateX(0);
       }
+    }
+
+    @keyframes metricSlideUp {
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
 
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
+    @keyframes visualZoomIn {
       to {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1);
       }
     }
 
-    @keyframes gradientShift {
-      0%, 100% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-    }
-
-    @keyframes floatAround {
-      0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-      }
-      25% {
-        transform: translateY(-20px) rotate(2deg);
-      }
-      75% {
-        transform: translateY(-10px) rotate(-2deg);
-      }
-    }
-
-    @keyframes orbMove {
-      0%, 100% {
-        transform: translate(0px, 0px);
-      }
-      25% {
-        transform: translate(30px, -30px);
-      }
-      75% {
-        transform: translate(-20px, 20px);
-      }
-    }
-
-    @keyframes gridMove {
-      0% {
-        transform: translate(0, 0);
-      }
-      100% {
-        transform: translate(50px, 50px);
-      }
-    }
-
-    @keyframes pulse {
+    @keyframes statusPulse {
       0%, 100% {
         opacity: 1;
         transform: scale(1);
@@ -493,206 +487,253 @@
       }
     }
 
+    @keyframes colorShift {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    @keyframes meshMove {
+      0%, 100% {
+        transform: scale(1) rotate(0deg);
+      }
+      50% {
+        transform: scale(1.1) rotate(2deg);
+      }
+    }
+
+    @keyframes morphShape {
+      0%, 100% {
+        border-radius: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      25% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+      50% {
+        border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+      75% {
+        border-radius: 30% 70% 30% 70% / 70% 30% 70% 30%;
+        transform: translate(-50%, -50%) rotate(270deg);
+      }
+    }
+
+    @keyframes orbitMove {
+      0% {
+        transform: rotate(0deg) translateX(200px) rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg) translateX(200px) rotate(-360deg);
+      }
+    }
+
+    @keyframes ringPulse {
+      0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.3;
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.6;
+      }
+    }
+
     /* Mobile Responsiveness */
     @media (max-width: 1024px) {
-      .hero-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
+      .hero-container {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
       }
 
-      .hero-visual {
+      .left-panel,
+      .right-panel {
+        flex: none;
+      }
+
+      .right-panel {
+        height: 50vh;
         order: -1;
       }
 
-      .animation-container {
-        height: 400px;
+      .left-panel {
+        padding: 2rem;
       }
 
-      .stats-grid {
-        gap: 2rem;
+      .visual-container {
+        width: 400px;
+        height: 400px;
       }
     }
 
     @media (max-width: 768px) {
-      .hero-container {
-        padding: 0 1.5rem;
+      .left-panel {
+        padding: 1.5rem;
       }
 
-      .hero-content {
-        padding: 2rem 0;
-        gap: 2rem;
-      }
-
-      .hero-title {
+      .main-heading {
         font-size: 2.5rem;
       }
 
-      .hero-subtitle {
-        font-size: 1.2rem;
+      .description-text {
+        font-size: 1.1rem;
         margin-bottom: 2rem;
       }
 
-      .hero-actions {
+      .interactive-buttons {
         flex-direction: column;
-        align-items: center;
         gap: 1rem;
-        margin-bottom: 3rem;
       }
 
-      .btn {
+      .morph-button {
         width: 100%;
-        max-width: 280px;
-        padding: 1rem 2rem;
-        font-size: 1rem;
       }
 
-      .stats-grid {
+      .metrics-display {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1rem;
       }
 
-      .stat-card {
-        text-align: center;
-        padding: 1.5rem 1rem;
+      .visual-container {
+        width: 320px;
+        height: 320px;
       }
 
-      .animation-container {
-        height: 300px;
+      .central-hub {
+        width: 240px;
+        height: 240px;
       }
 
-      .float-card {
-        width: 80px;
-        height: 80px;
-        padding: 15px;
+      .main-lottie {
+        width: 180px;
+        height: 180px;
       }
 
-      .float-card lottie-player {
-        width: 50px;
-        height: 50px;
-      }
-
-      .glow-orb {
-        display: none;
+      .data-point {
+        width: 60px;
+        height: 60px;
+        font-size: 0.7rem;
       }
     }
 
     @media (max-width: 480px) {
-      .hero-title {
+      .main-heading {
         font-size: 2rem;
       }
 
-      .hero-subtitle {
-        font-size: 1.1rem;
+      .description-text {
+        font-size: 1rem;
       }
 
-      .stat-number {
-        font-size: 2.2rem;
+      .metric-value {
+        font-size: 1.6rem;
       }
 
-      .animation-container {
-        height: 250px;
+      .visual-container {
+        width: 280px;
+        height: 280px;
+      }
+
+      .data-points {
+        display: none;
       }
     }
   </style>
 
-  <!-- Grid Overlay -->
-  <div class="grid-overlay"></div>
-
-  <!-- Glow Orbs -->
-  <div class="glow-orb orb-1"></div>
-  <div class="glow-orb orb-2"></div>
+  <!-- Animated Mesh Background -->
+  <div class="mesh-background"></div>
 
   <div class="hero-container">
-    <div class="hero-content">
-      <!-- Enhanced Text Content -->
-      <div class="hero-text">
-        <div class="hero-badge">
-          <div class="badge-dot"></div>
-          <span>Leading SMO Company in Noida</span>
+    <!-- Left Panel -->
+    <div class="left-panel">
+      <div class="content-wrapper">
+        <div class="status-badge">
+          <div class="status-dot"></div>
         </div>
+        <br><br>
+
         
-        <h1 class="hero-title">
-          Transform Your
-          <br><span class="title-gradient">Social Presence</span>
+        <h1 class="main-heading">
+          <span class="heading-highlight">Best PPC Company</span>
+          <br>in Noida
         </h1>
         
-        <p class="hero-subtitle">
-          RS Organisation delivers cutting-edge SMO solutions that amplify your brand reach, engage your audience, and drive measurable business growth across all social platforms.
-        </p>
+        <p class="description-text">
+In today’s competitive digital market, businesses need instant visibility and quality leads to stay ahead of their competitors. RS Organisation, a trusted PPC Company in Noida, specializes in creating high-performing campaigns that deliver measurable results. Our expertise lies in running targeted ads that not only attract visitors but also generate genuine leads, helping businesses grow efficiently        </p>
         
-        <div class="hero-actions">
-          <button class="btn btn-primary" id="getStarted">
-            Get Started Today
+        <div class="interactive-buttons">
+          <button class="morph-button btn-primary" id="startCampaign">
+            Start Campaign
           </button>
-          <button class="btn btn-secondary" id="viewPortfolio">
-            View Portfolio
+          <button class="morph-button btn-secondary" id="viewDemo">
+            View Demo
           </button>
         </div>
         
-        <div class="stats-grid">
-          <div class="stat-card">
-            <span class="stat-number" data-target="750">0</span>
-            <span class="stat-label">Successful Campaigns</span>
+        <div class="metrics-display">
+          <div class="metric-card">
+            <span class="metric-value" data-target="480">0</span>
+            <span class="metric-label">Active Campaigns</span>
           </div>
-          <div class="stat-card">
-            <span class="stat-number" data-target="99">0</span>
-            <span class="stat-label">Client Satisfaction</span>
+          <div class="metric-card">
+            <span class="metric-value" data-target="95">0</span>
+            <span class="metric-label">Success Rate</span>
           </div>
-          <div class="stat-card">
-            <span class="stat-number" data-target="25">0</span>
-            <span class="stat-label">Team Experts</span>
+          <div class="metric-card">
+            <span class="metric-value" data-target="360">0</span>
+            <span class="metric-label">ROI Growth</span>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Enhanced Visual Section -->
-      <div class="hero-visual">
-        <div class="animation-container">
-          <!-- Main Social Media Marketing Animation -->
+    <!-- Right Panel -->
+    <div class="right-panel">
+      <div class="visual-container">
+        <!-- Morphing Background Shape -->
+        <div class="morphing-shape"></div>
+        
+        <!-- Interactive Rings -->
+        <div class="interactive-rings"></div>
+        
+        <!-- Central Hub with Lottie -->
+        <div class="central-hub">
           <lottie-player
-            class="main-animation"
+            class="main-lottie"
             src="https://assets9.lottiefiles.com/packages/lf20_qp1q7mct.json"
             background="transparent"
             speed="1"
             loop
             autoplay>
           </lottie-player>
+        </div>
 
-          <!-- Floating Animation Cards -->
-          <div class="floating-elements">
-            <!-- Analytics Animation -->
-            <div class="float-card float-card-1">
-              <lottie-player
-                src="https://assets4.lottiefiles.com/private_files/lf30_WdTEui.json"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay>
-              </lottie-player>
-            </div>
-            
-            <!-- Growth Chart Animation -->
-            <div class="float-card float-card-2">
-              <lottie-player
-                src="https://assets5.lottiefiles.com/packages/lf20_qmfs6c3i.json"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay>
-              </lottie-player>
-            </div>
-            
-            <!-- Social Media Icons Animation -->
-            <div class="float-card float-card-3">
-              <lottie-player
-                src="https://assets1.lottiefiles.com/packages/lf20_kkflmtur.json"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay>
-              </lottie-player>
-            </div>
+        <!-- Orbiting Data Points -->
+        <div class="data-points">
+          <div class="data-point point-1">
+            <div class="point-icon">📊</div>
+            <div>Analytics</div>
+          </div>
+          
+          <div class="data-point point-2">
+            <div class="point-icon">🎯</div>
+            <div>Targeting</div>
+          </div>
+          
+          <div class="data-point point-3">
+            <div class="point-icon">📈</div>
+            <div>Growth</div>
+          </div>
+          
+          <div class="data-point point-4">
+            <div class="point-icon">💰</div>
+            <div>Revenue</div>
           </div>
         </div>
       </div>
@@ -700,142 +741,102 @@
   </div>
 
   <script>
-    // Enhanced Counter Animation
-    function animateValue(element, start, end, duration) {
-      const range = end - start;
-      const startTime = performance.now();
+    // Counter Animation
+    function animateCounters() {
+      const counters = document.querySelectorAll('.metric-value');
       
-      function updateValue(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        let current = 0;
+        const increment = target / 80;
         
-        // Easing function for smooth animation
-        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-        const current = Math.floor(start + (range * easeOutQuart));
-        
-        if (end === 99) {
-          element.textContent = current + '%';
-        } else {
-          element.textContent = current + '+';
-        }
-        
-        if (progress < 1) {
-          requestAnimationFrame(updateValue);
-        }
-      }
-      
-      requestAnimationFrame(updateValue);
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          
+          if (target === 95) {
+            counter.textContent = Math.floor(current) + '%';
+          } else if (target === 360) {
+            counter.textContent = Math.floor(current) + '%';
+          } else {
+            counter.textContent = Math.floor(current) + '+';
+          }
+        }, 25);
+      });
     }
 
-    // Intersection Observer for animations
-    const observerOptions = {
-      threshold: 0.3,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
+    // Start counters when metrics come into view
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const target = parseInt(entry.target.dataset.target);
-          setTimeout(() => {
-            animateValue(entry.target, 0, target, 2000);
-          }, 800);
+          setTimeout(animateCounters, 800);
           observer.unobserve(entry.target);
         }
       });
-    }, observerOptions);
+    }, { threshold: 0.5 });
 
-    // Observe all stat numbers
-    document.querySelectorAll('.stat-number').forEach(counter => {
-      observer.observe(counter);
-    });
-
-    // Enhanced Button Interactions
-    document.getElementById('getStarted').addEventListener('click', function(e) {
-      // Add ripple effect
-      createRipple(e, this);
-      // Your contact functionality
-      setTimeout(() => {
-        alert('Contact form will open here');
-      }, 200);
-    });
-
-    document.getElementById('viewPortfolio').addEventListener('click', function(e) {
-      createRipple(e, this);
-      // Your portfolio functionality
-      setTimeout(() => {
-        alert('Portfolio section will open here');
-      }, 200);
-    });
-
-    // Ripple Effect Function
-    function createRipple(event, button) {
-      const rect = button.getBoundingClientRect();
-      const size = Math.max(rect.width, rect.height);
-      const x = event.clientX - rect.left - size / 2;
-      const y = event.clientY - rect.top - size / 2;
-      
-      const ripple = document.createElement('span');
-      ripple.style.cssText = `
-        position: absolute;
-        border-radius: 50%;
-        transform: scale(0);
-        animation: rippleEffect 0.6s linear;
-        background-color: rgba(255, 255, 255, 0.6);
-        width: ${size}px;
-        height: ${size}px;
-        left: ${x}px;
-        top: ${y}px;
-      `;
-      
-      button.style.position = 'relative';
-      button.appendChild(ripple);
-      
-      setTimeout(() => {
-        ripple.remove();
-      }, 600);
+    const metricsDisplay = document.querySelector('.metrics-display');
+    if (metricsDisplay) {
+      observer.observe(metricsDisplay);
     }
 
-    // Add CSS for ripple animation
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes rippleEffect {
-        to {
-          transform: scale(4);
-          opacity: 0;
-        }
-      }
-    `;
-    document.head.appendChild(style);
+    // Button interactions
+    document.getElementById('startCampaign').addEventListener('click', function(e) {
+      this.style.transform = 'translateY(-3px) scale(1.1)';
+      setTimeout(() => {
+        this.style.transform = '';
+        console.log('Start Campaign clicked');
+      }, 200);
+    });
 
-    // Parallax effect on scroll
-    let ticking = false;
-    
-    function updateParallax() {
-      const scrolled = window.pageYOffset;
-      const orbs = document.querySelectorAll('.glow-orb');
-      
-      orbs.forEach((orb, index) => {
-        const speed = 0.3 + (index * 0.1);
-        orb.style.transform = `translateY(${scrolled * speed}px)`;
+    document.getElementById('viewDemo').addEventListener('click', function(e) {
+      this.style.transform = 'translateY(-2px) scale(1.05)';
+      setTimeout(() => {
+        this.style.transform = '';
+        console.log('View Demo clicked');
+      }, 200);
+    });
+
+    // Data point interactions
+    const dataPoints = document.querySelectorAll('.data-point');
+    dataPoints.forEach(point => {
+      point.addEventListener('click', function() {
+        // Add click effect
+        this.style.transform = 'scale(1.3)';
+        this.style.background = 'rgba(255, 99, 71, 0.4)';
+        
+        setTimeout(() => {
+          this.style.transform = '';
+          this.style.background = '';
+        }, 300);
       });
-      
-      ticking = false;
-    }
-    
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(updateParallax);
-        ticking = true;
-      }
     });
 
-    // Initialize animations on load
-    window.addEventListener('load', () => {
-      document.body.style.opacity = '1';
+    // Enhanced visual interactions
+    const visualContainer = document.querySelector('.visual-container');
+    const morphingShape = document.querySelector('.morphing-shape');
+    
+    visualContainer.addEventListener('mousemove', (e) => {
+      const rect = visualContainer.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width;
+      const y = (e.clientY - rect.top) / rect.height;
+      
+      const moveX = (x - 0.5) * 20;
+      const moveY = (y - 0.5) * 20;
+      
+      morphingShape.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
+    });
+
+    visualContainer.addEventListener('mouseleave', () => {
+      morphingShape.style.transform = 'translate(-50%, -50%)';
     });
   </script>
 </section>
+
+
 
 
 <!-- end -->
@@ -845,12 +846,13 @@
     <img style="width: 80%;" src="https://www.rsorganisation.com/assets/images/ppc2.png" alt="WordPress Development" />
   </div>
   <div class="wp-text">
-    <h2>What are Social Media Optimization Services?</h2>
+    <h2>Best PPC Company in Noida</h2>
     
     <p>
-Shopify is a powerful and flexible platform designed specifically for e-commerce. It allows you to build scalable, secure, and user-friendly online stores without the need for deep technical expertise. Its built-in features, extensive app ecosystem, and mobile responsiveness make it a top choice for businesses of all sizes.  </p>
+At RS Organisation, we focus on delivering result-driven PPC campaigns tailored to your business needs. Being a leading PPC Company in Noida, we design strategies that drive traffic, increase conversions, and reduce unnecessary ad spend. Our team ensures that every campaign aligns with your brand goals, helping you dominate search results and capture high-quality leads instantly.<br><br>
+We don’t just run ads—we build strong digital campaigns using Google AdWords services in Noida and advanced tools that maximize performance. With our data-driven approach, your business enjoys more visibility, better engagement, and consistent growth.
 <br><br>
-                             
+                            
 
 <a href="#" class="news-button" >
       Share your requirements
@@ -891,56 +893,56 @@ Shopify is a powerful and flexible platform designed specifically for e-commerce
 <!-- Shopify Development Services Section -->
 <section class="about_section-3">
   <div class="value-header">
-    <h2>Our Social  <span>Media Services</span></h2>
+    <h2>Our  <span>PPC Services </span></h2>
   </div>
 
 <div class="value-cards">
     <!-- Card 1 -->
     <div class="value-card">
         <div class="corner-bar"></div>
-        <div class="value-card-icon">📈</div>
-        <h3>Social Media Strategy Development</h3>
-        <p>We design tailored strategies that match your brand’s goals and audience behavior. Our social media plans ensure your brand voice is consistent and impactful, helping you connect with customers and drive better engagement.</p>
+        <div class="value-card-icon">🔎</div>
+        <h3>Google Ads Management</h3>
+        <p>We design and manage result-oriented Google AdWords services in Noida that put your brand on top of search engines. Our team ensures the right keywords, ad copies, and bidding strategies are in place to maximize visibility and conversions.</p>
     </div>
 
     <!-- Card 2 -->
     <div class="value-card">
         <div class="corner-bar"></div>
         <div class="value-card-icon">🖼️</div>
-        <h3>Content Creation & Marketing</h3>
-        <p>Our team develops creative and engaging content, including posts, graphics, videos, and reels. The focus is on creating meaningful content that attracts attention, builds awareness, and drives engagement across platforms.</p>
+        <h3>Display Advertising</h3>
+        <p>Our visually appealing display ad campaigns help your brand gain recognition across multiple platforms. With engaging banners and creatives, we target your audience effectively and increase awareness while driving traffic back to your website.</p>
     </div>
 
     <!-- Card 3 -->
     <div class="value-card">
         <div class="corner-bar"></div>
-        <div class="value-card-icon">🔍</div>
-        <h3>Profile Optimization</h3>
-        <p>We optimize your business profiles on all major social platforms. From improving visuals to adding relevant descriptions and keywords, our optimization process ensures your brand looks professional and attracts the right audience.</p>
+        <div class="value-card-icon">📱</div>
+        <h3>Social Media Advertising</h3>
+        <p>Our PPC experts design impactful ad campaigns across Facebook, Instagram, and LinkedIn to generate leads, boost engagement, and increase conversions with cost-effective strategies.</p>
     </div>
 
     <!-- Card 4 -->
     <div class="value-card">
         <div class="corner-bar"></div>
-        <div class="value-card-icon">💰</div>
-        <h3>Paid Social Media Advertising</h3>
-        <p>To boost results, we manage paid ad campaigns on platforms like Facebook, Instagram, and LinkedIn. These campaigns are highly targeted, ensuring your brand reaches potential customers quickly and cost-effectively.</p>
+        <div class="value-card-icon">🔁</div>
+        <h3>Remarketing Campaigns</h3>
+        <p>We help businesses reconnect with potential customers who have already shown interest in their products or services. Remarketing ensures higher chances of conversion by displaying relevant ads to the right audience at the right time.</p>
     </div>
 
     <!-- Card 5 -->
     <div class="value-card">
         <div class="corner-bar"></div>
-        <div class="value-card-icon">🤝</div>
-        <h3>Audience Engagement</h3>
-        <p>Building strong connections with your audience is key. We focus on likes, comments, shares, and direct interactions, ensuring customers feel valued and engaged with your brand consistently.</p>
+        <div class="value-card-icon">🛒</div>
+        <h3>E-commerce PPC Services</h3>
+        <p>For e-commerce businesses, we provide specialized PPC campaigns that focus on product ads, shopping campaigns, and conversion optimization. Our strategies drive more sales and improve return on ad spend (ROAS).</p>
     </div>
 
     <!-- Card 6 -->
     <div class="value-card">
         <div class="corner-bar"></div>
         <div class="value-card-icon">📊</div>
-        <h3>Analytics & Reporting</h3>
-        <p>Our detailed reports provide insights into campaign performance. From growth in followers to engagement metrics, we keep you informed and help refine strategies for better results.</p>
+        <h3>Campaign Tracking & Reporting</h3>
+        <p>Transparency is key at RS Organisation. We provide detailed reports and campaign analytics that help you track performance, measure ROI, and make informed decisions for better outcomes.</p>
     </div>
 </div>
 </section>
@@ -1073,53 +1075,6 @@ Shopify is a powerful and flexible platform designed specifically for e-commerce
 
 
 
-<!-- section-5 card process (with the connecting line restored) -->
-<section class="about-section5">
-  <h2>How Does a Social Media  <span>Optimisation Company in Noida Help? </span></h2>
-
-  <div class="process-wrapper">
-   <!-- Step 1 -->
-    <div class="step step-1">
-      <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Enhanced Brand Awareness" width="60">
-      <h3>1. Enhanced Brand Awareness</h3>
-      <p>We make your brand more visible by using creative campaigns and targeted strategies that reach the right audience and build brand recognition.</p>
-    </div>
-
-    <!-- Step 2 -->
-    <div class="step step-2">
-      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828961.png" alt="Improved Engagement" width="60">
-      <h3>2. Improved Engagement</h3>
-      <p>By creating interactive posts and managing responses, we ensure your customers stay connected and loyal to your brand.</p>
-    </div>
-
-    <!-- Step 3 -->
-    <div class="step step-3">
-      <img src="https://cdn-icons-png.flaticon.com/512/906/906343.png" alt="Targeted Audience Reach" width="60">
-      <h3>3. Targeted Audience Reach</h3>
-      <p>Our strategies ensure your content reaches people most likely to be interested in your products or services, increasing the chances of conversion.</p>
-    </div>
-
-    <!-- Step 4 -->
-    <div class="step step-4">
-      <img src="https://cdn-icons-png.flaticon.com/512/1581/1581135.png" alt="Quality Assurance" width="60">
-      <h3>4. Quality Assurance</h3>
-      <p>Each store goes through rigorous testing, including performance, functionality, and security checks. Our QA team ensures your Shopify store is error-free and ready for launch.</p>
-    </div>
-
-    <!-- Step 5 -->
-    <div class="step step-5">
-      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Launch & Maintenance" width="60">
-      <h3>5. Launch & Maintenance</h3>
-      <p>After successful deployment, we provide ongoing support and maintenance. Regular updates, performance monitoring, and bug fixes keep your Shopify store running smoothly post-launch.</p>
-    </div>
-
-    <!-- step 6 -->
-    <div class="step step-6">
-      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828961.png" alt="Feedback & Iteration" width="60">
-      <h3>6. Feedback & Iteration</h3>
-      <p>Post-launch, we gather user feedback and analyze performance metrics. This data helps us make necessary adjustments and improvements to enhance user experience and drive sales.</p>   
-  </div>
-</section>
 
 
 
@@ -1145,7 +1100,7 @@ Shopify is a powerful and flexible platform designed specifically for e-commerce
   margin-left: 80px;
   border-radius: 20px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  height: 50vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1366,9 +1321,11 @@ Shopify is a powerful and flexible platform designed specifically for e-commerce
 
 <section class="shopify-process-section">
   <div class="section-content">
-    <h2>Benefits of Hiring Social Media Optimization in Noida</h2>
+    <h2>How PPC Agency in Noida Helps to Grow Your Business?</h2>
     <p>
-      Hiring experts for Social Media Optimization Services in Noida ensures professional strategies, time-saving solutions, and measurable results. With RS Organisation, you gain access to experienced professionals who understand platforms, algorithms, and user behavior.
+A professional PPC agency in Noida like RS Organisation can transform your business growth by driving targeted traffic to your website. PPC ensures that your ads reach customers who are actively searching for products or services like yours. Unlike traditional marketing, PPC provides measurable results, instant visibility, and flexibility in budget management.
+<br>
+A professional PPC agency in Noida like RS Organisation can transform your business growth by driving targeted traffic to your website. PPC ensures that your ads reach customers who are actively searching for products or services like yours. Unlike traditional marketing, PPC provides measurable results, instant visibility, and flexibility in budget management.
     </p>
 
     <div class="process-bottom">
@@ -1729,13 +1686,13 @@ Shopify is a powerful and flexible platform designed specifically for e-commerce
     <div class="features-list">
       <div class="decorative-line"></div>
       
-      <!-- Trusted Expertise -->
+      <!-- Proven Expertise -->
       <div class="feature-item">
         <div class="feature-number">01</div>
         <div class="feature-content">
-          <h3 class="feature-title">Trusted Expertise</h3>
+          <h3 class="feature-title">Proven Expertise</h3>
           <p class="feature-description">
-            RS Organisation is a leading SMO Company in Noida with proven results across industries.
+            RS Organisation is a trusted PPC Company in Noida with years of experience managing successful ad campaigns for diverse industries.
           </p>
         </div>
         <div class="feature-icon">
@@ -1745,13 +1702,13 @@ Shopify is a powerful and flexible platform designed specifically for e-commerce
         </div>
       </div>
 
-      <!-- Tailored Solutions -->
+      <!-- Customized Campaigns -->
       <div class="feature-item">
         <div class="feature-number">02</div>
         <div class="feature-content">
-          <h3 class="feature-title">Tailored Solutions</h3>
+          <h3 class="feature-title">Customized Campaigns</h3>
           <p class="feature-description">
-            Every campaign is customized to fit your business needs and audience.
+            We don’t believe in one-size-fits-all. Every campaign is designed based on your business goals and target audience.
           </p>
         </div>
         <div class="feature-icon">
@@ -1761,29 +1718,13 @@ Shopify is a powerful and flexible platform designed specifically for e-commerce
         </div>
       </div>
 
-      <!-- Creative Content -->
+      <!-- Affordable Solutions -->
       <div class="feature-item">
         <div class="feature-number">03</div>
         <div class="feature-content">
-          <h3 class="feature-title">Creative Content</h3>
+          <h3 class="feature-title">Affordable Solutions</h3>
           <p class="feature-description">
-            Our engaging content stands out and attracts real interactions.
-          </p>
-        </div>
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
-          </svg>
-        </div>
-      </div>
-
-      <!-- Affordable Packages -->
-      <div class="feature-item">
-        <div class="feature-number">04</div>
-        <div class="feature-content">
-          <h3 class="feature-title">Affordable Packages</h3>
-          <p class="feature-description">
-            We provide cost-effective SMO solutions for startups, SMEs, and enterprises.
+            Our packages are designed to suit startups, SMEs, and enterprises without compromising on quality or performance.
           </p>
         </div>
         <div class="feature-icon">
@@ -1793,13 +1734,13 @@ Shopify is a powerful and flexible platform designed specifically for e-commerce
         </div>
       </div>
 
-      <!-- Transparency & Reports -->
+      <!-- Transparent Reporting -->
       <div class="feature-item">
-        <div class="feature-number">05</div>
+        <div class="feature-number">04</div>
         <div class="feature-content">
-          <h3 class="feature-title">Transparency & Reports</h3>
+          <h3 class="feature-title">Transparent Reporting</h3>
           <p class="feature-description">
-            Regular updates keep you informed about campaign performance.
+            We provide detailed reports and insights so you can track the progress of your campaigns.
           </p>
         </div>
         <div class="feature-icon">
@@ -1808,7 +1749,39 @@ Shopify is a powerful and flexible platform designed specifically for e-commerce
           </svg>
         </div>
       </div>
-    </div>
+
+      <!-- Certified Professionals -->
+      <div class="feature-item">
+        <div class="feature-number">05</div>
+        <div class="feature-content">
+          <h3 class="feature-title">Certified Professionals</h3>
+          <p class="feature-description">
+            Our team consists of Google Ads certified experts who bring knowledge, creativity, and technical expertise.
+          </p>
+        </div>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Focus on ROI -->
+      <div class="feature-item">
+        <div class="feature-number">06</div>
+        <div class="feature-content">
+          <h3 class="feature-title">Focus on ROI</h3>
+          <p class="feature-description">
+            Every campaign we run is optimized for maximum conversions, ensuring the best possible return on investment.
+          </p>
+        </div>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
+          </svg>
+        </div>
+      </div>
+    </div></svg>
   </div>
 
 </section>
