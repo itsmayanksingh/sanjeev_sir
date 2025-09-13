@@ -675,185 +675,285 @@ RS Organisation is a trusted website development company in Noida that blends cr
 
 
 <!-- section 4 (only section code) -->
+<!-- ===== Folded-Ribbon Timeline (Hover-to-show panels) ===== -->
+<section class="ribbon-timeline" aria-label="Folded ribbon timeline">
+  <div class="rt-wrap">
+    <h2 class="rt-title">Our Website <span class="rt-accent">Development Steps</span></h2>
+
+    <div class="rt-canvas" id="rtCanvas" role="list" aria-label="timeline steps">
+      <!-- SVG ribbon (zig-zag) -->
+      <svg class="rt-ribbon" viewBox="0 0 1200 220" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <defs>
+          <linearGradient id="rg" x1="0" x2="1">
+            <stop offset="0" stop-color="#ffdca6"/>
+            <stop offset="1" stop-color="#ffb27a"/>
+          </linearGradient>
+          <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.12"/>
+          </filter>
+        </defs>
+
+        <!-- ribbon main path (thick) -->
+        <path d="M60 110 L220 40 L380 180 L540 40 L700 180 L860 40 L1020 180 L1160 110"
+              stroke="url(#rg)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#shadow)"/>
+        <!-- crease line to emphasise folds -->
+        <path d="M220 40 L380 180 L540 40 L700 180 L860 40 L1020 180"
+              stroke="rgba(255,255,255,0.35)" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 8" fill="none"/>
+      </svg>
+
+      <!-- Steps anchored to fold points; JS will place them responsively -->
+      <ul class="rt-steps" id="rtSteps">
+        <li class="r-step" data-title="Requirement Analysis" tabindex="0">
+          <button class="r-toggle" aria-expanded="false">1</button>
+          <div class="r-panel">
+            <h3>Requirement Analysis</h3>
+            <p>Discovery & stakeholder interviews to create a clear roadmap and measurable goals.</p>
+          </div>
+        </li>
+
+        <li class="r-step" data-title="Planning & Strategy" tabindex="0">
+          <button class="r-toggle" aria-expanded="false">2</button>
+          <div class="r-panel">
+            <h3>Planning & Strategy</h3>
+            <p>Wireframes, information architecture and milestones tied to KPIs.</p>
+          </div>
+        </li>
+
+        <li class="r-step" data-title="Design & Prototyping" tabindex="0">
+          <button class="r-toggle" aria-expanded="false">3</button>
+          <div class="r-panel">
+            <h3>Design & Prototyping</h3>
+            <p>Pixel-perfect UI and interactive prototypes to validate flows before dev.</p>
+          </div>
+        </li>
+
+        <li class="r-step" data-title="Development & Coding" tabindex="0">
+          <button class="r-toggle" aria-expanded="false">4</button>
+          <div class="r-panel">
+            <h3>Development & Coding</h3>
+            <p>Modular, testable code with CI/CD and performance-first engineering.</p>
+          </div>
+        </li>
+
+        <li class="r-step" data-title="Testing & QA" tabindex="0">
+          <button class="r-toggle" aria-expanded="false">5</button>
+          <div class="r-panel">
+            <h3>Testing & QA</h3>
+            <p>Manual and automated testing, accessibility checks and security scans.</p>
+          </div>
+        </li>
+
+        <li class="r-step" data-title="Deployment & Support" tabindex="0">
+          <button class="r-toggle" aria-expanded="false">6</button>
+          <div class="r-panel">
+            <h3>Deployment & Support</h3>
+            <p>Production launch, monitoring, and ongoing improvements and support.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <style>
+:root{
+  --accent: #ff8a00;
+  --ribbon-grad-start: #ffdca6;
+  --ribbon-grad-end: #ffb27a;
+  --panel-w: 300px;
+}
 
+/* outer */
+.ribbon-timeline{ padding:44px 14px; font-family: Inter, system-ui, sans-serif; background: linear-gradient(180deg,#fffaf7,#fff); }
+.rt-wrap{ max-width:1180px; margin:0 auto; }
 
-  /* Full‑width gradient background wrapper */
-  .timeline-wrapper {
-    width: 100%;
-    /* smooth transition from white to orange */
-    background: linear-gradient(135deg, #d1caca, #f9ac1d);
-    padding: 60px 0 100px;
-    box-sizing: border-box;
-    margin-top: -40px;
-  }
+/* title */
+.rt-title{ font-size:26px; margin-bottom:18px; color:#222; text-align:center; }
+.rt-accent{ color:var(--accent); }
 
-  /* Inner container */
-  .timeline-section {
-    font-family: 'Poppins', sans-serif;
-    max-width: 900px;
-    margin: auto;
-    padding: 0 20px;
-    position: relative;
-    color: #333;
-  }
+/* canvas */
+.rt-canvas{ position:relative; padding:24px 8px 40px; min-height:260px; }
 
-  .timeline-section h2 {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 40px;
-    color: #222;
-  }
+/* svg ribbon occupies background */
+.rt-ribbon{ position:absolute; left:0; right:0; top:0; width:100%; height:220px; z-index:1; pointer-events:none; }
 
-  /* Vertical timeline line starts below heading */
-  .timeline-section::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 120px;
-    bottom: 0;
-    width: 4px;
-    background: rgba(0, 0, 0, 0.1);
-    transform: translateX(-50%);
-  }
+/* steps list overlays ribbon */
+.rt-steps{ list-style:none; margin:0; padding:0; position:relative; z-index:3; }
 
-  .timeline {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-  }
+/* single step: absolute anchor; default small avatar-like toggle */
+.r-step{ position:absolute; width:auto; display:flex; align-items:flex-start; gap:12px; transform-origin:center; transition: transform .24s ease; }
+.r-toggle{
+  width:56px; height:56px; border-radius:12px; border:none; cursor:pointer;
+  background: linear-gradient(180deg,#fff,#fff7ee); font-weight:800; color:#c25a00; box-shadow:0 10px 28px rgba(0,0,0,0.08);
+  display:flex; align-items:center; justify-content:center; font-size:18px;
+}
+.r-toggle:focus{ outline:3px solid rgba(255,138,0,0.16); outline-offset:4px; }
 
-  .timeline li {
-    position: relative;
-    width: 50%;
-    padding: 20px 40px;
-    box-sizing: border-box;
-  }
-  .timeline li:nth-child(odd) {
-    left: 0;
-    text-align: right;
-  }
-  .timeline li:nth-child(even) {
-    left: 50%;
-    text-align: left;
+/* panel that unfolds from the crease */
+.r-panel{
+  width:var(--panel-w);
+  background:#fff; border-radius:12px; padding:12px; box-shadow: 0 22px 50px rgba(0,0,0,0.08);
+  transform-origin:left center;
+  transform: perspective(800px) rotateY(-14deg) translateY(6px);
+  opacity:0; visibility:hidden;
+  transition: transform .42s cubic-bezier(.2,.9,.25,1), opacity .28s ease, visibility .28s;
+}
+.r-panel h3{ margin:0 0 6px; color:var(--accent); font-size:16px; }
+.r-panel p{ margin:0; color:#333; font-size:14px; line-height:1.45; }
+
+/* when open (via JS toggle), panel flips to face viewer */
+.r-step.open .r-panel{
+  transform: perspective(800px) rotateY(0deg) translateY(0);
+  opacity:1; visibility:visible;
+}
+
+/* NEW: show panel on hover / keyboard focus (desktop and hover-capable devices) */
+/* This makes panels appear when user hovers the number or focuses inside the step */
+@media (hover: hover) and (pointer: fine) {
+  .r-step:hover .r-panel,
+  .r-step:focus-within .r-panel {
+    transform: perspective(800px) rotateY(0deg) translateY(0);
+    opacity:1;
+    visibility:visible;
   }
 
-  .timeline li::before {
-    content: '';
-    position: absolute;
-    top: 30px;
-    width: 16px;
-    height: 16px;
-    background: #fff;
-    border: 4px solid #ffa500;
-    border-radius: 50%;
-    z-index: 1;
+  /* keep the toggle aria state in sync visually (doesn't change attribute) */
+  .r-step:hover .r-toggle,
+  .r-step:focus-within .r-toggle {
+    box-shadow: 0 16px 34px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
   }
-  .timeline li:nth-child(odd)::before {
-    right: -8px;
-  }
-  .timeline li:nth-child(even)::before {
-    left: -8px;
-  }
+}
 
-  .card {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 20px;
-    border-radius: 8px;
-    text-align: start;
-    width: 350px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-  .card h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #ffa500;
-  }
-  .card p {
-    font-size: 14px;
-    color: #333;
-  }
+/* small hover */
+.r-step:hover{ transform: translateY(-6px); }
 
-  @media (max-width: 768px) {
-    .timeline-section::before {
-      left: 8px;
-      top: 100px;
-    }
-    .timeline li,
-    .timeline li:nth-child(even) {
-      left: 0 !important;
-      width: 100%;
-      text-align: left;
-      padding-left: 30px;
-      padding-right: 20px;
-    }
-    .timeline li::before {
-      left: 0;
-    }
-  }
-  .text-red {
-    color: #ec1e44;
-  }
+/* placement presets for desktop (fallback) */
+.r-step.p0{ left:40px; top:54px; }
+.r-step.p1{ left:200px; top:-6px; }
+.r-step.p2{ left:360px; top:74px; }
+.r-step.p3{ left:520px; top:-6px; }
+.r-step.p4{ left:680px; top:74px; }
+.r-step.p5{ left:840px; top:-6px; }
+
+/* responsive: on small screens, stack vertically and hide SVG */
+@media (max-width:880px){
+  .rt-ribbon{ display:none; }
+  .rt-canvas{ min-height:auto; padding-bottom:12px; }
+  .r-step{ position:relative; display:flex; gap:12px; margin:10px 0; left:auto; top:auto; transform:none; }
+  .r-panel{ width:100%; transform:none; opacity:1; visibility:visible; }
+  .r-step.open .r-panel{ transform:none; }
+  .rt-wrap{ padding:0 6px; }
+
+  /* on touch devices, we still rely on click: make r-toggle apparent */
+  .r-toggle{ box-shadow:0 8px 18px rgba(0,0,0,0.06); }
+}
+
+/* tiny polish */
+@media (max-width:480px){
+  :root{ --panel-w: calc(100% - 96px); }
+  .r-toggle{ width:50px; height:50px; }
+}
 </style>
 
-<section class="timeline-wrapper">
- <div class="timeline-section">
-  <h2>Our <span class="text-red">Website Development Process</span></h2>
-  <ul class="timeline">
-    
-    <li>
-      <div class="card">
-        <h3>1-> Requirement Analysis</h3>
-        <p>We start with a deep understanding of your business, industry, and target audience. Our team conducts detailed consultations to identify goals, competitors, and challenges. This ensures our strategy is tailored to meet your unique requirements, providing a clear roadmap for your website development project.</p>
-      </div>
-    </li>
+<script>
+/* Place ribbon folds and attach interactivity:
+   - On wide screens, hover/focus-within will show panels (CSS)
+   - On small screens, clicking the toggle still opens/closes panels (JS)
+   - JS still provides keyboard navigation and ensures aria-expanded kept correct when toggled
+*/
+(function(){
+  const nodes = Array.from(document.querySelectorAll('#rtSteps .r-step'));
+  const foldPoints = [
+    { x: 60, y:110 },
+    { x:220, y:40 },
+    { x:380, y:180 },
+    { x:540, y:40 },
+    { x:700, y:180 },
+    { x:860, y:40 }
+  ];
 
-    <li>
-      <div class="card">
-        <h3>2-> Planning & Strategy</h3>
-        <p>Next, we create a blueprint for your project. This includes wireframes, sitemaps, and technology stack selection. By aligning strategy with your business objectives, we ensure that your website not only looks professional but also functions as a powerful digital asset for your brand.</p>
-      </div>
-    </li>
+  if(!nodes.length) return;
 
-    <li>
-      <div class="card">
-        <h3>3-> Design & Prototyping</h3>
-        <p>Our UI/UX designers craft visually stunning and user-friendly designs. Prototypes allow you to visualize the final product before development begins. This stage focuses on aesthetics, usability, and brand consistency to ensure your website leaves a lasting impression on visitors.</p>
-      </div>
-    </li>
+  // attach click/keyboard behavior, and add preset classes for fallback
+  nodes.forEach((el, i) => {
+    el.classList.add('p' + i); // fallback placement class
+    const btn = el.querySelector('.r-toggle');
 
-    <li>
-      <div class="card">
-        <h3>4-> Development & Coding</h3>
-        <p>Using the latest technologies, our developers bring your website to life. Whether it’s front-end or back-end, we ensure the code is clean, scalable, and secure. As a top web development services in Noida provider, we prioritize responsiveness and speed to deliver a flawless user experience.</p>
-      </div>
-    </li>
+    // toggle open/close (used on small screens)
+    function setOpen(open){
+      if(open){
+        nodes.forEach(n => { if(n !== el){ n.classList.remove('open'); n.querySelector('.r-toggle').setAttribute('aria-expanded','false'); }});
+        el.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        el.scrollIntoView({ behavior:'smooth', block: 'center' });
+      } else {
+        el.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      }
+    }
 
-    <li>
-      <div class="card">
-        <h3>5-> Testing & Quality Assurance</h3>
-        <p>Before launch, we perform rigorous testing across multiple devices and browsers. Our QA team checks for bugs, errors, performance issues, and security vulnerabilities. This step ensures your website is fully optimized, error-free, and ready to deliver a smooth user experience.</p>
-      </div>
-    </li>
+    btn.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      // only toggle on small screens (on desktop hover handles)
+      if(window.matchMedia('(max-width:880px)').matches){
+        const isOpen = el.classList.contains('open');
+        setOpen(!isOpen);
+      }
+    });
 
-    <li>
-      <div class="card">
-        <h3>6-> Deployment & Support</h3>
-        <p>Once approved, your website goes live with complete technical support. But our work doesn’t end here—we provide ongoing maintenance, updates, and optimization to ensure your site remains competitive and performs at its best in the digital landscape.</p>
-      </div>
-    </li>
+    // keyboard: Enter/Space to toggle (works on all sizes)
+    el.addEventListener('keydown', (ev) => {
+      if(ev.key === 'Enter' || ev.key === ' '){
+        ev.preventDefault();
+        // toggle regardless of screen, because keyboard users expect a toggle
+        const isOpen = el.classList.contains('open');
+        setOpen(!isOpen);
+      } else if(ev.key === 'ArrowRight'){
+        ev.preventDefault();
+        const next = nodes[(i+1) % nodes.length];
+        next.querySelector('.r-toggle').focus();
+      } else if(ev.key === 'ArrowLeft'){
+        ev.preventDefault();
+        const prev = nodes[(i-1+nodes.length) % nodes.length];
+        prev.querySelector('.r-toggle').focus();
+      }
+    });
+  });
 
-  </ul>
-</div>
+  // Positioning function: maps SVG fold points to container coordinates
+  function placeAnchors(){
+    const canvas = document.getElementById('rtCanvas');
+    if(!canvas) return;
+    const rect = canvas.getBoundingClientRect();
+    const width = rect.width;
+    const svgViewBoxWidth = 1200;
+    const scale = width / svgViewBoxWidth;
 
-</section>
+    nodes.forEach((el, i) => {
+      // only position absolutely on wide screens
+      if(window.matchMedia('(max-width:880px)').matches){
+        el.style.left = '';
+        el.style.top = '';
+        el.style.position = 'relative';
+        return;
+      }
+
+      const p = foldPoints[i] || foldPoints[foldPoints.length - 1];
+      const left = Math.round(p.x * scale);
+      const top = Math.round(p.y) - 36;
+      el.style.position = 'absolute';
+      el.style.left = (left - 12) + 'px';
+      el.style.top = (top - 14) + 'px';
+    });
+  }
+
+  // initial place + on resize (debounced)
+  window.addEventListener('load', placeAnchors);
+  window.addEventListener('resize', function(){ clearTimeout(window._ribbonResize); window._ribbonResize = setTimeout(placeAnchors, 80); });
+})();
+</script>
+
 
 
 
@@ -1588,7 +1688,7 @@ new Swiper('.techSwiper', {
 
     /* Testimonials Slider Section */
     .rev-slider-section {
-       background: linear-gradient(90deg, #57cff0, #c78d3b);
+       /* background: linear-gradient(90deg, #57cff0, #c78d3b); */
       color: #fff; 
       padding: 80px 20px;
       text-align: center;
@@ -1736,18 +1836,6 @@ new Swiper('.techSwiper', {
   }
 </style>
 
-<div class="top-contact-bar">
-  <div class="left-section">
-    <div class="icon-circle">💬</div>
-    <div class="contact-text">Elevating Customer Experience.</div>
-  </div>
-  <div class="right-section">
-    <div class="phone-card">
-      <div class="icon-circle rotating-icon">📞</div>
-      <div class="phone-box">+44 920 090 505</div>
-    </div>
-  </div>
-</div>
 
 
 

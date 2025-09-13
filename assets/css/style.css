@@ -2124,7 +2124,8 @@ color: #7e7e7e;
       align-items: center;
       justify-content: space-between;
       padding: 80px 5%;
-      background-color: linear-gradient(135deg, #ffffff 50%, #e3af3e 50%);
+      /* background-color: linear-gradient(135deg, #ffffff 50%, #e3af3e 50%); */
+      background-color: #EEEEEE;
       flex-wrap: wrap;
       min-height: 100vh;
     }

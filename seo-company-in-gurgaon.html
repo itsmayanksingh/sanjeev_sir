@@ -108,7 +108,6 @@
 <section class="hero-split" aria-label="Trusted SEO Agency — Hero">
   <!-- Moving icons layer (behind everything) -->
   <div class="icon-layer" aria-hidden="true">
-    <!-- simple inline SVG icons; positions via inline CSS for variety -->
     <svg class="icon i1" viewBox="0 0 24 24" style="top:8%; left:10%"><circle cx="12" cy="12" r="9" fill="none" stroke="#fff" stroke-width="2"/><path d="M12 7v5l3 2" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
     <svg class="icon i2" viewBox="0 0 24 24" style="top:22%; left:45%"><path d="M3 12h18M12 3v18" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
     <svg class="icon i3" viewBox="0 0 24 24" style="top:70%; left:6%"><path d="M4 16l6-8 4 6 6-10" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="4" cy="16" r="2" fill="#fff"/></svg>
@@ -122,10 +121,29 @@
   <div class="hero-grid">
     <!-- Left side -->
     <div class="hero-left">
+      <!-- Free-roam arena behind text -->
+      <div class="brand-arena" aria-hidden="true">
+        <span class="brand-floater f1" style="opacity:0">
+          <img width="300"
+            src="https://imgs.search.brave.com/7WI3h0ngZvs2o0QNzncgvgqumEY8SOfaGEylHDjDNrI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzcxLzdh/LzQzLzcxN2E0M2Jj/MGExNjkxY2I5NzMx/ZjAwN2E3ZDI2NDE3/LmpwZw"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </span>
+        <span class="brand-floater f2" style="opacity:0">
+          <img width="300"
+            src="https://imgs.search.brave.com/ckHBnmuaiQeLo9ug0CAPHWzQXqPF3tB09POdUyXJY_w/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZy/ZWVwaWsuY29tLzI1/Ni8xNjE4My8xNjE4/MzY3My5wbmc_c2Vt/dD1haXNfd2hpdGVf/bGFiZWw"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </span>
+      </div>
+
       <div class="left-inner">
-        <div class="logo-g">G</div>
-        <h1 class="title">Trusted SEO<br/>Agency in Dubai</h1>
-        <p class="sub">Get a customized SEO package from the SEO experts in Dubai.</p>
+        <h1 class="title">Trusted SEO<br/>Agency in Gurgaon</h1>
+        <p class="sub">Get a customized SEO package from the SEO experts in Gurgaon.</p>
         <a href="#audit" class="cta">
           <span class="loupe" aria-hidden="true">🔍</span>
           Get a Free Website Audit
@@ -141,50 +159,53 @@
     <!-- Right side -->
     <div class="hero-right">
       <div class="right-inner">
-        <h2 class="right-title">Pentagon</h2>
-        <h3 class="right-sub">How may I help you</h3>
+        <p class="right-copy">
+          If you’re searching for the most reliable and result-driven SEO Company in Gurgaon, your journey ends here with RS Organisation. We specialize in building strong online presences with modern strategies that deliver measurable results. From SEO services in Gurgaon to complete digital growth solutions, we ensure your business dominates search engines. Our team of professionals combines technical expertise, creative strategies, and ethical practices, making us the preferred SEO agency in Gurgaon for businesses across industries. Whether it’s improving rankings, generating traffic, or boosting conversions, RS Organisation is committed to driving long-term success for your brand.
+        </p>
 
         <div class="help-grid">
           <a class="help-pill" href="#">SEO & Digital Marketing</a>
           <a class="help-pill" href="#">Web Design</a>
-          <a class="help-pill" href="#">Email Hosting</a>
+          <a class="help-pill" href="#">App Design</a>
           <a class="help-pill" href="#">Web Hosting</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <style>
-    /* layout */
+/* layout */
 .hero-split{
-  position: relative;            /* establish containing block for absolute icons */
+  position: relative;
   overflow: hidden;
   background:#ffffff;
   color:#0b2235;
 }
-
 /* two columns */
 .hero-grid{
   display:grid;
   grid-template-columns: 1fr 1fr;
   min-height: 88vh;
 }
-
-/* left */
+/* left side */
 .hero-left{
+  --brand-icon: 44px;
   position: relative;
   padding: clamp(32px, 6vw, 72px) clamp(20px, 5vw, 72px);
   display:flex; align-items:center;
   background:
     radial-gradient(900px 700px at -20% 20%, rgba(20,163,240,.08), transparent 60%),
     #fff;
-  z-index:2;                     /* above icons */
+  z-index:2;
 }
-.left-inner{max-width:640px;}
-.logo-g{ width:56px; height:56px; border-radius:50%; display:grid; place-items:center; background:#eaf4ff; color:#116db5; font-weight:900; margin-bottom:14px; }
+.left-inner{
+  position: relative;
+  z-index: 2;  /* keep text above floating icons */
+  max-width:640px;
+}
 .title{ font-size: clamp(34px, 5.4vw, 64px); line-height:1.05; margin:0 0 14px; }
 .sub{ font-size: clamp(14px, 1.8vw, 18px); color:#4e6478; margin: 0 0 22px; }
-
 .cta{
   display:inline-flex; align-items:center; gap:10px;
   background: linear-gradient(90deg,#14a3f0,#0b86d1);
@@ -194,7 +215,32 @@
 .partners{ display:flex; gap:10px; flex-wrap:wrap; margin-top:22px; }
 .pill{ font-size:13px; color:#2b3f53; background:#f3f7fb; border:1px solid #e2ebf4; padding:10px 12px; border-radius:999px; }
 
-/* right */
+/* free-roam arena covering the left column */
+.brand-arena{
+  position: absolute;
+  inset: 8px;           /* small padding from edges */
+  pointer-events: none; /* never block clicks */
+  z-index: 1;           /* behind text */
+}
+.brand-floater{
+  position: absolute;
+  left: 0; top: 0;
+  width: var(--brand-icon);
+  height: var(--brand-icon);
+  border-radius: 999px;
+  display: grid; place-items: center;
+  background: #f3f7fb;
+  border: 1px solid #e2ebf4;
+  overflow: hidden;
+  will-change: transform;
+  transform: translate3d(0,0,0);
+}
+.brand-floater img{
+  width: 70%; height: 70%; object-fit: contain; display: block;
+  filter: saturate(1.05) contrast(1.02);
+}
+
+/* right side */
 .hero-right{
   position: relative;
   display:flex; align-items:center; justify-content:center;
@@ -204,12 +250,15 @@
     radial-gradient(700px 500px at -20% 110%, rgba(255,255,255,.10), transparent 60%),
     linear-gradient(#1593d4,#1087c5);
   color:#fff;
-  z-index:2;                     /* above icons */
+  z-index:2;
 }
 .right-inner{ max-width: 560px; padding: clamp(24px, 4vw, 60px); text-align:left; }
-.right-title{ font-size: clamp(30px, 4.8vw, 56px); line-height:1.05; margin:0 0 6px; }
-.right-sub{ font-size: clamp(22px, 3.6vw, 40px); font-weight:700; margin:0 0 22px; opacity:.95; }
-
+.right-copy{
+  font-size: clamp(14px, 1.6vw, 18px);
+  line-height: 1.6;
+  margin: 0 0 22px;
+  opacity: .95;
+}
 .help-grid{
   display:grid; grid-template-columns: 1fr 1fr; gap:16px;
 }
@@ -222,17 +271,15 @@
 
 /* ICON LAYER (behind text) */
 .icon-layer{
-  position: absolute; inset:0; z-index:0;    /* lower stacking order */
-  pointer-events: none;                      /* never intercept clicks */
+  position: absolute; inset:0; z-index:0;
+  pointer-events: none;
 }
 .icon{
   position: absolute; width:64px; height:64px; opacity:.18;
   transform-origin: 50% 50%;
-  will-change: transform;                    /* hint for animating transforms */
+  will-change: transform;
   filter: drop-shadow(0 8px 18px rgba(0,0,0,.18));
 }
-
-/* individual motion mixes */
 .i1{ animation: drift 26s linear infinite, float 8s ease-in-out infinite; }
 .i2{ animation: drift 30s linear infinite reverse, spin 22s linear infinite; width:48px; }
 .i3{ animation: drift 32s linear infinite, float 10s ease-in-out infinite reverse; width:54px; }
@@ -241,20 +288,13 @@
 .i6{ animation: drift 38s linear infinite reverse, spin 24s linear infinite; }
 .i7{ animation: drift 36s linear infinite, float 12s ease-in-out infinite reverse; width:52px; }
 .i8{ animation: drift 40s linear infinite reverse, spin 28s linear infinite reverse; width:42px; }
-
-/* keyframes */
 @keyframes drift{
   0%   { transform: translateY(0) translateX(0) rotate(0deg); }
   50%  { transform: translateY(-24px) translateX(18px) rotate(180deg); }
   100% { transform: translateY(0) translateX(0) rotate(360deg); }
 }
-@keyframes float{
-  0%,100%{ transform: translateY(0) }
-  50%    { transform: translateY(-16px) }
-}
-@keyframes spin{
-  to { transform: rotate(360deg); }
-}
+@keyframes float{ 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-16px) } }
+@keyframes spin{ to { transform: rotate(360deg); } }
 
 /* responsive */
 @media (max-width: 980px){
@@ -263,12 +303,125 @@
   .icon{ opacity:.16; }
 }
 
-/* accessibility: reduce motion */
+/* accessibility: reduce motion (CSS) */
 @media (prefers-reduced-motion: reduce){
   .icon{ animation: none !important; }
 }
-
 </style>
+
+<script>
+(function(){
+  const arena = document.querySelector('.hero-left .brand-arena');
+  const floaters = Array.from(document.querySelectorAll('.hero-left .brand-floater'));
+  if (!arena || floaters.length === 0) return;
+
+  const mq = window.matchMedia('(prefers-reduced-motion: reduce)'); // JS-aware reduced motion [2][4]
+  let rafId = null;
+  let lastTs = null;
+  let t0 = 0;
+  const bounds = { w: 0, h: 0 };
+  const items = [];
+
+  function measure(){
+    // Use element box metrics for animation bounds [5]
+    bounds.w = arena.clientWidth;
+    bounds.h = arena.clientHeight;
+  }
+  function rand(min, max){ return Math.random() * (max - min) + min; }
+
+  function init(){
+    items.length = 0;
+    measure();
+    floaters.forEach(el => {
+      const w = el.offsetWidth, h = el.offsetHeight;
+      // Random start inside bounds
+      let x = rand(0, Math.max(0, bounds.w - w));
+      let y = rand(0, Math.max(0, bounds.h - h));
+      // Curved motion seeds: angle and gentle turn noise
+      const angle = rand(0, Math.PI * 2);
+      const turnRate = rand(-1.2, 1.2);             // rad/s baseline turn
+      const wiggleAmp = rand(0.25, 0.6);            // extra curvature (rad)
+      const wiggleFreq = rand(0.3, 0.8);            // Hz
+      const wigglePhase = rand(0, Math.PI * 2);
+      // Speed oscillation
+      const speedBase = rand(55, 95);               // px/s
+      const speedAmp = rand(10, 28);                // px/s
+      const speedFreq = rand(0.15, 0.45);           // Hz
+      const speedPhase = rand(0, Math.PI * 2);
+
+      items.push({ el, w, h, x, y, angle, turnRate, wiggleAmp, wiggleFreq, wigglePhase, speedBase, speedAmp, speedFreq, speedPhase });
+      el.style.opacity = '1';
+      el.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+    });
+  }
+
+  function step(ts){
+    if (lastTs == null){ lastTs = ts; t0 = ts / 1000; }
+    const dt = Math.max(0, (ts - lastTs) / 1000);   // time-based updates [1]
+    const t = ts / 1000 - t0;
+    lastTs = ts;
+
+    for (const it of items){
+      // Smooth direction changes for rounded paths
+      const turnNoise = Math.sin(t * it.wiggleFreq * (2*Math.PI) + it.wigglePhase) * it.wiggleAmp;
+      it.angle += (it.turnRate + turnNoise) * dt;
+
+      const speed = Math.max(20, it.speedBase + Math.sin(t * it.speedFreq * (2*Math.PI) + it.speedPhase) * it.speedAmp);
+      let x = it.x + Math.cos(it.angle) * speed * dt;
+      let y = it.y + Math.sin(it.angle) * speed * dt;
+
+      // Wrap-around edges to avoid zig-zag bounce
+      if (x < 0) x = (bounds.w - it.w);
+      if (x > (bounds.w - it.w)) x = 0;
+      if (y < 0) y = (bounds.h - it.h);
+      if (y > (bounds.h - it.h)) y = 0;
+
+      it.x = x; it.y = y;
+      // Use transform for smooth, GPU-friendly animation [6]
+      it.el.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+    }
+
+    rafId = requestAnimationFrame(step); // sync with repaint for smoothness [1]
+  }
+
+  function start(){
+    stop();
+    lastTs = null;
+    init();
+    rafId = requestAnimationFrame(step);
+  }
+  function stop(){
+    if (rafId != null){ cancelAnimationFrame(rafId); rafId = null; }
+  }
+
+  function applyMotionPreference(){
+    if (mq.matches){ // reduced motion: no JS movement
+      stop();
+      if (items.length === 0) init();
+    } else {
+      start();
+    }
+  }
+
+  // Init
+  applyMotionPreference();
+
+  // React if user toggles motion preference [4]
+  mq.addEventListener?.('change', applyMotionPreference);
+
+  // Update bounds on resize; keep positions in range [5]
+  window.addEventListener('resize', () => {
+    measure();
+    for (const it of items){
+      it.x = Math.min(Math.max(0, it.x), Math.max(0, bounds.w - it.w));
+      it.y = Math.min(Math.max(0, it.y), Math.max(0, bounds.h - it.h));
+      it.el.style.transform = `translate3d(${it.x}px, ${it.y}px, 0)`;
+    }
+  });
+})();
+</script>
+
+
 
 
 <!-- end -->
@@ -276,7 +429,7 @@
 <!--  /section -2  -->
   <section class="wp-section">
   <div class="wp-image">
-    <img style="width: 80%;" src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/93e92f9b-94cc-40b5-adaf-1f6a9baab677.png" alt="WordPress Development" />
+    <img style="width: 100%;" src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/35af4362-efbe-4b38-86e4-3a1043315002.png" alt="WordPress Development" />
   </div>
   <div class="wp-text">
     <h2>Why Hire Leading SEO Agency in Gurgaon?</h2>
