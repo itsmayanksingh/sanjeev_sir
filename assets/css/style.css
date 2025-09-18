@@ -403,7 +403,7 @@ a {
   z-index: 4;
   width: 90%;
   max-width: 1170px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   color: var(--whiteColor);
   gap: 20px;
   top: 40px;

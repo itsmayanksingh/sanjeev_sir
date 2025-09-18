@@ -118,7 +118,7 @@
     flex-wrap: wrap;
     background: 
       linear-gradient(135deg, rgba(15, 16, 63, 0.95), rgba(44, 62, 80, 0.9)),
-      url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80') no-repeat center center;
+      url('') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     color: #fff;
@@ -738,7 +738,8 @@
 
 <section class="hero-section">
   <div class="hero-content">
-    <div class="hero-text">
+    <!-- Left Section (Text) -->
+    <div class="hero-text" id="bubbleText">
       <h1>Digital Marketing <br> Company in Noida</h1>
       <p>
         In today’s highly competitive world, every business needs a powerful online presence to stay ahead. 
@@ -755,7 +756,7 @@
       </a>
     </div>
 
-    <!-- Right Image (Fast loading) -->
+    <!-- Right Image -->
     <div class="hero-image">
       <img 
         src="https://digitalnotebook.in/up/2020/04/corporate_digital_marketing_training_for-employees.png" 
@@ -768,8 +769,139 @@
   </div>
 </section>
 
+<style>
+.hero-section {
+  background: #fff; /* white background */
+  padding: 80px 20px;
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.hero-text {
+  flex: 1;
+  position: relative; /* for bubble positioning */
+}
+.hero-text h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+  text-align: left;
+}
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  text-align: justify; /* justify text */
+  margin-bottom: 30px;
+}
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.hero-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: -130px;
+}
+
+/* CTA button */
+.news-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 26px;
+  background: linear-gradient(135deg, #00d4ff, #0066ff);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.news-button:hover {
+  background: linear-gradient(135deg, #0066ff, #00d4ff);
+}
+.news-button svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Bubble style */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 123, 255, 0.5);
+  pointer-events: none;
+  z-index: 5;
+  animation: rise 2s linear forwards;
+}
+
+@keyframes rise {
+  0% {
+    transform: scale(0.5) translateY(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.5) translateY(-80px);
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+@media(max-width: 950px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .hero-text p {
+    text-align: justify;
+  }
+  .hero-image {
+    margin-top: 20px;
+  }
+}
+</style>
+
 <script>
-  // Ripple effect on button
+  // Bubble effect on hover
+  const bubbleText = document.getElementById('bubbleText');
+
+  bubbleText.addEventListener('mousemove', (e) => {
+    const bubble = document.createElement('span');
+    bubble.classList.add('bubble');
+    
+    const rect = bubbleText.getBoundingClientRect();
+    const size = Math.random() * 12 + 8; // random bubble size
+    
+    bubble.style.width = `${size}px`;
+    bubble.style.height = `${size}px`;
+    bubble.style.left = `${e.clientX - rect.left - size / 2}px`;
+    bubble.style.top = `${e.clientY - rect.top - size / 2}px`;
+    
+    bubbleText.appendChild(bubble);
+    
+    setTimeout(() => {
+      bubble.remove();
+    }, 2000);
+  });
+
+  // Ripple + confirmation effect on button
   function setupButtonInteractions() {
     const expertButton = document.getElementById('expertButton');
     
@@ -823,7 +955,6 @@
 
   window.addEventListener('load', setupButtonInteractions);
 </script>
-
 
 
 <!-- end -->
@@ -1004,444 +1135,139 @@ As a leading digital marketing agency in Noida, RS Organisation believes in perf
     .process-wrapper { grid-template-columns: 1fr; }
   }
 </style>
-<br><br>
-<!-- end -->
-<!-- ---------------------------- -->
-<h1 style="text-align: center; font-family: 'Segoe UI', sans-serif; color: #0a2540; margin-bottom: 16px;">
-  Our Client Work
-</h1>
-
-<section class="restaurant-overview">
-  <!-- Floating Shapes -->
-  <div class="floating-shape shape1"></div>
-  <div class="floating-shape shape2"></div>
-
-  <div class="grid">
-    <!-- Row 1: Title / Top Stats -->
-    <div class="cell left top fade-in">
-      <h2>Chokhi Dhani</h2>
-      <p class="meta">
-        <i class="fas fa-map-marker-alt"></i> Dubai, Al Seef, UAE<br>
-        <i class="fas fa-utensils"></i> Restaurant
-      </p>
-    </div>
-    <div class="cell right top stats-row fade-in">
-      <div class="stat-card">
-        <div class="stat-label">Organic Traffic</div>
-        <div class="stat-value">45.7K <span class="stat-delta positive">+137.9%</span></div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Backlinks</div>
-        <div class="stat-value">6.4K <span class="stat-delta positive">+30%</span></div>
-      </div>
-    </div>
-
-    <!-- Row 2: Description / Chart -->
-    <div class="cell left mid fade-in">
-      <h3>About the Project</h3>
-      <p class="description">
-        Chokhi Dhani Dubai is an exclusive cultural resort offering a unique blend of traditional Indian hospitality, cuisine, and entertainment. We helped them:
-      </p>
-      <ul class="features">
-        <li>Optimize on‑page SEO for local keywords</li>
-        <li>Revamp site structure for better navigation</li>
-        <li>Implement performance and mobile improvements</li>
-      </ul>
-    </div>
-    <div class="cell right mid chart-card fade-in">
-      <div class="chart-header">
-        <span>Organic Traffic</span>
-        <select id="timeRange">
-          <option value="all">All Time</option>
-          <option value="6">Last 6 Months</option>
-          <option value="12">Last 12 Months</option>
-        </select>
-      </div>
-      <canvas id="trafficChart"></canvas>
-    </div>
-
-    <!-- Row 3: Highlights / Bottom Stats -->
-    <div class="cell left bottom highlight fade-in">
-      <h3>Key Highlights</h3>
-      <p><strong>Traffic Growth:</strong> 26K → 45.7K visitors/mo (76% increase)</p>
-      <p><strong>Domain Authority:</strong> 19 → 27 in 4 months</p>
-    </div>
-    <div class="cell right bottom stats-row fade-in">
-      <div class="stat-card">
-        <div class="stat-label">Authority Score</div>
-        <div class="stat-value positive">27</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Organic Keywords</div>
-        <div class="stat-value">364 <span class="stat-delta positive">+10.2%</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--  -->
 
 
-<!--  -->
-<!-- FontAwesome + Chart.js -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<style>
-  body {
-    background: #f9fafb;
-  }
-
-  h2, h3 {
-    margin-top: 0;
-    color: #1f2937;
-  }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.25rem; margin-bottom: 8px; }
-  p, li { line-height: 1.6; }
-
-  .restaurant-overview {
-    position: relative;
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: auto;
-    gap: 30px;
-    position: relative;
-    z-index: 2;
-  }
-
-  .cell {
-    background: #fff;
-    padding: 24px;
-    border-radius: 16px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s ease forwards;
-  }
-
-  .fade-in:nth-child(1) { animation-delay: 0.2s; }
-  .fade-in:nth-child(2) { animation-delay: 0.4s; }
-  .fade-in:nth-child(3) { animation-delay: 0.6s; }
-  .fade-in:nth-child(4) { animation-delay: 0.8s; }
-  .fade-in:nth-child(5) { animation-delay: 1s; }
-  .fade-in:nth-child(6) { animation-delay: 1.2s; }
-
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .features {
-    list-style: none;
-    padding: 0;
-    margin-top: 12px;
-  }
-  .features li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 8px;
-  }
-  .features li::before {
-    content: '✔';
-    position: absolute;
-    left: 0;
-    color: #10b981;
-    font-weight: bold;
-  }
-
-  .stats-row {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-  }
-
-  .stat-card {
-    flex: 1;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px;
-    background: #fdfdfd;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-  }
-
-  .stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-  }
-
-  .stat-label {
-    font-size: 0.85rem;
-    color: #6b7280;
-    margin-bottom: 6px;
-  }
-  .stat-value {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: #111827;
-  }
-  .stat-delta {
-    font-size: 0.9rem;
-    margin-left: 4px;
-  }
-  .stat-delta.positive { color: #10b981; }
-
-  .chart-card canvas {
-    width: 100% !important;
-    height: 220px !important;
-  }
-
-  .chart-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-    font-size: 0.9rem;
-    color: #4b5563;
-  }
-
-  .chart-header select {
-    padding: 6px 10px;
-    font-size: 0.9rem;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-    background: #fff;
-  }
-
-  /* Floating Gradient Shapes */
-  .floating-shape {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.4;
-    animation: float 12s ease-in-out infinite alternate;
-    z-index: 1;
-  }
-
-  .shape1 {
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(45deg, #f97316, #facc15);
-    top: -80px;
-    left: -80px;
-  }
-
-  .shape2 {
-    width: 250px;
-    height: 250px;
-    background: linear-gradient(45deg, #60a5fa, #38bdf8);
-    bottom: -60px;
-    right: -60px;
-  }
-
-  @keyframes float {
-    0% { transform: translateY(0px) rotate(0deg); }
-    100% { transform: translateY(-30px) rotate(15deg); }
-  }
-
-  @media (max-width: 800px) {
-    .grid { grid-template-columns: 1fr; }
-    .stats-row { flex-direction: column; }
-  }
-</style>
-
-<script>
-  const ctx = document.getElementById('trafficChart').getContext('2d');
-  const labels = ['Jan','Feb','Mar','Apr','May','Jun','Jul'];
-  const data = [20000,26000,32000,38000,42000,45000,45700];
-
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels,
-      datasets: [{
-        data,
-        borderColor: '#4b6cf2',
-        borderWidth: 3,
-        tension: 0.3,
-        fill: false,
-        pointRadius: 0
-      }]
-    },
-    options: {
-      scales: {
-        x: { grid: { display: false }, ticks: { color: '#6b7280' } },
-        y: { grid: { color: '#e5e7eb' }, ticks: { color: '#6b7280' } }
-      },
-      plugins: { legend: { display: false } }
-    }
-  });
-</script>
 
 
 <!-- why choose us section -->
 <style>
-.why-choose-us {
-  padding: 80px 20px;
-  background: #fff9f5;
-  font-family: "Poppins", sans-serif;
+.why-flex {
+  background: #fff;
+  padding: 70px 0;
+  font-family: 'Poppins', sans-serif;
 }
-
-.why-choose-container {
-  max-width: 1100px;
+.why-flex .container {
+  max-width: 1120px;
   margin: 0 auto;
+  padding: 0 18px;
 }
-
-.why-choose-title {
+.flex-title {
+  font-size: 2.3rem;
   text-align: center;
-  font-size: 38px;
   font-weight: 800;
-  color: #222;
-  margin-bottom: 15px;
-  position: relative;
+  color: #183153;
+  margin-bottom: 10px;
 }
-
-.why-choose-title::after {
-  content: "";
-  width: 70px;
-  height: 3px;
-  background: linear-gradient(90deg, #ff7e5f, #feb47b);
-  display: block;
-  margin: 12px auto 0;
-  border-radius: 2px;
-}
-
-.why-choose-subtitle {
+.flex-subtitle {
   text-align: center;
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 50px;
+  font-size: 1.08rem;
+  margin-bottom: 44px;
+  color: #5d6b82;
 }
-
-.features-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px 50px;
-}
-
-.feature-item {
+.flex-list {
   display: flex;
-  align-items: flex-start;
-  gap: 18px;
-  transition: transform 0.3s ease;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
 }
-
-.feature-item:hover {
-  transform: translateX(8px);
+.flex-card {
+  background: #f9f9fc;
+  border-radius: 15px;
+  padding: 36px 22px 28px 22px;
+  flex: 1 1 260px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 18px rgba(40,40,110,0.10);
+  position: relative;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1px solid #e4eaff;
 }
-
-.feature-icon {
-  flex-shrink: 0;
-  width: 55px;
-  height: 55px;
+.flex-card:hover {
+  box-shadow: 0px 8px 30px rgba(55,70,130,0.13);
+  transform: translateY(-5px) scale(1.03);
+}
+.flex-icon {
+  background: linear-gradient(135deg,#67e8f9,#e0e7ff);
   border-radius: 50%;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  width: 54px;
+  height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 14px rgba(255,126,95,0.35);
+  margin-bottom: 13px;
+  box-shadow: 0 4px 12px rgba(55,198,220,0.08);
 }
-
-.feature-icon svg {
-  width: 28px;
-  height: 28px;
-  stroke: #fff;
-  stroke-width: 2;
+.flex-icon svg {
+  width: 25px;
+  height: 25px;
+  stroke: #233e8b;
+  stroke-width: 2.2;
   fill: none;
 }
-
-.feature-text h3 {
-  font-size: 20px;
+.flex-label {
+  font-size: 1.18rem;
   font-weight: 700;
-  color: #333;
-  margin-bottom: 6px;
+  color: #2656a5;
+  margin-bottom: 7px;
+  text-align: center;
 }
-
-.feature-text p {
-  font-size: 15px;
-  color: #666;
-  line-height: 1.6;
+.flex-desc {
+  font-size: 0.98rem;
+  color: #626a7b;
+  text-align: center;
+  line-height: 1.52;
+}
+@media(max-width:800px) {
+  .flex-list { flex-direction: column; align-items: center;}
+  .flex-card {max-width: 92%;}
 }
 </style>
-
-<section class="why-choose-us">
-  <div class="why-choose-container">
-    <h2 class="why-choose-title">Why Choose Us</h2>
-    <p class="why-choose-subtitle">Here’s why businesses trust RS Organisation</p>
-
-    <div class="features-list">
-
-      <div class="feature-item">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+<section class="why-flex">
+  <div class="container">
+    <h2 class="flex-title">Why Choose Us</h2>
+    <p class="flex-subtitle">Benefits that make us stand out</p>
+    <div class="flex-list">
+      <div class="flex-card">
+        <div class="flex-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 21l-8-11h16z"/></svg>
         </div>
-        <div class="feature-text">
-          <h3>Proven Experience</h3>
-          <p>Years of expertise delivering consistent and reliable growth.</p>
-        </div>
+        <div class="flex-label">Proven Results</div>
+        <div class="flex-desc">Our projects deliver measurable, lasting improvements.</div>
       </div>
-
-      <div class="feature-item">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 8v8m-4-4h8"/></svg>
+      <div class="flex-card">
+        <div class="flex-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
         </div>
-        <div class="feature-text">
-          <h3>Tailored Solutions</h3>
-          <p>Strategies designed specifically around your unique business needs.</p>
-        </div>
+        <div class="flex-label">Quality Commitment</div>
+        <div class="flex-desc">Every detail of our work meets rigorous standards.</div>
       </div>
-
-      <div class="feature-item">
-        <div class="feature-icon">
+      <div class="flex-card">
+        <div class="flex-icon">
           <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
         </div>
-        <div class="feature-text">
-          <h3>Transparency</h3>
-          <p>Clear reporting and insights to keep you informed every step.</p>
-        </div>
+        <div class="flex-label">Transparent Process</div>
+        <div class="flex-desc">Open project updates and honest communication always.</div>
       </div>
-
-      <div class="feature-item">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 6V4m0 16v-2M6 12H4m16 0h-2"/></svg>
+      <div class="flex-card">
+        <div class="flex-icon">
+          <svg viewBox="0 0 24 24"><path d="M7 7h10v10H7z"/></svg>
         </div>
-        <div class="feature-text">
-          <h3>Affordable Packages</h3>
-          <p>Cost-effective digital marketing with uncompromised quality.</p>
-        </div>
+        <div class="flex-label">Affordable Pricing</div>
+        <div class="flex-desc">Get elite solutions that fit your budget and goals.</div>
       </div>
-
-      <div class="feature-item">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2l9 21H3L12 2z"/></svg>
+      <div class="flex-card">
+        <div class="flex-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3 3"/></svg>
         </div>
-        <div class="feature-text">
-          <h3>Expert Team</h3>
-          <p>Specialists committed to growing your brand with proven tactics.</p>
-        </div>
+        <div class="flex-label">Responsive Team</div>
+        <div class="flex-desc">We act quickly and adapt to your evolving needs.</div>
       </div>
-
-      <div class="feature-item">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01"/></svg>
-        </div>
-        <div class="feature-text">
-          <h3>ROI Focused</h3>
-          <p>We measure success through growth, conversions, and real ROI.</p>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
+
 
 <br><br><br>
 <!--  -->

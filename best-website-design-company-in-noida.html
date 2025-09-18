@@ -106,59 +106,60 @@
 
 <!-- section-1 with background image -->
 
-<section class="website-design-section">
+<section class="website-banner-section">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    .website-design-section {
-      min-height: 80vh;
-      background: url('https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/af80c9bb-4e0d-4fdb-ab56-7293c0a7ae5c.png') no-repeat center center;
-      background-size: cover;
+    .website-banner-section {
+      min-height: 90vh;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start; /* left aligned */
       align-items: center;
       font-family: 'Inter', sans-serif;
-      padding: 0;
-      box-sizing: border-box;
       position: relative;
       overflow: hidden;
+      background: url('https://zentroa.com/wp-content/uploads/2024/08/zentroa-slider5.jpg') no-repeat center center/cover;
     }
-    .wd-overlay {
+
+    /* Strong overlay for highlight */
+    .banner-overlay {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(255,255,255,0.3); /* Subtle overlay for text readability */
+      background: rgba(0, 0, 0, 0.353); /* darker for strong contrast */
       z-index: 1;
     }
-    .wd-container {
-      max-width: 1200px;
-      width: 100%;
-      padding: 4rem 2rem;
+
+    .banner-content {
+      max-width: 750px;
       text-align: left;
-      position: relative;
+      color: #ffffff7a;
       z-index: 2;
-      color: #333;
+      position: relative;
+      padding: 2rem 3rem;
+      top: 0px !important;
     }
-    .wd-title {
-      font-size: 3rem;
+
+    .banner-title {
+      font-size: 3.2rem;
       font-weight: 800;
-      color: #d84371;
       margin-bottom: 20px;
       line-height: 1.1;
-      background: linear-gradient(90deg, #d84371 20%, #4e8dd1 90%);
+      background: linear-gradient(90deg, #ff7e5f, #feb47b);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .wd-desc {
-      font-size: 1.3rem;
-      color: #222;
+
+    .banner-desc {
+      font-size: 1.2rem;
       margin-bottom: 32px;
       line-height: 1.7;
-      max-width: 800px;
+      color: #f1f1f18f;
     }
-    .wd-btn {
+
+    .banner-btn {
       padding: 14px 34px;
       border-radius: 30px;
       background: linear-gradient(90deg, #4e8dd1 30%, #fb8600 100%);
@@ -167,39 +168,53 @@
       font-size: 1rem;
       letter-spacing: 0.08em;
       border: none;
-      box-shadow: 0 5px 16px rgba(78,141,209,0.16);
+      box-shadow: 0 5px 16px rgba(0,0,0,0.3);
       margin-right: 16px;
       cursor: pointer;
       transition: transform 0.2s;
       text-transform: uppercase;
     }
-    .wd-btn:hover {
+
+    .banner-btn:hover {
       transform: scale(1.05);
       background: linear-gradient(90deg, #fb8600 20%, #4e8dd1 100%);
     }
+
     @media (max-width:950px) {
-      .wd-container {
-        padding: 3rem 1.5rem;
+      .banner-content {
+        max-width: 100%;
         text-align: center;
+        padding: 2rem;
+
       }
-    }
-    @media (max-width:600px) {
-      .wd-title {
-        font-size: 2.2rem;
+      .banner-title {
+        font-size: 2.4rem;
       }
-      .wd-desc { font-size: 1.1rem;}
+      .banner-desc {
+        font-size: 1.1rem;
+      }
     }
   </style>
-  <div class="wd-overlay"></div>
-  <div class="wd-container">
-    <div class="wd-title">Best Website Designing Company in Noida</div>
-    <div class="wd-desc">
-      Finding the right website designing company in Noida can be the turning point for your online business success. RS Organisation is a trusted name in creative, modern, and business-focused website designing services in Noida that help brands leave a strong digital footprint. With years of expertise, our team ensures your website not only looks great but also performs seamlessly to attract, engage, and convert visitors.
+
+  <!-- Overlay -->
+  <div class="banner-overlay"></div>
+
+  <!-- Text Content -->
+  <div class="banner-content">
+    <div class="banner-title">Best Website Designing Company in Noida</div>
+    <div class="banner-desc">
+      Finding the right website designing company in Noida can be the turning point for your online business success. 
+      RS Organisation is a trusted name in creative, modern, and business-focused website designing services in Noida 
+      that help brands leave a strong digital footprint. With years of expertise, our team ensures your website not 
+      only looks great but also performs seamlessly to attract, engage, and convert visitors.
     </div>
-    <button class="wd-btn">Get Started</button>
-    <button class="wd-btn" style="background:linear-gradient(90deg,#fb8600,#4e8dd1);">View Portfolio</button>
+    <button class="banner-btn">Get Started</button>
+    <button class="banner-btn" style="background:linear-gradient(90deg,#fb8600,#4e8dd1);">View Portfolio</button>
+      <br> <br>
+
   </div>
 </section>
+
 
 <!-- end -->
 
@@ -277,103 +292,191 @@
 <!--  -->
 
 <!-- section-5 card process (with the connecting line restored) -->
-<!-- section-5 card process (with the connecting line restored) -->
-<section class="seo-section">
-  <!-- Background Shapes -->
-  <div class="shape shape1"></div>
-  <div class="shape shape2"></div>
-  <div class="shape shape3"></div>
+<!-- Why Choose Section -->
+<section class="why_choos_1">
+  <div class="container">
 
-  <div class="seo-content">
-    <h2><span class="icon">&#128187;</span> Working Areas – <span style="color: #00b2ff;"> Make Your Online Presence Impressive with The Creative Website Design Service</span> </h2>
-    <p>
-      RS Organisation provides website designing services in Noida across multiple industries including 
-      e-commerce, healthcare, real estate, education, travel, hospitality, and more. Our goal is to create 
-      websites that combine creativity, usability, and technical performance. With innovative design strategies 
-      and advanced tools, we ensure your website becomes your strongest marketing asset.
-    </p>
+    <!-- Heading -->
+    <div class="heading">
+      <h2> Why Choose <span>RS Organisation</span> as the Best Website Designing Agency in Noida</h2>
+      <p>
+        RS Organisation is your trusted partner for professional and impactful website design in Noida. 
+        Our focus is on delivering creative, business-driven, and user-friendly websites that leave a lasting impression.
+      </p>
+    </div>
+
+    <!-- Feature Grid -->
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>📈 Proven Expertise in Web Design</h3>
+        <p>
+          At RS Organisation, we combine creativity with technical excellence. Our team has years of experience crafting websites 
+          that not only look stunning but also perform seamlessly. Every design is backed by user-friendly navigation, responsive layouts, and proven expertise.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>🎯 Authoritative Industry Knowledge</h3>
+        <p>
+          We stay ahead of industry trends, using the latest tools and strategies in web design. Our authority comes from delivering results-driven websites 
+          that reflect your brand identity and align with global standards, ensuring long-term growth and online visibility.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>🤝 Transparent and Trustworthy Practices</h3>
+        <p>
+          Trust is at the core of RS Organisation. From consultation to delivery, we follow transparent communication, realistic timelines, and ethical design practices. 
+          Our clients rely on us for honest guidance, ensuring they invest in solutions that truly benefit their business.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>🎨 Tailored Designs for Every Business</h3>
+        <p>
+          We believe no two businesses are alike. RS Organisation creates fully customized website designs that reflect your brand voice, 
+          target audience, and goals. Our approach ensures your digital presence stands out in Noida’s competitive market with measurable impact.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>🚀 Strong SEO and Performance Focus</h3>
+        <p>
+          A beautiful website is incomplete without visibility. RS Organisation integrates SEO-friendly structures, fast loading speeds, 
+          and mobile optimization in every project. This performance-driven approach ensures your site ranks higher, attracts visitors, and converts them into loyal customers effectively.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>🔒 Long-Term Support and Reliability</h3>
+        <p>
+          Our responsibility doesn’t end with website delivery. RS Organisation provides continuous support, updates, and maintenance to keep your website secure and future-ready. 
+          Clients trust us for reliability, timely assistance, and building long-lasting partnerships that fuel sustainable business growth.
+        </p>
+      </div>
+    </div>
+
   </div>
 </section>
 
+
+
+<!-- CSS -->
 <style>
-.seo-section {
-  position: relative;
-  background: #ffffff;
+.why_choos_1 {
+  background: #fff;
   padding: 80px 20px;
+  position: relative;
   overflow: hidden;
-  font-family: Arial, sans-serif;
   border-radius: 12px;
 }
 
-.seo-content {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: left;
+/* Abstract Background Shapes */
+.why_choos_1::before, .why_choos_1::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+.why_choos_1::before {
+  width: 350px;
+  height: 350px;
+  background: rgba(76, 175, 80, 0.08);
+  top: -120px;
+  left: -120px;
+}
+.why_choos_1::after {
+  width: 250px;
+  height: 250px;
+  background: rgba(0, 150, 136, 0.08);
+  bottom: -100px;
+  right: -100px;
+}
+
+/* Container */
+.why_choos_1 .container {
+  max-width: 1200px;
+  margin: auto;
   position: relative;
   z-index: 2;
 }
 
-.seo-content h2 {
-  font-size: 2rem;
+/* Heading */
+.why_choos_1 .heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.why_choos_1 .heading h2 {
+  font-size: 32px;
+  font-weight: 700;
   color: #111;
+}
+.why_choos_1 .heading h2 span {
+  color: #4caf50;
+}
+.why_choos_1 .heading p {
+  font-size: 18px;
+  color: #555;
+  margin-top: 15px;
+}
+
+/* Features Grid */
+.why_choos_1 .features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+.why_choos_1 .feature-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+.why_choos_1 .feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+.why_choos_1 .feature-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #2e7d32;
+}
+.why_choos_1 .feature-card p {
+  font-size: 16px;
+  color: #444;
+}
+
+/* CTA Box */
+.why_choos_1 .cta-box {
+  text-align: center;
+  margin-top: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.why_choos_1 .cta-box p {
+  font-size: 18px;
   margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
-
-.seo-content p {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #4e4848;
+.why_choos_1 .btn-primary {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 8px;
+  background: #fff;
+  color: #2e7d32;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
-
-.icon {
-  font-size: 2.5rem;
-  color: #1e88e5;
-}
-
-/* Background Shapes */
-.shape {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.15;
-  z-index: 1;
-  animation: float 10s infinite ease-in-out alternate;
-}
-
-.shape1 {
-  width: 150px;
-  height: 150px;
-  background: #1e88e5;
-  top: -50px;
-  left: -50px;
-}
-
-.shape2 {
-  width: 200px;
-  height: 200px;
-  background: #ff7043;
-  bottom: -100px;
-  right: -100px;
-  animation-duration: 15s;
-}
-
-.shape3 {
-  width: 100px;
-  height: 100px;
-  background: #43a047;
-  top: 50%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-  animation-duration: 12s;
-}
-
-/* Floating Animation */
-@keyframes float {
-  0% { transform: translateY(0) translateX(0); }
-  50% { transform: translateY(-30px) translateX(20px); }
-  100% { transform: translateY(0) translateX(0); }
+.why_choos_1 .btn-primary:hover {
+  background: #f5f5f5;
+  transform: scale(1.05);
 }
 </style>
 

@@ -107,12 +107,13 @@
 <!-- Replace your original hero section with this -->
 <!-- SEO Section -->
 <section class="seo-section">
-  <div class="overlay"></div>
-  <div class="seo-content">
-    <h3 class="subtitle">GROWTH-DRIVEN</h3>
-    <h1 class="title">BEST SEO AGENCY IN DEHRADUN</h1>
-    <p class="tagline">
-           
+  <div class="seo-container">
+    
+    <!-- Left Section (Text) -->
+    <div class="seo-left bubble-hover">
+      <h3 class="subtitle">GROWTH-DRIVEN</h3>
+      <h1 class="title">BEST SEO AGENCY IN DEHRADUN</h1>
+      <p class="tagline">
         If you are looking for the most trusted and performance-driven 
         <strong>SEO Agency in Dehradun</strong>, RS Organisation is your ideal partner. 
         As a top SEO company in Dehradun, we specialize in crafting strategies 
@@ -122,28 +123,14 @@
         engaging content, and powerful link-building strategies. Whether 
         you are a startup or an established business, our tailored SEO 
         solutions will help you scale and outperform your competition.
-    
-    </p>
-    
-    <!-- <div class="logos">
-      <img src="https://seeklogo.com/images/S/semrush-logo-8512E69E06-seeklogo.com.png" alt="Semrush Certified">
-      <img src="https://seeklogo.com/images/H/hubspot-logo-31B3B3C0C3-seeklogo.com.png" alt="Hubspot Partner">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Meta_Platforms_Inc._logo.svg" alt="Meta Partner">
-      <img src="https://upload.wikimedia.org/commons/2/2f/Google_2015_logo.svg" alt="Google Partner">
-    </div> -->
-
-    <div class="cta-box">
-      <div class="cta-text">
-        <h2>READY TO START?</h2>
-        <p>TAKE YOUR BUSINESS TO A NEW LEVEL WITH RS ORGANISATION</p>
-      </div>
-      <div class="cta-buttons">
-        <a href="#expert" class="btn black">TALK TO OUR EXPERT!</a>
-        <a href="#audit" class="btn green">FREE WEBSITE AUDIT</a>
-      </div>
+      </p>
     </div>
 
-  
+    <!-- Right Section (Image) -->
+    <div class="seo-right">
+      <img src="https://seoshope.com/wp-content/uploads/2021/11/SEOshope-Homepage.png" alt="SEO Services">
+    </div>
+
   </div>
 </section>
 
@@ -151,128 +138,125 @@
 <style>
 .seo-section {
   position: relative;
-  background: url('https://s7ap1.scene7.com/is/image/incredibleindia/mountains-dehradun-uttrakhand-city-1-hero?qlt=82&ts=1742155351343') no-repeat center center/cover;
-  color: #fff;
+  background: #FFFFFF;
   padding: 80px 20px;
-  text-align: center;
+  color: #111;
 }
-.seo-section .overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 1;
-}
-.seo-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.seo-content .subtitle {
-  color: #9ef01a;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-.seo-content .title {
-  font-size: 42px;
-  font-weight: 700;
-}
-.seo-content .tagline {
-  margin: 15px 0 30px;
-  font-size: 18px;
-  color: #ffffff;
-}
-.logos {
+
+.seo-container {
+  max-width: 1200px;
+  margin: -86px auto;
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-.logos img {
-  height: 50px;
-  object-fit: contain;
-}
-.cta-box {
-  background: linear-gradient(90deg, #9ef01a, #4caf502e);
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin: 30px auto;
-  max-width: 1000px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  gap: 40px;
+  flex-wrap: wrap;
 }
-.cta-text {
-  text-align: left;
-  color: #000;
+
+/* Left content */
+.seo-left {
   flex: 1;
+  text-align: justify; /* justify text */
 }
-.cta-text h2 {
-  margin: 0;
+.seo-left .subtitle {
+  color: #185FAC;
   font-size: 22px;
-  font-weight: 700;
-}
-.cta-text p {
-  margin: 5px 0 0;
-  font-size: 14px;
-}
-.cta-buttons {
-  display: flex;
-  gap: 15px;
-  margin-top: 10px;
-}
-.btn {
-  padding: 12px 20px;
-  border-radius: 6px;
+  margin-bottom: 10px;
   font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
+  text-align: left; /* keep subtitle left aligned */
 }
-.btn.black {
-  background: #000;
-  color: #fff;
+.seo-left .title {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #222;
+  text-align: left; /* keep heading left aligned */
 }
-.btn.black:hover {
-  background: #333;
-}
-.btn.green {
-  background: #c6ff00;
-  color: #000;
-}
-.btn.green:hover {
-  background: #aee100;
-}
-.extra-text {
-  margin-top: 40px;
-  font-size: 16px;
+.seo-left .tagline {
+  font-size: 18px;
   line-height: 1.6;
+  color: #444;
   text-align: justify;
 }
-@media(max-width: 768px) {
-  .seo-content .title {
-    font-size: 30px;
+
+/* Right image */
+.seo-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.seo-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Bubble hover effect */
+.bubble-hover {
+  position: relative;
+}
+.bubble-hover::before,
+.bubble-hover::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #185FAC;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0);
+}
+.bubble-hover:hover::before,
+.bubble-hover:hover::after {
+  animation: bubbles 1.5s ease-out infinite;
+}
+.bubble-hover::before {
+  top: -10px;
+  left: 20%;
+}
+.bubble-hover::after {
+  bottom: -10px;
+  right: 25%;
+}
+
+@keyframes bubbles {
+  0% {
+    transform: scale(0.5) translateY(0);
+    opacity: 0.6;
   }
-  .cta-box {
+  50% {
+    transform: scale(1.2) translateY(-15px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.3) translateY(-30px);
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+@media(max-width: 950px) {
+  .seo-container {
     flex-direction: column;
     text-align: center;
   }
-  .cta-text {
+  .seo-left .title {
+    font-size: 28px;
     text-align: center;
-    margin-bottom: 15px;
   }
-  .cta-buttons {
-    flex-direction: column;
-    width: 100%;
-  }
-  .cta-buttons .btn {
-    width: 100%;
+  .seo-left .subtitle {
     text-align: center;
+  }
+  .seo-left .tagline {
+    text-align: justify;
+  }
+  .seo-right {
+    margin-top: 30px;
   }
 }
 </style>
+
 
 
 <!-- end -->
