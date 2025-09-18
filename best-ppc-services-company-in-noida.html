@@ -106,68 +106,45 @@
 
 <!-- section-1 with background image -->
 
-<section class="hero-section" id="heroSection">
-  <!-- Lottie Player -->
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<section class="hero-section">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-    }
+
 
     .hero-section {
       min-height: 100vh;
-      background: #ffffff;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Inter', sans-serif;
-    }
-
-    /* Updated Parallax background - New PPC-related banner image */
-    .hero-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 120%;
-      background: url('https://img.freepik.com/free-vector/pay-per-click-concept-illustration_114360-4814.jpg?size=626&ext=jpg&ga=GA1.1.2000050994.1719273600&semt=ais_hybrid') no-repeat center center;
+      background: url('https://www.mightywarner.ae/uploads/sub_service/desktop_banner/paid-ads-management.jpg') no-repeat center center;
       background-size: cover;
-      transform: translateY(0px);
-      transition: transform 0.1s linear;
-      z-index: 0;
-      opacity: 0.9; /* Slight opacity for better text readability */
-    }
-
-    .hero-container {
       display: flex;
-      width: 100%;
-      max-width: 1200px;
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      justify-content: flex-start; /* text on left side */
+      font-family: 'Inter', sans-serif;
+      padding: 3rem;
       position: relative;
-      z-index: 10;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.8); /* Semi-transparent overlay for contrast */
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
-    .left-panel {
-      flex: 1;
-      min-width: 300px;
-      padding: 2rem;
+    /* Dark overlay for readability */
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 650px;
+      color: #fff;
+      text-align: left;
     }
 
     .main-heading {
       font-size: 3rem;
       font-weight: 800;
-      background: linear-gradient(90deg, #4e8dd1, #fb8600, #28b5e0); /* Updated gradient to match PPC theme colors */
+      background: linear-gradient(90deg, #4e8dd1, #fb8600, #28b5e0);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -176,97 +153,32 @@
 
     .description-text {
       font-size: 1.1rem;
-      color: #333;
       line-height: 1.6;
       margin-bottom: 2rem;
-    }
-
-    .description-text p {
-      margin-bottom: 1rem; /* Spacing between paragraphs */
+      color: #eee;
     }
 
     .morph-button {
       padding: 14px 28px;
-      border-radius: 30px; /* Rounded for modern UI */
+      border-radius: 30px;
+      background: #4e8dd1;
+      color: #fff;
+      border: none;
+      font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
-      border: none;
       transition: all 0.3s ease;
-      margin-right: 1rem;
-      text-transform: uppercase;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, #fb8600, #4e8dd1);
-      color: white;
+    .morph-button:hover {
+      background: #fb8600;
+      transform: scale(1.05);
     }
 
-    .btn-primary:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 10px 30px rgba(251, 134, 0, 0.5);
-    }
-
-    .btn-secondary {
-      background: linear-gradient(135deg, #28b5e0, #00bfff);
-      color: white;
-    }
-
-    .btn-secondary:hover {
-      transform: translateY(-2px) scale(1.05);
-      box-shadow: 0 6px 20px rgba(40, 181, 224, 0.4);
-    }
-
-    .right-panel {
-      flex: 1;
-      min-width: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    .glow-background {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 400px;
-      height: 400px;
-      transform: translate(-50%, -50%);
-      background: radial-gradient(circle, rgba(251, 134, 0, 0.5), rgba(78, 141, 209, 0.3), rgba(40, 181, 224, 0.2));
-      border-radius: 50%;
-      filter: blur(80px);
-      z-index: 0;
-      animation: pulseGlow 6s ease-in-out infinite;
-    }
-
-    @keyframes pulseGlow {
-      0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
-      50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.9; }
-    }
-
-    .main-lottie {
-      width: 350px;
-      max-width: 90%;
-      position: relative;
-      z-index: 1;
-      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2)); /* Added shadow for depth */
-    }
-
-    @media (max-width: 768px) {
-      .hero-container {
-        flex-direction: column;
-        text-align: center;
-      }
-      .left-panel, .right-panel {
-        padding: 1rem;
-      }
+    /* Responsive */
+    @media(max-width: 768px) {
       .main-heading {
-        font-size: 2.5rem;
-      }
-      .morph-button {
-        margin: 0.5rem 0;
-        width: 100%; /* Full width buttons on mobile */
+        font-size: 2.2rem;
       }
       .description-text {
         font-size: 1rem;
@@ -274,45 +186,24 @@
     }
   </style>
 
-  <!-- Parallax Background -->
-  <div class="hero-background"></div>
+  <div class="hero-content">
+    <h1 class="main-heading">Best PPC Company in Noida</h1>
+    <p class="description-text">
+      In today’s competitive digital market, businesses need instant visibility and quality leads to stay ahead of their competitors. 
+      RS Organisation, a trusted PPC Company in Noida, specializes in creating high-performing campaigns that deliver measurable results. 
+      Our expertise lies in running targeted ads that not only attract visitors but also generate genuine leads, helping businesses grow efficiently.
+    </p>
+    <p class="description-text">
+      As a reliable PPC agency in Noida, we understand that pay-per-click campaigns are more than just ads. 
+      They are a way to connect with the right audience at the right time. 
+      With our customized strategies, continuous monitoring, and optimization techniques, 
+      we ensure that your advertising budget brings maximum ROI.
+    </p>
+<a href="#" class="news-button" >
+      Share your requirements
 
-  <div class="hero-container">
-    <!-- Left Panel -->
-    <div class="left-panel">
-      <h1 class="main-heading">Best PPC Company in Noida</h1>
-      <div class="description-text">
-        <p>In today’s competitive digital market, businesses need instant visibility and quality leads to stay ahead of their competitors. RS Organisation, a trusted PPC Company in Noida, specializes in creating high-performing campaigns that deliver measurable results. Our expertise lies in running targeted ads that not only attract visitors but also generate genuine leads, helping businesses grow efficiently.</p>
-        <p>As a reliable PPC agency in Noida, we understand that pay-per-click campaigns are more than just ads. They are a way to connect with the right audience at the right time. With our customized strategies, continuous monitoring, and optimization techniques, we ensure that your advertising budget brings maximum ROI.</p>
-      </div>
-      <div>
-        <button class="morph-button btn-primary">Start Campaign</button>
-        <button class="morph-button btn-secondary">View Demo</button>
-      </div>
-    </div>
-
-    <!-- Right Panel -->
-    <div class="right-panel">
-      <div class="glow-background"></div>
-      <lottie-player
-        class="main-lottie"
-        src="https://assets9.lottiefiles.com/packages/lf20_qp1q7mct.json"
-        background="transparent"
-        speed="1"
-        loop
-        autoplay>
-      </lottie-player>
-    </div>
+      </a>
   </div>
-
-  <script>
-    // Simple parallax effect
-    const heroBg = document.querySelector('.hero-background');
-    window.addEventListener('scroll', () => {
-      let offset = window.pageYOffset;
-      heroBg.style.transform = `translateY(${offset * 0.3}px)`;
-    });
-  </script>
 </section>
 
 
@@ -321,7 +212,7 @@
 
 <section class="wp-section">
   <div class="wp-image">
-    <img style="width: 80%;" src="https://www.rsorganisation.com/assets/images/ppc2.png" alt="WordPress Development" />
+    <img style="width: 80%;" src="https://awrange.ae/wp-content/uploads/2024/01/xpay-per-click-login-website-payment-graphic-conceptop.webp.pagespeed.ic.xpoNw6d9Cu.webp" alt="WordPress Development" />
   </div>
   <div class="wp-text">
     <h2>Best PPC Company in Noida</h2>
@@ -807,178 +698,182 @@ A professional PPC agency in Noida like RS Organisation can transform your busin
     </p>
 
     <div class="process-bottom">
-      <div class="process-visual">
+      <!-- <div class="process-visual">
         <div class="circle-step"></div>
         <div class="process-arrow">→</div>
         <div class="step-label">Launch & Maintenance</div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
 
 <!-- --------------- -->
 <!-- why choose us section -->
-<style>
-.why-choose-us {
-  padding: 80px 20px;
-  background: #fff9f5;
-  font-family: "Poppins", sans-serif;
-}
+<!-- Why Choose Section -->
+<section class="why_choos_1">
+  <div class="container">
 
-.why-choose-container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.why-choose-title {
-  text-align: center;
-  font-size: 38px;
-  font-weight: 800;
-  color: #222;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.why-choose-title::after {
-  content: "";
-  width: 70px;
-  height: 3px;
-  background: linear-gradient(90deg, #ff7e5f, #feb47b);
-  display: block;
-  margin: 12px auto 0;
-  border-radius: 2px;
-}
-
-.why-choose-subtitle {
-  text-align: center;
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 50px;
-}
-
-.features-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px 50px;
-}
-
-.feature-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
-  transition: transform 0.3s ease;
-}
-
-.feature-item:hover {
-  transform: translateX(8px);
-}
-
-.feature-icon {
-  flex-shrink: 0;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 6px 14px rgba(255,126,95,0.35);
-}
-
-.feature-icon svg {
-  width: 28px;
-  height: 28px;
-  stroke: #fff;
-  stroke-width: 2;
-  fill: none;
-}
-
-.feature-text h3 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 6px;
-}
-
-.feature-text p {
-  font-size: 15px;
-  color: #666;
-  line-height: 1.6;
-}
-</style>
-
-<section class="why-choose-us">
-  <div class="why-choose-container">
-    <h2 class="why-choose-title">Why Choose Us</h2>
-    <p class="why-choose-subtitle">Here’s why businesses trust RS Organisation</p>
-
-<div class="features-list">
-
-  <div class="feature-item">
-    <div class="feature-icon">
-      <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+    <!-- Heading -->
+    <div class="heading">
+      <h2>Why Choose <span>RS Organisation</span> for Your SEO Services?</h2>
+      <p>
+        RS Organisation is a Noida-based SEO company delivering high-quality SEO services across India, including Dehradun. 
+        What sets us apart is our commitment to <strong>ethical practices, transparency, and business-focused strategies.</strong>
+      </p>
     </div>
-    <div class="feature-text">
-      <h3>Proven Expertise</h3>
-      <p>RS Organisation is a trusted PPC Company in Noida with years of experience managing successful ad campaigns for diverse industries.</p>
-    </div>
-  </div>
 
-  <div class="feature-item">
-    <div class="feature-icon">
-      <svg viewBox="0 0 24 24"><path d="M12 8v8m-4-4h8"/></svg>
+    <!-- Feature Grid -->
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>📈 Proven Track Record</h3>
+        <p>Years of experience delivering measurable SEO results for businesses.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🎯 Customized Strategies</h3>
+        <p>Every business is unique, so we design personalized SEO campaigns.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🌐 Comprehensive Services</h3>
+        <p>From on-page to local SEO in Dehradun, we cover all aspects.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🛠️ Advanced Tools & Techniques</h3>
+        <p>We use the latest SEO tools for precise analysis and optimization.</p>
+      </div>
+      <div class="feature-card">
+        <h3>👨‍💻 Expert Team</h3>
+        <p>A team of SEO specialists ensuring consistent monitoring & performance improvements.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🌱 Sustainable Growth</h3>
+        <p>We deliver SEO services that not only rank but also sustain long-term growth.</p>
+      </div>
     </div>
-    <div class="feature-text">
-      <h3>Customized Campaigns</h3>
-      <p>Every campaign is designed based on your business goals and target audience, no one-size-fits-all approach.</p>
-    </div>
-  </div>
 
-  <div class="feature-item">
-    <div class="feature-icon">
-      <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-    </div>
-    <div class="feature-text">
-      <h3>Affordable Solutions</h3>
-      <p>Our packages suit startups, SMEs, and enterprises without compromising on quality or performance.</p>
-    </div>
-  </div>
-
-  <div class="feature-item">
-    <div class="feature-icon">
-      <svg viewBox="0 0 24 24"><path d="M12 6V4m0 16v-2M6 12H4m16 0h-2"/></svg>
-    </div>
-    <div class="feature-text">
-      <h3>Transparent Reporting</h3>
-      <p>We provide detailed reports and insights so you can track the progress of your campaigns.</p>
-    </div>
-  </div>
-
-  <div class="feature-item">
-    <div class="feature-icon">
-      <svg viewBox="0 0 24 24"><path d="M12 2l9 21H3L12 2z"/></svg>
-    </div>
-    <div class="feature-text">
-      <h3>Certified Professionals</h3>
-      <p>Our team consists of Google Ads certified experts who bring knowledge, creativity, and technical expertise.</p>
-    </div>
-  </div>
-
-  <div class="feature-item">
-    <div class="feature-icon">
-      <svg viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01"/></svg>
-    </div>
-    <div class="feature-text">
-      <h3>Focus on ROI</h3>
-      <p>Every campaign is optimized for maximum conversions, ensuring the best possible return on investment.</p>
-    </div>
-  </div>
-
-</div>
+  
 
   </div>
 </section>
 
+
+<!-- CSS -->
+<style>
+.why_choos_1 {
+  background: #fff;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Abstract Background Shapes */
+.why_choos_1::before, .why_choos_1::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+.why_choos_1::before {
+  width: 350px;
+  height: 350px;
+  background: rgba(76, 175, 80, 0.08);
+  top: -120px;
+  left: -120px;
+}
+.why_choos_1::after {
+  width: 250px;
+  height: 250px;
+  background: rgba(0, 150, 136, 0.08);
+  bottom: -100px;
+  right: -100px;
+}
+
+/* Container */
+.why_choos_1 .container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Heading */
+.why_choos_1 .heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.why_choos_1 .heading h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+}
+.why_choos_1 .heading h2 span {
+  color: #4caf50;
+}
+.why_choos_1 .heading p {
+  font-size: 18px;
+  color: #555;
+  margin-top: 15px;
+}
+
+/* Features Grid */
+.why_choos_1 .features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+.why_choos_1 .feature-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+.why_choos_1 .feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+.why_choos_1 .feature-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #2e7d32;
+}
+.why_choos_1 .feature-card p {
+  font-size: 16px;
+  color: #444;
+}
+
+/* CTA Box */
+.why_choos_1 .cta-box {
+  text-align: center;
+  margin-top: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.why_choos_1 .cta-box p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.why_choos_1 .btn-primary {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 8px;
+  background: #fff;
+  color: #2e7d32;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.why_choos_1 .btn-primary:hover {
+  background: #f5f5f5;
+  transform: scale(1.05);
+}
+</style>
 
 <!-- lottt pie -->
 
