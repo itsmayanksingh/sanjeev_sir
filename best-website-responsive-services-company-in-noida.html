@@ -51,213 +51,609 @@
       </div>
     </div>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg p-3">
-      <div class="container-fluid p-0">
-        <div class="navbar-container p-0">
-          <!-- logo -->
-          <a href="/"><img src="assets/images/svg/logo.svg" class="logo" alt="logo" /></a>
-          <!-- toggle button -->
-          <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <img src="assets/images/svg/toggle-img.svg" height="16" width="16" class="toggle-img" />
-          </button>
-        </div>
-        <!-- navbar list -->
-        <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
-          <div class="d-flex ms-auto me-0 navbar-list">
-            <ul class="navbar-nav scalable-gap-30-20 me-auto mb-2 mb-lg-0 mb-0">
-              <li class="nav-item">
-                <a href="index.html" class="active" aria-current="page" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="" href="#">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="" href="#">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="" href="#">Career</a>
-              </li>
-              <li class="nav-item">
-                <a class="" href="#">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="" href="#">Free Website Audit</a>
-              </li>
-            </ul>
-            <div class="d-flex align-items-center gap-3">
-              <a href="#" class="primary-btn font-16 semibold d-flex align-items-center gap-1" role="button">Request a
-                call back
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                  <path
-                    d="M9.7731 4L9.32484 5.49182L14.2396 6.7165L3 13.1205L3.75436 14.4444L14.994 8.04048L13.5348 12.8968L15.0536 13.2679L17.279 5.86166L9.7731 4Z"
-                    fill="white" />
-                </svg>
-              </a>
+<!-- section: navbar001 (copy this section only into your page) -->
+<section class="navbar001" aria-label="Main navigation">
+  <div class="navwrap001">
+    <div class="brand001">
+      <img src="https://via.placeholder.com/160x48?text=tomsher+tech" alt="brand" class="brandimg001">
+    </div>
+
+    <ul class="menu001" id="mainMenu001" role="menubar">
+      <!-- ECOMMERCE -->
+      <li class="menuitem001 has-mega001" role="none">
+        <a class="menulink001" role="menuitem" aria-haspopup="true" aria-expanded="false">
+          ECOMMERCE <span class="caret001">▾</span>
+        </a>
+
+        <div class="mega001" role="region" aria-hidden="true">
+          <div class="megagrid001">
+            <div class="megacol001">
+              <h3 class="megatitle001">E-COMMERCE PLATFORMS</h3>
+              <ul class="megalist001">
+                <li class="merow001" tabindex="0" data-href="#custom"><span class="ico001" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 6h18" stroke="#6b7780" stroke-width="2" stroke-linecap="round"/></svg>
+                </span>
+                  <div class="meta001"><b>Custom E-Commerce Development</b><small>Build custom ecommerce in MERN, Laravel, VueJs</small></div>
+                </li>
+
+                <li class="merow001" tabindex="0" data-href="#adobe"><span class="ico001" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#6b7780" stroke-width="1.6"/></svg>
+                </span>
+                  <div class="meta001"><b>Adobe Commerce (Magento)</b><small>B2C, B2B, D2C in one platform</small></div>
+                </li>
+
+                <li class="merow001" tabindex="0" data-href="#opencart"><span class="ico001" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2" stroke="#6b7780" stroke-width="1.6" fill="none"/></svg>
+                </span>
+                  <div class="meta001"><b>OpenCart</b><small>Open-source eCommerce</small></div>
+                </li>
+
+                <li class="merow001" tabindex="0" data-href="#shopify"><span class="ico001" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24"><path d="M6 7h12v10H6z" stroke="#6b7780" stroke-width="1.6" fill="none"/></svg>
+                </span>
+                  <div class="meta001"><b>Shopify</b><small>Hosted ecommerce solution</small></div>
+                </li>
+
+                <li class="merow001" tabindex="0" data-href="#woocommerce"><span class="ico001" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 8h16" stroke="#6b7780" stroke-width="1.6"/></svg>
+                </span>
+                  <div class="meta001"><b>WooCommerce</b><small>WordPress e-commerce plugin</small></div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="megacol001">
+              <h3 class="megatitle001">&nbsp;</h3>
+              <ul class="megalist001">
+                <li class="merow001" tabindex="0"><span class="ico001"></span><div class="meta001"><b>Optimizely (Episerver)</b><small>Cloud commerce suite</small></div></li>
+                <li class="merow001" tabindex="0"><span class="ico001"></span><div class="meta001"><b>Squarespace</b><small>All-in-one sites</small></div></li>
+                <li class="merow001" tabindex="0"><span class="ico001"></span><div class="meta001"><b>Ecwid Ecommerce</b><small>Hosted stores</small></div></li>
+                <li class="merow001" tabindex="0"><span class="ico001"></span><div class="meta001"><b>PrestaShop</b><small>Freemium platform</small></div></li>
+              </ul>
+            </div>
+
+            <div class="megacol001">
+              <h3 class="megatitle001">INTERNET IMPLEMENTATION</h3>
+              <ul class="megalist001">
+                <li class="merow001" tabindex="0"><span class="ico001"></span><div class="meta001"><b>ECommerce SEO</b><small>Improve organic ranking</small></div></li>
+                <li class="merow001" tabindex="0"><span class="ico001"></span><div class="meta001"><b>SMO & SMM</b><small>Social promotions</small></div></li>
+                <li class="merow001" tabindex="0"><span class="ico001"></span><div class="meta001"><b>Payment Gateways</b><small>Integrate payment providers</small></div></li>
+                <li class="merow001" tabindex="0"><span class="ico001"></span><div class="meta001"><b>Shipping APIs</b><small>Delivery integrations</small></div></li>
+              </ul>
+            </div>
+
+            <div class="megacol001">
+              <h3 class="megatitle001">&nbsp;</h3>
+              <ul class="megalist001">
+                <li class="merow001" tabindex="0"><span class="ico001"></span><div class="meta001"><b>Meta Commerce</b><small>Facebook/Meta commerce</small></div></li>
+                <li class="merow001" tabindex="0"><span class="ico001"></span><div class="meta001"><b>Google Content API</b><small>Merchant Center sync</small></div></li>
+                <li class="merow001" tabindex="0"><span class="ico001"></span><div class="meta001"><b>ERP Integration</b><small>Backoffice sync</small></div></li>
+                <li class="merow001" tabindex="0"><span class="ico001"></span><div class="meta001"><b>CDN</b><small>Faster delivery</small></div></li>
+              </ul>
             </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </li>
+
+      <!-- make other top-level items identical in structure -->
+      <li class="menuitem001 has-mega001" role="none">
+        <a class="menulink001" role="menuitem" aria-haspopup="true" aria-expanded="false">WEB & APP DEVELOPMENT <span class="caret001">▾</span></a>
+        <div class="mega001" aria-hidden="true">
+          <div class="megagrid001">
+            <div class="megacol001">
+              <h3 class="megatitle001">WEB DEVELOPMENT</h3>
+              <ul class="megalist001">
+                <li class="merow001" tabindex="0"><span class="ico001"></span><div class="meta001"><b>Custom Websites</b><small>Tailored projects</small></div></li>
+                <li class="merow001" tabindex="0"><span class="ico001"></span><div class="meta001"><b>CMS</b><small>WordPress / Headless</small></div></li>
+              </ul>
+            </div>
+            <div class="megacol001"><h3 class="megatitle001">APP DEVELOPMENT</h3></div>
+            <div class="megacol001"><h3 class="megatitle001">TECH</h3></div>
+            <div class="megacol001"><h3 class="megatitle001">ENTERPRISE</h3></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="menuitem001 has-mega001" role="none">
+        <a class="menulink001" role="menuitem" aria-haspopup="true" aria-expanded="false">DIGITAL MARKETING <span class="caret001">▾</span></a>
+        <div class="mega001" aria-hidden="true">
+          <div class="megagrid001">
+            <div class="megacol001"><h3 class="megatitle001">SEO</h3></div>
+            <div class="megacol001"><h3 class="megatitle001">ADVERTISING</h3></div>
+            <div class="megacol001"></div>
+            <div class="megacol001"></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="menuitem001 has-mega001" role="none">
+        <a class="menulink001" role="menuitem" aria-haspopup="true" aria-expanded="false">HOSTING PLANS <span class="caret001">▾</span></a>
+        <div class="mega001" aria-hidden="true"><div class="megagrid001"><div class="megacol001"><h3 class="megatitle001">HOSTING</h3></div><div class="megacol001"></div><div class="megacol001"></div><div class="megacol001"></div></div></div>
+      </li>
+
+      <li class="menuitem001 has-mega001" role="none">
+        <a class="menulink001" role="menuitem" aria-haspopup="true" aria-expanded="false">PRODUCTS <span class="caret001">▾</span></a>
+        <div class="mega001" aria-hidden="true"><div class="megagrid001"><div class="megacol001"><h3 class="megatitle001">PRODUCTS</h3></div><div class="megacol001"></div><div class="megacol001"></div><div class="megacol001"></div></div></div>
+      </li>
+
+      <li class="menuitem001 has-mega001" role="none">
+        <a class="menulink001" role="menuitem" aria-haspopup="true" aria-expanded="false">GET TO KNOW US <span class="caret001">▾</span></a>
+        <div class="mega001" aria-hidden="true"><div class="megagrid001"><div class="megacol001"><h3 class="megatitle001">ABOUT</h3></div><div class="megacol001"></div><div class="megacol001"></div><div class="megacol001"></div></div></div>
+      </li>
+    </ul>
+
+    <!-- animated hamburger -->
+    <button id="hambBtn001" class="hamb001" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</section>
+
+<style>
+  /* renamed classes styles */
+  :root{ --accent001:#cfeff4; --navtxt001:#0b3046; --cardborder001:#d6e9ef; --muted001:#7b8589; --sep001:#e6eef2; --maxw001:1160px; --break001:1000px; }
+  *{box-sizing:border-box}
+  .navbar001{ background:var(--accent001); border-bottom:3px solid rgba(0,0,0,0.03) }
+  .navwrap001{ max-width:1280px; margin:0 auto; display:flex; align-items:center; gap:20px; padding:10px 18px; position:relative }
+  .brandimg001{ height:56px; display:block }
+
+  .menu001{ list-style:none; display:flex; gap:18px; margin-left:auto; align-items:center; padding:0 }
+  .menuitem001{ position:relative; white-space:nowrap }
+  .menulink001{ color:var(--navtxt001); text-decoration:none; font-weight:600; font-size:14px; padding:8px 6px; display:inline-flex; gap:8px; align-items:center; cursor:pointer }
+  .caret001{ font-size:11px; opacity:.75; transition:transform .18s }
+
+  /* mega001 uses gradient background for the whole card; each column also has gradient */
+  .mega001{
+    position:absolute; top:100%; left:50%;
+    transform:translateX(-50%) translateY(8px);
+    width:calc(100% - 160px); max-width:var(--maxw001);
+    background: linear-gradient(180deg, #ffffff 0%, #f2fbff 100%);
+    border:1px solid var(--cardborder001); box-shadow:0 10px 26px rgba(13,38,47,0.06);
+    padding:18px; border-radius:6px; display:none; z-index:1200;
+  }
+
+  .megagrid001{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px }
+  .megacol001{
+    padding:10px 12px; border-right:1px solid var(--sep001);
+    /* gradient background for each column card */
+    background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(240,250,255,0.65));
+    border-radius:6px;
+  }
+  .megacol001:last-child{ border-right:0 }
+  .megatitle001{ font-size:13px; font-weight:700; text-transform:uppercase; margin:6px 0 12px; padding-bottom:8px; border-bottom:1px solid rgba(240,244,246,0.9); color:#222 }
+
+  .megalist001{ list-style:none; padding:0; margin:0 }
+  .merow001{ display:flex; gap:12px; padding:12px 6px; align-items:flex-start; border-radius:6px; cursor:pointer }
+  .merow001 + .merow001{ border-top:1px solid #f6f9fb }
+  .ico001{ width:44px; height:44px; border-radius:6px; background: linear-gradient(135deg,#eef7ff,#f8f0ff); flex:0 0 44px; display:flex; align-items:center; justify-content:center }
+  .meta001 b{ display:block; font-size:14px; color:#222; margin-bottom:4px }
+  .meta001 small{ color:var(--muted001); font-size:12px; display:block; line-height:1.2 }
+
+  /* desktop hover behavior (visual) */
+  @media (min-width: calc(var(--break001) + 1px)) {
+    .has-mega001:hover > .mega001 { display:block }
+    .has-mega001.open > .mega001 { display:block }
+    .has-mega001:hover > .menulink001 .caret001{ transform:rotate(180deg) }
+    .has-mega001.open > .menulink001 .caret001 { transform:rotate(180deg) }
+  }
+
+  /* hamburger styles */
+  .hamb001{ display:none; margin-left:12px; background:transparent; border:0; cursor:pointer; padding:8px; align-items:center }
+  .hamb001 span{ display:block; width:28px; height:3px; margin:4px 0; background:#233; border-radius:2px; transition:all .22s ease }
+
+  /* mobile */
+  @media (max-width:1000px){
+    .menu001{ position:fixed; top:72px; right:0; left:0; bottom:0; background:#fff; flex-direction:column; gap:0; padding:8px 0; overflow:auto; display:none; z-index:1300 }
+    .menu001.show{ display:flex }
+    .menuitem001{ width:100%; border-top:1px solid var(--sep001) }
+    .menulink001{ padding:14px 16px; display:flex; justify-content:space-between; width:100% }
+    .mega001{ position:static; transform:none; width:calc(100% - 32px); max-width:none; margin:0 auto; padding:12px 16px; display:none; box-shadow:none; border:0 }
+    .megagrid001{ display:block }
+    .megacol001{ border-right:0; padding:10px 0; border-top:1px solid var(--sep001); background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(245,250,255,0.82)); }
+    .megalist001 .merow001{ padding:10px 0 }
+    .hamb001{ display:flex }
+  }
+
+  @media (max-width:520px){
+    .mega001{ left:10px; right:10px; width:auto; transform:none }
+  }
+
+  /* open state classes */
+  .menuitem001.open > .menulink001 .caret001 { transform:rotate(180deg) }
+  .menuitem001.open > .mega001 { display:block }
+</style>
+
+<script>
+/* JS for navbar001 - hamburger, centered & clamped megas, desktop stay-open until click on list */
+(function(){
+  const BREAK = 1000;
+  const mainMenu = document.getElementById('mainMenu001');
+  const hamb = document.getElementById('hambBtn001') || document.querySelector('#hambBtn001');
+  const hambBtn = document.getElementById('hambBtn001') || document.querySelector('.hamb001');
+  const menuItems = Array.from(document.querySelectorAll('.menuitem001.has-mega001'));
+
+  // hamburger toggle + animation
+  const hambEl = document.getElementById('hambBtn001') || document.querySelector('.hamb001');
+  if(hambEl){
+    hambEl.addEventListener('click', () => {
+      const shown = mainMenu.classList.toggle('show');
+      hambEl.setAttribute('aria-expanded', shown ? 'true' : 'false');
+      hambEl.classList.toggle('active');
+      const s = hambEl.querySelectorAll('span');
+      if(hambEl.classList.contains('active')){
+        s[0].style.transform = 'translateY(7px) rotate(45deg)';
+        s[1].style.opacity = '0';
+        s[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+      } else {
+        s[0].style.transform = '';
+        s[1].style.opacity = '';
+        s[2].style.transform = '';
+      }
+    });
+  }
+
+  // utility: open mega (center & clamp)
+  function openMega(item){
+    // close other desktop opens
+    menuItems.forEach(i => {
+      if(i !== item) {
+        i.classList.remove('open');
+        const m = i.querySelector('.mega001');
+        if(m){ m.style.display = ''; m.setAttribute('aria-hidden','true'); }
+        const link = i.querySelector('.menulink001');
+        if(link) link.setAttribute('aria-expanded','false');
+      }
+    });
+
+    item.classList.add('open');
+    const mega = item.querySelector('.mega001');
+    if(!mega) return;
+    mega.style.display = 'block';
+    mega.setAttribute('aria-hidden','false');
+    const link = item.querySelector('.menulink001');
+    if(link) link.setAttribute('aria-expanded','true');
+
+    // center mega inside navwrap001 and clamp to viewport
+    if(window.innerWidth > 520){
+      const navwrap = document.querySelector('.navwrap001');
+      const wrapRect = navwrap.getBoundingClientRect();
+      const pad = 12;
+      // compute available width
+      const computedMaxW = parseInt(getComputedStyle(mega).maxWidth) || (window.innerWidth - 2*pad);
+      const megaW = Math.min(computedMaxW, window.innerWidth - 2*pad);
+      let desiredLeft = wrapRect.left + (wrapRect.width - megaW) / 2;
+      desiredLeft = Math.max(pad, Math.min(desiredLeft, window.innerWidth - megaW - pad));
+      mega.style.left = desiredLeft + 'px';
+      mega.style.right = 'auto';
+      mega.style.width = megaW + 'px';
+      mega.style.transform = 'translateY(8px)';
+    } else {
+      mega.style.left = '';
+      mega.style.right = '';
+      mega.style.transform = '';
+      mega.style.width = '';
+    }
+  }
+
+  // close all megas
+  function closeAllMegas(){
+    menuItems.forEach(i=>{
+      i.classList.remove('open');
+      const m = i.querySelector('.mega001');
+      if(m){
+        m.style.display = '';
+        m.setAttribute('aria-hidden','true');
+      }
+      const link = i.querySelector('.menulink001');
+      if(link) link.setAttribute('aria-expanded','false');
+    });
+  }
+
+  // interactions per item
+  menuItems.forEach(item =>{
+    const link = item.querySelector('.menulink001');
+    const mega = item.querySelector('.mega001');
+
+    // desktop: open on mouseenter or focus, but DON'T auto-close on mouseleave
+    item.addEventListener('mouseenter', () => {
+      if(window.innerWidth > BREAK) openMega(item);
+    });
+    link.addEventListener('focus', () => {
+      if(window.innerWidth > BREAK) openMega(item);
+    });
+
+    // click behavior:
+    link.addEventListener('click', (e) => {
+      // mobile: accordion toggle
+      if(window.innerWidth <= BREAK){
+        e.preventDefault();
+        const isOpen = item.classList.toggle('open');
+        link.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if(mega) mega.style.display = isOpen ? 'block' : 'none';
+        // close others
+        if(isOpen){
+          menuItems.forEach(other=>{
+            if(other !== item && other.classList.contains('open')){
+              other.classList.remove('open');
+              other.querySelector('.mega001').style.display = 'none';
+              other.querySelector('.menulink001').setAttribute('aria-expanded','false');
+            }
+          });
+        }
+      } else {
+        // desktop clicking top link also opens mega (prevent navigation)
+        e.preventDefault();
+        openMega(item);
+      }
+    });
+
+    // clicking a mega-row triggers action then closes megas (as requested)
+    const rows = mega ? Array.from(mega.querySelectorAll('.merow001')) : [];
+    rows.forEach(row=>{
+      row.addEventListener('click', () => {
+        const href = row.getAttribute('data-href');
+        if(href){
+          // example navigation - replace with your real navigation
+          window.location.hash = href;
+        }
+        closeAllMegas();
+        if(window.innerWidth <= BREAK){
+          mainMenu.classList.remove('show');
+          if(hambEl){
+            hambEl.classList.remove('active');
+            hambEl.setAttribute('aria-expanded','false');
+            const sp = hambEl.querySelectorAll('span');
+            sp[0].style.transform = ''; sp[1].style.opacity = ''; sp[2].style.transform = '';
+          }
+        }
+      });
+      // keyboard
+      row.addEventListener('keydown', (ev) => {
+        if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); row.click(); }
+      });
+    });
+  });
+
+  // click outside to close all
+  document.addEventListener('click', (e) => {
+    if(!e.target.closest('.navwrap001')){
+      closeAllMegas();
+      if(window.innerWidth <= BREAK && mainMenu.classList.contains('show')){
+        mainMenu.classList.remove('show');
+        if(hambEl){
+          hambEl.classList.remove('active');
+          hambEl.setAttribute('aria-expanded','false');
+          const sp = hambEl.querySelectorAll('span');
+          sp[0].style.transform = ''; sp[1].style.opacity = ''; sp[2].style.transform = '';
+        }
+      }
+    }
+  });
+
+  // Esc closes everything
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape'){ closeAllMegas(); if(mainMenu.classList.contains('show')) mainMenu.classList.remove('show'); }
+  });
+
+  // on resize: reset states if crossing breakpoint
+  window.addEventListener('resize', () => {
+    if(window.innerWidth > BREAK){
+      mainMenu.classList.remove('show');
+      if(hambEl){ hambEl.classList.remove('active'); hambEl.setAttribute('aria-expanded','false'); const sp = hambEl.querySelectorAll('span'); sp[0].style.transform=''; sp[1].style.opacity=''; sp[2].style.transform=''; }
+      menuItems.forEach(i => {
+        const m = i.querySelector('.mega001');
+        if(m) m.style.display = i.classList.contains('open') ? 'block' : '';
+      });
+    } else {
+      closeAllMegas();
+    }
+  });
+
+})();
+</script>
+
 
 <!-- section-1 with background image -->
 
-<section class="hero-section">
+<section class="hero-slider">
   <style>
-    .hero-section {
+    .hero-slider {
+      position: relative;
+      overflow: hidden;
       min-height: 100vh;
-      background: #fff;
+      font-family: 'Poppins','Inter',sans-serif;
+    }
+    .hero-slide {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 4rem 6%;
-      font-family: 'Poppins', 'Inter', sans-serif;
-      gap: 3rem;
+      min-height: 100vh;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      opacity: 0;
+      transition: all 0.8s ease;
+    }
+    .hero-slide.active {
+      left: 0;
+      opacity: 1;
+      position: relative;
     }
 
-    /* Left Content */
+    /* Content */
     .hero-content {
       flex: 1;
       max-width: 640px;
       color: #111;
     }
     .hero-title {
-      font-size: 3.2rem;
+      font-size: 3rem;
       font-weight: 800;
-      color: #222;
       margin-bottom: 1.25rem;
       line-height: 1.2;
+      color: #222;
     }
-    .hero-title span {
-      color: #1976d2;
-    }
+    .hero-title span { color: #1976d2; }
     .hero-text {
-      font-size: 1.13rem;
+      font-size: 1.1rem;
       line-height: 1.65;
-      margin-bottom: 2.8rem;
+      margin-bottom: 2.5rem;
       color: #333;
       text-align: justify;
     }
-
-    /* CTA Button */
     .cta-btn {
       display: inline-flex;
       align-items: center;
       gap: 10px;
       background: #297cf7;
       color: #fff;
-      font-size: 1.12rem;
+      font-size: 1.1rem;
       font-weight: 600;
-      border: none;
       border-radius: 40px;
       padding: 16px 34px;
       text-decoration: none;
-      box-shadow: 0 6px 22px rgba(41,124,247,0.35);
-      transition: all 0.25s ease;
-      cursor: pointer;
+      transition: 0.25s ease;
     }
-    .cta-btn:hover {
-      background: #1565d8;
-      box-shadow: 0 8px 28px rgba(21,101,216,0.45);
-      transform: translateY(-2px);
-    }
-    .cta-btn svg {
-      width: 22px;
-      height: 22px;
-      stroke: currentColor;
-      fill: none;
-    }
+    .cta-btn:hover { background:#1565d8; transform: translateY(-2px); }
+    .cta-btn svg { width:22px; height:22px; stroke:currentColor; fill:none; }
 
-    /* Right Image Block */
+    /* Image Block */
     .hero-image-block {
       flex: 1;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       position: relative;
     }
     .hero-image-block::before {
-      content: "";
-      position: absolute;
-      width: 340px;
-      height: 340px;
-      border-radius: 50%;
-      background: radial-gradient(circle at center, #1976d2, #00c6ff);
-      filter: blur(100px);
-      opacity: 0.35;
-      z-index: 0;
+      content:"";
+      position:absolute;
+      width:340px;
+      height:340px;
+      border-radius:50%;
+      background:radial-gradient(circle at center,#1976d2,#00c6ff);
+      filter:blur(100px);
+      opacity:0.35;
+      z-index:0;
     }
     .hero-image-block img {
       max-width: 460px;
       height: auto;
-      border-radius: 0;
-      object-fit: contain;
       position: relative;
       z-index: 1;
       transition: transform 0.4s ease;
     }
-    .hero-image-block img:hover {
-      transform: scale(1.05);
+    .hero-image-block img:hover { transform:scale(1.05); }
+
+    /* Navigation dots */
+    .slider-dots {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
     }
+    .slider-dots button {
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      border: none;
+      background: #bbb;
+      cursor: pointer;
+    }
+    .slider-dots button.active { background: #1976d2; }
 
     /* Responsive */
-    @media (max-width: 1100px) {
-      .hero-section {
-        flex-direction: column;
-        text-align: center;
-        padding: 3rem 1.5rem 2rem;
-      }
-      .hero-content {
-        max-width: 100%;
-      }
-      .hero-image-block {
-        margin-top: 2.5rem;
-      }
-      .hero-image-block::before {
-        width: 280px;
-        height: 280px;
-      }
+    @media(max-width:1100px){
+      .hero-slide {flex-direction: column; text-align:center; padding:3rem 1.5rem;}
+      .hero-image-block {margin-top:2rem;}
     }
-    @media (max-width: 700px) {
-      .hero-title {
-        font-size: 2rem;
-      }
-      .cta-btn {
-        font-size: 1rem;
-        padding: 14px 24px;
-      }
+    @media(max-width:700px){
+      .hero-title{font-size:2rem;}
+      .cta-btn{font-size:1rem; padding:12px 22px;}
     }
   </style>
 
-  <div class="hero-content">
-    <h1 class="hero-title">
-      Best Responsive <br />
-      <span>Development Company in Noida</span>
-    </h1>
-    <p class="hero-text">
-      At IMG Global Infotech, one of the largest and leading AI development firms in the USA, 
-      we build intelligent, scalable, and future-proofed AI solutions to meet your business needs. 
-      Whether through machine learning, natural language processing, or other AI tools, 
-      our top AI development company in the US provides enterprises with powerful AI-driven innovations 
-      to drive growth, automate workflows, and facilitate smarter, more informed decision-making.
-    </p>
-    <a href="#" class="cta-btn">
-      Let’s Create Future
-      <svg viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="11" stroke-width="2"/>
-        <path d="M10 8l4 4-4 4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
+  <!-- Slide 1 -->
+  <div class="hero-slide active">
+    <div class="hero-content">
+      <h1 class="hero-title">Best Responsive <span>Development Company in Noida</span></h1>
+      <p class="hero-text">At IMG Global Infotech, one of the largest and leading AI development firms, 
+        we build intelligent, scalable, and future-proof AI solutions tailored to your needs.</p>
+      <a href="#" class="cta-btn">Let’s Create Future
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" stroke-width="2"/><path d="M10 8l4 4-4 4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="hero-image-block">
+      <img src="https://www.redspider.ae/wp-content/themes/redspider/images/about_back.png" alt="AI Development">
+    </div>
   </div>
 
-  <div class="hero-image-block">
-    <img src="https://www.redspider.ae/wp-content/themes/redspider/images/about_back.png" alt="AI Development">
+  <!-- Slide 2 -->
+  <div class="hero-slide">
+    <div class="hero-content">
+      <h1 class="hero-title">Innovative <span>AI & ML Solutions</span></h1>
+      <p class="hero-text">Our expert developers craft machine learning models, NLP systems, and AI automation 
+        workflows that enhance productivity and business decision-making.</p>
+      <a href="#" class="cta-btn">Explore AI Services
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" stroke-width="2"/><path d="M10 8l4 4-4 4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="hero-image-block">
+      <img src="https://img.freepik.com/free-vector/ai-technology-background_52683-76024.jpg" alt="AI Solutions">
+    </div>
   </div>
+
+  <!-- Slide 3 -->
+  <div class="hero-slide">
+    <div class="hero-content">
+      <h1 class="hero-title">Empowering <span>Business Growth</span></h1>
+      <p class="hero-text">We empower enterprises with AI-driven innovations that boost growth, automate workflows, 
+        and enable smarter insights for future-ready businesses.</p>
+      <a href="#" class="cta-btn">Get Started
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" stroke-width="2"/><path d="M10 8l4 4-4 4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="hero-image-block">
+      <img src="https://img.freepik.com/free-vector/artificial-intelligence-illustration_52683-60347.jpg" alt="Business Growth">
+    </div>
+  </div>
+
+  <!-- Dots -->
+  <div class="slider-dots"></div>
+
+  <script>
+    const slides = document.querySelectorAll('.hero-slide');
+    const dotsContainer = document.querySelector('.slider-dots');
+    let current = 0;
+
+    // create dots
+    slides.forEach((_,i)=>{
+      const btn=document.createElement('button');
+      if(i===0) btn.classList.add('active');
+      btn.addEventListener('click',()=>showSlide(i));
+      dotsContainer.appendChild(btn);
+    });
+    const dots = dotsContainer.querySelectorAll('button');
+
+    function showSlide(i){
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = i;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    // auto slide
+    setInterval(()=>{
+      let next = (current+1)%slides.length;
+      showSlide(next);
+    },5000);
+  </script>
 </section>
+
 
 
 <!-- end -->
