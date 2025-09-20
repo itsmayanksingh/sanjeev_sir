@@ -106,727 +106,157 @@
 
 <!-- section-1 with background image -->
 
-
-<section class="hero-section" id="heroSection">
-  <!-- Include Lottie Player Script -->
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  
-  <!-- Include Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
+<section class="hero-section">
   <style>
-
-
     .hero-section {
       min-height: 100vh;
-      background: linear-gradient(140deg, #1ad4b5 0%, #2a1ad4 35%, #cbd41a 100%);
-      position: relative;
+      background: #fff;
       display: flex;
       align-items: center;
-      padding: 0;
-      overflow: hidden;
-      font-family: 'Inter', sans-serif;
+      justify-content: space-between;
+      padding: 4rem 6%;
+      font-family: 'Poppins', 'Inter', sans-serif;
+      gap: 3rem;
     }
 
-    /* Modern Background Pattern */
-    .hero-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: 
-        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
-        linear-gradient(45deg, transparent 49%, rgba(255, 255, 255, 0.03) 50%, transparent 51%);
-      z-index: 1;
-    }
-
-    /* Animated Grid */
-    .grid-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-      background-size: 50px 50px;
-      animation: gridMove 20s linear infinite;
-      z-index: 1;
-    }
-
-    .hero-container {
-      max-width: 1400px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 0 2rem;
-      position: relative;
-      z-index: 10;
-    }
-
+    /* Left Content */
     .hero-content {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 6rem;
-      align-items: center;
-      min-height: 100vh;
-      padding: 4rem 0;
+      flex: 1;
+      max-width: 640px;
+      color: #111;
     }
-
-    /* Enhanced Text Content */
+    .hero-title {
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: #222;
+      margin-bottom: 1.25rem;
+      line-height: 1.2;
+    }
+    .hero-title span {
+      color: #1976d2;
+    }
     .hero-text {
-      opacity: 0;
-      animation: slideUp 1.2s ease-out 0.3s forwards;
+      font-size: 1.13rem;
+      line-height: 1.65;
+      margin-bottom: 2.8rem;
+      color: #333;
+      text-align: justify;
     }
 
-    .hero-badge {
+    /* CTA Button */
+    .cta-btn {
       display: inline-flex;
       align-items: center;
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 0.75rem 1.5rem;
-      border-radius: 100px;
+      gap: 10px;
+      background: #297cf7;
       color: #fff;
-      font-size: 0.9rem;
+      font-size: 1.12rem;
       font-weight: 600;
-      margin-bottom: 2rem;
-      gap: 0.75rem;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    }
-
-    .badge-dot {
-      width: 8px;
-      height: 8px;
-      background: #00ff88;
-      border-radius: 50%;
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    .hero-title {
-      font-size: clamp(3rem, 6vw, 5.5rem);
-      font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      color: #fff;
-      letter-spacing: -0.02em;
-    }
-
-    .title-gradient {
-      background: linear-gradient(135deg, #00ff88 0%, #00d4ff 50%, #ff6b6b 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      background-size: 200% 200%;
-      animation: gradientShift 3s ease-in-out infinite;
-    }
-
-    .hero-subtitle {
-      font-size: 1.4rem;
-      line-height: 1.6;
-      color: rgba(255, 255, 255, 0.85);
-      margin-bottom: 3rem;
-      font-weight: 400;
-    }
-
-    /* Action Buttons */
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-bottom: 4rem;
-    }
-
-    .btn {
-      padding: 1.2rem 2.5rem;
       border: none;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 1.1rem;
+      border-radius: 40px;
+      padding: 16px 34px;
+      text-decoration: none;
+      box-shadow: 0 6px 22px rgba(41,124,247,0.35);
+      transition: all 0.25s ease;
       cursor: pointer;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-      min-width: 200px;
-      text-align: center;
     }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
-      color: #1a1a1a;
-      box-shadow: 0 20px 40px rgba(0, 255, 136, 0.3);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 25px 50px rgba(0, 255, 136, 0.4);
-      background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(20px);
-      color: #fff;
-      border: 2px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.2);
-      border-color: rgba(255, 255, 255, 0.4);
+    .cta-btn:hover {
+      background: #1565d8;
+      box-shadow: 0 8px 28px rgba(21,101,216,0.45);
       transform: translateY(-2px);
     }
-
-    /* Stats Grid */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3rem;
-      margin-top: 2rem;
+    .cta-btn svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      fill: none;
     }
 
-    .stat-card {
-      text-align: left;
-      padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(20px);
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      opacity: 0;
-      transform: translateY(40px);
-      animation: fadeUp 1s ease-out forwards;
-    }
-
-    .stat-card:nth-child(1) { animation-delay: 1s; }
-    .stat-card:nth-child(2) { animation-delay: 1.2s; }
-    .stat-card:nth-child(3) { animation-delay: 1.4s; }
-
-    .stat-number {
-      display: block;
-      font-size: 2.8rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #00ff88, #00d4ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0.5rem;
-    }
-
-    .stat-label {
-      font-size: 1rem;
-      color: rgba(255, 255, 255, 0.7);
-      font-weight: 500;
-    }
-
-    /* Animation Container */
-    .hero-visual {
+    /* Right Image Block */
+    .hero-image-block {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
-      opacity: 0;
-      animation: slideUp 1.2s ease-out 0.6s forwards;
     }
-
-    .animation-container {
-      position: relative;
-      width: 100%;
-      max-width: 600px;
-      height: 500px;
-      margin: 0 auto;
-    }
-
-    /* Main Lottie */
-    .main-animation {
-      width: 100%;
-      height: 100%;
-      filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.3));
-    }
-
-    /* Floating Elements */
-    .floating-elements {
+    .hero-image-block::before {
+      content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .float-card {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(20px);
-      border-radius: 25px;
-      padding: 20px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      animation: floatAround 6s ease-in-out infinite;
-    }
-
-    .float-card-1 {
-      top: 15%;
-      left: -15%;
-      animation-delay: 0s;
-    }
-
-    .float-card-2 {
-      top: 65%;
-      right: -15%;
-      animation-delay: 2s;
-    }
-
-    .float-card-3 {
-      bottom: 15%;
-      left: 5%;
-      animation-delay: 4s;
-    }
-
-    .float-card lottie-player {
-      width: 60px;
-      height: 60px;
-    }
-
-    /* Glow Effects */
-    .glow-orb {
-      position: absolute;
+      width: 340px;
+      height: 340px;
       border-radius: 50%;
-      filter: blur(40px);
-      animation: orbMove 8s ease-in-out infinite;
+      background: radial-gradient(circle at center, #1976d2, #00c6ff);
+      filter: blur(100px);
+      opacity: 0.35;
+      z-index: 0;
+    }
+    .hero-image-block img {
+      max-width: 460px;
+      height: auto;
+      border-radius: 0;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.4s ease;
+    }
+    .hero-image-block img:hover {
+      transform: scale(1.05);
     }
 
-    .orb-1 {
-      width: 200px;
-      height: 200px;
-      background: rgba(0, 255, 136, 0.3);
-      top: 20%;
-      right: 10%;
-      animation-delay: 0s;
-    }
-
-    .orb-2 {
-      width: 150px;
-      height: 150px;
-      background: rgba(0, 212, 255, 0.2);
-      bottom: 30%;
-      left: 20%;
-      animation-delay: 4s;
-    }
-
-    /* Animations */
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(60px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes gradientShift {
-      0%, 100% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-    }
-
-    @keyframes floatAround {
-      0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-      }
-      25% {
-        transform: translateY(-20px) rotate(2deg);
-      }
-      75% {
-        transform: translateY(-10px) rotate(-2deg);
-      }
-    }
-
-    @keyframes orbMove {
-      0%, 100% {
-        transform: translate(0px, 0px);
-      }
-      25% {
-        transform: translate(30px, -30px);
-      }
-      75% {
-        transform: translate(-20px, 20px);
-      }
-    }
-
-    @keyframes gridMove {
-      0% {
-        transform: translate(0, 0);
-      }
-      100% {
-        transform: translate(50px, 50px);
-      }
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-      50% {
-        opacity: 0.5;
-        transform: scale(1.2);
-      }
-    }
-
-    /* Mobile Responsiveness */
-    @media (max-width: 1024px) {
-      .hero-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
-      }
-
-      .hero-visual {
-        order: -1;
-      }
-
-      .animation-container {
-        height: 400px;
-      }
-
-      .stats-grid {
-        gap: 2rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .hero-container {
-        padding: 0 1.5rem;
-      }
-
-      .hero-content {
-        padding: 2rem 0;
-        gap: 2rem;
-      }
-
-      .hero-title {
-        font-size: 2.5rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-      }
-
-      .hero-actions {
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .hero-section {
         flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 3rem;
-      }
-
-      .btn {
-        width: 100%;
-        max-width: 280px;
-        padding: 1rem 2rem;
-        font-size: 1rem;
-      }
-
-      .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .stat-card {
         text-align: center;
-        padding: 1.5rem 1rem;
+        padding: 3rem 1.5rem 2rem;
       }
-
-      .animation-container {
-        height: 300px;
+      .hero-content {
+        max-width: 100%;
       }
-
-      .float-card {
-        width: 80px;
-        height: 80px;
-        padding: 15px;
+      .hero-image-block {
+        margin-top: 2.5rem;
       }
-
-      .float-card lottie-player {
-        width: 50px;
-        height: 50px;
-      }
-
-      .glow-orb {
-        display: none;
+      .hero-image-block::before {
+        width: 280px;
+        height: 280px;
       }
     }
-
-    @media (max-width: 480px) {
+    @media (max-width: 700px) {
       .hero-title {
         font-size: 2rem;
       }
-
-      .hero-subtitle {
-        font-size: 1.1rem;
-      }
-
-      .stat-number {
-        font-size: 2.2rem;
-      }
-
-      .animation-container {
-        height: 250px;
+      .cta-btn {
+        font-size: 1rem;
+        padding: 14px 24px;
       }
     }
   </style>
 
-  <!-- Grid Overlay -->
-  <div class="grid-overlay"></div>
-
-  <!-- Glow Orbs -->
-  <div class="glow-orb orb-1"></div>
-  <div class="glow-orb orb-2"></div>
-
-  <div class="hero-container">
-    <div class="hero-content">
-      <!-- Enhanced Text Content -->
-      <div class="hero-text">
-      
-        
-        <h1 class="hero-title">
-        Best Website Redesigning
-          <br><span class="title-gradient"> Services in Noida</span>
-        </h1>
-        
-        <p class="hero-subtitle" style="color: #fff;">
-In today’s fast-paced digital world, your website is often the first impression your customers get about your business. An outdated or non-functional website can harm your brand, reduce leads, and impact sales. At RS Organisation, we provide the best Website Redesigning Services in Noida to help businesses transform their online presence with modern, responsive, and result-driven designs.        </p>
-        
-        <div class="hero-actions">
-          <button class="btn btn-primary" id="getStarted">
-            Get Started Today
-          </button>
-          <button class="btn btn-secondary" id="viewPortfolio">
-            View Portfolio
-          </button>
-        </div>
-        
-        <div class="stats-grid">
-          <div class="stat-card">
-            <span class="stat-number" data-target="750">0</span>
-            <span class="stat-label">Successful Campaigns</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number" data-target="99">0</span>
-            <span class="stat-label">Client Satisfaction</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number" data-target="25">0</span>
-            <span class="stat-label">Team Experts</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Enhanced Visual Section -->
-      <div class="hero-visual">
-        <div class="animation-container">
-          <!-- Main Social Media Marketing Animation -->
-          <lottie-player
-            class="main-animation"
-            src="https://assets9.lottiefiles.com/packages/lf20_qp1q7mct.json"
-            background="transparent"
-            speed="1"
-            loop
-            autoplay>
-          </lottie-player>
-
-          <!-- Floating Animation Cards -->
-          <div class="floating-elements">
-            <!-- Analytics Animation -->
-            <div class="float-card float-card-1">
-              <lottie-player
-                src="https://assets4.lottiefiles.com/private_files/lf30_WdTEui.json"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay>
-              </lottie-player>
-            </div>
-            
-            <!-- Growth Chart Animation -->
-            <div class="float-card float-card-2">
-              <lottie-player
-                src="https://assets5.lottiefiles.com/packages/lf20_qmfs6c3i.json"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay>
-              </lottie-player>
-            </div>
-            
-            <!-- Social Media Icons Animation -->
-            <div class="float-card float-card-3">
-              <lottie-player
-                src="https://assets1.lottiefiles.com/packages/lf20_kkflmtur.json"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay>
-              </lottie-player>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="hero-content">
+    <h1 class="hero-title">
+      Best Responsive <br />
+      <span>Development Company in Noida</span>
+    </h1>
+    <p class="hero-text">
+      At IMG Global Infotech, one of the largest and leading AI development firms in the USA, 
+      we build intelligent, scalable, and future-proofed AI solutions to meet your business needs. 
+      Whether through machine learning, natural language processing, or other AI tools, 
+      our top AI development company in the US provides enterprises with powerful AI-driven innovations 
+      to drive growth, automate workflows, and facilitate smarter, more informed decision-making.
+    </p>
+    <a href="#" class="cta-btn">
+      Let’s Create Future
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="11" stroke-width="2"/>
+        <path d="M10 8l4 4-4 4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
   </div>
 
-  <script>
-    // Enhanced Counter Animation
-    function animateValue(element, start, end, duration) {
-      const range = end - start;
-      const startTime = performance.now();
-      
-      function updateValue(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        
-        // Easing function for smooth animation
-        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-        const current = Math.floor(start + (range * easeOutQuart));
-        
-        if (end === 99) {
-          element.textContent = current + '%';
-        } else {
-          element.textContent = current + '+';
-        }
-        
-        if (progress < 1) {
-          requestAnimationFrame(updateValue);
-        }
-      }
-      
-      requestAnimationFrame(updateValue);
-    }
-
-    // Intersection Observer for animations
-    const observerOptions = {
-      threshold: 0.3,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const target = parseInt(entry.target.dataset.target);
-          setTimeout(() => {
-            animateValue(entry.target, 0, target, 2000);
-          }, 800);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    // Observe all stat numbers
-    document.querySelectorAll('.stat-number').forEach(counter => {
-      observer.observe(counter);
-    });
-
-    // Enhanced Button Interactions
-    document.getElementById('getStarted').addEventListener('click', function(e) {
-      // Add ripple effect
-      createRipple(e, this);
-      // Your contact functionality
-      setTimeout(() => {
-        alert('Contact form will open here');
-      }, 200);
-    });
-
-    document.getElementById('viewPortfolio').addEventListener('click', function(e) {
-      createRipple(e, this);
-      // Your portfolio functionality
-      setTimeout(() => {
-        alert('Portfolio section will open here');
-      }, 200);
-    });
-
-    // Ripple Effect Function
-    function createRipple(event, button) {
-      const rect = button.getBoundingClientRect();
-      const size = Math.max(rect.width, rect.height);
-      const x = event.clientX - rect.left - size / 2;
-      const y = event.clientY - rect.top - size / 2;
-      
-      const ripple = document.createElement('span');
-      ripple.style.cssText = `
-        position: absolute;
-        border-radius: 50%;
-        transform: scale(0);
-        animation: rippleEffect 0.6s linear;
-        background-color: rgba(255, 255, 255, 0.6);
-        width: ${size}px;
-        height: ${size}px;
-        left: ${x}px;
-        top: ${y}px;
-      `;
-      
-      button.style.position = 'relative';
-      button.appendChild(ripple);
-      
-      setTimeout(() => {
-        ripple.remove();
-      }, 600);
-    }
-
-    // Add CSS for ripple animation
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes rippleEffect {
-        to {
-          transform: scale(4);
-          opacity: 0;
-        }
-      }
-    `;
-    document.head.appendChild(style);
-
-    // Parallax effect on scroll
-    let ticking = false;
-    
-    function updateParallax() {
-      const scrolled = window.pageYOffset;
-      const orbs = document.querySelectorAll('.glow-orb');
-      
-      orbs.forEach((orb, index) => {
-        const speed = 0.3 + (index * 0.1);
-        orb.style.transform = `translateY(${scrolled * speed}px)`;
-      });
-      
-      ticking = false;
-    }
-    
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(updateParallax);
-        ticking = true;
-      }
-    });
-
-    // Initialize animations on load
-    window.addEventListener('load', () => {
-      document.body.style.opacity = '1';
-    });
-  </script>
+  <div class="hero-image-block">
+    <img src="https://www.redspider.ae/wp-content/themes/redspider/images/about_back.png" alt="AI Development">
+  </div>
 </section>
 
 
