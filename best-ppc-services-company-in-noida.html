@@ -105,60 +105,48 @@
     </nav>
 
 <!-- section-1 with background image -->
-
 <section class="hero-section">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
   <style>
-
-
     .hero-section {
       min-height: 100vh;
-      background: url('https://www.mightywarner.ae/uploads/sub_service/desktop_banner/paid-ads-management.jpg') no-repeat center center;
-      background-size: cover;
+      background: #ffff;
       display: flex;
       align-items: center;
-      justify-content: flex-start; /* text on left side */
+      justify-content: space-between;
       font-family: 'Inter', sans-serif;
-      padding: 3rem;
-      position: relative;
-    }
-
-    /* Dark overlay for readability */
-    .hero-section::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-      z-index: 0;
+      padding: 3rem 6%;
+      gap: 2rem;
     }
 
     .hero-content {
-      position: relative;
+      flex: 1;
+      max-width: 600px;
+      color: #222;
+      text-align: justify;
       z-index: 1;
-      max-width: 650px;
-      color: #fff;
-      text-align: left;
     }
 
     .main-heading {
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-weight: 800;
       background: linear-gradient(90deg, #4e8dd1, #fb8600, #28b5e0);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
     }
 
     .description-text {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-      color: #eee;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: #444;
     }
 
-    .morph-button {
+    .news-button {
+      display: inline-block;
       padding: 14px 28px;
       border-radius: 30px;
       background: #4e8dd1;
@@ -167,25 +155,55 @@
       font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
+      text-decoration: none;
       transition: all 0.3s ease;
     }
 
-    .morph-button:hover {
+    .news-button:hover {
       background: #fb8600;
       transform: scale(1.05);
     }
 
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 520px;
+      border-radius: 12px;
+      animation: zigzag 6s ease-in-out infinite;
+    }
+
+    /* Zigzag animation */
+    @keyframes zigzag {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(20px); }
+      50% { transform: translateX(-20px); }
+      75% { transform: translateX(20px); }
+      100% { transform: translateX(0); }
+    }
+
     /* Responsive */
-    @media(max-width: 768px) {
-      .main-heading {
-        font-size: 2.2rem;
+    @media(max-width: 900px) {
+      .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
       }
-      .description-text {
-        font-size: 1rem;
+      .hero-content {
+        text-align: center;
+      }
+      .hero-image img {
+        max-width: 400px;
       }
     }
   </style>
 
+  <!-- Left Text -->
   <div class="hero-content">
     <h1 class="main-heading">Best PPC Company in Noida</h1>
     <p class="description-text">
@@ -199,12 +217,16 @@
       With our customized strategies, continuous monitoring, and optimization techniques, 
       we ensure that your advertising budget brings maximum ROI.
     </p>
-<a href="#" class="news-button" >
-      Share your requirements
+    <a href="#" class="news-button">Share your requirements</a>
+  </div>
 
-      </a>
+  <!-- Right Image -->
+  <div class="hero-image">
+    <img src="https://imgs.search.brave.com/S6lS5QJBxt9B8pbca3rxgrgWOMgmfWSVJwTXovMazDI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS82/MWI5NWYzZmExMmFi/NTlhNTJkM2ZmZDQv/NjJiYTE3Y2UyMGQ0/MmM4MTQyY2I4YTM5/X2NhbmRpZGF0ZS1w/dXJwbGUtYnV0dG9u/LnBuZw" alt="PPC Ads Illustration" />
   </div>
 </section>
+
+
 
 
 
@@ -318,138 +340,253 @@ We don’t just run ads—we build strong digital campaigns using Google AdWords
 
 <!-- end -->
 
-
-
-
-<!-- ---------------- -->
-
-
-<!-- ---------------------------- -->
- <br><br><br><br>
-<h1 style="text-align: center; font-family: 'Segoe UI', sans-serif; color: #0a2540; margin-bottom: 16px;">
-  Our Client Work
-</h1>
-
-<section class="restaurant-overview">
-  <!-- Floating Shapes -->
-  <div class="floating-shape shape1"></div>
-  <div class="floating-shape shape2"></div>
-
-  <div class="grid">
-    <!-- Row 1: Title / Top Stats -->
-    <div class="cell left top fade-in">
-      <h2>Chokhi Dhani</h2>
-      <p class="meta">
-        <i class="fas fa-map-marker-alt"></i> Dubai, Al Seef, UAE<br>
-        <i class="fas fa-utensils"></i> Restaurant
-      </p>
+ <section class="feature-cards-container001">
+  <img class="feature-cards-top-img001" src="https://webeesocial.com/digital-marketing-agency-dubai/images/hero-bg.jpg" alt="Top Dubai Agency" />
+  <div class="feature-cards-row001">
+    <div class="feature-card001">
+      <h3>Award-winning</h3>
+      <p>campaigns done for clients<br>in Dubai</p>
     </div>
-    <div class="cell right top stats-row fade-in">
-      <div class="stat-card">
-        <div class="stat-label">Organic Traffic</div>
-        <div class="stat-value">45.7K <span class="stat-delta positive">+137.9%</span></div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Backlinks</div>
-        <div class="stat-value">6.4K <span class="stat-delta positive">+30%</span></div>
-      </div>
+    <div class="feature-card001">
+      <h3>100+ clients</h3>
+      <p>serviced across<br>the globe</p>
     </div>
-
-    <!-- Row 2: Description / Chart -->
-    <div class="cell left mid fade-in">
-      <h3>About the Project</h3>
-      <p class="description">
-        Chokhi Dhani Dubai is an exclusive cultural resort offering a unique blend of traditional Indian hospitality, cuisine, and entertainment. We helped them:
-      </p>
-      <ul class="features">
-        <li>Optimize on‑page SEO for local keywords</li>
-        <li>Revamp site structure for better navigation</li>
-        <li>Implement performance and mobile improvements</li>
-      </ul>
+    <div class="feature-card001">
+      <h3>Google partner</h3>
+      <p>agency since<br>2018</p>
     </div>
-    <div class="cell right mid chart-card fade-in">
-      <div class="chart-header">
-        <span>Organic Traffic</span>
-        <select id="timeRange">
-          <option value="all">All Time</option>
-          <option value="6">Last 6 Months</option>
-          <option value="12">Last 12 Months</option>
-        </select>
-      </div>
-      <canvas id="trafficChart"></canvas>
-    </div>
-
-    <!-- Row 3: Highlights / Bottom Stats -->
-    <div class="cell left bottom highlight fade-in">
-      <h3>Key Highlights</h3>
-      <p><strong>Traffic Growth:</strong> 26K → 45.7K visitors/mo (76% increase)</p>
-      <p><strong>Domain Authority:</strong> 19 → 27 in 4 months</p>
-    </div>
-    <div class="cell right bottom stats-row fade-in">
-      <div class="stat-card">
-        <div class="stat-label">Authority Score</div>
-        <div class="stat-value positive">27</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Organic Keywords</div>
-        <div class="stat-value">364 <span class="stat-delta positive">+10.2%</span></div>
-      </div>
+    <div class="feature-card001">
+      <h3>Awarded Fastest<br>growing</h3>
+      <p>social media agency in 2024</p>
     </div>
   </div>
 </section>
 
-<!-- FontAwesome + Chart.js -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+.feature-cards-container001 {
+  width: 100%;
+  margin: 40px auto;
+  box-sizing: border-box;
+  background: #F89C34;
+  border-radius: 16px;
+  /* box-shadow: 0 6px 24px rgba(120,88,0,0.12); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
 
+.feature-cards-top-img001 {
+  width: 100%;
+ 
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  margin-bottom: 0;
+  /* box-shadow: 0 3px 22px rgba(120,88,0,0.10); */
+}
 
+.feature-cards-row001 {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  flex-wrap: wrap;
+}
 
-<script>
-  const ctx = document.getElementById('trafficChart').getContext('2d');
-  const labels = ['Jan','Feb','Mar','Apr','May','Jun','Jul'];
-  const data = [20000,26000,32000,38000,42000,45000,45700];
+.feature-card001 {
+  flex: 1 1 25%;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 28px 18px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  border-right: 1.5px solid #222;
+  background: transparent;
+  transition: all 0.3s ease;
+}
 
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels,
-      datasets: [{
-        data,
-        borderColor: '#4b6cf2',
-        borderWidth: 3,
-        tension: 0.3,
-        fill: false,
-        pointRadius: 0
-      }]
-    },
-    options: {
-      scales: {
-        x: { grid: { display: false }, ticks: { color: '#6b7280' } },
-        y: { grid: { color: '#e5e7eb' }, ticks: { color: '#6b7280' } }
-      },
-      plugins: { legend: { display: false } }
-    }
-  });
-</script>
+.feature-card001:last-child {
+  border-right: none;
+}
 
+.feature-card001 h3 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 1.45rem;
+  color: #222;
+  margin-bottom: 12px;
+  text-align: center;
+}
 
+.feature-card001 p {
+  font-size: 1.08rem;
+  color: #222;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.32;
+  margin: 0;
+}
 
-<!-- ----------------------------- -->
+/* Hover Effect */
+.feature-card001:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
 
-
-<!-- section 4 (only section code) -->
-
-
-
-
-
-
-
-
-
+/* Responsive */
+@media (max-width: 1100px) {
+  .feature-cards-top-img001 { height: 120px; }
+  .feature-cards-row001 { flex-direction: column; }
+  .feature-card001 { 
+    width: 100%; 
+    border-right: none; 
+    border-bottom: 1.5px solid #222; 
+  }
+  .feature-card001:last-child { border-bottom: none; }
+}
+</style>
 
 <br><br>
 <!-- end -->
+
+<!-- card design -->
+
+<!-- paragraph -->
+<section class="brand-visibility-ai-section001">
+  <div class="brand-ai-container001">
+    <div class="brand-ai-left001">
+      <img src="https://imgs.search.brave.com/Er-iV_54MnVJ16pe55bkGtNDLm_2TUrFB8mW--nC548/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS12ZWN0/b3IvcGF5LXBlci1j/bGljay1pbnRlcm5l/dC1hZHZlcnRpc2lu/Z183NzMxODYtMTQ0/NS5qcGc_c2VtdD1h/aXNfaW5jb21pbmcm/dz03NDAmcT04MA" alt="AI Brand Elevate" />
+    </div>
+    <div class="brand-ai-right001">
+      <h2>How PPC Agency in<br> Noida Helps to Grow Your Business?</h2>
+      <p>
+       A professional PPC agency in Noida like RS Organisation can transform your business growth by driving targeted traffic to your website. PPC ensures that your ads reach customers who are actively searching for products or services like yours. Unlike traditional marketing, PPC provides measurable results, instant visibility, and flexibility in budget management.
+      </p>
+  
+    </div>
+  </div>
+</section>
+
+<!-- end -->
+
+<style>
+.brand-visibility-ai-section001 {
+  width: 100%;
+  min-height: 70vh;
+  background: linear-gradient(90deg, #4995f5 0%, #4587e1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.brand-ai-container001 {
+  display: flex;
+  width: 100%;
+  max-width: 1800px;
+  min-height: 70vh;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  gap: 32px;
+}
+
+.brand-ai-left001 {
+  flex: 1 1 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.brand-ai-left001 img {
+  width: 100%;
+  max-width: 600px;
+  height: 55vh;
+  min-height: 330px;
+  object-fit: contain;
+  border-radius: 28px;
+}
+
+.brand-ai-right001 {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 0 32px 40px;
+  color: #fff;
+}
+
+.brand-ai-right001 h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 26px;
+  line-height: 1.15;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.brand-ai-right001 p {
+  font-size: 1.18rem;
+  margin-bottom: 38px;
+  max-width: 780px;
+  color: #ffff;
+}
+
+/* Button */
+.brand-ai-btn001 {
+  display: inline-block;
+  font-size: 1.22rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e6bdc, #50aaff); /* gradient */
+  color: #fff;
+  border-radius: 32px;
+  padding: 16px 36px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  transition: all 0.3s ease;
+}
+
+.brand-ai-btn001 span {
+  font-size: 1.3em;
+  padding-left: 6px;
+}
+
+.brand-ai-btn001:hover {
+  background: #fff;
+  color: #1e6bdc; /* text becomes blue */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .brand-ai-container001 {
+    flex-direction: column;
+    padding: 16px 2vw;
+    gap: 24px;
+  }
+  .brand-ai-left001, .brand-ai-right001 {
+    padding: 0;
+    width: 100%;
+    max-width: 100vw;
+  }
+  .brand-ai-left001 img {
+    max-width: 90vw;
+    height: 30vh;
+    min-height: 180px;
+    margin-bottom: 14px;
+  }
+  .brand-ai-right001 h2 { font-size: 2rem; }
+  .brand-ai-right001 p { font-size: 1.04rem; margin-bottom: 22px;}
+  .brand-ai-btn001 { font-size: 1.08rem; padding: 14px 26px;}
+}
+</style>
+
 
 
 <br><br>
@@ -459,256 +596,9 @@ We don’t just run ads—we build strong digital campaigns using Google AdWords
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 <!-- why choose us -->
-<style>
-.shopify-process-section {
-  padding: 40px 30px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  position: relative;
-  overflow: hidden;
-  width: 87%;
-  margin-left: 80px;
-  border-radius: 20px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
-.shopify-process-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
-  z-index: 1;
-}
 
-.section-content {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
 
-.shopify-process-section h2 {
-  font-size: clamp(24px, 4vw, 36px);
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #fff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease-out 0.2s forwards;
-  line-height: 1.2;
-}
-
-.shopify-process-section p {
-  font-size: clamp(16px, 2vw, 18px);
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.6;
-  font-weight: 400;
-  margin-bottom: 30px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease-out 0.4s forwards;
-}
-
-.process-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease-out 0.6s forwards;
-}
-
-.process-visual {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.circle-step {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #00ff88, #00d4ff);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 25px rgba(0, 255, 136, 0.3);
-  animation: pulse 3s ease-in-out infinite;
-}
-
-.circle-step::before {
-  content: '';
-  width: 30px;
-  height: 30px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-}
-
-.process-arrow {
-  font-size: 24px;
-  color: rgba(255, 255, 255, 0.7);
-  animation: bounce 2s ease-in-out infinite;
-}
-
-.step-label {
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(20px);
-  padding: 15px 25px;
-  border-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.step-label::before {
-  content: '';
-  display: inline-block;
-  width: 6px;
-  height: 16px;
-  background: linear-gradient(135deg, #00ff88, #00d4ff);
-  border-radius: 3px;
-}
-
-/* Animations */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-5px);
-  }
-  60% {
-    transform: translateY(-3px);
-  }
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 1024px) {
-  .shopify-process-section {
-    width: 95%;
-    margin-left: 20px;
-    height: 45vh;
-  }
-}
-
-@media (max-width: 768px) {
-  .shopify-process-section {
-    width: 100%;
-    margin-left: 0;
-    margin: 20px;
-    padding: 30px 20px;
-    height: 50vh;
-  }
-
-  .process-visual {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .circle-step {
-    width: 70px;
-    height: 70px;
-  }
-
-  .circle-step::before {
-    width: 25px;
-    height: 25px;
-  }
-
-  .process-arrow {
-    transform: rotate(90deg);
-    font-size: 20px;
-  }
-
-  .step-label {
-    font-size: 16px;
-    padding: 12px 20px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .shopify-process-section {
-    padding: 25px 15px;
-    height: 60vh;
-  }
-
-  .shopify-process-section h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-  }
-
-  .shopify-process-section p {
-    font-size: 15px;
-    margin-bottom: 25px;
-  }
-
-  .circle-step {
-    width: 60px;
-    height: 60px;
-  }
-
-  .step-label {
-    font-size: 15px;
-    padding: 10px 18px;
-  }
-}
-</style>
-
-<section class="shopify-process-section">
-  <div class="section-content">
-    <h2>How PPC Agency in Noida Helps to Grow Your Business?</h2>
-    <p>
-A professional PPC agency in Noida like RS Organisation can transform your business growth by driving targeted traffic to your website. PPC ensures that your ads reach customers who are actively searching for products or services like yours. Unlike traditional marketing, PPC provides measurable results, instant visibility, and flexibility in budget management.
-<br>
-A professional PPC agency in Noida like RS Organisation can transform your business growth by driving targeted traffic to your website. PPC ensures that your ads reach customers who are actively searching for products or services like yours. Unlike traditional marketing, PPC provides measurable results, instant visibility, and flexibility in budget management.
-    </p>
-
-    <div class="process-bottom">
-      <!-- <div class="process-visual">
-        <div class="circle-step"></div>
-        <div class="process-arrow">→</div>
-        <div class="step-label">Launch & Maintenance</div>
-      </div> -->
-    </div>
-  </div>
-</section>
-
-<!-- --------------- -->
-<!-- why choose us section -->
 <!-- Why Choose Section -->
 <section class="why_choos_1">
   <div class="container">

@@ -694,19 +694,18 @@ function initParallax_001Effect() {
 <!-- end -->
 <section class="wp-section">
   <div class="wp-image">
-    <img style="width: 100%; height: 400px;" src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Google My Business Expert" />
+    <div class="wp-image-wrapper">
+      <img src="https://gmb.expert/wp-content/uploads/2024/08/gmb_specialists.png.webp" alt="Google My Business Expert" />
+    </div>
   </div>
+  
   <div class="wp-text">
-    <h2>Why a <span style="color: rgb(255, 165, 0);">GMB Expert in Noida is</span>  Important for Your Business</h2>
+    <h2>Best <span style="color: rgb(255, 165, 0);">GMB Expert in Noida is</span> Important for Your Business</h2>
     
     <p>
-      Google My Business (GMB) has become one of the most powerful tools for local businesses. Whether you own a restaurant, clinic, hotel, or service-based company, a properly optimized GMB profile can:
-    </p>
+Your Google Business Profile is one of the most powerful tools to attract local customers, but only when it’s properly verified, updated, and optimized. Many businesses struggle with phone number verification delays, outdated details, or low rankings on Google Maps—leading to missed calls, lost leads, and reduced credibility. That’s where our expert team comes in. We provide complete Business Profile support, specializing in instant phone verification, number updation, and advanced GMB ranking solutions. Our process is fast, reliable, and transparent, ensuring your Phone Number goes live instantly, stays accurate, and consistently ranks higher on Google Maps.    </p>
     
-    <p>✅ <strong>Boost your visibility</strong> on Google Maps and local searches.</p>
-    <p>✅ <strong>Attract high-intent customers</strong> who are ready to take action.</p>
-    <p>✅ <strong>Showcase your services</strong>, reviews, and location details effectively.</p>
-    <p>✅ <strong>Improve your chances</strong> of getting featured in Google's "Local 3 Pack."</p>
+   
 
     <p style="margin-top: 15px;">
       By working with an experienced GMB expert in Noida, you ensure that your profile is not just created but also fully optimized for maximum business growth.
@@ -718,6 +717,102 @@ function initParallax_001Effect() {
   </div>
 </section>
 
+<style>
+.wp-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 8%;
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap;
+}
+
+.wp-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wp-image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.wp-image-wrapper img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+/* dotted ring around image */
+.wp-image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
+  border: 3px dotted #ff9900;
+  border-radius: 50%;
+  animation: rotateRing 10s linear infinite;
+  z-index: 1;
+}
+
+@keyframes rotateRing {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.wp-text {
+  flex: 1.2;
+}
+
+.wp-text h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.wp-text p {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.news-button {
+  display: inline-block;
+  background: #ff9900;
+  color: #fff;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.news-button:hover {
+  background: #e68900;
+}
+
+/* responsive */
+@media(max-width: 900px) {
+  .wp-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .wp-text { margin-top: 30px; }
+}
+</style>
+
 
 
 <!-- card section -->
@@ -726,10 +821,10 @@ function initParallax_001Effect() {
   <!-- Left Content -->
   <div style="flex: 1; min-width: 280px; max-width: 600px;">
     <h2 style="font-size: 2rem; color: #fff; margin-bottom: 20px; font-weight: bold;">
-      Ready to build a custom Shopify<br>store that delivary your business forwards?
+     GMB Profile Support<br>Everything you need to confidently run your business.
     </h2>
 
-   <a href="#" class="news-button"> Hire Shopify Experts! </a>
+   <a href="#" class="news-button"> Contect Us</a>
 
   </div>
 
@@ -793,6 +888,12 @@ function initParallax_001Effect() {
       <h3>Performance Tracking & Reporting</h3>
       <p>Regular insights and analytics to measure growth and improve results.</p>
     </div>
+    <div class="value-card">
+      <div class="corner-bar"></div>
+      <div class="value-card-icon">⭐</div>
+      <h3>Profile Setup & Verification</h3>
+      <p>Regular insights and analytics to measure growth and improve results.</p>
+    </div>
 </div>
 
 </section>
@@ -800,101 +901,254 @@ function initParallax_001Effect() {
 <!-- end -->
 
 <!-- ============================= -->
-  <style>
-    
-
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 90%;
-      max-width: 1200px;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
-
-    .lottie-box {
-      flex: 1;
-      min-width: 300px;
-      max-width: 500px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .lottie-box h2 {
-      color: rgb(255, 165, 0); /* Orange */
-      font-size: 38.4px;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    .text-box {
-      flex: 1;
-      min-width: 300px;
-      display: flex;
-      flex-direction: column;
-      /* gap: 1.5rem; */
-    }
-
-    .card {
-   
-      border-radius: 12px;
-      padding: 1.5rem;
-          margin-top: 21px;
-      box-shadow:linear-gradient(90deg, #72faff, #d14e4e) ;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      background:linear-gradient(90deg, #fb8600, #4e8dd1) ;
-    }
-
-    .card strong {
-      color: rgb(0, 0, 0); /* Sky Blue */
-      font-size: 1.2rem;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
-
-  <div class="container">
-    <div class="lottie-box">
-      <div class="value-header">
-    <h2>Benefits of Choosing <span>Local SEO Services in Noida</span></h2>
-    <br>
-  </div>
-      <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_fcfjwiyb.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%;" loop autoplay></lottie-player>
+<section class="wp-section">
+  <div class="wp-image">
+    <div class="wp-image-wrapper01">
+      <img src="https://gmb.expert/wp-content/uploads/2024/08/google_my_business_experts.png.webp" alt="Google My Business Expert" />
     </div>
-    
-    <div class="text-box">
-        <h5 style="margin-top: 20px;">There are many agencies offering digital marketing solutions, but here’s why businesses trust RS Organisation as the most reliable GMB expert in Noida:</h5>
-      <div class="card">
-   
-✅ Your business ranks higher in local search results.      </div>
-      <div class="card">
-
-✅	You get more phone calls, leads, and foot traffic.      </div>
-      <div class="card">
-     
-✅	You build strong local authority with consistent citations and listings.      </div>
-      <div class="card">
-     ✅You increase ROI with targeted marketing.     </div>
-    </div>
-    <p style="text-align: center; margin: 0 auto; width: 100%; max-width: 1000px; padding: 0 20px;">By combining Google My Business Optimisation with advanced local SEO strategies, we help you dominate your niche in the Noida market.</p>
-
   </div>
+  
+  <div class="wp-text">
+    <h2>Why a <span style="color: rgb(255, 165, 0);">GMB Expert in Noida is</span> Important for Your Business</h2>
+    
+    <p>
+      Google My Business (GMB) has become one of the most powerful tools for local businesses. Whether you own a restaurant, clinic, hotel, or service-based company, a properly optimized GMB profile can:
+    </p>
+    
+    <p>✅ <strong>Boost your visibility</strong> on Google Maps and local searches.</p>
+    <p>✅ <strong>Attract high-intent customers</strong> who are ready to take action.</p>
+    <p>✅ <strong>Showcase your services</strong>, reviews, and location details effectively.</p>
+    <p>✅ <strong>Improve your chances</strong> of getting featured in Google's "Local 3 Pack."</p>
+
+    <p style="margin-top: 15px;">
+      By working with an experienced GMB expert in Noida, you ensure that your profile is not just created but also fully optimized for maximum business growth.
+    </p>
+
+    <a href="#" class="news-button">
+      Share your requirements
+    </a>
+  </div>
+</section>
+
+<style>
+.wp-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 8%;
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap;
+}
+
+.wp-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wp-image-wrapper01 {
+  position: relative;
+  display: inline-block;
+}
+
+.wp-image-wrapper01 img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+
+@keyframes rotateRing {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.wp-text {
+  flex: 1.2;
+}
+
+.wp-text h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.wp-text p {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.news-button {
+  display: inline-block;
+  background: #ff9900;
+  color: #fff;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.news-button:hover {
+  background: #e68900;
+}
+
+/* responsive */
+@media(max-width: 900px) {
+  .wp-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .wp-text { margin-top: 30px; }
+}
+</style>
+<!-- end -->
 
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
+<br><br><br>
 <!-- ---------------------------- -->
+<section class="brand-visibility-ai-section001">
+  <div class="brand-ai-container001">
+    <div class="brand-ai-left001">
+      <img src="https://d1y41eupgbwbb2.cloudfront.net/images/digitalMarketingCta1.webp" alt="AI Brand Elevate" />
+    </div>
+    <div class="brand-ai-right001">
+      <h2>Enhance Your Brand<br>Visibility with Digital Marketing</h2>
+      <p>
+        Revamp your brand growth with Digital Marketing Overview tactics that can increase the visibility of your brand 
+        and also attract an audience to your business. This can help build strong recognition in the market 
+        to generate higher revenue and offer you better leads to explore new regions for your business.
+      </p>
+  
+    </div>
+  </div>
+</section>
 
+<!-- end -->
+
+<style>
+.brand-visibility-ai-section001 {
+  width: 100%;
+  min-height: 70vh;
+  background: linear-gradient(90deg, #4995f5 0%, #4587e1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.brand-ai-container001 {
+  display: flex;
+  width: 100%;
+  max-width: 1800px;
+  min-height: 70vh;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  gap: 32px;
+}
+
+.brand-ai-left001 {
+  flex: 1 1 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.brand-ai-left001 img {
+  width: 100%;
+  max-width: 600px;
+  height: 55vh;
+  min-height: 330px;
+  object-fit: contain;
+  border-radius: 28px;
+}
+
+.brand-ai-right001 {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 0 32px 40px;
+  color: #fff;
+}
+
+.brand-ai-right001 h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 26px;
+  line-height: 1.15;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.brand-ai-right001 p {
+  font-size: 1.18rem;
+  margin-bottom: 38px;
+  max-width: 780px;
+  color: #ffff;
+}
+
+/* Button */
+.brand-ai-btn001 {
+  display: inline-block;
+  font-size: 1.22rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e6bdc, #50aaff); /* gradient */
+  color: #fff;
+  border-radius: 32px;
+  padding: 16px 36px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  transition: all 0.3s ease;
+}
+
+.brand-ai-btn001 span {
+  font-size: 1.3em;
+  padding-left: 6px;
+}
+
+.brand-ai-btn001:hover {
+  background: #fff;
+  color: #1e6bdc; /* text becomes blue */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .brand-ai-container001 {
+    flex-direction: column;
+    padding: 16px 2vw;
+    gap: 24px;
+  }
+  .brand-ai-left001, .brand-ai-right001 {
+    padding: 0;
+    width: 100%;
+    max-width: 100vw;
+  }
+  .brand-ai-left001 img {
+    max-width: 90vw;
+    height: 30vh;
+    min-height: 180px;
+    margin-bottom: 14px;
+  }
+  .brand-ai-right001 h2 { font-size: 2rem; }
+  .brand-ai-right001 p { font-size: 1.04rem; margin-bottom: 22px;}
+  .brand-ai-btn001 { font-size: 1.08rem; padding: 14px 26px;}
+}
+</style>
 
 <!-- ---------------- -->
 
@@ -906,7 +1160,7 @@ function initParallax_001Effect() {
 
 
 
-<br><br>
+
 <!-- end -->
 
 
@@ -1033,7 +1287,7 @@ border: 2px solid red;
       padding: 60px 20px;
       gap: 40px;
       justify-content: center;
-      align-items: flex-end;
+      align-items: center;
       position: relative;
       background-color: aliceblue;
     }
@@ -1043,13 +1297,30 @@ border: 2px solid red;
       text-align: center;
       font-size: 26px;
       font-weight: bold;
-      margin-bottom: 40px;
+      margin-bottom: 10px; /* reduced gap */
       color: #222;
     }
 
-    .lottie-box {
+    .intro-text {
+      text-align: center;
       width: 100%;
-      max-width: 500px;
+      max-width: 1000px;
+      margin: 0 auto 30px auto; /* smaller spacing */
+      font-size: 16px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .lottie-box {
+      flex: 1 1 350px;
+      max-width: 450px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lottie-box lottie-player {
+      width: 100%;
       height: auto;
     }
 
@@ -1095,6 +1366,16 @@ border: 2px solid red;
       line-height: 1.5;
     }
 
+    .bottom-text {
+      text-align: center;
+      margin: 20px auto 0 auto;
+      width: 100%;
+      max-width: 1000px;
+      padding: 0 20px;
+      font-size: 16px;
+      color: #333;
+    }
+
     @media (max-width: 768px) {
       .why-choose-section {
         flex-direction: column;
@@ -1107,17 +1388,18 @@ border: 2px solid red;
       }
 
       .lottie-box {
-        width: 100%;
-        height: auto;
+        max-width: 300px;
+        margin-bottom: 30px;
       }
     }
   </style>
 
   <div class="text-heading">
-Why Choose RS Organisation as Your GMB Expert in Noida?
-
-</div>
-<p style="margin-top: -70px; text-align: center; width: 100%; max-width: 1000px; ">At RS Organisation, we don't believe in one-size-fits-all solutions. Instead, we create personalized strategies based on your industry and target audience. Our GMB services in Noida include:</p>
+    Why Choose RS Organisation as Your GMB Expert in Noida?
+  </div>
+  <p class="intro-text">
+    At RS Organisation, we don't believe in one-size-fits-all solutions. Instead, we create personalized strategies based on your industry and target audience. Our GMB services in Noida include:
+  </p>
 
   <!-- Left Column with Lottie -->
   <div class="lottie-box">
@@ -1125,7 +1407,6 @@ Why Choose RS Organisation as Your GMB Expert in Noida?
       src="https://assets10.lottiefiles.com/packages/lf20_tfb3estd.json"
       background="transparent"
       speed="1"
-      style="width: 130%; height: 130%;"
       loop
       autoplay>
     </lottie-player>
@@ -1153,12 +1434,19 @@ Why Choose RS Organisation as Your GMB Expert in Noida?
       <h3>Affordable Packages</h3>
       <p>Quality services that fit your budget.</p>
     </div>
-</div>
-<p style="text-align: center; margin: 0 auto; width: 100%; max-width: 1000px; padding: 0 20px;">We believe in long-term partnerships and helping businesses grow sustainably. </p>
+      <div class="feature-card">
+      <h3>EAT-Based Approach</h3>
+      <p>We focus on Expertise, Authoritativeness, and Trustworthiness in every campaign.</p>
+    </div>
+  </div>
 
+  <p class="bottom-text">
+    We believe in long-term partnerships and helping businesses grow sustainably.
+  </p>
 </section>
 
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 
 <!--  -->
 <!-- indusrty we sureve -->
@@ -1227,6 +1515,8 @@ Why Choose RS Organisation as Your GMB Expert in Noida?
         <h4>Social Networking</h4>
         <p class="projects">110 Projects</p>
       </div>
+
+      
     </div>
   </div>
 
