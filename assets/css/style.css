@@ -406,7 +406,7 @@ a {
   /* margin: 0 auto; */
   color: var(--whiteColor);
   gap: 20px;
-  top: 40px;
+  /* top: -20px important; */
 }
 .text-gradient {
   background: linear-gradient(90deg, #fb8600, #4e8dd1);
@@ -2180,3 +2180,86 @@ color: #ffffff;
       }
     }
 /* ============================ */
+
+
+
+
+
+
+.logo001-section {
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.logo001-title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #1b2a41;
+  margin-bottom: 6px;
+}
+
+.logo001-desc {
+  font-size: 1rem;
+  color: #444b5a;
+  margin-bottom: 32px;
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo001-row {
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 22px;
+  position: relative;
+  height: 70px;
+}
+
+.logo001-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.logo001-row.row1 .logo001-track {
+  animation-name: slide001LeftToRight;
+  animation-duration: 10s;
+}
+
+.logo001-row.row2 .logo001-track {
+  animation-name: slide001RightToLeft;
+  animation-duration: 15s;
+  animation-delay: 0.4s;
+}
+
+.logo001-row.row3 .logo001-track {
+  animation-name: slide001LeftToRight;
+  animation-duration: 5s;
+  animation-delay: 0.2s;
+}
+
+.logo001 {
+  height: 70px;
+  width: 70px;
+  object-fit: contain;
+  margin: 0 16px;
+  vertical-align: middle;
+}
+
+@keyframes slide001LeftToRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes slide001RightToLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 600px) {
+  .logo001-row { height: 50px; }
+  .logo001 { height: 50px; width: 50px; margin: 0 8px; }
+}
