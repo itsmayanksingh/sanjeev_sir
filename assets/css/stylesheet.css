@@ -31,7 +31,7 @@
 }
  
     .left-content h1 {
-      font-size: 2.25rem; margin-bottom: .5rem;
+      font-size: 2.4rem; margin-bottom: .5rem;
     }
     .left-content p {
       font-size: 1rem; margin-bottom: 1rem;
@@ -136,7 +136,7 @@
     }
 
     .core-section h2 {
-      font-size: 34px;
+      font-size: 2.4rem;
       font-weight: 700;
       color: #1e2b47;
       margin-bottom: 40px;
@@ -601,10 +601,10 @@
   .mega-parent { position: relative; }
   .mega-dropdown {
     position: absolute;
-    left: 50%;
+    left: 100%;
     transform: translateX(-50%) translateY(8px);
     top: calc(100% + 8px);
-    min-width: 1010px;
+    min-width: 1200px;
     max-width: calc(100% - 48px);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -618,7 +618,7 @@
     transition: opacity .25s ease, transform .25s ease, visibility .25s;
     z-index: 130;
     white-space: normal;
-    max-height: 70vh;
+    max-height: 80vh;
   }
   /* show on hover (desktop) */
   .mega-parent:hover .mega-dropdown,
@@ -635,7 +635,7 @@
     gap:10px; 
     padding: 0 20px;
     position: relative;
-    max-height: 65vh;
+    max-height: 75vh;
     overflow-y: auto;
   }
   
