@@ -20,10 +20,8 @@
   <!-- CSS -->
 
 
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script src="./script.js"></script>
 
 
 
@@ -201,7 +199,7 @@
                 </a>
               </li>
               <li>
-                <a href="./shopify.html">
+                <a href="./shopify-development-india.html">
                   <span class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M16.75,22.16L14.17,19.58L15.58,18.17L16.75,19.34L20.08,16L21.5,17.41L16.75,22.16M13,17.74C13.5,18.37 14.09,18.94 14.76,19.41L10.08,20.4L3.5,3.5L20.5,10.08L19.41,14.84C18.79,14.16 18,13.66 17.15,13.42L18.31,10.79L7.89,6.11L12.57,16.53L13,17.74M6.89,4.5L4.5,6.89L8.26,17.86L10.05,17.5L6.89,4.5Z"/>
@@ -341,8 +339,6 @@
     </ul>
   </div>
 </nav>
-
-
 <script>
   
 
@@ -431,199 +427,10 @@
 
   // end of DOMContentLoaded
 </script>
+<!-- end -->
 
 
-<script>
-  
-
-// Mega menu and mobile nav functionality
-  document.addEventListener('DOMContentLoaded', function () {
-    const nav = document.querySelector('.navbar001');
-    const navToggle = nav.querySelector('.nav-toggle001');
-    const navMenu = nav.querySelector('.nav-menu001');
-    const megaParent = nav.querySelector('.mega-parent');
-    const megaDropdown = nav.querySelector('.mega-dropdown');
-    const servicesLink = megaParent ? megaParent.querySelector('.services-link') : null;
-    const cta = nav.querySelector('.nav-btn001');
-
-    // Hamburger toggle - works on mobile widths
-    navToggle.addEventListener('click', function (e) {
-      e.stopPropagation();
-      const open = navMenu.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-
-      // when closing menu also close mega dropdown
-      if (!open && megaParent && megaParent.classList.contains('open')) {
-        megaParent.classList.remove('open');
-      }
-    });
-
-    // Services (mega) toggle behavior on mobile
-    if (servicesLink && megaParent && megaDropdown) {
-      servicesLink.addEventListener('click', function (e) {
-        if (window.innerWidth <= 992) {
-          e.preventDefault();
-          e.stopPropagation();
-          const opened = megaParent.classList.toggle('open');
-          // ensure mobile nav is visible so user can see the mega content
-          if (!navMenu.classList.contains('active')) navMenu.classList.add('active');
-          // set aria and display handled by CSS (.open)
-          servicesLink.setAttribute('aria-expanded', opened ? 'true' : 'false');
-        }
-      });
-    }
-
-    // Close button functionality for mega menu on mobile
-    const megaCloseBtn = document.querySelector('.mega-close-btn');
-    if (megaCloseBtn) {
-      megaCloseBtn.addEventListener('click', e => {
-        e.stopPropagation();
-        if (megaParent.classList.contains('open')) {
-          megaParent.classList.remove('open');
-          // Optionally close entire mobile nav menu as well:
-          if(navMenu && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            navToggle.setAttribute('aria-expanded', 'false');
-          }
-          // Update aria attribute
-          if (servicesLink) servicesLink.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-
-    // Close menus when clicking outside nav
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.navbar001')) {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-
-    // Reset inline/mobile classes on resize -> bigger screens
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 992) {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-
-    // Accessibility: close on Escape
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-  });
-
-  // end of DOMContentLoaded
-</script>
-
-
-
-<script>
-  
-
-// Mega menu and mobile nav functionality
-  document.addEventListener('DOMContentLoaded', function () {
-    const nav = document.querySelector('.navbar001');
-    const navToggle = nav.querySelector('.nav-toggle001');
-    const navMenu = nav.querySelector('.nav-menu001');
-    const megaParent = nav.querySelector('.mega-parent');
-    const megaDropdown = nav.querySelector('.mega-dropdown');
-    const servicesLink = megaParent ? megaParent.querySelector('.services-link') : null;
-    const cta = nav.querySelector('.nav-btn001');
-
-    // Hamburger toggle - works on mobile widths
-    navToggle.addEventListener('click', function (e) {
-      e.stopPropagation();
-      const open = navMenu.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-
-      // when closing menu also close mega dropdown
-      if (!open && megaParent && megaParent.classList.contains('open')) {
-        megaParent.classList.remove('open');
-      }
-    });
-
-    // Services (mega) toggle behavior on mobile
-    if (servicesLink && megaParent && megaDropdown) {
-      servicesLink.addEventListener('click', function (e) {
-        if (window.innerWidth <= 992) {
-          e.preventDefault();
-          e.stopPropagation();
-          const opened = megaParent.classList.toggle('open');
-          // ensure mobile nav is visible so user can see the mega content
-          if (!navMenu.classList.contains('active')) navMenu.classList.add('active');
-          // set aria and display handled by CSS (.open)
-          servicesLink.setAttribute('aria-expanded', opened ? 'true' : 'false');
-        }
-      });
-    }
-
-    // Close button functionality for mega menu on mobile
-    const megaCloseBtn = document.querySelector('.mega-close-btn');
-    if (megaCloseBtn) {
-      megaCloseBtn.addEventListener('click', e => {
-        e.stopPropagation();
-        if (megaParent.classList.contains('open')) {
-          megaParent.classList.remove('open');
-          // Optionally close entire mobile nav menu as well:
-          if(navMenu && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            navToggle.setAttribute('aria-expanded', 'false');
-          }
-          // Update aria attribute
-          if (servicesLink) servicesLink.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-
-    // Close menus when clicking outside nav
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.navbar001')) {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-
-    // Reset inline/mobile classes on resize -> bigger screens
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 992) {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-
-    // Accessibility: close on Escape
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-  });
-
-  // end of DOMContentLoaded
-</script>
-
-
-
- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script src="./script.js"></script>
-
-
-
-<!-- section-1 with background image -->
-
-
+<!-- section-1 -->
 <section style="background: #dcbeea;" class="hero-section">
   <div class="hero-text">
     <h1>Best Shopify Development <br> Company in Noida</h1>
@@ -631,14 +438,13 @@
 RS Organisation is recognized as the best Shopify Development Company in Noida, offering tailored Shopify solutions that drive e-commerce success. We help businesses launch, scale, and optimize online stores with advanced features and seamless user experiences. Choose our expert team to elevate your e-commerce presence today.  </p>
     <a href="#" class="news-button">Talk To Our Experts</a>
   </div>
-
   <div class="hero-image">
     <img src="https://www.w3care.com/images/uploads/services/shopify-banner.webp" alt="Hero Laptop Design" />
   </div>
 </section>
-
 <!-- end -->
 
+<!-- section -2 -->
 <section class="wp-section">
   <div class="wp-image">
     <img style="width: 80%;" src="https://www.techspakes.com/images/wordpress/s1.png" alt="WordPress Development" />
@@ -658,10 +464,10 @@ Shopify is a powerful and flexible platform designed specifically for e-commerce
   </div>
   
 </section>
+<!-- end -->
 
 
-
-<!-- card section -->
+<!--  section 3 -->
  <section style="background:linear-gradient(90deg, #fb8600, #4e8dd1) ; height: 60vh; display: flex; justify-content: space-between; align-items: center; padding: 30px; border-radius: 20px; flex-wrap: wrap; overflow: hidden; position: relative;">
 
   <!-- Left Content -->
@@ -685,9 +491,9 @@ Shopify is a powerful and flexible platform designed specifically for e-commerce
   </div>
 
 </section>
+<!-- end -->
 
-<!-- =========================================== -->
-<!-- Shopify Development Services Section -->
+<!--  Section 4 -->
 <section class="about_section-3">
   <div class="value-header">
     <h2>Custom Shopify Development <span>Services Offered By Us</span></h2>
@@ -743,109 +549,39 @@ Shopify is a powerful and flexible platform designed specifically for e-commerce
     </div>
   </div>
 </section>
-
 <!-- end -->
 
-<!-- ============================= -->
-  <style>
-    
 
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 90%;
-      max-width: 1200px;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
-
-    .lottie-box {
-      flex: 1;
-      min-width: 300px;
-      max-width: 500px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .lottie-box h2 {
-      color: rgb(255, 165, 0); /* Orange */
-      font-size: 38.4px;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    .text-box {
-      flex: 1;
-      min-width: 300px;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .card {
-   
-      border-radius: 12px;
-      padding: 1.5rem;
-          margin-top: 21px;
-      box-shadow:linear-gradient(90deg, #72faff, #d14e4e) ;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      background:linear-gradient(90deg, #fb8600, #4e8dd1) ;
-    }
-
-    .card strong {
-      color: rgb(0, 0, 0); /* Sky Blue */
-      font-size: 1.2rem;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
-
-  <div class="container">
-    <div class="lottie-box">
-      <div class="value-header">
-    <h2>Benefits of Custom Shopify <span>Development for Your Business</span></h2>
-    <br>
-  </div>
-      <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_fcfjwiyb.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%;" loop autoplay></lottie-player>
+<!-- ============ section-5 ================= -->
+<div class="container_033">
+  <div class="lottie-box_033">
+    <div class="value-header_033">
+      <h2>Benefits of Custom Shopify <span>Development for Your Business</span></h2>
+      <br>
     </div>
-    
-    <div class="text-box">
-      <div class="card">
-        <strong>Brand-Centric Design</strong><br/>
-        Custom Shopify development ensures that your online store reflects your brand’s unique identity. Personalized designs and features enhance brand recall and foster customer trust, leading to better engagement and higher sales conversions for your e-commerce store.
-      </div>
-      <div class="card">
-        <strong>Optimized Performance</strong><br/>
-        A custom-built Shopify store is optimized for speed, responsiveness, and search engines. With enhanced functionality and clean coding practices, your website loads faster, ranks higher in search results, and provides a seamless shopping experience across all devices.
-      </div>
-      <div class="card">
-        <strong>Scalable Architecture</strong><br/>
-        As your business grows, so should your store. Custom development ensures your Shopify store is built to scale. From managing larger inventories to accommodating higher traffic volumes, we develop stores that evolve with your business needs effortlessly.
-      </div>
+    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_fcfjwiyb.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></lottie-player>
+  </div>
+  
+  <div class="text-box_033">
+    <div class="card_033">
+      <strong>Brand-Centric Design</strong><br/>
+      Custom Shopify development ensures that your online store reflects your brand's unique identity. Personalized designs and features enhance brand recall and foster customer trust, leading to better engagement and higher sales conversions for your e-commerce store.
+    </div>
+    <div class="card_033">
+      <strong>Optimized Performance</strong><br/>
+      A custom-built Shopify store is optimized for speed, responsiveness, and search engines. With enhanced functionality and clean coding practices, your website loads faster, ranks higher in search results, and provides a seamless shopping experience across all devices.
+    </div>
+    <div class="card_033">
+      <strong>Scalable Architecture</strong><br/>
+      As your business grows, so should your store. Custom development ensures your Shopify store is built to scale. From managing larger inventories to accommodating higher traffic volumes, we develop stores that evolve with your business needs effortlessly.
     </div>
   </div>
-
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-<!-- ---------------------------- -->
+</div>
+<!-- end -->
 
 
-<!-- ---------------- -->
-
-
-<!-- ---------------------------- -->
- <br><br><br><br>
+<!-- ---------------section 6 ------------- -->
+ <br><br>
 <h1 style="text-align: center; font-family: 'Segoe UI', sans-serif; color: #0a2540; margin-bottom: 16px;">
   Our Client Work
 </h1>
@@ -917,13 +653,9 @@ Shopify is a powerful and flexible platform designed specifically for e-commerce
     </div>
   </div>
 </section>
-
 <!-- FontAwesome + Chart.js -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
-
 <script>
   const ctx = document.getElementById('trafficChart').getContext('2d');
   const labels = ['Jan','Feb','Mar','Apr','May','Jun','Jul'];
@@ -951,20 +683,9 @@ Shopify is a powerful and flexible platform designed specifically for e-commerce
     }
   });
 </script>
+<!-- end -->
 
-
-
-<!-- ----------------------------- -->
-
-
-<!-- section 4 (only section code) -->
-
-
-
-
-
-
-<!-- section-5 card process (with the connecting line restored) -->
+<!-- section-6  -->
 <section class="about-section5">
   <h2>Design Process of  <span>Shopify Website Development</span></h2>
 
@@ -1011,395 +732,244 @@ Shopify is a powerful and flexible platform designed specifically for e-commerce
       <p>Post-launch, we gather user feedback and analyze performance metrics. This data helps us make necessary adjustments and improvements to enhance user experience and drive sales.</p>   
   </div>
 </section>
-
-
-
-
-<br><br>
 <!-- end -->
 
 
-<br><br>
-<!-- Swiper CSS & JS -->
-<!-- Include Swiper CSS & JS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<!-- Modern SEO Banner -->
+<section class="seo-talk-wrap_030">
+  <!-- Green card -->
+  <div class="talk-card_030">
+    <div class="talk-left_030">
+      <h3>Design Process of Shopify Website Development</h3>
+          <p>Before launching a successful Shopify store, it’s important to understand the step-by-step development process. Here's how IMG Global Infotech brings your Shopify vision to life with strategic planning and execution.</p>
+    </div>
+    <a href="#contact" class="talk-btn_030">LET’S TALK</a>
+    <!-- Curved background lines -->
+    <div class="arc-lines_030"></div>
+  </div>
 
-<!-- why choose us -->
-  <style>
-   
-
-    .shopify-process-section {
-border: 2px solid red;
-    padding: 60px 20px;
-    height: 51vh;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    width: 87%;
-    margin-left: 80px;
-    }
-
-    .shopify-process-section h2 {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    .shopify-process-section p {
-      font-size: 16px;
-      color: #555;
-      max-width: 800px;
-      margin: 0 auto 50px;
-      line-height: 1.6;
-    }
-
-    .process-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      position: relative;
-      padding: 0 20px;
-    }
-
-    .process-bottom img {
-      max-width: 100px;
-      height: auto;
-    }
-
-    .circle-step {
-      position: absolute;
-      bottom: 40px;
-      left: 20px;
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background-color: #6cbf3f;
-      color: white;
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
-
-    .circle-step::before {
-      content: "05";
-    }
-
-    .step-label {
-      font-size: 20px;
-      font-weight: 700;
-      color: #000;
-      position: absolute;
-      bottom: 30px;
-      right: 20px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .step-label::before {
-      content: '';
-      display: inline-block;
-      width: 6px;
-      height: 16px;
-      background-color: #6cbf3f;
-      border-radius: 2px;
-    }
-
-    @media (max-width: 768px) {
-      .process-bottom {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .circle-step {
-        position: static;
-        margin-bottom: 20px;
-      }
-
-      .step-label {
-        position: static;
-        margin-top: 20px;
-      }
-    }
-  </style>
-
-
-<section class="shopify-process-section">
-  <h2>Design Process of Shopify Website Development</h2>
-  <p>
-    Before launching a successful Shopify store, it’s important to understand the step-by-step development
-    process. Here's how IMG Global Infotech brings your Shopify vision to life with strategic planning and execution.
-  </p>
-
-  <div class="process-bottom">
-    <!-- Decorative green step (05) circle -->
-    <div class="circle-step"></div>
-
-    <!-- Inserted image in the center -->
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuVDh2mHcPyfnldekxHppM_Nzh199mu_H1IQ&s" alt="Process Icon" />
-
-    <!-- Step label on the right -->
-    <div class="step-label">Launch & Maintenance</div>
+  <!-- OVERLAY IMAGE (outside card, layered above) -->
+  <div class="talk-overlay-img_030">
+    <img src="https://www.techgropse.com/common/images/menus/megamenu_img.avif" alt="Specialist illustration">
   </div>
 </section>
-<!-- --------------- -->
+<!-- end -->
 
+<!-- section -8 -->
+<section class="why-choose-section_034">
+  <div class="text-heading_034">
+    Why Choose RS Organisation as Your Shopify Website Development Company?
+  </div>
 
-
-<!-- lottt pie -->
-
-<section class="why-choose-section">
-  <style>
-    .why-choose-section {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 60px 20px;
-      gap: 40px;
-      justify-content: center;
-      align-items: flex-end;
-      position: relative;
-      background-color: aliceblue;
-    }
-
-    .text-heading {
-      width: 100%;
-      text-align: center;
-      font-size: 26px;
-      font-weight: bold;
-      margin-bottom: 40px;
-      color: #222;
-    }
-
-    .lottie-box {
-      width: 100%;
-      max-width: 500px;
-      height: auto;
-    }
-
-    .card-grid {
-      flex: 2 1 600px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .feature-card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-      position: relative;
-      transition: transform 0.3s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-6px);
-    }
-
-    .feature-card::after {
-      content: "+";
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 22px;
-      color: #1890ff;
-      font-weight: bold;
-    }
-
-    .feature-card h3 {
-      margin-top: 0;
-      font-size: 18px;
-      color: #222;
-    }
-
-    .feature-card p {
-      font-size: 15px;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    @media (max-width: 768px) {
-      .why-choose-section {
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 15px;
-      }
-
-      .card-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .lottie-box {
-        width: 100%;
-        height: auto;
-      }
-    }
-  </style>
-
-  <div class="text-heading">Why Choose RS Organisation as Your Shopify Website Development Company?</div>
-
-  <!-- Left Column with Lottie -->
-  <div class="lottie-box">
+  <!-- Left Column (Lottie Animation) -->
+  <div class="lottie-box_034">
     <lottie-player
       src="https://assets10.lottiefiles.com/packages/lf20_tfb3estd.json"
       background="transparent"
       speed="1"
-      style="width: 130%; height: 130%;"
+      style="width: 110%; height: 110%;"  
       loop
       autoplay>
     </lottie-player>
   </div>
 
   <!-- Right Cards -->
-  <div class="card-grid">
-    <div class="feature-card">
+  <div class="card-grid_034">
+    <div class="feature-card_034">
       <h3>1. Expert Shopify Developers</h3>
       <p>Our team consists of certified and experienced developers with in-depth knowledge of the Shopify ecosystem. We deliver feature-rich, high-performance Shopify stores that are customized to meet your business needs.</p>
     </div>
-    <div class="feature-card">
+
+    <div class="feature-card_034">
       <h3>2. End-to-End Solutions</h3>
       <p>From strategy and design to development and post-launch support, RS Organisation provides complete Shopify development services in Noida. We ensure your store is ready to compete and succeed in today’s fast-paced e-commerce landscape.</p>
     </div>
-    <div class="feature-card">
+
+    <div class="feature-card_034">
       <h3>3. Proven Track Record</h3>
       <p>With multiple successful projects delivered, RS Organisation has earned a reputation as a trusted Shopify development agency in Noida. We’ve helped clients across industries build and scale their e-commerce stores with measurable success.</p>
     </div>
-    <div class="feature-card">
+
+    <div class="feature-card_034">
       <h3>4. Transparent Communication & Support</h3>
       <p>We believe in building strong client relationships through transparent communication and reliable support. Our team keeps you updated at every stage of the project and is always available for any post-launch queries or enhancements.</p>
     </div>
   </div>
 </section>
+<!--  end-->
 
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-<!--  -->
-<!-- indusrty we sureve -->
- 
-<section class="iwss-section">
-  <!-- Left Industry Cards -->
-  <div class="iwss-left">
-    <h2 class="iwss-title">The Industries We Serve</h2>
-    <p class="iwss-desc">
-      We are a web &amp; development and mobile application development agency that has experience in gathering client needs and then developing the best solutions to meet them. After testing, we launch our work in the market and make it taste successful for our clients by providing the best services that are accessible at affordable rates.
-    </p>
-    <div class="iwss-grid">
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Healthcare">
+     <!-- Industry We Serve-9 -->
+      <section class="iwss-section_020">
+        <!-- Left Industry Cards -->
+        <div class="iwss-left_020">
+          <h2 class="iwss-title_020">The Industries We Serve</h2>
+          <p class="iwss-desc_020">
+            We are a web &amp; development and mobile application development
+            agency that has experience in gathering client needs and then
+            developing the best solutions to meet them. After testing, we launch
+            our work in the market and make it taste successful for our clients
+            by providing the best services that are accessible at affordable
+            rates.
+          </p>
+          <div class="iwss-grid_020">
+            <div class="industry-card_020">
+              <div class="card-logo_020">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png"
+                  alt="Healthcare"
+                />
+              </div>
+              <h4>Healthcare</h4>
+              <p class="projects_020">213 Projects</p>
+            </div>
+            <div class="industry-card_020">
+              <div class="card-logo_020">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/3416/3416044.png"
+                  alt="Education"
+                />
+              </div>
+              <h4>Education / e‑Learning</h4>
+              <p class="projects_020">123 Projects</p>
+            </div>
+            <div class="industry-card_020">
+              <div class="card-logo_020">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/2920/2920322.png"
+                  alt="Media"
+                />
+              </div>
+              <h4>Media &amp; Entertainment</h4>
+              <p class="projects_020">2040 Projects</p>
+            </div>
+            <div class="industry-card_020">
+              <div class="card-logo_020">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/891/891462.png"
+                  alt="E‑commerce"
+                />
+              </div>
+              <h4>E‑commerce</h4>
+              <p class="projects_020">103 Projects</p>
+            </div>
+            <div class="industry-card_020">
+              <div class="card-logo_020">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/2933/2933887.png"
+                  alt="Banking"
+                />
+              </div>
+              <h4>Banking &amp; Finance</h4>
+              <p class="projects_020">109 Projects</p>
+            </div>
+            <div class="industry-card_020">
+              <div class="card-logo_020">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/1087/1087929.png"
+                  alt="Travel"
+                />
+              </div>
+              <h4>Tour &amp; Travels</h4>
+              <p class="projects_020">110 Projects</p>
+            </div>
+            <div class="industry-card_020">
+              <div class="card-logo_020">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png"
+                  alt="Logistics"
+                />
+              </div>
+              <h4>Logistics</h4>
+              <p class="projects_020">110 Projects</p>
+            </div>
+            <div class="industry-card_020">
+              <div class="card-logo_020">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
+                  alt="Social"
+                />
+              </div>
+              <h4>Social Networking</h4>
+              <p class="projects_020">110 Projects</p>
+            </div>
+          </div>
         </div>
-        <h4>Healthcare</h4>
-        <p class="projects">213 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/3416/3416044.png" alt="Education">
+
+        <!-- Center Rotating Ring -->
+        <div class="iwss-center_020">
+          <div class="iwss-bg-ring_020"></div>
+          <div class="iwss-ring-container_020">
+            <div class="iwss-icon_020">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png"
+                alt="Healthcare"
+              />
+            </div>
+            <div class="iwss-icon_020">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3416/3416044.png"
+                alt="Education"
+              />
+            </div>
+            <div class="iwss-icon_020">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2920/2920322.png"
+                alt="Media"
+              />
+            </div>
+            <div class="iwss-icon_020">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/891/891462.png"
+                alt="E-commerce"
+              />
+            </div>
+            <div class="iwss-icon_020">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2933/2933887.png"
+                alt="Banking"
+              />
+            </div>
+            <div class="iwss-icon_020">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1087/1087929.png"
+                alt="Travel"
+              />
+            </div>
+            <div class="iwss-icon_020">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png"
+                alt="Logistics"
+              />
+            </div>
+            <div class="iwss-icon_020">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
+                alt="Social"
+              />
+            </div>
+          </div>
+          <div class="iwss-center-logo_020">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png"
+              alt="Industries"
+            />
+            <p>Industries<br />We Serve</p>
+          </div>
         </div>
-        <h4>Education / e‑Learning</h4>
-        <p class="projects">123 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/2920/2920322.png" alt="Media">
-        </div>
-        <h4>Media &amp; Entertainment</h4>
-        <p class="projects">2040 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="E‑commerce">
-        </div>
-        <h4>E‑commerce</h4>
-        <p class="projects">103 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/2933/2933887.png" alt="Banking">
-        </div>
-        <h4>Banking &amp; Finance</h4>
-        <p class="projects">109 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/1087/1087929.png" alt="Travel">
-        </div>
-        <h4>Tour &amp; Travels</h4>
-        <p class="projects">110 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png" alt="Logistics">
-        </div>
-        <h4>Logistics</h4>
-        <p class="projects">110 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Social">
-        </div>
-        <h4>Social Networking</h4>
-        <p class="projects">110 Projects</p>
-      </div>
-    </div>
-  </div>
+      </section>
+      <!-- end -->
 
-  <!-- Center Rotating Ring -->
-  <div class="iwss-center">
-    <div class="iwss-bg-ring"></div>
-    <div class="iwss-ring-container">
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/3416/3416044.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/2920/2920322.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/2933/2933887.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/1087/1087929.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt=""></div>
-    </div>
-    <div class="iwss-center-logo">
-      <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" alt="React">
-      <p>Industries<br>We Serve</p>
-    </div>
-  </div>
-</section>
-
-<!-- end -->
-
-
-
-
-
-
-
-
+<!-- section 10 -->
 <section class="rev-slider-section" id="testimonials">
   <div class="rev-slider-header">
-  
     <h2 class="rev-title" style="color: #0a2540;">Our Clients  <span class="rev-highlight">Review</span></h2>
   </div>
-
 <!-- Elfsight Google Reviews | Untitled Google Reviews -->
 <script src="https://static.elfsight.com/platform/platform.js" async></script>
 <div class="elfsight-app-3bba91a8-67ea-46be-9a2b-299ee3a35c7f" data-elfsight-app-lazy></div>
 
 </section>
-
-<!-- contect  -->
-
-
-
-
-
-
-
-
-
-<!-- footer -->
-
+<!-- end -->
 
     <!-- Footer section -->
     <footer class="footer-section text-white">

@@ -201,7 +201,7 @@
                 </a>
               </li>
               <li>
-                <a href="./shopify.html">
+                  <a href="./shopify-development-india.html">
                   <span class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M16.75,22.16L14.17,19.58L15.58,18.17L16.75,19.34L20.08,16L21.5,17.41L16.75,22.16M13,17.74C13.5,18.37 14.09,18.94 14.76,19.41L10.08,20.4L3.5,3.5L20.5,10.08L19.41,14.84C18.79,14.16 18,13.66 17.15,13.42L18.31,10.79L7.89,6.11L12.57,16.53L13,17.74M6.89,4.5L4.5,6.89L8.26,17.86L10.05,17.5L6.89,4.5Z"/>
@@ -431,309 +431,30 @@
 
   // end of DOMContentLoaded
 </script>
-
-
-<script>
-  
-
-// Mega menu and mobile nav functionality
-  document.addEventListener('DOMContentLoaded', function () {
-    const nav = document.querySelector('.navbar001');
-    const navToggle = nav.querySelector('.nav-toggle001');
-    const navMenu = nav.querySelector('.nav-menu001');
-    const megaParent = nav.querySelector('.mega-parent');
-    const megaDropdown = nav.querySelector('.mega-dropdown');
-    const servicesLink = megaParent ? megaParent.querySelector('.services-link') : null;
-    const cta = nav.querySelector('.nav-btn001');
-
-    // Hamburger toggle - works on mobile widths
-    navToggle.addEventListener('click', function (e) {
-      e.stopPropagation();
-      const open = navMenu.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-
-      // when closing menu also close mega dropdown
-      if (!open && megaParent && megaParent.classList.contains('open')) {
-        megaParent.classList.remove('open');
-      }
-    });
-
-    // Services (mega) toggle behavior on mobile
-    if (servicesLink && megaParent && megaDropdown) {
-      servicesLink.addEventListener('click', function (e) {
-        if (window.innerWidth <= 992) {
-          e.preventDefault();
-          e.stopPropagation();
-          const opened = megaParent.classList.toggle('open');
-          // ensure mobile nav is visible so user can see the mega content
-          if (!navMenu.classList.contains('active')) navMenu.classList.add('active');
-          // set aria and display handled by CSS (.open)
-          servicesLink.setAttribute('aria-expanded', opened ? 'true' : 'false');
-        }
-      });
-    }
-
-    // Close button functionality for mega menu on mobile
-    const megaCloseBtn = document.querySelector('.mega-close-btn');
-    if (megaCloseBtn) {
-      megaCloseBtn.addEventListener('click', e => {
-        e.stopPropagation();
-        if (megaParent.classList.contains('open')) {
-          megaParent.classList.remove('open');
-          // Optionally close entire mobile nav menu as well:
-          if(navMenu && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            navToggle.setAttribute('aria-expanded', 'false');
-          }
-          // Update aria attribute
-          if (servicesLink) servicesLink.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-
-    // Close menus when clicking outside nav
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.navbar001')) {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-
-    // Reset inline/mobile classes on resize -> bigger screens
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 992) {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-
-    // Accessibility: close on Escape
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-  });
-
-  // end of DOMContentLoaded
-</script>
-
-
-
-<script>
-  
-
-// Mega menu and mobile nav functionality
-  document.addEventListener('DOMContentLoaded', function () {
-    const nav = document.querySelector('.navbar001');
-    const navToggle = nav.querySelector('.nav-toggle001');
-    const navMenu = nav.querySelector('.nav-menu001');
-    const megaParent = nav.querySelector('.mega-parent');
-    const megaDropdown = nav.querySelector('.mega-dropdown');
-    const servicesLink = megaParent ? megaParent.querySelector('.services-link') : null;
-    const cta = nav.querySelector('.nav-btn001');
-
-    // Hamburger toggle - works on mobile widths
-    navToggle.addEventListener('click', function (e) {
-      e.stopPropagation();
-      const open = navMenu.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-
-      // when closing menu also close mega dropdown
-      if (!open && megaParent && megaParent.classList.contains('open')) {
-        megaParent.classList.remove('open');
-      }
-    });
-
-    // Services (mega) toggle behavior on mobile
-    if (servicesLink && megaParent && megaDropdown) {
-      servicesLink.addEventListener('click', function (e) {
-        if (window.innerWidth <= 992) {
-          e.preventDefault();
-          e.stopPropagation();
-          const opened = megaParent.classList.toggle('open');
-          // ensure mobile nav is visible so user can see the mega content
-          if (!navMenu.classList.contains('active')) navMenu.classList.add('active');
-          // set aria and display handled by CSS (.open)
-          servicesLink.setAttribute('aria-expanded', opened ? 'true' : 'false');
-        }
-      });
-    }
-
-    // Close button functionality for mega menu on mobile
-    const megaCloseBtn = document.querySelector('.mega-close-btn');
-    if (megaCloseBtn) {
-      megaCloseBtn.addEventListener('click', e => {
-        e.stopPropagation();
-        if (megaParent.classList.contains('open')) {
-          megaParent.classList.remove('open');
-          // Optionally close entire mobile nav menu as well:
-          if(navMenu && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            navToggle.setAttribute('aria-expanded', 'false');
-          }
-          // Update aria attribute
-          if (servicesLink) servicesLink.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-
-    // Close menus when clicking outside nav
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.navbar001')) {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-
-    // Reset inline/mobile classes on resize -> bigger screens
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 992) {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-
-    // Accessibility: close on Escape
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-  });
-
-  // end of DOMContentLoaded
-</script>
-
-
-
- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script src="./script.js"></script>
-
-
-
-<!-- section-1 with background image -->
-<style>
-  .hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px 5%;
-    position: relative;
-    flex-wrap: wrap;
-    background: linear-gradient(135deg, rgba(15, 16, 63, 0.95), rgba(15, 16, 63, 0.95)),
-                url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80') no-repeat center center;
-    background-size: cover;
-    color: #fff;
-  }
-
-  .hero-text {
-    flex: 1 1 500px;
-    max-width: 600px;
-    z-index: 2;
-  }
-
-  .hero-text h1 {
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 1.3;
-    margin-bottom: 20px;
-  }
-
-  .hero-text p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #e0e6f0;
-    margin-bottom: 35px;
-  }
-
-  .news-button {
-    display: inline-block;
-    background: linear-gradient(90deg, #ff9e37, #fe2da0);
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 14px 28px;
-    border-radius: 999px;
-    text-decoration: none;
-    transition: background 0.3s ease;
-  }
-
-  .news-button:hover {
-    background: linear-gradient(90deg, #f7862f, #68b9ff);
-  }
-
-  .hero-image {
-    flex: 1 1 400px;
-    max-width: 600px;
-    text-align: center;
-    z-index: 2;
-  }
-
-  .hero-image img {
-    width: 100%;
-    max-width: 480px;
-    filter: drop-shadow(0 5px 20px rgba(0,0,0,0.2));
-  }
-
-  /* Responsive */
-  @media (max-width: 992px) {
-    .hero-section {
-      flex-direction: column;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .hero-text, .hero-image {
-      max-width: 100%;
-    }
-
-    .hero-text h1 {
-      font-size: 30px;
-    }
-
-    .hero-text p {
-      font-size: 15px;
-    }
-
-    .news-button {
-      font-size: 15px;
-      padding: 12px 24px;
-    }
-  }
-</style>
-
-<section class="hero-section">
-  <div class="hero-text">
-    <h1 style="color: #ffff;">Best Web Development <br> Company in Noida</h1>
+<!-- end -->
+ 
+<!-- section-1  -->
+<section class="hero_section_009">
+  <div class="hero_section_009_text">
+    <h1>Best Web Development <br> Company in Noida</h1>
     <p>
-In today’s digital-first world, your website is the face of your business.
- A professionally designed and high-performing website builds credibility, 
- drives traffic, and generates revenue. Choosing the right Web Development 
- Company in Noida ensures your online presence is powerful, secure, and
-  growth-driven. RS Organisation helps businesses achieve this with innovative solutions.</p>
-    <a href="#" class="news-button">Talk To Our Experts</a>
+      In today’s digital-first world, your website is the face of your business.
+      A professionally designed and high-performing website builds credibility,
+      drives traffic, and generates revenue. Choosing the right Web Development
+      Company in Noida ensures your online presence is powerful, secure, and
+      growth-driven. RS Organisation helps businesses achieve this with innovative solutions.
+    </p>
+    <a href="#" class="hero_section_009_button">Talk To Our Experts</a>
   </div>
 
-  <div class="hero-image">
+  <div class="hero_section_009_image">
     <img src="./assets/images/png/444-4448502_web-design-website-web-development-3d-hd-png-removebg-preview.png" alt="Hero Laptop Design" />
   </div>
 </section>
-
 <!-- end -->
 
 
-<!-- section 3  -->
-
+<!-- section 2  -->
 <section class="wp-section">
   <div class="wp-image">
     <img style="width: 80%;" src="./assets/images/png/istockphoto-1096969570-612x612-removebg-preview.png" alt="WordPress Development" />
@@ -752,13 +473,10 @@ RS Organisation is a trusted website development company in Noida that blends cr
   </div>
   
 </section>
-
 <!-- end  -->
 
 
-
-
-<!-- section-5 card process (with the connecting line restored) -->
+<!-- section-3 -->
 <section class="about-section5">
   <h2>Cost-Effective  <span>Web Development Services</span></h2>
   <p>We follow a structured and result-oriented process to ensure every client gets the maximum return on their Web Deve:</p>
@@ -802,121 +520,10 @@ RS Organisation is a trusted website development company in Noida that blends cr
 </div>
 
 </section>
-
-<style>
-  .about-section5 {
-    max-width: 1400px;
-    margin: auto;
-    text-align: center;
-    padding: 40px 20px;
-  }
-  .about-section5 h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    font-weight: 600;
-    color: #0a2540;
-  }
-  .about-section5 h2 span {
-    color: #0a66c2;
-  }
-  .about-section5 p {
-    color: #6c757d;
-    margin-bottom: 40px;
-    font-size: 16px;
-  }
-
-  /* GRID + CONNECTOR LINES (behind the cards) */
-  .process-wrapper {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 20px;
-  }
-  .process-wrapper::before,
-  .process-wrapper::after {
-    content: '';
-    position: absolute;
-    left: 0; right: 0;
-    height: 4px;
-    background: #ccc;
-    z-index: 1;                /* behind the circles (z-index:2) */
-  }
-  /* top row line */
-  .process-wrapper::before {
-    top: calc((100% / 2) - 60px);
-  }
-  /* bottom row line */
-  .process-wrapper::after {
-    top: calc((100% / 2) + 60px);
-  }
-
-  /* CARD STYLES */
-  .step {
-    position: relative;
-    background: #fff;
-    border-radius: 30px;
-    padding: 30px 20px;
-    text-align: center;
-    border: 4px solid #ddd;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-    z-index: 2;
-  }
-  .step img {
-    width: 50px;
-    margin-bottom: 15px;
-  }
-  .step h3 {
-    font-size: 18px;
-    margin-bottom: 12px;
-    font-weight: 600;
-    color: #0a2540;
-  }
-  .step p {
-    font-size: 14px;
-    color: #333;
-    line-height: 1.5;
-  }
-
-  /* CONNECTOR DOTS (above the bars) */
-  .step::before,
-  .step::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 20px; height: 20px;
-    border: 4px solid currentColor;
-    border-radius: 50%;
-    background: #fff;
-    transform: translateY(-50%);
-    z-index: 3;                /* above the bars */
-  }
-  .step::before { left: -12px; }
-  .step::after  { right: -12px; }
-
-  /* only hide the 3rd card’s right‐dot,
-     so the 6th card still shows its dot on the right */
-  .step:nth-child(3)::after { display: none; }
-
-  /* OPTIONAL: ACCENT COLORS */
-  .step-1 { border-color: #f23cae; color: #f23cae; }
-  .step-2 { border-color: #a74cf2; color: #a74cf2; }
-  .step-3 { border-color: #4b6cf2; color: #4b6cf2; }
-  .step-4 { border-color: #00b6ff; color: #00b6ff; }
-  .step-5 { border-color: #02d2c9; color: #02d2c9; }
-  .step-6 { border-color: #ffa500; color: #ffa500; }
-
-  /* RESPONSIVE */
-  @media (max-width: 1024px) {
-    .process-wrapper { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 768px) {
-    .process-wrapper { grid-template-columns: 1fr; }
-  }
-</style>
 <br><br>
 <!-- end -->
-<!-- ---------------------------- -->
+
+<!-- -----------section 4----------------- -->
 <h1 style="text-align: center; font-family: 'Segoe UI', sans-serif; color: #0a2540; margin-bottom: 16px;">
   Our Client Work
 </h1>
@@ -1185,43 +792,46 @@ RS Organisation is a trusted website development company in Noida that blends cr
     }
   });
 </script>
+<!-- end -->
 
-
-
-<!-- ----------------------------- -->
-
-
-<!-- section 4 (only section code) -->
+<!-- section 5 -->
 <!-- ===== Folded-Ribbon Timeline (Hover-to-show panels) ===== -->
 <section class="ribbon-timeline" aria-label="Folded ribbon timeline">
-  <div class="rt-wrap">
+  <div class="rt-wrap" data-aos="zoom-out-down" data-aos-duration="1000">
     <h2 class="rt-title">Our Website <span class="rt-accent">Development Steps</span></h2>
 
     <div class="rt-canvas" id="rtCanvas" role="list" aria-label="timeline steps">
-      <!-- SVG ribbon (zig-zag) -->
+      <!-- SVG ribbon (zig-zag) - Desktop only -->
       <svg class="rt-ribbon" viewBox="0 0 1200 220" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
         <defs>
           <linearGradient id="rg" x1="0" x2="1">
-            <stop offset="0" stop-color="#ffdca6"/>
-            <stop offset="1" stop-color="#ffb27a"/>
+            <stop offset="0" stop-color="#ffdca6" />
+            <stop offset="1" stop-color="#ffb27a" />
           </linearGradient>
           <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-            <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.12"/>
+            <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.12" />
           </filter>
         </defs>
 
         <!-- ribbon main path (thick) -->
-        <path d="M60 110 L220 40 L380 180 L540 40 L700 180 L860 40 L1020 180 L1160 110"
-              stroke="url(#rg)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#shadow)"/>
+        <path d="M60 110 L220 40 L380 180 L540 40 L700 180 L860 40 L1020 180 L1160 110" stroke="url(#rg)"
+          stroke-width="36" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#shadow)" />
         <!-- crease line to emphasise folds -->
-        <path d="M220 40 L380 180 L540 40 L700 180 L860 40 L1020 180"
-              stroke="rgba(255,255,255,0.35)" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 8" fill="none"/>
+        <path d="M220 40 L380 180 L540 40 L700 180 L860 40 L1020 180" stroke="rgba(255,255,255,0.35)"
+          stroke-width="4" stroke-linecap="round" stroke-dasharray="6 8" fill="none" />
       </svg>
 
-      <!-- Steps anchored to fold points; JS will place them responsively -->
+      <!-- Steps anchored to fold points -->
       <ul class="rt-steps" id="rtSteps">
         <li class="r-step" data-title="Requirement Analysis" tabindex="0">
-          <button class="r-toggle" aria-expanded="false">1</button>
+          <button class="r-toggle" aria-expanded="false">
+            <span class="toggle-number">1</span>
+            <span class="toggle-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+              </svg>
+            </span>
+          </button>
           <div class="r-panel">
             <h3>Requirement Analysis</h3>
             <p>Discovery & stakeholder interviews to create a clear roadmap and measurable goals.</p>
@@ -1229,7 +839,14 @@ RS Organisation is a trusted website development company in Noida that blends cr
         </li>
 
         <li class="r-step" data-title="Planning & Strategy" tabindex="0">
-          <button class="r-toggle" aria-expanded="false">2</button>
+          <button class="r-toggle" aria-expanded="false">
+            <span class="toggle-number">2</span>
+            <span class="toggle-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+              </svg>
+            </span>
+          </button>
           <div class="r-panel">
             <h3>Planning & Strategy</h3>
             <p>Wireframes, information architecture and milestones tied to KPIs.</p>
@@ -1237,7 +854,14 @@ RS Organisation is a trusted website development company in Noida that blends cr
         </li>
 
         <li class="r-step" data-title="Design & Prototyping" tabindex="0">
-          <button class="r-toggle" aria-expanded="false">3</button>
+          <button class="r-toggle" aria-expanded="false">
+            <span class="toggle-number">3</span>
+            <span class="toggle-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+              </svg>
+            </span>
+          </button>
           <div class="r-panel">
             <h3>Design & Prototyping</h3>
             <p>Pixel-perfect UI and interactive prototypes to validate flows before dev.</p>
@@ -1245,7 +869,14 @@ RS Organisation is a trusted website development company in Noida that blends cr
         </li>
 
         <li class="r-step" data-title="Development & Coding" tabindex="0">
-          <button class="r-toggle" aria-expanded="false">4</button>
+          <button class="r-toggle" aria-expanded="false">
+            <span class="toggle-number">4</span>
+            <span class="toggle-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
+            </span>
+          </button>
           <div class="r-panel">
             <h3>Development & Coding</h3>
             <p>Modular, testable code with CI/CD and performance-first engineering.</p>
@@ -1253,7 +884,14 @@ RS Organisation is a trusted website development company in Noida that blends cr
         </li>
 
         <li class="r-step" data-title="Testing & QA" tabindex="0">
-          <button class="r-toggle" aria-expanded="false">5</button>
+          <button class="r-toggle" aria-expanded="false">
+            <span class="toggle-number">5</span>
+            <span class="toggle-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </span>
+          </button>
           <div class="r-panel">
             <h3>Testing & QA</h3>
             <p>Manual and automated testing, accessibility checks and security scans.</p>
@@ -1261,7 +899,14 @@ RS Organisation is a trusted website development company in Noida that blends cr
         </li>
 
         <li class="r-step" data-title="Deployment & Support" tabindex="0">
-          <button class="r-toggle" aria-expanded="false">6</button>
+          <button class="r-toggle" aria-expanded="false">
+            <span class="toggle-number">6</span>
+            <span class="toggle-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </button>
           <div class="r-panel">
             <h3>Deployment & Support</h3>
             <p>Production launch, monitoring, and ongoing improvements and support.</p>
@@ -1271,233 +916,236 @@ RS Organisation is a trusted website development company in Noida that blends cr
     </div>
   </div>
 </section>
-
-<style>
-:root{
-  --accent: #ff8a00;
-  --ribbon-grad-start: #ffdca6;
-  --ribbon-grad-end: #ffb27a;
-  --panel-w: 300px;
-}
-
-/* outer */
-.ribbon-timeline{ padding:44px 14px; font-family: Inter, system-ui, sans-serif; background: linear-gradient(180deg,#fffaf7,#fff); }
-.rt-wrap{ max-width:1180px; margin:0 auto; }
-
-/* title */
-.rt-title{ font-size:26px; margin-bottom:18px; color:#222; text-align:center; }
-.rt-accent{ color:var(--accent); }
-
-/* canvas */
-.rt-canvas{ position:relative; padding:24px 8px 40px; min-height:260px; }
-
-/* svg ribbon occupies background */
-.rt-ribbon{ position:absolute; left:0; right:0; top:0; width:100%; height:220px; z-index:1; pointer-events:none; }
-
-/* steps list overlays ribbon */
-.rt-steps{ list-style:none; margin:0; padding:0; position:relative; z-index:3; }
-
-/* single step: absolute anchor; default small avatar-like toggle */
-.r-step{ position:absolute; width:auto; display:flex; align-items:flex-start; gap:12px; transform-origin:center; transition: transform .24s ease; }
-.r-toggle{
-  width:56px; height:56px; border-radius:12px; border:none; cursor:pointer;
-  background: linear-gradient(180deg,#fff,#fff7ee); font-weight:800; color:#c25a00; box-shadow:0 10px 28px rgba(0,0,0,0.08);
-  display:flex; align-items:center; justify-content:center; font-size:18px;
-}
-.r-toggle:focus{ outline:3px solid rgba(255,138,0,0.16); outline-offset:4px; }
-
-/* panel that unfolds from the crease */
-.r-panel{
-  width:var(--panel-w);
-  background:#fff; border-radius:12px; padding:12px; box-shadow: 0 22px 50px rgba(0,0,0,0.08);
-  transform-origin:left center;
-  transform: perspective(800px) rotateY(-14deg) translateY(6px);
-  opacity:0; visibility:hidden;
-  transition: transform .42s cubic-bezier(.2,.9,.25,1), opacity .28s ease, visibility .28s;
-}
-.r-panel h3{ margin:0 0 6px; color:var(--accent); font-size:16px; }
-.r-panel p{ margin:0; color:#333; font-size:14px; line-height:1.45; }
-
-/* when open (via JS toggle), panel flips to face viewer */
-.r-step.open .r-panel{
-  transform: perspective(800px) rotateY(0deg) translateY(0);
-  opacity:1; visibility:visible;
-}
-
-/* NEW: show panel on hover / keyboard focus (desktop and hover-capable devices) */
-/* This makes panels appear when user hovers the number or focuses inside the step */
-@media (hover: hover) and (pointer: fine) {
-  .r-step:hover .r-panel,
-  .r-step:focus-within .r-panel {
-    transform: perspective(800px) rotateY(0deg) translateY(0);
-    opacity:1;
-    visibility:visible;
-  }
-
-  /* keep the toggle aria state in sync visually (doesn't change attribute) */
-  .r-step:hover .r-toggle,
-  .r-step:focus-within .r-toggle {
-    box-shadow: 0 16px 34px rgba(0,0,0,0.12);
-    transform: translateY(-4px);
-  }
-}
-
-/* small hover */
-.r-step:hover{ transform: translateY(-6px); }
-
-/* placement presets for desktop (fallback) */
-.r-step.p0{ left:40px; top:54px; }
-.r-step.p1{ left:200px; top:-6px; }
-.r-step.p2{ left:360px; top:74px; }
-.r-step.p3{ left:520px; top:-6px; }
-.r-step.p4{ left:680px; top:74px; }
-.r-step.p5{ left:840px; top:-6px; }
-
-/* responsive: on small screens, stack vertically and hide SVG */
-@media (max-width:880px){
-  .rt-ribbon{ display:none; }
-  .rt-canvas{ min-height:auto; padding-bottom:12px; }
-  .r-step{ position:relative; display:flex; gap:12px; margin:10px 0; left:auto; top:auto; transform:none; }
-  .r-panel{ width:100%; transform:none; opacity:1; visibility:visible; }
-  .r-step.open .r-panel{ transform:none; }
-  .rt-wrap{ padding:0 6px; }
-
-  /* on touch devices, we still rely on click: make r-toggle apparent */
-  .r-toggle{ box-shadow:0 8px 18px rgba(0,0,0,0.06); }
-}
-
-/* tiny polish */
-@media (max-width:480px){
-  :root{ --panel-w: calc(100% - 96px); }
-  .r-toggle{ width:50px; height:50px; }
-}
-</style>
-
 <script>
-/* Place ribbon folds and attach interactivity:
-   - On wide screens, hover/focus-within will show panels (CSS)
-   - On small screens, clicking the toggle still opens/closes panels (JS)
-   - JS still provides keyboard navigation and ensures aria-expanded kept correct when toggled
-*/
-(function(){
-  const nodes = Array.from(document.querySelectorAll('#rtSteps .r-step'));
-  const foldPoints = [
-    { x: 60, y:110 },
-    { x:220, y:40 },
-    { x:380, y:180 },
-    { x:540, y:40 },
-    { x:700, y:180 },
-    { x:860, y:40 }
-  ];
+  /* Enhanced positioning and interaction for ribbon timeline */
+  (function () {
+    const nodes = Array.from(document.querySelectorAll('#rtSteps .r-step'));
+    const foldPoints = [
+      { x: 60, y: 110 },
+      { x: 220, y: 40 },
+      { x: 380, y: 180 },
+      { x: 540, y: 40 },
+      { x: 700, y: 180 },
+      { x: 860, y: 40 }
+    ];
 
-  if(!nodes.length) return;
+    if (!nodes.length) return;
 
-  // attach click/keyboard behavior, and add preset classes for fallback
-  nodes.forEach((el, i) => {
-    el.classList.add('p' + i); // fallback placement class
-    const btn = el.querySelector('.r-toggle');
-
-    // toggle open/close (used on small screens)
-    function setOpen(open){
-      if(open){
-        nodes.forEach(n => { if(n !== el){ n.classList.remove('open'); n.querySelector('.r-toggle').setAttribute('aria-expanded','false'); }});
-        el.classList.add('open');
-        btn.setAttribute('aria-expanded','true');
-        el.scrollIntoView({ behavior:'smooth', block: 'center' });
-      } else {
-        el.classList.remove('open');
-        btn.setAttribute('aria-expanded','false');
-      }
-    }
-
-    btn.addEventListener('click', (ev) => {
-      ev.preventDefault();
-      // only toggle on small screens (on desktop hover handles)
-      if(window.matchMedia('(max-width:880px)').matches){
-        const isOpen = el.classList.contains('open');
-        setOpen(!isOpen);
-      }
-    });
-
-    // keyboard: Enter/Space to toggle (works on all sizes)
-    el.addEventListener('keydown', (ev) => {
-      if(ev.key === 'Enter' || ev.key === ' '){
-        ev.preventDefault();
-        // toggle regardless of screen, because keyboard users expect a toggle
-        const isOpen = el.classList.contains('open');
-        setOpen(!isOpen);
-      } else if(ev.key === 'ArrowRight'){
-        ev.preventDefault();
-        const next = nodes[(i+1) % nodes.length];
-        next.querySelector('.r-toggle').focus();
-      } else if(ev.key === 'ArrowLeft'){
-        ev.preventDefault();
-        const prev = nodes[(i-1+nodes.length) % nodes.length];
-        prev.querySelector('.r-toggle').focus();
-      }
-    });
-  });
-
-  // Positioning function: maps SVG fold points to container coordinates
-  function placeAnchors(){
-    const canvas = document.getElementById('rtCanvas');
-    if(!canvas) return;
-    const rect = canvas.getBoundingClientRect();
-    const width = rect.width;
-    const svgViewBoxWidth = 1200;
-    const scale = width / svgViewBoxWidth;
-
+    // Setup interactivity
     nodes.forEach((el, i) => {
-      // only position absolutely on wide screens
-      if(window.matchMedia('(max-width:880px)').matches){
-        el.style.left = '';
-        el.style.top = '';
-        el.style.position = 'relative';
+      el.classList.add('p' + i);
+      const btn = el.querySelector('.r-toggle');
+
+      function setOpen(open) {
+        if (open) {
+          nodes.forEach(n => {
+            if (n !== el) {
+              n.classList.remove('open');
+              n.querySelector('.r-toggle').setAttribute('aria-expanded', 'false');
+            }
+          });
+          el.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+          
+          // Smooth scroll on mobile
+          if (window.matchMedia('(max-width:880px)').matches) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+          }
+        } else {
+          el.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      }
+
+      // Click handler
+      btn.addEventListener('click', (ev) => {
+        ev.preventDefault();
+        if (window.matchMedia('(max-width:880px)').matches) {
+          const isOpen = el.classList.contains('open');
+          setOpen(!isOpen);
+        }
+      });
+
+      // Keyboard navigation
+      el.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Enter' || ev.key === ' ') {
+          ev.preventDefault();
+          const isOpen = el.classList.contains('open');
+          setOpen(!isOpen);
+        } else if (ev.key === 'ArrowRight' || ev.key === 'ArrowDown') {
+          ev.preventDefault();
+          const next = nodes[(i + 1) % nodes.length];
+          next.querySelector('.r-toggle').focus();
+        } else if (ev.key === 'ArrowLeft' || ev.key === 'ArrowUp') {
+          ev.preventDefault();
+          const prev = nodes[(i - 1 + nodes.length) % nodes.length];
+          prev.querySelector('.r-toggle').focus();
+        }
+      });
+    });
+
+    // Responsive positioning
+    function placeAnchors() {
+      const canvas = document.getElementById('rtCanvas');
+      if (!canvas) return;
+      
+      const isMobile = window.matchMedia('(max-width:880px)').matches;
+      
+      if (isMobile) {
+        nodes.forEach(el => {
+          el.style.left = '';
+          el.style.top = '';
+          el.style.position = 'relative';
+        });
         return;
       }
 
-      const p = foldPoints[i] || foldPoints[foldPoints.length - 1];
-      const left = Math.round(p.x * scale);
-      const top = Math.round(p.y) - 36;
-      el.style.position = 'absolute';
-      el.style.left = (left - 12) + 'px';
-      el.style.top = (top - 14) + 'px';
+      const rect = canvas.getBoundingClientRect();
+      const width = rect.width;
+      const svgViewBoxWidth = 1200;
+      const scale = width / svgViewBoxWidth;
+
+      nodes.forEach((el, i) => {
+        const p = foldPoints[i] || foldPoints[foldPoints.length - 1];
+        const left = Math.round(p.x * scale);
+        const top = Math.round(p.y);
+        
+        el.style.position = 'absolute';
+        el.style.left = (left - 15) + 'px';
+        el.style.top = (top - 30) + 'px';
+      });
+    }
+
+    // Initialize and handle resize
+    window.addEventListener('load', placeAnchors);
+    
+    let resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(placeAnchors, 100);
     });
-  }
 
-  // initial place + on resize (debounced)
-  window.addEventListener('load', placeAnchors);
-  window.addEventListener('resize', function(){ clearTimeout(window._ribbonResize); window._ribbonResize = setTimeout(placeAnchors, 80); });
-})();
+    // Initial placement
+    placeAnchors();
+  })();
 </script>
+<!-- end -->
 
+  <!-- client logo -->
+  <section class="logo001-section">
+    <h2 class="logo001-title">Our Trusted Clients</h2>
+    <p class="logo001-desc">We are proud to have these amazing clients who trust our work.</p>
 
+    <div class="logo001-row row1">
+      <div class="logo001-track">
+        <!-- Logos repeated for seamless scroll -->
+        <img src="https://www.techgropse.com/common/images/menus/logo.png" alt="Client 1" class="logo001" />
+        <img src="https://vs4.in/wp-content/uploads/2024/10/vs4-logo-about-us-removebg-preview.png.webp" alt="Client 2"
+          class="logo001" />
+        <img src="https://kartarvalves.com/wp-content/uploads/2021/04/footer-logo.jpg" alt="Client 3" class="logo001" />
+        <img
+          src="https://www.queenchoicecarpets.com/wp-content/uploads/2025/07/WhatsApp_Image_2025-05-02_at_1.20.49_PM__1_-removebg-preview-removebg-preview.png"
+          alt="Client 4" class="logo001" />
+        <img src="https://drraghvendraramdasi.com/wp-content/uploads/2024/08/logo.png" alt="Client 5" class="logo001" />
+        <img
+          src="https://rsorganisation.in/wp-content/uploads/2025/09/cropped-Untitled-design-2025-09-23T153030.309.png"
+          alt="Client 6" class="logo001" />
+        <img src="https://mygreencab.in/assets/images/logo.svg" alt="Client 7" class="logo001" />
+        <img src="https://rekaps.co/wp-content/uploads/2021/09/Rekaps-Logo-2.png" alt="Client 8" class="logo001" />
+        <img src="https://ibrahimaccounts.com/assets/images/logo.png" alt="Client 9" class="logo001" />
+        <!-- Repeat logos -->
+        <img src="https://www.techgropse.com/common/images/menus/logo.png" alt="Client 1" class="logo001" />
+        <img src="https://vs4.in/wp-content/uploads/2024/10/vs4-logo-about-us-removebg-preview.png.webp" alt="Client 2"
+          class="logo001" />
+        <img src="https://kartarvalves.com/wp-content/uploads/2021/04/footer-logo.jpg" alt="Client 3" class="logo001" />
+        <img
+          src="https://www.queenchoicecarpets.com/wp-content/uploads/2025/07/WhatsApp_Image_2025-05-02_at_1.20.49_PM__1_-removebg-preview-removebg-preview.png"
+          alt="Client 4" class="logo001" />
+        <img src="https://drraghvendraramdasi.com/wp-content/uploads/2024/08/logo.png" alt="Client 5" class="logo001" />
+        <img
+          src="https://rsorganisation.in/wp-content/uploads/2025/09/cropped-Untitled-design-2025-09-23T153030.309.png"
+          alt="Client 6" class="logo001" />
+        <img src="https://mygreencab.in/assets/images/logo.svg" alt="Client 7" class="logo001" />
+        <img src="https://rekaps.co/wp-content/uploads/2021/09/Rekaps-Logo-2.png" alt="Client 8" class="logo001" />
+        <img src="https://ibrahimaccounts.com/assets/images/logo.png" alt="Client 9" class="logo001" />
+      </div>
+    </div>
 
+    <div class="logo001-row row2">
+      <div class="logo001-track">
+        <!-- Repeat same logos for row 2 -->
+        <img src="https://www.techgropse.com/common/images/menus/logo.png" alt="Client 1" class="logo001" />
+        <img src="https://vs4.in/wp-content/uploads/2024/10/vs4-logo-about-us-removebg-preview.png.webp" alt="Client 2"
+          class="logo001" />
+        <img src="https://kartarvalves.com/wp-content/uploads/2021/04/footer-logo.jpg" alt="Client 3" class="logo001" />
+        <img
+          src="https://www.queenchoicecarpets.com/wp-content/uploads/2025/07/WhatsApp_Image_2025-05-02_at_1.20.49_PM__1_-removebg-preview-removebg-preview.png"
+          alt="Client 4" class="logo001" />
+        <img src="https://drraghvendraramdasi.com/wp-content/uploads/2024/08/logo.png" alt="Client 5" class="logo001" />
+        <img
+          src="https://rsorganisation.in/wp-content/uploads/2025/09/cropped-Untitled-design-2025-09-23T153030.309.png"
+          alt="Client 6" class="logo001" />
+        <img src="https://mygreencab.in/assets/images/logo.svg" alt="Client 7" class="logo001" />
+        <img src="https://rekaps.co/wp-content/uploads/2021/09/Rekaps-Logo-2.png" alt="Client 8" class="logo001" />
+        <img src="https://ibrahimaccounts.com/assets/images/logo.png" alt="Client 9" class="logo001" />
+        <!-- Repeat logos -->
+        <img src="https://www.techgropse.com/common/images/menus/logo.png" alt="Client 1" class="logo001" />
+        <img src="https://vs4.in/wp-content/uploads/2024/10/vs4-logo-about-us-removebg-preview.png.webp" alt="Client 2"
+          class="logo001" />
+        <img src="https://kartarvalves.com/wp-content/uploads/2021/04/footer-logo.jpg" alt="Client 3" class="logo001" />
+        <img
+          src="https://www.queenchoicecarpets.com/wp-content/uploads/2025/07/WhatsApp_Image_2025-05-02_at_1.20.49_PM__1_-removebg-preview-removebg-preview.png"
+          alt="Client 4" class="logo001" />
+        <img src="https://drraghvendraramdasi.com/wp-content/uploads/2024/08/logo.png" alt="Client 5" class="logo001" />
+        <img
+          src="https://rsorganisation.in/wp-content/uploads/2025/09/cropped-Untitled-design-2025-09-23T153030.309.png"
+          alt="Client 6" class="logo001" />
+        <img src="https://mygreencab.in/assets/images/logo.svg" alt="Client 7" class="logo001" />
+        <img src="https://rekaps.co/wp-content/uploads/2021/09/Rekaps-Logo-2.png" alt="Client 8" class="logo001" />
+        <img src="https://ibrahimaccounts.com/assets/images/logo.png" alt="Client 9" class="logo001" />
+      </div>
+    </div>
 
-<!-- 8 logo -->
+    <div class="logo001-row row3">
+      <div class="logo001-track">
+        <!-- Reverse scrolling -->
+        <img src="https://ibrahimaccounts.com/assets/images/logo.png" alt="Client 9" class="logo001" />
+        <img src="https://rekaps.co/wp-content/uploads/2021/09/Rekaps-Logo-2.png" alt="Client 8" class="logo001" />
+        <img src="https://mygreencab.in/assets/images/logo.svg" alt="Client 7" class="logo001" />
+        <img
+          src="https://rsorganisation.in/wp-content/uploads/2025/09/cropped-Untitled-design-2025-09-23T153030.309.png"
+          alt="Client 6" class="logo001" />
+        <img src="https://drraghvendraramdasi.com/wp-content/uploads/2024/08/logo.png" alt="Client 5" class="logo001" />
+        <img
+          src="https://www.queenchoicecarpets.com/wp-content/uploads/2025/07/WhatsApp_Image_2025-05-02_at_1.20.49_PM__1_-removebg-preview-removebg-preview.png"
+          alt="Client 4" class="logo001" />
+        <img src="https://kartarvalves.com/wp-content/uploads/2021/04/footer-logo.jpg" alt="Client 3" class="logo001" />
+        <img src="https://vs4.in/wp-content/uploads/2024/10/vs4-logo-about-us-removebg-preview.png.webp" alt="Client 2"
+          class="logo001" />
+        <img src="https://www.techgropse.com/common/images/menus/logo.png" alt="Client 1" class="logo001" />
+        <!-- Repeat -->
+        <img src="https://ibrahimaccounts.com/assets/images/logo.png" alt="Client 9" class="logo001" />
+        <img src="https://rekaps.co/wp-content/uploads/2021/09/Rekaps-Logo-2.png" alt="Client 8" class="logo001" />
+        <img src="https://mygreencab.in/assets/images/logo.svg" alt="Client 7" class="logo001" />
+        <img
+          src="https://rsorganisation.in/wp-content/uploads/2025/09/cropped-Untitled-design-2025-09-23T153030.309.png"
+          alt="Client 6" class="logo001" />
+        <img src="https://drraghvendraramdasi.com/wp-content/uploads/2024/08/logo.png" alt="Client 5" class="logo001" />
+        <img
+          src="https://www.queenchoicecarpets.com/wp-content/uploads/2025/07/WhatsApp_Image_2025-05-02_at_1.20.49_PM__1_-removebg-preview-removebg-preview.png"
+          alt="Client 4" class="logo001" />
+        <img src="https://kartarvalves.com/wp-content/uploads/2021/04/footer-logo.jpg" alt="Client 3" class="logo001" />
+        <img src="https://vs4.in/wp-content/uploads/2024/10/vs4-logo-about-us-removebg-preview.png.webp" alt="Client 2"
+          class="logo001" />
+        <img src="https://www.techgropse.com/common/images/menus/logo.png" alt="Client 1" class="logo001" />
+      </div>
+    </div>
+  </section>
+  <!-- end client logos -->
 
-<div style="background: #f9fbff; padding: 40px 0; overflow: hidden;">
- 
-  <h2 class="font-36 semibold text-center mb-0 textColor">Our Partners</h2>
-
-
-  <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();" style="display: flex; align-items: center;">
-    <img src="assets/images/png/certified3.webp" alt="Logo 3" class="rotating-logo" />
-    <img src="assets/images/png/certified2.webp" alt="Logo 2" class="rotating-logo" />
-    <img src="assets/images/png/certified1.webp" alt="Logo 1" class="rotating-logo" />
-    <img src="assets/images/png/certified3.webp" alt="Logo 3" class="rotating-logo" />
-    <img src="assets/images/png/certified2.webp" alt="Logo 2" class="rotating-logo" />
-    <img src="assets/images/png/certified1.webp" alt="Logo 1" class="rotating-logo" />
-    <img src="assets/images/png/certified3.webp" alt="Logo 3" class="rotating-logo" />
-    <img src="assets/images/png/certified2.webp" alt="Logo 2" class="rotating-logo" />
-    <img src="assets/images/png/certified1.webp" alt="Logo 1" class="rotating-logo" />
-
-
-  </marquee>
-</div>
-
-
-<!-- Our Value Section -->
+<!-- Section 6-->
 <section class="about_section-3">
   <div class="value-header">
     <h2>Why Choose Us – <span>RS Organisation</span></h2>
@@ -1555,643 +1203,100 @@ RS Organisation is a trusted website development company in Noida that blends cr
     </div>
   </div>
 </section>
+<!-- end -->
+            
+    <!--section-7 -->
+    <section class="tech-section">
+      <h2>Latest Cutting edge technologies we use</h2>
 
-
-<style>
-.about_section-3 {
-  background: #f6f7f9;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.value-header h2 {
-  font-size: 2.4rem;
-  margin-bottom: 50px;
-}
-.value-header span {
-  color: #0d6efd;
-}
-
-.value-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-}
-
-.value-card {
-  position: relative;
-  width: 320px;
-  background: #fff;
-  padding: 30px 25px;
-  border-radius: 25px;
-  text-align: left;
-  z-index: 1;
-  transition: all 0.4s ease;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-}
-
-.value-card::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 100%;
-  height: 100%;
-  border: 2px solid black;
-  border-radius: 30px;
-  z-index: -1;
-  transition: 0.3s ease;
-}
-
-.value-card:hover::before {
-  border-color: #8a61f4;
-  box-shadow: 0 0 20px rgba(138, 97, 244, 0.5);
-}
-
-/* Purple Top-Left Bar */
-.corner-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 8px;
-  width: 60px;
-  background: #8a61f4;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 4px;
-}
-
-/* Content */
-.value-card-icon {
-  font-size: 2.5rem;
-  color: #8a61f4;
-  margin-bottom: 20px;
-  z-index: 2;
-}
-
-.value-card h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.value-card p {
-  font-size: 0.98rem;
-  color: #444;
-  line-height: 1.6;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .value-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .value-card {
-    width: 90%;
-  }
-}
-</style>
-
-
-<!-- ---------------- -->
-
-<!-- Swiper CSS & JS -->
-<!-- Include Swiper CSS & JS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-<section class="tech-slider-section">
-  <h2 class="slider-heading">Our Technology Stack for Local SEO Success</h2>
-  <p class="slider-subheading">Building Your Digital Future with Expertise and Excellence</p>
-
-  <div class="swiper techSwiper">
-    <div class="swiper-wrapper">
-
-      <!-- Google Search Console -->
-      <div class="swiper-slide tech-card gsc">
-        <img src="https://cdn-icons-png.flaticon.com/512/270/270798.png" alt="GSC">
-        <h4>Google Search Console</h4>
-        <p>Monitor site performance in Google search.</p>
+      <!-- Tab Buttons -->
+      <div class="tech-tabs">
+        <button class="tab-button active" data-tab="databases">Databases</button>
+        <button class="tab-button" data-tab="languages">Programming Languages</button>
+        <button class="tab-button" data-tab="tools">Development Tools</button>
+        <button class="tab-button" data-tab="design">UI/UX & Design</button>
       </div>
 
-      <!-- Google Analytics -->
-      <div class="swiper-slide tech-card ga">
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" alt="GA">
-        <h4>Google Analytics</h4>
-        <p>Analyze traffic & user behavior.</p>
+      <!-- Tab Content -->
+      <div class="tab-content active" id="databases">
+        <div class="tech-grid">
+          <div class="tech-card"><img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="Database">
+          </div>
+          <div class="tech-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968313.png" alt="Firebase">
+          </div>
+          <div class="tech-card"><img src="https://www.sqlite.org/images/sqlite370_banner.gif" alt="SQLite"></div>
+          <div class="tech-card"><img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="MySQL"></div>
+          <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"
+              alt="PostgreSQL"></div>
+        </div>
       </div>
 
-      <!-- Google Business Profile -->
-      <div class="swiper-slide tech-card gbp">
-        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991149.png" alt="GBP">
-        <h4>Google Business Profile</h4>
-        <p>Manage local business presence.</p>
+      <div class="tab-content" id="languages">
+        <div class="tech-grid">
+          <div class="tech-card"><img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java"></div>
+          <div class="tech-card"><img src="https://cdn-icons-png.flaticon.com/512/919/919852.png" alt="Python"></div>
+          <div class="tech-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript">
+          </div>
+          <div class="tech-card"><img src="https://cdn-icons-png.flaticon.com/512/919/919826.png" alt="PHP"></div>
+          <div class="tech-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="C++"></div>
+        </div>
       </div>
 
-      <!-- SEMrush / Ahrefs -->
-      <div class="swiper-slide tech-card semrush">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png" alt="SEMrush">
-        <h4>SEMrush / Ahrefs</h4>
-        <p>SEO audit and backlink tools.</p>
+      <div class="tab-content" id="tools">
+        <div class="tech-grid">
+          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" alt="GitHub"></div>
+          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="Git"></div>
+          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg"
+              alt="VS Code"></div>
+          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="Docker"></div>
+          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS"></div>
+        </div>
       </div>
 
-      <!-- Moz Local / BrightLocal -->
-      <div class="swiper-slide tech-card moz">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968721.png" alt="Moz">
-        <h4>Moz / BrightLocal</h4>
-        <p>Local citation & listing management.</p>
+      <div class="tab-content" id="design">
+        <div class="tech-grid">
+          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/figma-1.svg" alt="Figma"></div>
+          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/adobe-xd-1.svg" alt="Adobe XD"></div>
+          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/adobe-photoshop-2.svg" alt="Photoshop">
+          </div>
+          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/adobe-illustrator-cc-icon.svg"
+              alt="Illustrator"></div>
+          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/sketch-2.svg" alt="Sketch"></div>
+        </div>
       </div>
+    </section>
+    <script>
+      const tabs = document.querySelectorAll(".tab-button");
+      const contents = document.querySelectorAll(".tab-content");
 
-      <!-- Screaming Frog -->
-      <div class="swiper-slide tech-card screamingfrog">
-        <img src="https://cdn-icons-png.flaticon.com/512/3104/3104585.png" alt="Screaming Frog">
-        <h4>Screaming Frog</h4>
-        <p>Technical SEO crawling tool.</p>
-      </div>
+      tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+          tabs.forEach(btn => btn.classList.remove("active"));
+          tab.classList.add("active");
 
-      <!-- SurferSEO / Frase -->
-      <div class="swiper-slide tech-card surfer">
-        <img src="https://cdn-icons-png.flaticon.com/512/873/873257.png" alt="SurferSEO">
-        <h4>Surfer SEO / Frase</h4>
-        <p>Content optimization solutions.</p>
-      </div>
+          contents.forEach(c => c.classList.remove("active"));
+          document.getElementById(tab.dataset.tab).classList.add("active");
+        });
+      });
+    </script>
+    <!-- end -->
 
-      <!-- Schema Markup Generator -->
-      <div class="swiper-slide tech-card schema">
-        <img src="https://cdn-icons-png.flaticon.com/512/1455/1455537.png" alt="Schema">
-        <h4>Schema Markup</h4>
-        <p>Add structured data & rich snippets.</p>
-      </div>
-
-      <!-- GTmetrix / PageSpeed -->
-      <div class="swiper-slide tech-card pagespeed">
-        <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="PageSpeed">
-        <h4>PageSpeed / GTmetrix</h4>
-        <p>Performance & speed auditing tools.</p>
-      </div>
-
-      <!-- Review Management Tools -->
-      <div class="swiper-slide tech-card review">
-        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Review Tools">
-        <h4>Review Management</h4>
-        <p>Manage and improve customer reviews.</p>
-      </div>
-
-      <!-- Rank Tracking Tools -->
-      <div class="swiper-slide tech-card rank">
-        <img src="https://cdn-icons-png.flaticon.com/512/892/892781.png" alt="Rank Tracking">
-        <h4>Rank Tracking Tools</h4>
-        <p>Monitor keyword search rankings.</p>
-      </div>
-
-    </div>
-
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <!-- section-8 -->
+  <!-- sentin-9 -->
+<section class="rev-slider-section" id="testimonials">
+  <div class="rev-slider-header">
+  
+    <h2 class="rev-title " style="color: #000;">Our Clients  <span class="rev-highlight">Review</span></h2>
   </div>
+
+<!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-3bba91a8-67ea-46be-9a2b-299ee3a35c7f" data-elfsight-app-lazy></div>
+
 </section>
+<!-- end -->
+    <!-- end -->
 
-<style>
-.tech-slider-section {
-  background: linear-gradient(135deg, #2a6cf1, #94c7f5);
-  padding: 60px 5%;
-  border-radius: 60px;
-  text-align: center;
-}
-.slider-heading {
-  font-size: 2rem;
-  color: #fff;
-  margin-bottom: 10px;
-}
-.slider-subheading {
-  font-size: 1rem;
-  color: #eef1f5;
-  margin-bottom: 40px;
-}
-.tech-card {
-  width: 200px;
-  height: 200px;
-  margin: auto;
-  border-radius: 20px;
-  padding: 20px;
-  color: #fff;
-  text-align: center;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-}
-.tech-card img {
-  height: 60px;
-  margin-bottom: 12px;
-}
-.tech-card h4 {
-  font-size: 1.1rem;
-  margin-bottom: 6px;
-}
-.tech-card p {
-  font-size: 0.85rem;
-}
-
-/* Background colors matching brand palettes */
-.tech-card.gsc         { background: #4285F4; }
-.tech-card.ga          { background: #34A853; }
-.tech-card.gbp         { background: #FBBC05; }
-.tech-card.semrush     { background: #FF6A00; }
-.tech-card.moz         { background: #E8741E; }
-.tech-card.screamingfrog{ background: #3C9E4F; }
-.tech-card.surfer      { background: #FF6B6B; }
-.tech-card.schema      { background: #4A90E2; }
-.tech-card.pagespeed   { background: #4CAF50; }
-.tech-card.review      { background: #9C27B0; }
-.tech-card.rank        { background: #00BCD4; }
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff;
-  background-color: rgba(0,0,0,0.3);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-}
-</style>
-
-<script>
-new Swiper('.techSwiper', {
-  loop: true,
-  spaceBetween: 20,
-  autoplay: { delay: 3000, disableOnInteraction: false },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
-  breakpoints: {
-    320: { slidesPerView: 1 },
-    576: { slidesPerView: 2 },
-    768: { slidesPerView: 3 },
-    1024:{ slidesPerView: 4 }
-  }
-});
-</script>
-
-
-<!-- indusrty we sureve -->
- 
-<section class="iwss-section">
-  <!-- Left Industry Cards -->
-  <div class="iwss-left">
-    <h2 class="iwss-title">The Industries We Serve</h2>
-    <p class="iwss-desc">
-      We are a web &amp; development and mobile application development agency that has experience in gathering client needs and then developing the best solutions to meet them. After testing, we launch our work in the market and make it taste successful for our clients by providing the best services that are accessible at affordable rates.
-    </p>
-    <div class="iwss-grid">
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Healthcare">
-        </div>
-        <h4>Healthcare</h4>
-        <p class="projects">213 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/3416/3416044.png" alt="Education">
-        </div>
-        <h4>Education / e‑Learning</h4>
-        <p class="projects">123 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/2920/2920322.png" alt="Media">
-        </div>
-        <h4>Media &amp; Entertainment</h4>
-        <p class="projects">2040 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="E‑commerce">
-        </div>
-        <h4>E‑commerce</h4>
-        <p class="projects">103 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/2933/2933887.png" alt="Banking">
-        </div>
-        <h4>Banking &amp; Finance</h4>
-        <p class="projects">109 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/1087/1087929.png" alt="Travel">
-        </div>
-        <h4>Tour &amp; Travels</h4>
-        <p class="projects">110 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png" alt="Logistics">
-        </div>
-        <h4>Logistics</h4>
-        <p class="projects">110 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Social">
-        </div>
-        <h4>Social Networking</h4>
-        <p class="projects">110 Projects</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Center Rotating Ring -->
-  <div class="iwss-center">
-    <div class="iwss-bg-ring"></div>
-    <div class="iwss-ring-container">
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/3416/3416044.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/2920/2920322.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/2933/2933887.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/1087/1087929.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt=""></div>
-    </div>
-    <div class="iwss-center-logo">
-      <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" alt="React">
-      <p>Industries<br>We Serve</p>
-    </div>
-  </div>
-</section>
-
-<style>
-  /* Section Layout */
-  .iwss-section {
-    max-width: 1200px;
-    margin: 80px auto;
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 60px;
-    align-items: flex-start;
-    font-family: 'Segoe UI', sans-serif;
-  }
-  /* 1) Make sure the parent container is positioned relative: */
-.iwss-center {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  margin: 0 auto;
-}
-
-/* 2) Center the ring exactly at 50%/50% of its parent,
-      and spin around its own center: */
-.iwss-ring-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  height: 400px;
-
-  /* move its own center to the parent’s center */
-  transform: translate(-50%, -50%);
-
-  /* rotate around its center point */
-  transform-origin: center center;
-  animation: spin 20s linear infinite;
-
-  /* optional neon glow on the path */
-  border: 2px solid rgba(0, 123, 255, 0.5);
-  border-radius: 50%;
-  box-shadow: 0 0 20px rgba(0, 123, 255, 0.7);
-  z-index: 1;
-}
-
-/* 3) Now place each icon around the circle at 45° increments: */
-.iwss-icon {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-}
-
-.iwss-icon:nth-child(1) { top:   0%; left: 50%; transform: translate(-50%, -50%); }
-.iwss-icon:nth-child(2) { top:  14%; left: 86%; transform: translate(-50%, -50%); }
-.iwss-icon:nth-child(3) { top:  50%; left:100%; transform: translate(-50%, -50%); }
-.iwss-icon:nth-child(4) { top:  86%; left: 86%; transform: translate(-50%, -50%); }
-.iwss-icon:nth-child(5) { top: 100%; left: 50%; transform: translate(-50%, -50%); }
-.iwss-icon:nth-child(6) { top:  86%; left: 14%; transform: translate(-50%, -50%); }
-.iwss-icon:nth-child(7) { top:  50%; left:  0%; transform: translate(-50%, -50%); }
-.iwss-icon:nth-child(8) { top:  14%; left: 14%; transform: translate(-50%, -50%); }
-
-/* 4) Keep your spin keyframe: */
-@keyframes spin {
-  to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-
-  /* Left Side */
-  .iwss-left {
-    flex: 1 1 500px;
-  }
-  .iwss-title {
-    font-size: 2.4rem;
-    color: #0b2b4c;
-    margin-bottom: 16px;
-  }
-  .iwss-desc {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 24px;
-    margin-left: 0px;
-  }
-
-  .iwss-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-/* ring spins with ease-in-out */
-.iwss-ring-container {
-  animation: spin 15s ease-in-out infinite;
-}
-
-/*  smoother spin */
-@keyframes spin {
-  0%   { transform: translate(-50%, -50%) rotate(0deg); }
-  50%  { transform: translate(-50%, -50%) rotate(180deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-/* add a tiny “pop” on each icon as it passes top */
-.iwss-icon {
-  animation: orbit-pop 4s ease-in-out infinite;
-}
-
-@keyframes orbit-pop {
-  0%,100% { transform: translate(-50%,-50%) scale(1); }
-  25%     { transform: translate(-50%,-60%) scale(1.1); } /* pop at top */
-  50%     { transform: translate(-50%,-50%) scale(1); }
-  75%     { transform: translate(-50%,-40%) scale(1.05); } /* pop at bottom */
-}
-
-  .industry-card {
-    background: #0b2b4c;
-    color: white;
-    border-radius: 12px;
-    padding: 24px 16px 16px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(11,43,76,0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-  }
-
-  .industry-card::before {
-    content: '';
-    position: absolute;
-    top: -40%;
-    left: -40%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at center, rgba(0,123,255,0.3), transparent 70%);
-    animation: rotateBg 6s linear infinite;
-    z-index: 0;
-  }
-
-  .industry-card:hover {
-    transform: perspective(800px) rotateX(5deg) rotateY(-5deg);
-    box-shadow: 0 10px 30px rgba(0,123,255,0.4);
-  }
-
-  .card-logo {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 12px;
-    background: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 10px rgba(0,123,255,0.5);
-    z-index: 1;
-    animation: pulse 3s ease-in-out infinite;
-  }
-
-  .card-logo img {
-    width: 32px;
-    animation: spinLogo 8s linear infinite;
-  }
-
-  .industry-card h4 {
-    margin: 0 0 8px;
-    font-size: 1.1rem;
-    z-index: 1;
-  }
-
-  .industry-card .projects {
-    font-size: 0.9rem;
-    font-weight: 600;
-    z-index: 1;
-  }
-
-  /* Center Ring */
-  .iwss-center {
-    flex: 1 1 400px;
-    position: relative;
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
-  }
-
-  .iwss-bg-ring {
-    position: absolute;
-    top:50%; left:50%;
-    width:420px; height:420px;
-    background: radial-gradient(circle, rgba(0,123,255,0.1), transparent);
-    border-radius:50%;
-    transform: translate(-50%,-50%);
-    filter: blur(20px);
-    z-index:0;
-  }
-
-  .iwss-ring-container {
-    position: absolute;
-    top:37%; left:27%;
-    width:400px; height:400px;
-    transform: translate(-50%,-50%);
-    animation: spin 20s linear infinite;
-    z-index:2;
-  }
-
-  .iwss-icon {
-    position: absolute;
-    width:60px; height:60px;
-    background:#fff; border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    box-shadow:0 4px 16px rgba(0,0,0,0.1);
-  }
-  .iwss-icon img { width:28px; }
-
-  /* icon positions */
-  .iwss-icon:nth-child(1){ top:0%; left:50%; transform:translate(-50%,-50%); }
-  .iwss-icon:nth-child(2){ top:18%; left:82%; }
-  .iwss-icon:nth-child(3){ top:50%; left:100%; }
-  .iwss-icon:nth-child(4){ top:82%; left:82%; }
-  .iwss-icon:nth-child(5){ top:100%;left:50%; }
-  .iwss-icon:nth-child(6){ top:82%; left:18%; }
-  .iwss-icon:nth-child(7){ top:50%; left:0%; }
-  .iwss-icon:nth-child(8){ top:18%; left:18%; }
-
-  .iwss-center-logo {
-    position: absolute;
-    top:85%; left:67%;
-    width:140px; height:140px;
-    background:#fff; border-radius:50%;
-    transform:translate(-50%,-50%);
-    display:flex; align-items:center; justify-content:center;
-    flex-direction:column; text-align:center;
-    box-shadow:0 4px 20px rgba(0,0,0,0.1); z-index:3;
-  }
-  .iwss-center-logo img { width:40px; margin-bottom:6px; }
-  .iwss-center-logo p { margin:0; color:#0b2b4c; font-weight:600; }
-
-  /* Animations */
-  @keyframes spin { to { transform: translate(-50%,-50%) rotate(360deg); }}
-  @keyframes rotateBg { to { transform: rotate(360deg); }}
-  @keyframes spinLogo { to { transform: rotate(360deg); }}
-  @keyframes pulse {
-    0%,100% { box-shadow:0 0 10px rgba(0,123,255,0.5); }
-    50%    { box-shadow:0 0 20px rgba(0,123,255,0.8); }
-  }
-
-  /* Responsiveness */
-  @media (max-width: 992px) {
-    .iwss-grid { grid-template-columns: repeat(2,1fr); }
-    .iwss-section { gap: 40px; }
-  }
-  @media (max-width: 600px) {
-    .iwss-grid { grid-template-columns: 1fr; }
-    .iwss-center { width: 300px; height:300px; }
-    .iwss-bg-ring { width:320px; height:320px; }
-    .iwss-ring-container {        width: 300px;
-        height: 300px;
-        left: 30px;
-        top: 10px; }
-    .iwss-center-logo { width:100px; height:100px; top:150px; left:200px; }
-    .card-logo { width:50px; height:50px; }
-  }
-</style>
-
-
-
-<!-- card section  -->
 <br><br>
 
 <!-- end -->
@@ -2201,72 +1306,10 @@ new Swiper('.techSwiper', {
 
 
 
-<style>
-
-    /* Testimonials Slider Section */
-    .rev-slider-section {
-       /*  */
-      color: #fff; 
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .rev-slider-header .rev-badge {
-      border: 1px solid #ff4500;
-      padding: 5px 15px;
-      border-radius: 30px;
-      color: #ff4500;
-      display: inline-block;
-      margin-bottom: 10px;
-    }
-    .rev-slider-header .rev-title {
-      font-size: 36px;
-      font-weight: bold;
-      color: #fff;
-      margin: 0 0 20px;
-    }
-    .rev-slider-header .rev-highlight { color: #ff4500; }
-
-    .rev-swiper-container {
-      width: 100%;
-      padding-bottom: 40px;
-      overflow: visible;
-    }
-    .rev-swiper-container .swiper-slide { display: flex; justify-content: center; }
-
-    .rev-card {
-      background: #121a2f;
-      padding: 30px 20px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-      width: 100%;
-      max-width: 350px;
-      box-sizing: border-box;
-    }
-    .rev-card:hover { transform: translateY(-10px); }
-    .rev-card .rev-quote { font-size: 40px; color: #ff4500; margin-bottom: 20px; }
-    .rev-card .rev-text { color: #ddd; font-size: 16px; min-height: 80px; margin:0 0 15px; }
-    .rev-stars { color: #ffc107; font-size: 18px; margin-bottom: 15px; }
-    .rev-profile { display: flex; align-items: center; justify-content: center; gap: 10px; }
-    .rev-profile img { width: 50px; height: 50px; border-radius: 50%; }
-    .rev-info { text-align: left; }
-    .rev-info strong { display: block; font-size: 16px; }
-    .rev-info span { color: #ff4500; font-size: 14px; }
-
-    /* Pagination bullets */
-    .swiper-pagination-bullets { bottom: 10px !important; }
-    .swiper-pagination-bullet { background: #888; opacity: 1; }
-    .swiper-pagination-bullet-active { background: #ff4500; }
-
-    @media (max-width: 768px) {
-      .rev-swiper-container .swiper-slide { width: 80% !important; }
-    }
-  </style>
-
 <section class="rev-slider-section" id="testimonials">
   <div class="rev-slider-header">
   
-    <h2 class="rev-title">Our Clients  <span class="rev-highlight">Review</span></h2>
+    <h2 class="rev-title" style="color: black;">Our Clients  <span class="rev-highlight">Review</span></h2>
   </div>
 
 <!-- Elfsight Google Reviews | Untitled Google Reviews -->
@@ -2274,84 +1317,6 @@ new Swiper('.techSwiper', {
 <div class="elfsight-app-3bba91a8-67ea-46be-9a2b-299ee3a35c7f" data-elfsight-app-lazy></div>
 
 </section>
-
-<!-- contect  -->
-<style>
-  /* Header Contact Bar */
-  .top-contact-bar {
-    background-color: #F79B31;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-  }
-
-  .top-contact-bar .left-section,
-  .top-contact-bar .right-section {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .top-contact-bar .icon-circle {
-    width: 48px;
-    height: 48px;
-    border: 2px dashed #fff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 22px;
-    background-color: transparent;
-    color: white;
-  }
-
-  .top-contact-bar .contact-text {
-    font-weight: bold;
-    font-size: 20px;
-    color: white;
-  }
-
-  .top-contact-bar .phone-box {
-    background-color: #0a0e1a;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: bold;
-    color: #fff;
-    font-size: 16px;
-    transition: 0.3s ease;
-  }
-
-  /* Phone icon rotating */
-  .rotating-icon {
-    animation: spin 3s linear infinite;
-    border: 2px solid #fff;
-  }
-
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-
-  /* Optional rotating card wrapper effect */
-  .phone-card {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 5px 10px;
-    border-radius: 40px;
-    border: 2px solid #fff;
-    animation: card-rotate 6s linear infinite alternate;
-    transition: all 0.3s ease;
-  }
-
-  @keyframes card-rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(1deg); }
-  }
-</style>
 
 
 
