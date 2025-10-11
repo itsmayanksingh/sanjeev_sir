@@ -9589,11 +9589,13 @@ color: #ffffff;
     .iwss-ring-container_020 {
       width: 280px;
       height: 280px;
+      top: 50%;
     }
 
     .iwss-icon_020 {
       width: 40px;
       height: 40px;
+      
     }
 
     .iwss-icon_020 img {

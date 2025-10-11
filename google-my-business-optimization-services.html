@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,22 +15,20 @@
     href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
   <!-- CSS -->
 
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-
- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script src="./script.js"></script>
 
 
 
 </head>
+
 <body>
-          <div class="fixedTop">
+  <div class="fixedTop">
     <!-- Sub header -->
     <div class="sub-header d-flex justify-content-between flex-wrap gap-2">
       <div class="d-flex gap-3">
@@ -56,2039 +55,883 @@
             src="assets/images/svg/youtube.svg" height="16" width="16" /></a>
       </div>
     </div>
+
     <!-- Navbar -->
-   <nav class="navbar001" aria-label="Main navigation">
-  <div class="nav-container001">
-    <!-- Logo (left) -->
-    <a href="/" class="nav-logo001" aria-label="Home">
-      <img src="assets/images/svg/logo.svg" alt="Logo" />
-    </a>
+    <nav class="navbar001" aria-label="Main navigation">
+      <div class="nav-container001">
+        <!-- Logo (left) -->
+        <a href="/" class="nav-logo001" aria-label="Home">
+          <img src="assets/images/svg/logo.svg" alt="Logo" />
+        </a>
 
-    <!-- Hamburger (mobile) -->
-    <button class="nav-toggle001" aria-label="Toggle menu" aria-expanded="false" type="button">
-      <!-- SVG hamburger -->
-      <svg width="28" height="20" viewBox="0 0 28 20" fill="none" aria-hidden="true">
-        <rect width="28" height="2" rx="1" fill="#111"/>
-        <rect y="9" width="28" height="2" rx="1" fill="#111"/>
-        <rect y="18" width="28" height="2" rx="1" fill="#111"/>
-      </svg>
-    </button>
+        <!-- Hamburger (mobile) -->
+        <button class="nav-toggle001" aria-label="Toggle menu" aria-expanded="false" type="button">
+          <!-- SVG hamburger -->
+          <svg width="28" height="20" viewBox="0 0 28 20" fill="none" aria-hidden="true">
+            <rect width="28" height="2" rx="1" fill="#111" />
+            <rect y="9" width="28" height="2" rx="1" fill="#111" />
+            <rect y="18" width="28" height="2" rx="1" fill="#111" />
+          </svg>
+        </button>
 
-    <!-- Menu -->
-    <ul class="nav-menu001" role="menubar">
-      <li role="none"><a role="menuitem" href="index.html" class="active">Home</a></li>
-      <li role="none"><a role="menuitem" href="about.html">About</a></li>
-      <li role="none"><a role="menuitem" href="./artificial-intelligence-development-company.html">A.I</a></li>
+        <!-- Menu -->
+        <ul class="nav-menu001" role="menubar">
+          <li role="none"><a role="menuitem" href="index.html" class="active">Home</a></li>
+          <li role="none"><a role="menuitem" href="about.html">About</a></li>
+          <li role="none"><a role="menuitem" href="./artificial-intelligence-development-company.html">A.I</a></li>
 
-      <!-- Services (mega) -->
-      <li class="mega-parent" role="none">
-        <a href="#" role="menuitem" class="services-link" aria-expanded="false">Services </a>
+          <!-- Services (mega) -->
+          <li class="mega-parent" role="none">
+            <a href="#" role="menuitem" class="services-link" aria-expanded="false">Services </a>
 
-        <!-- Mega Dropdown -->
-        <div class="mega-dropdown" aria-hidden="true">
-          <!-- Close button for mobile -->
-          <button class="mega-close-btn" aria-label="Close menu" type="button">&times;</button>
+            <!-- Mega Dropdown -->
+            <div class="mega-dropdown" aria-hidden="true">
+              <!-- Close button for mobile -->
+              <button class="mega-close-btn" aria-label="Close menu" type="button">&times;</button>
 
-          <div class="mega-section">
-            <h5>App Development</h5>
-            <ul>
-              <li>
-                <a href="./ios-app-development.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
-                    </svg>
-                  </span>
-                  <span>iOS Development</span>
-                </a>
-              </li>
-              <li>
-                <a href="./android-application-development.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M17.6,9.48L16.34,8.22L17.2,7.36C17.58,6.98 17.58,6.38 17.2,6L16.1,4.88C15.71,4.5 15.12,4.5 14.74,4.88L13.87,5.75L12.62,4.49C11.96,3.83 10.9,3.83 10.24,4.49L4.22,10.5C3.56,11.16 3.56,12.23 4.22,12.89L5.47,14.14L4.6,15C4.23,15.39 4.23,16 4.6,16.37L5.7,17.47C6.08,17.85 6.68,17.85 7.06,17.47L7.92,16.61L9.18,17.86C9.84,18.53 10.9,18.53 11.56,17.86L17.6,11.82C18.25,11.17 18.25,10.13 17.6,9.48M6.12,11.46L10.24,7.34L13.77,10.88L9.65,15L6.12,11.46M14.16,13.5L10.63,9.96L11.91,8.68L15.44,12.22L14.16,13.5M19.59,11.77C19.2,11.77 18.84,11.91 18.56,12.18L16.7,14.04L19.59,16.93L21.45,15.07C22,14.5 22,13.6 21.45,13.04L20.62,12.18C20.34,11.91 19.97,11.77 19.59,11.77M13,19.88C13.42,21.32 12.71,22.87 11.31,23.5C10.63,23.8 9.89,23.88 9.17,23.75C8.45,23.61 7.8,23.26 7.3,22.75L7.22,22.67C6.67,22.13 6.31,21.43 6.19,20.66C6.07,19.89 6.19,19.11 6.54,18.42L6.62,18.28L9.42,21.08L12.22,18.28L12.34,18.4C12.85,18.9 13.1,19.38 13,19.88Z"/>
-                    </svg>
-                  </span>
-                  <span>Android Development</span>
-                </a>
-              </li>
-              <li>
-                <a href="./flutter-app-development.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M14.6,16.6L19.2,12L14.6,7.4L16,6L22,12L16,18L14.6,16.6M9.4,16.6L4.8,12L9.4,7.4L8,6L2,12L8,18L9.4,16.6Z"/>
-                    </svg>
-                  </span>
-                  <span>Flutter Apps</span>
-                </a>
-              </li>
-          <!-- <h5>Figma Designing</h5> -->
-        <li>
-                <a href="./best-figma-design-company-in-noida.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M16.75,22.16L14.17,19.58L15.58,18.17L16.75,19.34L20.08,16L21.5,17.41L16.75,22.16M13,17.74C13.5,18.37 14.09,18.94 14.76,19.41L10.08,20.4L3.5,3.5L20.5,10.08L19.41,14.84C18.79,14.16 18,13.66 17.15,13.42L18.31,10.79L7.89,6.11L12.57,16.53L13,17.74M6.89,4.5L4.5,6.89L8.26,17.86L10.05,17.5L6.89,4.5Z"/>
-                    </svg>
-                  </span>
-                  <span>Figma Design</span>
-                </a>
-              </li>
-           
-            </ul>
-          </div>
-
-          <div class="mega-section">
-            <h5>Web Development</h5>
-            <ul>
-              <li>
-                <a href="./web-development-company-in-noida.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/>
-                    </svg>
-                  </span>
-                  <span>Website Development</span>
-                </a>
-              </li>
-              <li>
-                <a href="./best-website-design-company-in-noida.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12,17.56L16.07,16.43L16.62,10.33H9.38L9.2,8.3H16.8L17,6.31H7L7.56,12.32H14.45L14.22,14.9L12,15.5L9.78,14.9L9.64,13.24H7.64L7.93,16.43L12,17.56M4.07,3H19.93L18.5,19.2L12,21L5.5,19.2L4.07,3Z"/>
-                    </svg>
-                  </span>
-                  <span>Website Design</span>
-                </a>
-              </li>
-              <li>
-                <a href="./best-website-redesiging-services-company-in-noida.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M19,12H22L18,8L14,12H17V14H19V12M5,12H2L6,16L10,12H7V10H5V12M12,5V2L8,6L12,10V7H14V5H12M12,19V22L16,18L12,14V17H10V19H12Z"/>
-                    </svg>
-                  </span>
-                  <span>Website Redesign</span>
-                </a>
-              </li>
-              <li>
-                <a href="./best-website-responsive-services-company-in-noida.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M4,6H20V16H4M20,18A2,2 0 0,0 22,16V6C22,4.89 21.1,4 20,4H4C2.89,4 2,4.89 2,6V16A2,2 0 0,0 4,18H0V20H24V18H20Z"/>
-                    </svg>
-                  </span>
-                  <span>Responsive Website</span>
-                </a>
-              </li>
-              <li>
-                <a href="./php-development-company-noida.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12,18.08C5.37,18.08 0,15.36 0,12C0,8.64 5.37,5.92 12,5.92C18.63,5.92 24,8.64 24,12C24,15.36 18.63,18.08 12,18.08M12,7.5C7.5,7.5 4.5,9.5 4.5,12C4.5,14.5 7.5,16.5 12,16.5C16.5,16.5 19.5,14.5 19.5,12C19.5,9.5 16.5,7.5 12,7.5M7,12L9,10V14L7,12M17,12L15,14V10L17,12Z"/>
-                    </svg>
-                  </span>
-                  <span>PHP Development</span>
-                </a>
-              </li>
-              <li>
-                <a href="./react-development-company-noida.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12,10.11C13.03,10.11 13.87,10.95 13.87,12C13.87,13 13.03,13.85 12,13.85C10.97,13.85 10.13,13 10.13,12C10.13,10.95 10.97,10.11 12,10.11M7.37,20C8,20.38 9.38,19.8 10.97,18.3C10.45,17.71 9.94,17.07 9.46,16.4C8.64,16.32 7.83,16.2 7.06,16.04C6.55,18.18 6.74,19.65 7.37,20M8.08,14.26L7.79,13.75C7.68,14.04 7.57,14.33 7.5,14.61C7.77,14.67 8.07,14.72 8.38,14.77C8.28,14.6 8.18,14.43 8.08,14.26M14.62,13.5L15.43,12L14.62,10.5C14.32,9.97 14,9.5 13.71,9.03C13.17,9 12.6,9 12,9C11.4,9 10.83,9 10.29,9.03C10,9.5 9.68,9.97 9.38,10.5L8.57,12L9.38,13.5C9.68,14.03 10,14.5 10.29,14.97C10.83,15 11.4,15 12,15C12.6,15 13.17,15 13.71,14.97C14,14.5 14.32,14.03 14.62,13.5M12,6.78C11.81,7 11.61,7.23 11.41,7.5C11.61,7.5 11.8,7.5 12,7.5C12.2,7.5 12.39,7.5 12.59,7.5C12.39,7.23 12.19,7 12,6.78M12,17.22C12.19,17 12.39,16.77 12.59,16.5C12.39,16.5 12.2,16.5 12,16.5C11.8,16.5 11.61,16.5 11.41,16.5C11.61,16.77 11.81,17 12,17.22M16.62,4C16,3.62 14.62,4.2 13.03,5.7C13.55,6.29 14.06,6.93 14.54,7.6C15.36,7.68 16.17,7.8 16.94,7.96C17.45,5.82 17.26,4.35 16.62,4M15.92,9.74L16.21,10.25C16.32,9.96 16.43,9.67 16.5,9.39C16.23,9.33 15.93,9.28 15.62,9.23C15.72,9.4 15.82,9.57 15.92,9.74M17.37,2.69C18.84,3.53 19,5.74 18.38,8.32C20.92,9.07 22.75,10.31 22.75,12C22.75,13.69 20.92,14.93 18.38,15.68C19,18.26 18.84,20.47 17.37,21.31C15.91,22.15 13.92,21.19 12,19.36C10.08,21.19 8.09,22.15 6.62,21.31C5.16,20.47 5,18.26 5.62,15.68C3.08,14.93 1.25,13.69 1.25,12C1.25,10.31 3.08,9.07 5.62,8.32C5,5.74 5.16,3.53 6.62,2.69C8.09,1.85 10.08,2.81 12,4.64C13.92,2.81 15.91,1.85 17.37,2.69M17.08,12C17.42,12.75 17.72,13.5 17.97,14.26C20.07,13.63 21.25,12.73 21.25,12C21.25,11.27 20.07,10.37 17.97,9.74C17.72,10.5 17.42,11.25 17.08,12M6.92,12C6.58,11.25 6.28,10.5 6.03,9.74C3.93,10.37 2.75,11.27 2.75,12C2.75,12.73 3.93,13.63 6.03,14.26C6.28,13.5 6.58,12.75 6.92,12M15.92,14.26C15.82,14.43 15.72,14.6 15.62,14.77C15.93,14.72 16.23,14.67 16.5,14.61C16.43,14.33 16.32,14.04 16.21,13.75L15.92,14.26M13.03,18.3C14.62,19.8 16,20.38 16.62,20C17.26,19.65 17.45,18.18 16.94,16.04C16.17,16.2 15.36,16.32 14.54,16.4C14.06,17.07 13.55,17.71 13.03,18.3M8.08,9.74C8.18,9.57 8.28,9.4 8.38,9.23C8.07,9.28 7.77,9.33 7.5,9.39C7.57,9.67 7.68,9.96 7.79,10.25L8.08,9.74M10.97,5.7C9.38,4.2 8,3.62 7.37,4C6.74,4.35 6.55,5.82 7.06,7.96C7.83,7.8 8.64,7.68 9.46,7.6C9.94,6.93 10.45,6.29 10.97,5.7Z"/>
-                    </svg>
-                  </span>
-                  <span>React Development</span>
-                </a>
-              </li>
-              <li>
-                  <a href="./shopify-development-india.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M16.75,22.16L14.17,19.58L15.58,18.17L16.75,19.34L20.08,16L21.5,17.41L16.75,22.16M13,17.74C13.5,18.37 14.09,18.94 14.76,19.41L10.08,20.4L3.5,3.5L20.5,10.08L19.41,14.84C18.79,14.16 18,13.66 17.15,13.42L18.31,10.79L7.89,6.11L12.57,16.53L13,17.74M6.89,4.5L4.5,6.89L8.26,17.86L10.05,17.5L6.89,4.5Z"/>
-                    </svg>
-                  </span>
-                  <span>Shopify Developer</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="mega-section">
-            <h5>Digital Marketing</h5>
-            <ul>
-              <li>
-                <a href="./digital-marketing-services-in-noida.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M11,17V16H9V14H13V13H10A1,1 0 0,1 9,12V9A1,1 0 0,1 10,8H14V9H12V11H15V12A1,1 0 0,1 14,13H13V14H15V16H13V17H11Z"/>
-                    </svg>
-                  </span>
-                  <span>Digital Marketing Noida</span>
-                </a>
-              </li>
-                      <li>
-                <a href="./digital-marketing-services-in-jaipur.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"/>
-                    </svg>
-                  </span>
-                  <span>Digital Marketing Jaipur
-                  </span>
-                </a>
-              </li>
-     
-              <li>
-                <a href="./smo-agency-in-noida.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.19C16.5,7.69 17.21,8 18,8A3,3 0 0,0 21,5A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.81C7.5,9.31 6.79,9 6,9A3,3 0 0,0 3,12A3,3 0 0,0 6,15C6.79,15 7.5,14.69 8.04,14.19L15.16,18.34C15.11,18.55 15.08,18.77 15.08,19C15.08,20.61 16.39,21.91 18,21.91C19.61,21.91 20.92,20.61 20.92,19A2.92,2.92 0 0,0 18,16.08Z"/>
-                    </svg>
-                  </span>
-                  <span>SMO</span>
-                </a>
-              </li>
-              <li>
-                <a href="./best-ppc-services-company-in-noida.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M7.5,21H2V9H7.5V21M22,21H16.5V3H22V21M14.5,21H9V12H14.5V21Z"/>
-                    </svg>
-                  </span>
-                  <span>PPC</span>
-                </a>
-              </li>
-              <li>
-                <a href="./google-my-business-optimization-services.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"/>
-                    </svg>
-                  </span>
-                  <span>GMB</span>
-                </a>
-              </li>
-              <li>
-                <a href="./seo-company-in-dehradun.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"/>
-                    </svg>
-                  </span>
-                  <span>SEO-Dehradun</span>
-                </a>
-              </li>
-              <li>
-                <a href="./seo-company-in-dubai.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"/>
-                    </svg>
-                  </span>
-                  <span>SEO-Dubai</span>
-                </a>
-              </li>
-              <li>
-                <a href="./seo-company-in-india.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"/>
-                    </svg>
-                  </span>
-                  <span>SEO-India</span>
-                </a>
-              </li>
-              <li>
-                <a href="./seo-company-in-noida.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"/>
-                    </svg>
-                  </span>
-                  <span>SEO-Noida</span>
-                </a>
-              </li>
-              <li>
-                <a href="./seo-company-in-gurgaon.html">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z"/>
-                    </svg>
-                  </span>
-                  <span>SEO-Gurgaon</span>
-                </a>
-              </li>
-      
-            </ul>
-          </div>
-
-          <div class="mega-section right-section">
-            <img src="https://www.rsorganisation.com/assets/images/menu.gif" alt="GIF preview">
-          </div>
-        </div>
-        <!-- /Mega Dropdown -->
-      </li>
-
-      <li role="none"><a role="menuitem" href="blog.html">Blog</a></li>
-      <li role="none"><a role="menuitem" href="career.html">Career</a></li>
-      <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
-      <li role="none"><a role="menuitem" href="#">Free Website Audit</a></li>
-
-      <!-- CTA -->
-      <li role="none" class="cta-wrap">
-        <a class="nav-btn001" href="#" role="menuitem">Request a call back ➝</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-
-<script>
-  
-
-// Mega menu and mobile nav functionality
-  document.addEventListener('DOMContentLoaded', function () {
-    const nav = document.querySelector('.navbar001');
-    const navToggle = nav.querySelector('.nav-toggle001');
-    const navMenu = nav.querySelector('.nav-menu001');
-    const megaParent = nav.querySelector('.mega-parent');
-    const megaDropdown = nav.querySelector('.mega-dropdown');
-    const servicesLink = megaParent ? megaParent.querySelector('.services-link') : null;
-    const cta = nav.querySelector('.nav-btn001');
-
-    // Hamburger toggle - works on mobile widths
-    navToggle.addEventListener('click', function (e) {
-      e.stopPropagation();
-      const open = navMenu.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-
-      // when closing menu also close mega dropdown
-      if (!open && megaParent && megaParent.classList.contains('open')) {
-        megaParent.classList.remove('open');
-      }
-    });
-
-    // Services (mega) toggle behavior on mobile
-    if (servicesLink && megaParent && megaDropdown) {
-      servicesLink.addEventListener('click', function (e) {
-        if (window.innerWidth <= 992) {
-          e.preventDefault();
-          e.stopPropagation();
-          const opened = megaParent.classList.toggle('open');
-          // ensure mobile nav is visible so user can see the mega content
-          if (!navMenu.classList.contains('active')) navMenu.classList.add('active');
-          // set aria and display handled by CSS (.open)
-          servicesLink.setAttribute('aria-expanded', opened ? 'true' : 'false');
-        }
-      });
-    }
-
-    // Close button functionality for mega menu on mobile
-    const megaCloseBtn = document.querySelector('.mega-close-btn');
-    if (megaCloseBtn) {
-      megaCloseBtn.addEventListener('click', e => {
-        e.stopPropagation();
-        if (megaParent.classList.contains('open')) {
-          megaParent.classList.remove('open');
-          // Optionally close entire mobile nav menu as well:
-          if(navMenu && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            navToggle.setAttribute('aria-expanded', 'false');
-          }
-          // Update aria attribute
-          if (servicesLink) servicesLink.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-
-    // Close menus when clicking outside nav
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.navbar001')) {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-
-    // Reset inline/mobile classes on resize -> bigger screens
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 992) {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-
-    // Accessibility: close on Escape
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-  });
-
-  // end of DOMContentLoaded
-</script>
-
-
-<script>
-  
-
-// Mega menu and mobile nav functionality
-  document.addEventListener('DOMContentLoaded', function () {
-    const nav = document.querySelector('.navbar001');
-    const navToggle = nav.querySelector('.nav-toggle001');
-    const navMenu = nav.querySelector('.nav-menu001');
-    const megaParent = nav.querySelector('.mega-parent');
-    const megaDropdown = nav.querySelector('.mega-dropdown');
-    const servicesLink = megaParent ? megaParent.querySelector('.services-link') : null;
-    const cta = nav.querySelector('.nav-btn001');
-
-    // Hamburger toggle - works on mobile widths
-    navToggle.addEventListener('click', function (e) {
-      e.stopPropagation();
-      const open = navMenu.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-
-      // when closing menu also close mega dropdown
-      if (!open && megaParent && megaParent.classList.contains('open')) {
-        megaParent.classList.remove('open');
-      }
-    });
-
-    // Services (mega) toggle behavior on mobile
-    if (servicesLink && megaParent && megaDropdown) {
-      servicesLink.addEventListener('click', function (e) {
-        if (window.innerWidth <= 992) {
-          e.preventDefault();
-          e.stopPropagation();
-          const opened = megaParent.classList.toggle('open');
-          // ensure mobile nav is visible so user can see the mega content
-          if (!navMenu.classList.contains('active')) navMenu.classList.add('active');
-          // set aria and display handled by CSS (.open)
-          servicesLink.setAttribute('aria-expanded', opened ? 'true' : 'false');
-        }
-      });
-    }
-
-    // Close button functionality for mega menu on mobile
-    const megaCloseBtn = document.querySelector('.mega-close-btn');
-    if (megaCloseBtn) {
-      megaCloseBtn.addEventListener('click', e => {
-        e.stopPropagation();
-        if (megaParent.classList.contains('open')) {
-          megaParent.classList.remove('open');
-          // Optionally close entire mobile nav menu as well:
-          if(navMenu && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            navToggle.setAttribute('aria-expanded', 'false');
-          }
-          // Update aria attribute
-          if (servicesLink) servicesLink.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-
-    // Close menus when clicking outside nav
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.navbar001')) {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-
-    // Reset inline/mobile classes on resize -> bigger screens
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 992) {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-
-    // Accessibility: close on Escape
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-  });
-
-  // end of DOMContentLoaded
-</script>
-
-
-
-<script>
-  
-
-// Mega menu and mobile nav functionality
-  document.addEventListener('DOMContentLoaded', function () {
-    const nav = document.querySelector('.navbar001');
-    const navToggle = nav.querySelector('.nav-toggle001');
-    const navMenu = nav.querySelector('.nav-menu001');
-    const megaParent = nav.querySelector('.mega-parent');
-    const megaDropdown = nav.querySelector('.mega-dropdown');
-    const servicesLink = megaParent ? megaParent.querySelector('.services-link') : null;
-    const cta = nav.querySelector('.nav-btn001');
-
-    // Hamburger toggle - works on mobile widths
-    navToggle.addEventListener('click', function (e) {
-      e.stopPropagation();
-      const open = navMenu.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-
-      // when closing menu also close mega dropdown
-      if (!open && megaParent && megaParent.classList.contains('open')) {
-        megaParent.classList.remove('open');
-      }
-    });
-
-    // Services (mega) toggle behavior on mobile
-    if (servicesLink && megaParent && megaDropdown) {
-      servicesLink.addEventListener('click', function (e) {
-        if (window.innerWidth <= 992) {
-          e.preventDefault();
-          e.stopPropagation();
-          const opened = megaParent.classList.toggle('open');
-          // ensure mobile nav is visible so user can see the mega content
-          if (!navMenu.classList.contains('active')) navMenu.classList.add('active');
-          // set aria and display handled by CSS (.open)
-          servicesLink.setAttribute('aria-expanded', opened ? 'true' : 'false');
-        }
-      });
-    }
-
-    // Close button functionality for mega menu on mobile
-    const megaCloseBtn = document.querySelector('.mega-close-btn');
-    if (megaCloseBtn) {
-      megaCloseBtn.addEventListener('click', e => {
-        e.stopPropagation();
-        if (megaParent.classList.contains('open')) {
-          megaParent.classList.remove('open');
-          // Optionally close entire mobile nav menu as well:
-          if(navMenu && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            navToggle.setAttribute('aria-expanded', 'false');
-          }
-          // Update aria attribute
-          if (servicesLink) servicesLink.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-
-    // Close menus when clicking outside nav
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.navbar001')) {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-
-    // Reset inline/mobile classes on resize -> bigger screens
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 992) {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-
-    // Accessibility: close on Escape
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-  });
-
-  // end of DOMContentLoaded
-</script>
-
-
-
- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script src="./script.js"></script>
-
-
-
-<!-- section-1 with background image -->
-
-
-<section class="hero_001-section" id="hero_001Section">
-    <div class="hero_001-container">
-        <div class="hero_001-content">
-            <div class="hero_001-text" id="hero_001Text">
-                
-                <h1 class="hero_001-title">
-                    <span class="title_001-line">Best GMB Expert in</span>
-                    <span class="title_001-highlight">Noida RS Organisation</span>
-                    <span class="company_001-name"></span>
-                </h1>
-                <p style="color: #ffffff;" class="hero_001-description">
-                    When it comes to strengthening your local presence online, RS Organisation stands out as the best GMB expert in Noida. With years of experience in helping businesses rank higher in local search results, our team specializes in Google My Business Optimisation, local SEO services in Noida, and customized GMB services in Noida.
-                </p>
-                <div class="hero_001-buttons">
-                    <button class="btn_001-primary" id="talkToExpert_001Btn">
-                        <span>Talk To Our Experts</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <div class="mega-section">
+                <h5>App Development</h5>
+                <ul>
+                  <li>
+                    <a href="./ios-app-development.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z" />
                         </svg>
-                    </button>
-                </div>
-            </div>
+                      </span>
+                      <span>iOS Development</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./android-application-development.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M17.6,9.48L16.34,8.22L17.2,7.36C17.58,6.98 17.58,6.38 17.2,6L16.1,4.88C15.71,4.5 15.12,4.5 14.74,4.88L13.87,5.75L12.62,4.49C11.96,3.83 10.9,3.83 10.24,4.49L4.22,10.5C3.56,11.16 3.56,12.23 4.22,12.89L5.47,14.14L4.6,15C4.23,15.39 4.23,16 4.6,16.37L5.7,17.47C6.08,17.85 6.68,17.85 7.06,17.47L7.92,16.61L9.18,17.86C9.84,18.53 10.9,18.53 11.56,17.86L17.6,11.82C18.25,11.17 18.25,10.13 17.6,9.48M6.12,11.46L10.24,7.34L13.77,10.88L9.65,15L6.12,11.46M14.16,13.5L10.63,9.96L11.91,8.68L15.44,12.22L14.16,13.5M19.59,11.77C19.2,11.77 18.84,11.91 18.56,12.18L16.7,14.04L19.59,16.93L21.45,15.07C22,14.5 22,13.6 21.45,13.04L20.62,12.18C20.34,11.91 19.97,11.77 19.59,11.77M13,19.88C13.42,21.32 12.71,22.87 11.31,23.5C10.63,23.8 9.89,23.88 9.17,23.75C8.45,23.61 7.8,23.26 7.3,22.75L7.22,22.67C6.67,22.13 6.31,21.43 6.19,20.66C6.07,19.89 6.19,19.11 6.54,18.42L6.62,18.28L9.42,21.08L12.22,18.28L12.34,18.4C12.85,18.9 13.1,19.38 13,19.88Z" />
+                        </svg>
+                      </span>
+                      <span>Android Development</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./flutter-app-development.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M14.6,16.6L19.2,12L14.6,7.4L16,6L22,12L16,18L14.6,16.6M9.4,16.6L4.8,12L9.4,7.4L8,6L2,12L8,18L9.4,16.6Z" />
+                        </svg>
+                      </span>
+                      <span>Flutter Apps</span>
+                    </a>
+                  </li>
+                  <!-- <h5>Figma Designing</h5> -->
+                  <li>
+                    <a href="./best-figma-design-company-in-noida.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M16.75,22.16L14.17,19.58L15.58,18.17L16.75,19.34L20.08,16L21.5,17.41L16.75,22.16M13,17.74C13.5,18.37 14.09,18.94 14.76,19.41L10.08,20.4L3.5,3.5L20.5,10.08L19.41,14.84C18.79,14.16 18,13.66 17.15,13.42L18.31,10.79L7.89,6.11L12.57,16.53L13,17.74M6.89,4.5L4.5,6.89L8.26,17.86L10.05,17.5L6.89,4.5Z" />
+                        </svg>
+                      </span>
+                      <span>Figma Design</span>
+                    </a>
+                  </li>
 
-            <div class="hero_001-visual" id="hero_001Visual">
-                <div class="lottie_001-container">
-                    <lottie-player 
-                        id="hero_001Lottie"
-                        src="https://assets8.lottiefiles.com/packages/lf20_V9t630.json"
-                        background="transparent"
-                        speed="1"
-                        style="width: 100%; height: 100%;"
-                        loop
-                        autoplay>
-                    </lottie-player>
-                </div>
-                <div class="floating_001-elements">
-                    <div class="floating_001-card card_001-1">
-                        <span>📈 Local SEO</span>
-                    </div>
-                    <div class="floating_001-card card_001-2">
-                        <span>🎯 GMB Optimization</span>
-                    </div>
-                    <div class="floating_001-card card_001-3">
-                        <span>⭐ 5 Star Reviews</span>
-                    </div>
-                </div>
+                </ul>
+              </div>
+
+              <div class="mega-section">
+                <h5>Web Development</h5>
+                <ul>
+                  <li>
+                    <a href="./web-development-company-in-noida.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+                        </svg>
+                      </span>
+                      <span>Website Development</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./best-website-design-company-in-noida.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12,17.56L16.07,16.43L16.62,10.33H9.38L9.2,8.3H16.8L17,6.31H7L7.56,12.32H14.45L14.22,14.9L12,15.5L9.78,14.9L9.64,13.24H7.64L7.93,16.43L12,17.56M4.07,3H19.93L18.5,19.2L12,21L5.5,19.2L4.07,3Z" />
+                        </svg>
+                      </span>
+                      <span>Website Design</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./best-website-redesiging-services-company-in-noida.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M19,12H22L18,8L14,12H17V14H19V12M5,12H2L6,16L10,12H7V10H5V12M12,5V2L8,6L12,10V7H14V5H12M12,19V22L16,18L12,14V17H10V19H12Z" />
+                        </svg>
+                      </span>
+                      <span>Website Redesign</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./best-website-responsive-services-company-in-noida.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M4,6H20V16H4M20,18A2,2 0 0,0 22,16V6C22,4.89 21.1,4 20,4H4C2.89,4 2,4.89 2,6V16A2,2 0 0,0 4,18H0V20H24V18H20Z" />
+                        </svg>
+                      </span>
+                      <span>Responsive Website</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./php-development-company-noida.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12,18.08C5.37,18.08 0,15.36 0,12C0,8.64 5.37,5.92 12,5.92C18.63,5.92 24,8.64 24,12C24,15.36 18.63,18.08 12,18.08M12,7.5C7.5,7.5 4.5,9.5 4.5,12C4.5,14.5 7.5,16.5 12,16.5C16.5,16.5 19.5,14.5 19.5,12C19.5,9.5 16.5,7.5 12,7.5M7,12L9,10V14L7,12M17,12L15,14V10L17,12Z" />
+                        </svg>
+                      </span>
+                      <span>PHP Development</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./react-development-company-noida.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12,10.11C13.03,10.11 13.87,10.95 13.87,12C13.87,13 13.03,13.85 12,13.85C10.97,13.85 10.13,13 10.13,12C10.13,10.95 10.97,10.11 12,10.11M7.37,20C8,20.38 9.38,19.8 10.97,18.3C10.45,17.71 9.94,17.07 9.46,16.4C8.64,16.32 7.83,16.2 7.06,16.04C6.55,18.18 6.74,19.65 7.37,20M8.08,14.26L7.79,13.75C7.68,14.04 7.57,14.33 7.5,14.61C7.77,14.67 8.07,14.72 8.38,14.77C8.28,14.6 8.18,14.43 8.08,14.26M14.62,13.5L15.43,12L14.62,10.5C14.32,9.97 14,9.5 13.71,9.03C13.17,9 12.6,9 12,9C11.4,9 10.83,9 10.29,9.03C10,9.5 9.68,9.97 9.38,10.5L8.57,12L9.38,13.5C9.68,14.03 10,14.5 10.29,14.97C10.83,15 11.4,15 12,15C12.6,15 13.17,15 13.71,14.97C14,14.5 14.32,14.03 14.62,13.5M12,6.78C11.81,7 11.61,7.23 11.41,7.5C11.61,7.5 11.8,7.5 12,7.5C12.2,7.5 12.39,7.5 12.59,7.5C12.39,7.23 12.19,7 12,6.78M12,17.22C12.19,17 12.39,16.77 12.59,16.5C12.39,16.5 12.2,16.5 12,16.5C11.8,16.5 11.61,16.5 11.41,16.5C11.61,16.77 11.81,17 12,17.22M16.62,4C16,3.62 14.62,4.2 13.03,5.7C13.55,6.29 14.06,6.93 14.54,7.6C15.36,7.68 16.17,7.8 16.94,7.96C17.45,5.82 17.26,4.35 16.62,4M15.92,9.74L16.21,10.25C16.32,9.96 16.43,9.67 16.5,9.39C16.23,9.33 15.93,9.28 15.62,9.23C15.72,9.4 15.82,9.57 15.92,9.74M17.37,2.69C18.84,3.53 19,5.74 18.38,8.32C20.92,9.07 22.75,10.31 22.75,12C22.75,13.69 20.92,14.93 18.38,15.68C19,18.26 18.84,20.47 17.37,21.31C15.91,22.15 13.92,21.19 12,19.36C10.08,21.19 8.09,22.15 6.62,21.31C5.16,20.47 5,18.26 5.62,15.68C3.08,14.93 1.25,13.69 1.25,12C1.25,10.31 3.08,9.07 5.62,8.32C5,5.74 5.16,3.53 6.62,2.69C8.09,1.85 10.08,2.81 12,4.64C13.92,2.81 15.91,1.85 17.37,2.69M17.08,12C17.42,12.75 17.72,13.5 17.97,14.26C20.07,13.63 21.25,12.73 21.25,12C21.25,11.27 20.07,10.37 17.97,9.74C17.72,10.5 17.42,11.25 17.08,12M6.92,12C6.58,11.25 6.28,10.5 6.03,9.74C3.93,10.37 2.75,11.27 2.75,12C2.75,12.73 3.93,13.63 6.03,14.26C6.28,13.5 6.58,12.75 6.92,12M15.92,14.26C15.82,14.43 15.72,14.6 15.62,14.77C15.93,14.72 16.23,14.67 16.5,14.61C16.43,14.33 16.32,14.04 16.21,13.75L15.92,14.26M13.03,18.3C14.62,19.8 16,20.38 16.62,20C17.26,19.65 17.45,18.18 16.94,16.04C16.17,16.2 15.36,16.32 14.54,16.4C14.06,17.07 13.55,17.71 13.03,18.3M8.08,9.74C8.18,9.57 8.28,9.4 8.38,9.23C8.07,9.28 7.77,9.33 7.5,9.39C7.57,9.67 7.68,9.96 7.79,10.25L8.08,9.74M10.97,5.7C9.38,4.2 8,3.62 7.37,4C6.74,4.35 6.55,5.82 7.06,7.96C7.83,7.8 8.64,7.68 9.46,7.6C9.94,6.93 10.45,6.29 10.97,5.7Z" />
+                        </svg>
+                      </span>
+                      <span>React Development</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./shopify-development-india.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M16.75,22.16L14.17,19.58L15.58,18.17L16.75,19.34L20.08,16L21.5,17.41L16.75,22.16M13,17.74C13.5,18.37 14.09,18.94 14.76,19.41L10.08,20.4L3.5,3.5L20.5,10.08L19.41,14.84C18.79,14.16 18,13.66 17.15,13.42L18.31,10.79L7.89,6.11L12.57,16.53L13,17.74M6.89,4.5L4.5,6.89L8.26,17.86L10.05,17.5L6.89,4.5Z" />
+                        </svg>
+                      </span>
+                      <span>Shopify Developer</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mega-section">
+                <h5>Digital Marketing</h5>
+                <ul>
+                  <li>
+                    <a href="./digital-marketing-services-in-noida.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M11,17V16H9V14H13V13H10A1,1 0 0,1 9,12V9A1,1 0 0,1 10,8H14V9H12V11H15V12A1,1 0 0,1 14,13H13V14H15V16H13V17H11Z" />
+                        </svg>
+                      </span>
+                      <span>Digital Marketing Noida</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./digital-marketing-services-in-jaipur.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z" />
+                        </svg>
+                      </span>
+                      <span>Digital Marketing Jaipur
+                      </span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="./smo-agency-in-noida.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.19C16.5,7.69 17.21,8 18,8A3,3 0 0,0 21,5A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.81C7.5,9.31 6.79,9 6,9A3,3 0 0,0 3,12A3,3 0 0,0 6,15C6.79,15 7.5,14.69 8.04,14.19L15.16,18.34C15.11,18.55 15.08,18.77 15.08,19C15.08,20.61 16.39,21.91 18,21.91C19.61,21.91 20.92,20.61 20.92,19A2.92,2.92 0 0,0 18,16.08Z" />
+                        </svg>
+                      </span>
+                      <span>SMO</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./best-ppc-services-company-in-noida.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M7.5,21H2V9H7.5V21M22,21H16.5V3H22V21M14.5,21H9V12H14.5V21Z" />
+                        </svg>
+                      </span>
+                      <span>PPC</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./google-my-business-optimization-services.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" />
+                        </svg>
+                      </span>
+                      <span>GMB</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./seo-company-in-dehradun.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z" />
+                        </svg>
+                      </span>
+                      <span>SEO-Dehradun</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./seo-company-in-dubai.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z" />
+                        </svg>
+                      </span>
+                      <span>SEO-Dubai</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./seo-company-in-india.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z" />
+                        </svg>
+                      </span>
+                      <span>SEO-India</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./seo-company-in-noida.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z" />
+                        </svg>
+                      </span>
+                      <span>SEO-Noida</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="./seo-company-in-gurgaon.html">
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5M12,2A7,7 0 0,1 19,9C19,14.25 12,22 12,22C12,22 5,14.25 5,9A7,7 0 0,1 12,2M12,4A5,5 0 0,0 7,9C7,10 7,12 12,18.71C17,12 17,10 17,9A5,5 0 0,0 12,4Z" />
+                        </svg>
+                      </span>
+                      <span>SEO-Gurgaon</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+
+              <div class="mega-section right-section">
+                <img src="https://www.rsorganisation.com/assets/images/menu.gif" alt="GIF preview">
+              </div>
             </div>
+            <!-- /Mega Dropdown -->
+          </li>
+
+          <li role="none"><a role="menuitem" href="blog.html">Blog</a></li>
+          <li role="none"><a role="menuitem" href="career.html">Career</a></li>
+          <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+          <li role="none"><a role="menuitem" href="#">Free Website Audit</a></li>
+
+          <!-- CTA -->
+          <li role="none" class="cta-wrap">
+            <a class="nav-btn001" href="#" role="menuitem">Request a call back ➝</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <script>
+
+
+      // Mega menu and mobile nav functionality
+      document.addEventListener('DOMContentLoaded', function () {
+        const nav = document.querySelector('.navbar001');
+        const navToggle = nav.querySelector('.nav-toggle001');
+        const navMenu = nav.querySelector('.nav-menu001');
+        const megaParent = nav.querySelector('.mega-parent');
+        const megaDropdown = nav.querySelector('.mega-dropdown');
+        const servicesLink = megaParent ? megaParent.querySelector('.services-link') : null;
+        const cta = nav.querySelector('.nav-btn001');
+
+        // Hamburger toggle - works on mobile widths
+        navToggle.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const open = navMenu.classList.toggle('active');
+          navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+
+          // when closing menu also close mega dropdown
+          if (!open && megaParent && megaParent.classList.contains('open')) {
+            megaParent.classList.remove('open');
+          }
+        });
+
+        // Services (mega) toggle behavior on mobile
+        if (servicesLink && megaParent && megaDropdown) {
+          servicesLink.addEventListener('click', function (e) {
+            if (window.innerWidth <= 992) {
+              e.preventDefault();
+              e.stopPropagation();
+              const opened = megaParent.classList.toggle('open');
+              // ensure mobile nav is visible so user can see the mega content
+              if (!navMenu.classList.contains('active')) navMenu.classList.add('active');
+              // set aria and display handled by CSS (.open)
+              servicesLink.setAttribute('aria-expanded', opened ? 'true' : 'false');
+            }
+          });
+        }
+
+        // Close button functionality for mega menu on mobile
+        const megaCloseBtn = document.querySelector('.mega-close-btn');
+        if (megaCloseBtn) {
+          megaCloseBtn.addEventListener('click', e => {
+            e.stopPropagation();
+            if (megaParent.classList.contains('open')) {
+              megaParent.classList.remove('open');
+              // Optionally close entire mobile nav menu as well:
+              if (navMenu && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+              }
+              // Update aria attribute
+              if (servicesLink) servicesLink.setAttribute('aria-expanded', 'false');
+            }
+          });
+        }
+
+        // Close menus when clicking outside nav
+        document.addEventListener('click', function (e) {
+          if (!e.target.closest('.navbar001')) {
+            if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
+          }
+        });
+
+        // Reset inline/mobile classes on resize -> bigger screens
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 992) {
+            if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
+          }
+        });
+
+        // Accessibility: close on Escape
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') {
+            if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
+          }
+        });
+      });
+
+      // end of DOMContentLoaded
+    </script>
+    <!-- end -->
+
+
+
+    <!-- section-1 with background image -->
+    <section class="hero_48-section" id="hero_48Section">
+      <div class="hero_48-container">
+        <div class="hero_48-content">
+          <div class="hero_48-text" id="hero_48Text">
+            <h1 class="hero_48-title">
+              <span class="title_48-line">Best GMB Expert in</span>
+              <span class="title_48-highlight">Noida RS Organisation</span>
+              <span class="company_48-name"></span>
+            </h1>
+            <p style="color: #ffffff;" class="hero_48-description">
+              When it comes to strengthening your local presence online, RS Organisation stands out as the best GMB
+              expert in Noida. With years of experience in helping businesses rank higher in local search results, our
+              team specializes in Google My Business Optimisation, local SEO services in Noida, and customized GMB
+              services in Noida.
+            </p>
+            <div class="hero_48-buttons">
+              <button class="btn_48-primary" id="talkToExpert_48Btn">
+                <span>Talk To Our Experts</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="hero_48-visual" id="hero_48Visual">
+            <div class="lottie_48-container">
+              <lottie-player id="hero_48Lottie" src="https://assets8.lottiefiles.com/packages/lf20_V9t630.json"
+                background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay>
+              </lottie-player>
+            </div>
+            <div class="floating_48-elements">
+              <div class="floating_48-card card_48-1">
+                <span>📈 Local SEO</span>
+              </div>
+              <div class="floating_48-card card_48-2">
+                <span>🎯 GMB Optimization</span>
+              </div>
+              <div class="floating_48-card card_48-3">
+                <span>⭐ 5 Star Reviews</span>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    
-    <div class="hero_001-background">
-        <div class="gradient_001-orb orb_001-1"></div>
-        <div class="gradient_001-orb orb_001-2"></div>
-        <div class="gradient_001-orb orb_001-3"></div>
-    </div>
-</section>
+      </div>
 
-<style>
-.hero_001-section {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 2rem 0;
-    overflow: hidden;
-}
+      <div class="hero_48-background">
+        <div class="gradient_48-orb orb_48-1"></div>
+        <div class="gradient_48-orb orb_48-2"></div>
+        <div class="gradient_48-orb orb_48-3"></div>
+      </div>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        initHero_48Animations();
+        initButton_48Interactions();
+        initLottie_48Interactions();
+        initScroll_48Animations();
+        initParallax_48Effect();
+      });
 
-.hero_001-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    width: 100%;
-    z-index: 2;
-    position: relative;
-}
+      function initHero_48Animations() {
+        const heroText = document.getElementById('hero_48Text');
+        const elements = heroText.children;
+        Array.from(elements).forEach((el, i) => {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(30px)';
+          setTimeout(() => {
+            el.style.transition = 'all 0.6s ease-out';
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+          }, i * 200);
+        });
+      }
 
-.hero_001-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    min-height: 80vh;
-}
+      function initButton_48Interactions() {
+        const btn = document.getElementById('talkToExpert_48Btn');
+        btn.addEventListener('click', e => {
+          const ripple = document.createElement('span');
+          const rect = btn.getBoundingClientRect();
+          const size = Math.max(rect.width, rect.height);
+          const x = e.clientX - rect.left - size / 2;
+          const y = e.clientY - rect.top - size / 2;
+          ripple.style.width = ripple.style.height = size + 'px';
+          ripple.style.left = x + 'px';
+          ripple.style.top = y + 'px';
+          ripple.classList.add('ripple_48');
+          btn.appendChild(ripple);
+          setTimeout(() => ripple.remove(), 600);
+        });
+      }
 
-.hero_001-text {
-    animation: slideInLeft_001 0.8s ease-out;
-}
-
-.hero_001-badge {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.hero_001-title {
-    font-size: 42px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
-}
-
-.title_001-line {
-    display: block;
-}
-
-.title_001-highlight {
-    background: linear-gradient(45deg, #ff6b6b, #feca57);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    display: block;
-}
-
-.company_001-name {
-    display: block;
-    font-size: 0.7em;
-    opacity: 0.9;
-    margin-top: 0.5rem;
-}
-
-.hero_001-description {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 2rem;
-    line-height: 1.7;
-}
-
-.hero_001-stats {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-}
-
-.stat_001-item {
-    text-align: center;
-}
-
-.stat_001-number {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #feca57;
-}
-
-.stat_001-label {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
-    margin-top: 0.25rem;
-}
-
-.hero_001-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.btn_001-primary, .btn_001-secondary {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
-}
-
-.btn_001-primary {
-    background: linear-gradient(45deg, #ff6b6b, #feca57);
-    color: white;
-    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
-}
-
-.btn_001-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
-}
-
-.btn_001-secondary {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-}
-
-.btn_001-secondary:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-}
-
-.hero_001-visual {
-    position: relative;
-    opacity: 0;
-    transform: translateX(50px);
-    animation: slideInRight_001 0.8s ease-out 2s forwards;
-}
-
-.lottie_001-container {
-    width: 100%;
-    height: 500px;
-    position: relative;
-    z-index: 2;
-}
-
-.floating_001-elements {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-}
-
-.floating_001-card {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    padding: 1rem;
-    color: white;
-    font-size: 0.9rem;
-    font-weight: 600;
-    animation: float_001 3s ease-in-out infinite;
-    opacity: 0;
-    animation-delay: 2.5s;
-    animation-fill-mode: both;
-}
-
-.card_001-1 {
-    top: 20%;
-    right: -10%;
-    animation-delay: 2.5s;
-}
-
-.card_001-2 {
-    top: 60%;
-    left: -15%;
-    animation-delay: 3s;
-}
-
-.card_001-3 {
-    bottom: 10%;
-    right: 10%;
-    animation-delay: 3.5s;
-}
-
-.hero_001-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-}
-
-.gradient_001-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(60px);
-    opacity: 0.7;
-    animation: pulse_001 4s ease-in-out infinite;
-}
-
-.orb_001-1 {
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(45deg, #ff6b6b, #feca57);
-    top: -150px;
-    right: -150px;
-}
-
-.orb_001-2 {
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(45deg, #74b9ff, #0984e3);
-    bottom: -100px;
-    left: -100px;
-    animation-delay: 2s;
-}
-
-.orb_001-3 {
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(45deg, #fd79a8, #e84393);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation-delay: 1s;
-}
-
-.ripple_001 {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: scale(0);
-    animation: ripple_001-animation 0.6s linear;
-    pointer-events: none;
-}
-
-/* Animations */
-@keyframes slideInLeft_001 {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight_001 {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes float_001 {
-    0% {
-        opacity: 0;
-        transform: translateY(20px) rotate(0deg);
-    }
-    10% {
-        opacity: 1;
-    }
-    50% {
-        transform: translateY(-20px) rotate(3deg);
-    }
-    100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-}
-
-@keyframes pulse_001 {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 0.7;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.9;
-    }
-}
-
-@keyframes ripple_001-animation {
-    to {
-        transform: scale(4);
-        opacity: 0;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 968px) {
-    .hero_001-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
-    }
-    
-    .hero_001-visual {
-        order: -1;
-        animation-delay: 1s;
-    }
-    
-    .lottie_001-container {
-        height: 300px;
-    }
-    
-    .hero_001-stats {
-        justify-content: center;
-    }
-    
-    .floating_001-card {
-        display: none;
-    }
-}
-
-@media (max-width: 640px) {
-    .hero_001-container {
-        padding: 0 1rem;
-    }
-    
-    .hero_001-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero_001-description {
-        font-size: 1rem;
-    }
-    
-    .hero_001-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .btn_001-primary, .btn_001-secondary {
-        width: 100%;
-        justify-content: center;
-        max-width: 300px;
-    }
-    
-    .hero_001-stats {
-        gap: 1rem;
-    }
-    
-    .stat_001-number {
-        font-size: 1.5rem;
-    }
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    initHero_001Animations();
-    initCounter_001Animations();
-    initButton_001Interactions();
-    initLottie_001Interactions();
-    initScroll_001Animations();
-    initParallax_001Effect();
-});
-
-function initHero_001Animations() {
-    const heroText = document.getElementById('hero_001Text');
-    
-    const elements = heroText.children;
-    Array.from(elements).forEach((element, index) => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(30px)';
-        
+      function initLottie_48Interactions() {
+        const player = document.getElementById('hero_48Lottie');
         setTimeout(() => {
-            element.style.transition = 'all 0.6s ease-out';
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-        }, index * 200);
-    });
-}
-
-function initCounter_001Animations() {
-    const counters = document.querySelectorAll('.stat_001-number');
-    
-    const animateCounter = (counter) => {
-        const target = parseInt(counter.getAttribute('data-count'));
-        const duration = 2000;
-        const increment = target / (duration / 16);
-        let current = 0;
-        
-        const updateCounter = () => {
-            current += increment;
-            if (current < target) {
-                counter.textContent = Math.floor(current);
-                requestAnimationFrame(updateCounter);
-            } else {
-                counter.textContent = target + (counter.textContent.includes('%') ? '' : '+');
-            }
-        };
-        
-        updateCounter();
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counter = entry.target;
-                if (!counter.classList.contains('animated')) {
-                    counter.classList.add('animated');
-                    setTimeout(() => animateCounter(counter), Math.random() * 500);
-                }
-            }
-        });
-    });
-    
-    counters.forEach(counter => observer.observe(counter));
-}
-
-function initButton_001Interactions() {
-    const primaryBtn = document.getElementById('talkToExpert_001Btn');
-    
-    function createRipple_001(event) {
-        const button = event.currentTarget;
-        const ripple = document.createElement('span');
-        const rect = button.getBoundingClientRect();
-        const size = Math.max(rect.width, rect.height);
-        const x = event.clientX - rect.left - size / 2;
-        const y = event.clientY - rect.top - size / 2;
-        
-        ripple.style.width = ripple.style.height = size + 'px';
-        ripple.style.left = x + 'px';
-        ripple.style.top = y + 'px';
-        ripple.classList.add('ripple_001');
-        
-        button.appendChild(ripple);
-        
-        setTimeout(() => {
-            ripple.remove();
-        }, 600);
-    }
-    
-    primaryBtn.addEventListener('click', createRipple_001);
-    
-    primaryBtn.addEventListener('click', () => {
-        console.log('Talk to Expert clicked');
-    });
-}
-
-function initLottie_001Interactions() {
-    const lottiePlayer = document.getElementById('hero_001Lottie');
-    
-    // Delay lottie interactions by 2 seconds
-    setTimeout(() => {
-        lottiePlayer.addEventListener('mouseenter', () => {
-            lottiePlayer.setSpeed(1.5);
-        });
-        
-        lottiePlayer.addEventListener('mouseleave', () => {
-            lottiePlayer.setSpeed(1);
-        });
-        
-        const lottieFiles = [
-            // 'https://assets2.lottiefiles.com/packages/lf20_qp1spzqv.json',
+          player.addEventListener('mouseenter', () => player.setSpeed(1.5));
+          player.addEventListener('mouseleave', () => player.setSpeed(1));
+          const animations = [
             'https://assets8.lottiefiles.com/packages/lf20_V9t630.json',
             'https://assets4.lottiefiles.com/packages/lf20_khzniaya.json'
-        ];
-        
-        let currentIndex = 0;
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % lottieFiles.length;
-            lottiePlayer.load(lottieFiles[currentIndex]);
-        }, 3000);
-    }, 2000);
-}
+          ];
+          let index = 0;
+          setInterval(() => {
+            index = (index + 1) % animations.length;
+            player.load(animations[index]);
+          }, 3000);
+        }, 2000);
+      }
 
-function initScroll_001Animations() {
-    const floatingCards = document.querySelectorAll('.floating_001-card');
-    
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
-        
-        floatingCards.forEach((card, index) => {
-            const speed = (index + 1) * 0.2;
-            card.style.transform = `translateY(${rate * speed}px) rotate(${scrolled * 0.01}deg)`;
+      function initScroll_48Animations() {
+        const cards = document.querySelectorAll('.floating_48-card');
+        window.addEventListener('scroll', () => {
+          const scrollY = window.pageYOffset;
+          cards.forEach((card, i) => {
+            const speed = (i + 1) * 0.2;
+            card.style.transform = `translateY(${scrollY * -0.3 * speed}px) rotate(${scrollY * 0.01}deg)`;
+          });
         });
-    });
-}
+      }
 
-function initParallax_001Effect() {
-    const orbs = document.querySelectorAll('.gradient_001-orb');
-    
-    window.addEventListener('mousemove', (e) => {
-        const mouseX = e.clientX / window.innerWidth;
-        const mouseY = e.clientY / window.innerHeight;
-        
-        orbs.forEach((orb, index) => {
-            const speed = (index + 1) * 0.02;
-            const x = mouseX * speed * 100;
-            const y = mouseY * speed * 100;
-            
-            orb.style.transform = `translate(${x}px, ${y}px)`;
+      function initParallax_48Effect() {
+        const orbs = document.querySelectorAll('.gradient_48-orb');
+        window.addEventListener('mousemove', e => {
+          const x = e.clientX / window.innerWidth;
+          const y = e.clientY / window.innerHeight;
+          orbs.forEach((orb, i) => {
+            const speed = (i + 1) * 0.02;
+            orb.style.transform = `translate(${x * speed * 100}px, ${y * speed * 100}px)`;
+          });
         });
-    });
-}
-</script>
+      }
+    </script>
+    <!-- end -->
 
-<!-- end -->
-<section class="wp-section">
-  <div class="wp-image">
-    <div class="wp-image-wrapper">
-      <img src="https://gmb.expert/wp-content/uploads/2024/08/gmb_specialists.png.webp" alt="Google My Business Expert" />
-    </div>
-  </div>
-  
-  <div class="wp-text">
-    <h2>Best <span style="color: rgb(255, 165, 0);">GMB Expert in Noida is</span> Important for Your Business</h2>
-    
-    <p>
-Your Google Business Profile is one of the most powerful tools to attract local customers, but only when it’s properly verified, updated, and optimized. Many businesses struggle with phone number verification delays, outdated details, or low rankings on Google Maps—leading to missed calls, lost leads, and reduced credibility. That’s where our expert team comes in. We provide complete Business Profile support, specializing in instant phone verification, number updation, and advanced GMB ranking solutions. Our process is fast, reliable, and transparent, ensuring your Phone Number goes live instantly, stays accurate, and consistently ranks higher on Google Maps.    </p>
-    
-   
 
-    <p style="margin-top: 15px;">
-      By working with an experienced GMB expert in Noida, you ensure that your profile is not just created but also fully optimized for maximum business growth.
-    </p>
+    <!-- section 2-->
+    <section class="wp-section">
+      <div class="wp-image">
+        <div class="wp-image-wrapper">
+          <img src="https://gmb.expert/wp-content/uploads/2024/08/gmb_specialists.png.webp"
+            alt="Google My Business Expert" />
+        </div>
+      </div>
 
-    <a href="#" class="news-button">
-      Share your requirements
-    </a>
-  </div>
-</section>
+      <div class="wp-text">
+        <h2>Best <span style="color: rgb(255, 165, 0);">GMB Expert in Noida is</span> Important for Your Business</h2>
 
-<style>
-.wp-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 60px 8%;
-  background: #fff;
-  font-family: "Poppins", sans-serif;
-  flex-wrap: wrap;
-}
-
-.wp-image {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.wp-image-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.wp-image-wrapper img {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  border-radius: 12px;
-  position: relative;
-  z-index: 2;
-}
-
-/* dotted ring around image */
-.wp-image-wrapper::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  width: calc(100% + 40px);
-  height: calc(100% + 40px);
-  border: 3px dotted #ff9900;
-  border-radius: 50%;
-  animation: rotateRing 10s linear infinite;
-  z-index: 1;
-}
-
-@keyframes rotateRing {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.wp-text {
-  flex: 1.2;
-}
-
-.wp-text h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.3;
-}
-
-.wp-text p {
-  font-size: 1.05rem;
-  color: #333;
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
-.news-button {
-  display: inline-block;
-  background: #ff9900;
-  color: #fff;
-  font-weight: 600;
-  padding: 14px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: 0.3s;
-  margin-top: 20px;
-}
-
-.news-button:hover {
-  background: #e68900;
-}
-
-/* responsive */
-@media(max-width: 900px) {
-  .wp-section {
-    flex-direction: column;
-    text-align: center;
-  }
-  .wp-text { margin-top: 30px; }
-}
-</style>
+        <p>
+          Your Google Business Profile is one of the most powerful tools to attract local customers, but only when it’s
+          properly verified, updated, and optimized. Many businesses struggle with phone number verification delays,
+          outdated details, or low rankings on Google Maps—leading to missed calls, lost leads, and reduced credibility.
+          That’s where our expert team comes in. We provide complete Business Profile support, specializing in instant
+          phone verification, number updation, and advanced GMB ranking solutions. Our process is fast, reliable, and
+          transparent, ensuring your Phone Number goes live instantly, stays accurate, and consistently ranks higher on
+          Google Maps. </p>
 
 
 
-<!-- card section -->
- <section style="background:linear-gradient(90deg, #fb8600, #4e8dd1) ; height: 50vh; display: flex; justify-content: space-between; align-items: center; padding: 30px; border-radius: 20px; flex-wrap: wrap; overflow: hidden; position: relative;">
+        <p style="margin-top: 15px;">
+          By working with an experienced GMB expert in Noida, you ensure that your profile is not just created but also
+          fully optimized for maximum business growth.
+        </p>
 
-  <!-- Left Content -->
-  <div style="flex: 1; min-width: 280px; max-width: 600px;">
-    <h2 style="font-size: 2rem; color: #fff; margin-bottom: 20px; font-weight: bold;">
-     GMB Profile Support<br>Everything you need to confidently run your business.
-    </h2>
+        <a href="#" class="news-button">
+          Share your requirements
+        </a>
+      </div>
+    </section>
+    <!-- end -->
 
-   <a href="#" class="news-button"> Contect Us</a>
+    <!-- section 3 -->
+    <section class="gmb_49-section">
+      <!-- Left Content -->
+      <div class="gmb_49-left">
+        <h2 class="gmb_49-title">
+          GMB Profile Support<br>Everything you need to confidently run your business.
+        </h2>
+        <a href="#" class="gmb_49-button">Contact Us →</a>
+      </div>
 
-  </div>
+      <!-- Right Content -->
+      <div class="gmb_49-right">
+        <div class="gmb_49-circle"></div>
+        <img src="./assets/images/png/40b57dcc-f81c-41c6-a4b6-9188aaa2e2ef.png" alt="App UI" class="gmb_49-image">
+      </div>
+    </section>
+    <!-- end -->
 
-  <!-- Right Content -->
-  <div style="flex: 1; min-width: 280px; display: flex; justify-content: center; align-items: center; position: relative;">
-    
-    <!-- Circle Background -->
-    <div style="width: 250px; height: 250px; background-color: #28b5e0; border-radius: 50%; position: absolute; right: 30%; top: -3%; z-index: 0;"></div>
+    <!-- Shopify Development Services Section -->
+    <section class="about_section-3">
+      <div class="value-header">
+        <h2>Our GMB Services in <span>Noida</span></h2>
+      </div>
+      <p style="text-align: center; margin: 0 auto; width: 100%; max-width: 1000px; padding: 0 20px;">At RS
+        Organisation, we don't believe in one-size-fits-all solutions. Instead, we create personalized strategies based
+        on your industry and target audience. Our GMB services in Noida include:</p>
+      <br><br>
+      <div class="value-cards">
+        <!-- Card 1 -->
+        <div class="value-card">
+          <div class="corner-bar"></div>
+          <div class="value-card-icon">✅</div>
+          <h3>Profile Setup & Verification</h3>
+          <p>We handle the complete setup and verification process of your GMB listing.</p>
+        </div>
 
-    <!-- Phone Image -->
-    <img src="./assets/images/png/40b57dcc-f81c-41c6-a4b6-9188aaa2e2ef.png" alt="App UI" style="height: 30%; max-width: 40%; z-index: 1; border-radius: 16px;">
-  </div>
+        <!-- Card 2 -->
+        <div class="value-card">
+          <div class="corner-bar"></div>
+          <div class="value-card-icon">🎯</div>
+          <h3>Google My Business Optimisation</h3>
+          <p>From adding accurate business details to optimizing categories, photos, and attributes, we make your
+            profile stand out.</p>
+        </div>
 
-</section>
+        <!-- Card 3 -->
+        <div class="value-card">
+          <div class="corner-bar"></div>
+          <div class="value-card-icon">⭐</div>
+          <h3>Review Management</h3>
+          <p>Building trust with customers through positive reviews and responding to queries professionally.</p>
+        </div>
 
-<!-- =========================================== -->
-<!-- Shopify Development Services Section -->
-<section class="about_section-3">
-  <div class="value-header">
-    <h2>Our GMB Services in <span>Noida</span></h2>
-  </div>
-<p style="text-align: center; margin: 0 auto; width: 100%; max-width: 1000px; padding: 0 20px;">At RS Organisation, we don't believe in one-size-fits-all solutions. Instead, we create personalized strategies based on your industry and target audience. Our GMB services in Noida include:</p>
-<br><br>
-<div class="value-cards">
-    <!-- Card 1 -->
-    <div class="value-card">
-      <div class="corner-bar"></div>
-      <div class="value-card-icon">✅</div>
-      <h3>Profile Setup & Verification</h3>
-      <p>We handle the complete setup and verification process of your GMB listing.</p>
-    </div>
+        <!-- Card 4 -->
+        <div class="value-card">
+          <div class="corner-bar"></div>
+          <div class="value-card-icon">🔍</div>
+          <h3>Local SEO Services in Noida</h3>
+          <p>Targeting local keywords, citations, and geo-specific strategies to rank your business higher in local
+            searches.</p>
+        </div>
 
-    <!-- Card 2 -->
-    <div class="value-card">
-      <div class="corner-bar"></div>
-      <div class="value-card-icon">🎯</div>
-      <h3>Google My Business Optimisation</h3>
-      <p>From adding accurate business details to optimizing categories, photos, and attributes, we make your profile stand out.</p>
-    </div>
+        <!-- Card 5 -->
+        <div class="value-card">
+          <div class="corner-bar"></div>
+          <div class="value-card-icon">📊</div>
+          <h3>Performance Tracking & Reporting</h3>
+          <p>Regular insights and analytics to measure growth and improve results.</p>
+        </div>
+        <div class="value-card">
+          <div class="corner-bar"></div>
+          <div class="value-card-icon">⭐</div>
+          <h3>Profile Setup & Verification</h3>
+          <p>Regular insights and analytics to measure growth and improve results.</p>
+        </div>
+      </div>
 
-    <!-- Card 3 -->
-    <div class="value-card">
-      <div class="corner-bar"></div>
-      <div class="value-card-icon">⭐</div>
-      <h3>Review Management</h3>
-      <p>Building trust with customers through positive reviews and responding to queries professionally.</p>
-    </div>
+    </section>
+    <!-- end -->
 
-    <!-- Card 4 -->
-    <div class="value-card">
-      <div class="corner-bar"></div>
-      <div class="value-card-icon">🔍</div>
-      <h3>Local SEO Services in Noida</h3>
-      <p>Targeting local keywords, citations, and geo-specific strategies to rank your business higher in local searches.</p>
-    </div>
+    <!-- ============section 4================= -->
+    <section class="wp-section">
+      <div class="wp-image">
+        <div class="wp-image-wrapper01">
+          <img src="https://gmb.expert/wp-content/uploads/2024/08/google_my_business_experts.png.webp"
+            alt="Google My Business Expert" />
+        </div>
+      </div>
 
-    <!-- Card 5 -->
-    <div class="value-card">
-      <div class="corner-bar"></div>
-      <div class="value-card-icon">📊</div>
-      <h3>Performance Tracking & Reporting</h3>
-      <p>Regular insights and analytics to measure growth and improve results.</p>
-    </div>
-    <div class="value-card">
-      <div class="corner-bar"></div>
-      <div class="value-card-icon">⭐</div>
-      <h3>Profile Setup & Verification</h3>
-      <p>Regular insights and analytics to measure growth and improve results.</p>
-    </div>
-</div>
+      <div class="wp-text">
+        <h2>Why a <span style="color: rgb(255, 165, 0);">GMB Expert in Noida is</span> Important for Your Business</h2>
 
-</section>
+        <p>
+          Google My Business (GMB) has become one of the most powerful tools for local businesses. Whether you own a
+          restaurant, clinic, hotel, or service-based company, a properly optimized GMB profile can:
+        </p>
 
-<!-- end -->
+        <p>✅ <strong>Boost your visibility</strong> on Google Maps and local searches.</p>
+        <p>✅ <strong>Attract high-intent customers</strong> who are ready to take action.</p>
+        <p>✅ <strong>Showcase your services</strong>, reviews, and location details effectively.</p>
+        <p>✅ <strong>Improve your chances</strong> of getting featured in Google's "Local 3 Pack."</p>
 
-<!-- ============================= -->
-<section class="wp-section">
-  <div class="wp-image">
-    <div class="wp-image-wrapper01">
-      <img src="https://gmb.expert/wp-content/uploads/2024/08/google_my_business_experts.png.webp" alt="Google My Business Expert" />
-    </div>
-  </div>
-  
-  <div class="wp-text">
-    <h2>Why a <span style="color: rgb(255, 165, 0);">GMB Expert in Noida is</span> Important for Your Business</h2>
-    
-    <p>
-      Google My Business (GMB) has become one of the most powerful tools for local businesses. Whether you own a restaurant, clinic, hotel, or service-based company, a properly optimized GMB profile can:
-    </p>
-    
-    <p>✅ <strong>Boost your visibility</strong> on Google Maps and local searches.</p>
-    <p>✅ <strong>Attract high-intent customers</strong> who are ready to take action.</p>
-    <p>✅ <strong>Showcase your services</strong>, reviews, and location details effectively.</p>
-    <p>✅ <strong>Improve your chances</strong> of getting featured in Google's "Local 3 Pack."</p>
+        <p style="margin-top: 15px;">
+          By working with an experienced GMB expert in Noida, you ensure that your profile is not just created but also
+          fully optimized for maximum business growth.
+        </p>
 
-    <p style="margin-top: 15px;">
-      By working with an experienced GMB expert in Noida, you ensure that your profile is not just created but also fully optimized for maximum business growth.
-    </p>
+        <a href="#" class="news-button">
+          Share your requirements
+        </a>
+      </div>
+    </section>
+    <!-- end -->
 
-    <a href="#" class="news-button">
-      Share your requirements
-    </a>
-  </div>
-</section>
+    <!-- ------------section ---------------- -->
+    <section class="brand-visibility-ai-section_50">
+      <div class="brand-ai-container_50">
+        <div class="brand-ai-left_50">
+          <img src="https://d1y41eupgbwbb2.cloudfront.net/images/digitalMarketingCta1.webp" alt="AI Brand Elevate" />
+        </div>
+        <div class="brand-ai-right_50">
+          <h2>Enhance Your Brand<br>Visibility with Digital Marketing</h2>
+          <p>
+            Revamp your brand growth with Digital Marketing Overview tactics that can increase the visibility of your
+            brand
+            and also attract an audience to your business. This can help build strong recognition in the market
+            to generate higher revenue and offer you better leads to explore new regions for your business.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- --------end-------- -->
 
-<style>
-.wp-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 60px 8%;
-  background: #fff;
-  font-family: "Poppins", sans-serif;
-  flex-wrap: wrap;
-}
+    <!-- section-->
+    <section class="why-choose-section_51">
 
-.wp-image {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      <div class="text-heading_51">
+        Why Choose RS Organisation as Your GMB Expert in Noida?
+      </div>
 
-.wp-image-wrapper01 {
-  position: relative;
-  display: inline-block;
-}
-
-.wp-image-wrapper01 img {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  border-radius: 12px;
-  position: relative;
-  z-index: 2;
-}
-
-
-@keyframes rotateRing {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.wp-text {
-  flex: 1.2;
-}
-
-.wp-text h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.3;
-}
-
-.wp-text p {
-  font-size: 1.05rem;
-  color: #333;
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
-.news-button {
-  display: inline-block;
-  background: #ff9900;
-  color: #fff;
-  font-weight: 600;
-  padding: 14px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: 0.3s;
-  margin-top: 20px;
-}
-
-.news-button:hover {
-  background: #e68900;
-}
-
-/* responsive */
-@media(max-width: 900px) {
-  .wp-section {
-    flex-direction: column;
-    text-align: center;
-  }
-  .wp-text { margin-top: 30px; }
-}
-</style>
-<!-- end -->
-
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<br><br><br>
-<!-- ---------------------------- -->
-<section class="brand-visibility-ai-section001">
-  <div class="brand-ai-container001">
-    <div class="brand-ai-left001">
-      <img src="https://d1y41eupgbwbb2.cloudfront.net/images/digitalMarketingCta1.webp" alt="AI Brand Elevate" />
-    </div>
-    <div class="brand-ai-right001">
-      <h2>Enhance Your Brand<br>Visibility with Digital Marketing</h2>
-      <p>
-        Revamp your brand growth with Digital Marketing Overview tactics that can increase the visibility of your brand 
-        and also attract an audience to your business. This can help build strong recognition in the market 
-        to generate higher revenue and offer you better leads to explore new regions for your business.
+      <p class="intro-text_51">
+        At RS Organisation, we don't believe in one-size-fits-all solutions. Instead, we create personalized strategies
+        based on your industry and target audience. Our GMB services in Noida include:
       </p>
-  
-    </div>
-  </div>
-</section>
 
-<!-- end -->
-
-<style>
-.brand-visibility-ai-section001 {
-  width: 100%;
-  min-height: 70vh;
-  background: linear-gradient(90deg, #4995f5 0%, #4587e1 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-
-.brand-ai-container001 {
-  display: flex;
-  width: 100%;
-  max-width: 1800px;
-  min-height: 70vh;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 3vw;
-  padding-right: 3vw;
-  gap: 32px;
-}
-
-.brand-ai-left001 {
-  flex: 1 1 45%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 0;
-}
-
-.brand-ai-left001 img {
-  width: 100%;
-  max-width: 600px;
-  height: 55vh;
-  min-height: 330px;
-  object-fit: contain;
-  border-radius: 28px;
-}
-
-.brand-ai-right001 {
-  flex: 1 1 55%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 32px 0 32px 40px;
-  color: #fff;
-}
-
-.brand-ai-right001 h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 26px;
-  line-height: 1.15;
-  color: #fff;
-  letter-spacing: 1px;
-}
-
-.brand-ai-right001 p {
-  font-size: 1.18rem;
-  margin-bottom: 38px;
-  max-width: 780px;
-  color: #ffff;
-}
-
-/* Button */
-.brand-ai-btn001 {
-  display: inline-block;
-  font-size: 1.22rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, #1e6bdc, #50aaff); /* gradient */
-  color: #fff;
-  border-radius: 32px;
-  padding: 16px 36px;
-  text-decoration: none;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
-  transition: all 0.3s ease;
-}
-
-.brand-ai-btn001 span {
-  font-size: 1.3em;
-  padding-left: 6px;
-}
-
-.brand-ai-btn001:hover {
-  background: #fff;
-  color: #1e6bdc; /* text becomes blue */
-  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .brand-ai-container001 {
-    flex-direction: column;
-    padding: 16px 2vw;
-    gap: 24px;
-  }
-  .brand-ai-left001, .brand-ai-right001 {
-    padding: 0;
-    width: 100%;
-    max-width: 100vw;
-  }
-  .brand-ai-left001 img {
-    max-width: 90vw;
-    height: 30vh;
-    min-height: 180px;
-    margin-bottom: 14px;
-  }
-  .brand-ai-right001 h2 { font-size: 2rem; }
-  .brand-ai-right001 p { font-size: 1.04rem; margin-bottom: 22px;}
-  .brand-ai-btn001 { font-size: 1.08rem; padding: 14px 26px;}
-}
-</style>
-
-<!-- ---------------- -->
-
-
-
-
-
-
-
-
-
-
-<!-- end -->
-
-
-<br><br>
-<!-- Swiper CSS & JS -->
-<!-- Include Swiper CSS & JS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-<!-- why choose us -->
-  <style>
-   
-
-    .shopify-process-section {
-border: 2px solid red;
-    padding: 60px 20px;
-    height: 51vh;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    width: 87%;
-    margin-left: 80px;
-    }
-
-    .shopify-process-section h2 {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    .shopify-process-section p {
-      font-size: 16px;
-      color: #555;
-      max-width: 800px;
-      margin: 0 auto 50px;
-      line-height: 1.6;
-    }
-
-    .process-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      position: relative;
-      padding: 0 20px;
-    }
-
-    .process-bottom img {
-      max-width: 100px;
-      height: auto;
-    }
-
-    .circle-step {
-      position: absolute;
-      bottom: 40px;
-      left: 20px;
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background-color: #6cbf3f;
-      color: white;
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
-
-    .circle-step::before {
-      content: "05";
-    }
-
-    .step-label {
-      font-size: 20px;
-      font-weight: 700;
-      color: #000;
-      position: absolute;
-      bottom: 30px;
-      right: 20px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .step-label::before {
-      content: '';
-      display: inline-block;
-      width: 6px;
-      height: 16px;
-      background-color: #6cbf3f;
-      border-radius: 2px;
-    }
-
-    @media (max-width: 768px) {
-      .process-bottom {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .circle-step {
-        position: static;
-        margin-bottom: 20px;
-      }
-
-      .step-label {
-        position: static;
-        margin-top: 20px;
-      }
-    }
-  </style>
-
-
-<!-- --------------- -->
-
-
-
-<!-- lottt pie -->
-
-<section class="why-choose-section">
-  <style>
-    .why-choose-section {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 60px 20px;
-      gap: 40px;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      background-color: aliceblue;
-    }
-
-    .text-heading {
-      width: 100%;
-      text-align: center;
-      font-size: 26px;
-      font-weight: bold;
-      margin-bottom: 10px; /* reduced gap */
-      color: #222;
-    }
-
-    .intro-text {
-      text-align: center;
-      width: 100%;
-      max-width: 1000px;
-      margin: 0 auto 30px auto; /* smaller spacing */
-      font-size: 16px;
-      color: #444;
-      line-height: 1.6;
-    }
-
-    .lottie-box {
-      flex: 1 1 350px;
-      max-width: 450px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .lottie-box lottie-player {
-      width: 100%;
-      height: auto;
-    }
-
-    .card-grid {
-      flex: 2 1 600px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .feature-card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-      position: relative;
-      transition: transform 0.3s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-6px);
-    }
-
-    .feature-card::after {
-      content: "+";
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 22px;
-      color: #1890ff;
-      font-weight: bold;
-    }
-
-    .feature-card h3 {
-      margin-top: 0;
-      font-size: 18px;
-      color: #222;
-    }
-
-    .feature-card p {
-      font-size: 15px;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    .bottom-text {
-      text-align: center;
-      margin: 20px auto 0 auto;
-      width: 100%;
-      max-width: 1000px;
-      padding: 0 20px;
-      font-size: 16px;
-      color: #333;
-    }
-
-    @media (max-width: 768px) {
-      .why-choose-section {
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 15px;
-      }
-
-      .card-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .lottie-box {
-        max-width: 300px;
-        margin-bottom: 30px;
-      }
-    }
-  </style>
-
-  <div class="text-heading">
-    Why Choose RS Organisation as Your GMB Expert in Noida?
-  </div>
-  <p class="intro-text">
-    At RS Organisation, we don't believe in one-size-fits-all solutions. Instead, we create personalized strategies based on your industry and target audience. Our GMB services in Noida include:
-  </p>
-
-  <!-- Left Column with Lottie -->
-  <div class="lottie-box">
-    <lottie-player
-      src="https://assets10.lottiefiles.com/packages/lf20_tfb3estd.json"
-      background="transparent"
-      speed="1"
-      loop
-      autoplay>
-    </lottie-player>
-  </div>
-
-  <!-- Right Cards -->
-  <div class="card-grid">
-    <div class="feature-card">
-      <h3>Proven Experience</h3>
-      <p>7+ years of expertise in SEO and local business marketing.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Tailored Strategies</h3>
-      <p>Customized GMB and SEO plans based on your industry.</p>
-    </div>
-    <div class="feature-card">
-      <h3>EAT-Based Approach</h3>
-      <p>We focus on Expertise, Authoritativeness, and Trustworthiness in every campaign.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Transparency</h3>
-      <p>Clear reporting and regular updates on progress.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Affordable Packages</h3>
-      <p>Quality services that fit your budget.</p>
-    </div>
-      <div class="feature-card">
-      <h3>EAT-Based Approach</h3>
-      <p>We focus on Expertise, Authoritativeness, and Trustworthiness in every campaign.</p>
-    </div>
-  </div>
-
-  <p class="bottom-text">
-    We believe in long-term partnerships and helping businesses grow sustainably.
-  </p>
-</section>
-
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-
-<!--  -->
-<!-- indusrty we sureve -->
- 
-<section class="iwss-section">
-  <!-- Left Industry Cards -->
-  <div class="iwss-left">
-    <h2 class="iwss-title">The Industries We Serve</h2>
-    <p class="iwss-desc">
-      We are a web &amp; development and mobile application development agency that has experience in gathering client needs and then developing the best solutions to meet them. After testing, we launch our work in the market and make it taste successful for our clients by providing the best services that are accessible at affordable rates.
-    </p>
-    <div class="iwss-grid">
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Healthcare">
-        </div>
-        <h4>Healthcare</h4>
-        <p class="projects">213 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/3416/3416044.png" alt="Education">
-        </div>
-        <h4>Education / e‑Learning</h4>
-        <p class="projects">123 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/2920/2920322.png" alt="Media">
-        </div>
-        <h4>Media &amp; Entertainment</h4>
-        <p class="projects">2040 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="E‑commerce">
-        </div>
-        <h4>E‑commerce</h4>
-        <p class="projects">103 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/2933/2933887.png" alt="Banking">
-        </div>
-        <h4>Banking &amp; Finance</h4>
-        <p class="projects">109 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/1087/1087929.png" alt="Travel">
-        </div>
-        <h4>Tour &amp; Travels</h4>
-        <p class="projects">110 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png" alt="Logistics">
-        </div>
-        <h4>Logistics</h4>
-        <p class="projects">110 Projects</p>
-      </div>
-      <div class="industry-card">
-        <div class="card-logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Social">
-        </div>
-        <h4>Social Networking</h4>
-        <p class="projects">110 Projects</p>
+      <!-- Lottie Animation -->
+      <div class="lottie-box_51">
+        <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_tfb3estd.json" background="transparent"
+          speed="1" loop autoplay>
+        </lottie-player>
       </div>
 
-      
-    </div>
-  </div>
+      <!-- Feature Cards -->
+      <div class="card-grid_51">
+        <div class="feature-card_51">
+          <h3>Proven Experience</h3>
+          <p>7+ years of expertise in SEO and local business marketing.</p>
+        </div>
+        <div class="feature-card_51">
+          <h3>Tailored Strategies</h3>
+          <p>Customized GMB and SEO plans based on your industry.</p>
+        </div>
+        <div class="feature-card_51">
+          <h3>EAT-Based Approach</h3>
+          <p>We focus on Expertise, Authoritativeness, and Trustworthiness in every campaign.</p>
+        </div>
+        <div class="feature-card_51">
+          <h3>Transparency</h3>
+          <p>Clear reporting and regular updates on progress.</p>
+        </div>
+        <div class="feature-card_51">
+          <h3>Affordable Packages</h3>
+          <p>Quality services that fit your budget.</p>
+        </div>
+        <div class="feature-card_51">
+          <h3>Long-Term Partnership</h3>
+          <p>We believe in sustainable growth and long-lasting relationships.</p>
+        </div>
+      </div>
 
-  <!-- Center Rotating Ring -->
-  <div class="iwss-center">
-    <div class="iwss-bg-ring"></div>
-    <div class="iwss-ring-container">
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/3416/3416044.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/2920/2920322.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/2933/2933887.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/1087/1087929.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png" alt=""></div>
-      <div class="iwss-icon"><img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt=""></div>
-    </div>
-    <div class="iwss-center-logo">
-      <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" alt="React">
-      <p>Industries<br>We Serve</p>
-    </div>
-  </div>
-</section>
+      <p class="bottom-text_51">
+        We believe in long-term partnerships and helping businesses grow sustainably.
+      </p>
+    </section>
+    <!-- end -->
 
-<!-- end -->
+    <!--section -->
+    <section class="iwss-section_020">
+      <!-- Left Industry Cards -->
+      <div class="iwss-left_020">
+        <h2 class="iwss-title_020">The Industries We Serve</h2>
+        <p class="iwss-desc_020">
+          We are a web &amp; development and mobile application development
+          agency that has experience in gathering client needs and then
+          developing the best solutions to meet them. After testing, we launch
+          our work in the market and make it taste successful for our clients
+          by providing the best services that are accessible at affordable
+          rates.
+        </p>
+        <div class="iwss-grid_020">
+          <div class="industry-card_020">
+            <div class="card-logo_020">
+              <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Healthcare" />
+            </div>
+            <h4>Healthcare</h4>
+            <p class="projects_020">213 Projects</p>
+          </div>
+          <div class="industry-card_020">
+            <div class="card-logo_020">
+              <img src="https://cdn-icons-png.flaticon.com/512/3416/3416044.png" alt="Education" />
+            </div>
+            <h4>Education / e‑Learning</h4>
+            <p class="projects_020">123 Projects</p>
+          </div>
+          <div class="industry-card_020">
+            <div class="card-logo_020">
+              <img src="https://cdn-icons-png.flaticon.com/512/2920/2920322.png" alt="Media" />
+            </div>
+            <h4>Media &amp; Entertainment</h4>
+            <p class="projects_020">2040 Projects</p>
+          </div>
+          <div class="industry-card_020">
+            <div class="card-logo_020">
+              <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="E‑commerce" />
+            </div>
+            <h4>E‑commerce</h4>
+            <p class="projects_020">103 Projects</p>
+          </div>
+          <div class="industry-card_020">
+            <div class="card-logo_020">
+              <img src="https://cdn-icons-png.flaticon.com/512/2933/2933887.png" alt="Banking" />
+            </div>
+            <h4>Banking &amp; Finance</h4>
+            <p class="projects_020">109 Projects</p>
+          </div>
+          <div class="industry-card_020">
+            <div class="card-logo_020">
+              <img src="https://cdn-icons-png.flaticon.com/512/1087/1087929.png" alt="Travel" />
+            </div>
+            <h4>Tour &amp; Travels</h4>
+            <p class="projects_020">110 Projects</p>
+          </div>
+          <div class="industry-card_020">
+            <div class="card-logo_020">
+              <img src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png" alt="Logistics" />
+            </div>
+            <h4>Logistics</h4>
+            <p class="projects_020">110 Projects</p>
+          </div>
+          <div class="industry-card_020">
+            <div class="card-logo_020">
+              <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Social" />
+            </div>
+            <h4>Social Networking</h4>
+            <p class="projects_020">110 Projects</p>
+          </div>
+        </div>
+      </div>
 
+      <!-- Center Rotating Ring -->
+      <div class="iwss-center_020">
+        <div class="iwss-bg-ring_020"></div>
+        <div class="iwss-ring-container_020">
+          <div class="iwss-icon_020">
+            <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Healthcare" />
+          </div>
+          <div class="iwss-icon_020">
+            <img src="https://cdn-icons-png.flaticon.com/512/3416/3416044.png" alt="Education" />
+          </div>
+          <div class="iwss-icon_020">
+            <img src="https://cdn-icons-png.flaticon.com/512/2920/2920322.png" alt="Media" />
+          </div>
+          <div class="iwss-icon_020">
+            <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="E-commerce" />
+          </div>
+          <div class="iwss-icon_020">
+            <img src="https://cdn-icons-png.flaticon.com/512/2933/2933887.png" alt="Banking" />
+          </div>
+          <div class="iwss-icon_020">
+            <img src="https://cdn-icons-png.flaticon.com/512/1087/1087929.png" alt="Travel" />
+          </div>
+          <div class="iwss-icon_020">
+            <img src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png" alt="Logistics" />
+          </div>
+          <div class="iwss-icon_020">
+            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Social" />
+          </div>
+        </div>
+        <div class="iwss-center-logo_020">
+          <img src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png" alt="Industries" />
+          <p>Industries<br />We Serve</p>
+        </div>
+      </div>
+    </section>
+    <!-- end -->
 
+    <!-- section  -->
+    <section class="rev-slider-section" id="testimonials">
+      <div class="rev-slider-header">
 
+        <h2 class="rev-title" style="color: #0a2540;">Our Clients <span class="rev-highlight">Review</span></h2>
+      </div>
 
-
-
-
-
-<section class="rev-slider-section" id="testimonials">
-  <div class="rev-slider-header">
-  
-    <h2 class="rev-title" style="color: #0a2540;">Our Clients  <span class="rev-highlight">Review</span></h2>
-  </div>
-
-<!-- Elfsight Google Reviews | Untitled Google Reviews -->
-<script src="https://static.elfsight.com/platform/platform.js" async></script>
-<div class="elfsight-app-3bba91a8-67ea-46be-9a2b-299ee3a35c7f" data-elfsight-app-lazy></div>
-
-</section>
-
-<!-- contect  -->
-
-
-
-
-
-
-
-
-
-<!-- footer -->
+      <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+      <script src="https://static.elfsight.com/platform/platform.js" async></script>
+      <div class="elfsight-app-3bba91a8-67ea-46be-9a2b-299ee3a35c7f" data-elfsight-app-lazy></div>
+    </section>
+    <!-- end-->
 
 
     <!-- Footer section -->
@@ -2179,7 +1022,7 @@ border: 2px solid red;
                 </li>
                 <li>
                   <a href="#" class="footer-link font-14 regular text-white">SEO Company in Dehradun</a>
-                </li >
+                </li>
                 <li>
                   <a href="#" class="footer-link font-14 regular text-white">SEO Company in Noida</a>
                 </li>
@@ -2214,4 +1057,5 @@ border: 2px solid red;
     </footer>
   </div>
 </body>
+
 </html>
