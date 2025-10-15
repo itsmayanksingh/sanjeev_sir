@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>wordpress</title>
+  <title>About</title>
   <!-- Fonts  -->
   <link href="assets/css/stylesheet.css" rel="stylesheet" />
   <!-- Custom Css -->
@@ -13,16 +14,20 @@
   <link rel="stylesheet"
     href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
   <!-- Swiper CSS -->
-  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <!-- CSS -->
 
 
+  <!-- aos -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- end aos -->
 
 </head>
+
 <body>
-          <div class="fixedTop">
+  <div class="fixedTop">
     <!-- Sub header -->
     <div class="sub-header d-flex justify-content-between flex-wrap gap-2">
       <div class="d-flex gap-3">
@@ -50,7 +55,7 @@
       </div>
     </div>
     <!-- Navbar -->
-  <nav class="navbar001" aria-label="Main navigation">
+     <nav class="navbar001" aria-label="Main navigation">
         <div class="nav-container001">
           <!-- Logo (left) -->
           <a href="/" class="nav-logo001" aria-label="Home">
@@ -148,7 +153,7 @@
                   </ul>
                 </div>
 
-                 <div class="mega-section">
+                <div class="mega-section">
                   <h5>Web</h5>
                   <ul>
                     <li>
@@ -213,7 +218,6 @@
                         <span>PHP Development</span>
                       </a>
                     </li>
-                
                     <li>
                       <a href="./react-development-company-noida.html">
                         <span class="icon">
@@ -238,20 +242,9 @@
                         <span>Shopify Developer</span>
                       </a>
                     </li>
-                   <li>
-                      <a href="./wordpress-development-company-in-noida.html">
-                        <span class="icon">
-                          <svg xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                              d="M12,18.08C5.37,18.08 0,15.36 0,12C0,8.64 5.37,5.92 12,5.92C18.63,5.92 24,8.64 24,12C24,15.36 18.63,18.08 12,18.08M12,7.5C7.5,7.5 4.5,9.5 4.5,12C4.5,14.5 7.5,16.5 12,16.5C16.5,16.5 19.5,14.5 19.5,12C19.5,9.5 16.5,7.5 12,7.5M7,12L9,10V14L7,12M17,12L15,14V10L17,12Z" />
-                          </svg>
-                        </span>
-                        <span>WordPress Development</span>
-                      </a>
-                    </li>
                   </ul>
                 </div>
+
                 <div class="mega-section">
                   <h5>Marketing</h5>
                   <ul>
@@ -331,954 +324,198 @@
           </ul>
         </div>
       </nav>
-<script>
-  
-
-// Mega menu and mobile nav functionality
-  document.addEventListener('DOMContentLoaded', function () {
-    const nav = document.querySelector('.navbar001');
-    const navToggle = nav.querySelector('.nav-toggle001');
-    const navMenu = nav.querySelector('.nav-menu001');
-    const megaParent = nav.querySelector('.mega-parent');
-    const megaDropdown = nav.querySelector('.mega-dropdown');
-    const servicesLink = megaParent ? megaParent.querySelector('.services-link') : null;
-    const cta = nav.querySelector('.nav-btn001');
-
-    // Hamburger toggle - works on mobile widths
-    navToggle.addEventListener('click', function (e) {
-      e.stopPropagation();
-      const open = navMenu.classList.toggle('active');
-      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-
-      // when closing menu also close mega dropdown
-      if (!open && megaParent && megaParent.classList.contains('open')) {
-        megaParent.classList.remove('open');
-      }
-    });
-
-    // Services (mega) toggle behavior on mobile
-    if (servicesLink && megaParent && megaDropdown) {
-      servicesLink.addEventListener('click', function (e) {
-        if (window.innerWidth <= 992) {
-          e.preventDefault();
-          e.stopPropagation();
-          const opened = megaParent.classList.toggle('open');
-          // ensure mobile nav is visible so user can see the mega content
-          if (!navMenu.classList.contains('active')) navMenu.classList.add('active');
-          // set aria and display handled by CSS (.open)
-          servicesLink.setAttribute('aria-expanded', opened ? 'true' : 'false');
-        }
-      });
-    }
-
-    // Close button functionality for mega menu on mobile
-    const megaCloseBtn = document.querySelector('.mega-close-btn');
-    if (megaCloseBtn) {
-      megaCloseBtn.addEventListener('click', e => {
-        e.stopPropagation();
-        if (megaParent.classList.contains('open')) {
-          megaParent.classList.remove('open');
-          // Optionally close entire mobile nav menu as well:
-          if(navMenu && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            navToggle.setAttribute('aria-expanded', 'false');
-          }
-          // Update aria attribute
-          if (servicesLink) servicesLink.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-
-    // Close menus when clicking outside nav
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.navbar001')) {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-
-    // Reset inline/mobile classes on resize -> bigger screens
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 992) {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-
-    // Accessibility: close on Escape
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-        if (megaParent && megaParent.classList.contains('open')) megaParent.classList.remove('open');
-      }
-    });
-  });
-
-  // end of DOMContentLoaded
-</script>
-<!-- end  -->
+  </div>
 
 
-
-<!-- section-1 with background image -->
-<section class="_60_hero">
-  <div class="_60_hero_text">
-    <h1>Best SEO Company in India</h1>
-    <p>
-      RS Organisation is a Noida-based SEO Company in India delivering result-driven digital marketing solutions. With years of expertise, we specialize in providing data-backed, ethical, and growth-oriented SEO services. Our mission is to help businesses increase online visibility, generate high-quality leads, and achieve long-term digital success. By combining technical knowledge, creative strategies, and industry expertise, RS Organisation has become one of the most trusted SEO services companies in India.
-    </p>
-
-    <div class="_60_hero_features">
-      <span>Local SEO Services</span>
-      <span>Precious Strategy</span>
-      <span>Cost Effective</span>
-      <span>Advanced Techniques</span>
+  <!-- Hero About Section -->
+  <section class="about_section-1">
+    <div class="about_section-1-overlay">
+      <div class="about_section-1-content">
+        <h1 data-aos="fade-right" data-aos-delay="1000"> Our Latest Blog</h1>
+      </div>
     </div>
+  </section>
+  <!-- end -->
 
-    <a href="#" class="_60_news_button">Talk To Our Experts</a>
-  </div>
+<!-- section -1 -->
+        <section class="modern-blog-section">
+          <!-- Decorative Background Elements -->
+          <div class="blog-background">
+            <div class="bg-circle circle-1"></div>
+            <div class="bg-circle circle-2"></div>
+            <div class="bg-circle circle-3"></div>
+          </div>
 
-  <div class="_60_hero_image">
-    <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/082e7614-3aa3-4199-8e15-09a67ea65aac.png" alt="SEO illustration" />
-  </div>
-</section>
+          <div class="blog-container" data-aos="zoom-in-up" data-aos-duration="2000">
+            <!-- Section Header -->
+            <div class="blog-header">
+              <span class="blog-tag">Latest Updates</span>
+              <h2 class="blog-title">
+                Explore Our Latest <span
+                  class="highlight-gradient">Insights</span>
+              </h2>
+              <p class="blog-subtitle">
+                Discover expert articles, industry trends, and innovative
+                solutions from our team
+              </p>
+            </div>
+
+            <!-- Blog Cards Grid -->
+            <div class="blog-grid">
+
+              <!-- Blog Card 1 -->
+              <article class="blog-card">
+                <div class="card-image-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1593642532400-2682810df593?crop=entropy&cs=tinysrgb&fit=crop&h=400&w=600"
+                    alt="Designing with Purpose"
+                    class="card-image" />
+                  <div class="card-overlay">
+                    <span class="card-category">Design</span>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <div class="card-meta">
+                    <span class="meta-item">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
+                      </svg>
+                      5 min read
+                    </span>
+                    <span class="meta-item">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z" />
+                      </svg>
+                      Jan 15, 2025
+                    </span>
+                  </div>
+                  <h3 class="card-title">Designing with Purpose</h3>
+                  <p class="card-description">
+                    Explore how purposeful design shapes user experience and
+                    increases engagement across digital platforms.
+                  </p>
+                  <a href="#" class="card-link">
+                    <span>Read Article</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                      fill="currentColor">
+                      <path
+                        d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Blog Card 2 -->
+              <article class="blog-card featured-card">
+                <div class="card-image-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?crop=entropy&cs=tinysrgb&fit=crop&h=400&w=600"
+                    alt="Future of AI"
+                    class="card-image" />
+                  <div class="card-overlay">
+                    <span class="card-category featured">AI & Technology</span>
+                  </div>
+                  <div class="featured-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                      fill="currentColor">
+                      <path
+                        d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+                    </svg>
+                    Featured
+                  </div>
+                </div>
+                <div class="card-content">
+                  <div class="card-meta">
+                    <span class="meta-item">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
+                      </svg>
+                      8 min read
+                    </span>
+                    <span class="meta-item">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z" />
+                      </svg>
+                      Jan 20, 2025
+                    </span>
+                  </div>
+                  <h3 class="card-title">Future of AI in Business</h3>
+                  <p class="card-description">
+                    Discover how businesses are integrating AI for smarter
+                    workflows and data-driven decisions in 2025 and beyond.
+                  </p>
+                  <a href="#" class="card-link">
+                    <span>Read Article</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                      fill="currentColor">
+                      <path
+                        d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Blog Card 3 -->
+              <article class="blog-card">
+                <div class="card-image-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=crop&h=400&w=600"
+                    alt="Tech Stack Guide"
+                    class="card-image" />
+                  <div class="card-overlay">
+                    <span class="card-category">Development</span>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <div class="card-meta">
+                    <span class="meta-item">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z" />
+                      </svg>
+                      6 min read
+                    </span>
+                    <span class="meta-item">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z" />
+                      </svg>
+                      Jan 10, 2025
+                    </span>
+                  </div>
+                  <h3 class="card-title">Startup Tech Stack Guide</h3>
+                  <p class="card-description">
+                    The top technologies every startup should adopt for fast,
+                    secure growth and seamless scaling in modern markets.
+                  </p>
+                  <a href="#" class="card-link">
+                    <span>Read Article</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                      fill="currentColor">
+                      <path
+                        d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </section>
+        <!-- end -->
 
 <!-- end -->
-
-
-
-
-
-<!-- section-2 card process (with the connecting line restored) -->
-<section class="about-section5">
-  <h2>Our  <span>SEO Services</span></h2>
-  <p>We follow a structured and result-oriented process to ensure every client gets the maximum return on their SEO investment:</p>
-<div class="process-wrapper">
-    <div class="step step-1">
-        <img src="https://cdn-icons-png.flaticon.com/512/2621/2621090.png" alt="Keyword Research & Strategy">
-        <h3>Keyword Research & Strategy</h3>
-        <p>We analyze your business goals, competitors, and market trends to create a data-driven keyword strategy. Our experts identify high-value short-tail and long-tail keywords to target, ensuring maximum traffic and conversion opportunities for your business.</p>
-    </div>
-    <div class="step step-2">
-        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Link Building">
-        <h3>Link Building</h3>
-        <p>High-quality backlinks are the backbone of effective SEO. We build authoritative, relevant, and organic links that strengthen your domain authority. Our approach ensures safe, long-term rankings while avoiding spammy or black-hat link practices.</p>
-    </div>
-    <div class="step step-3">
-        <img src="https://cdn-icons-png.flaticon.com/512/3302/3302129.png" alt="Technical SEO">
-        <h3>Technical SEO</h3>
-        <p>Our team performs in-depth website audits to fix crawlability, indexation, speed, and mobile-friendliness issues. From structured data implementation to site architecture optimization, we ensure your site is technically strong and Google-friendly.</p>
-    </div>
-    <div class="step step-4">
-        <img src="https://cdn-icons-png.flaticon.com/512/1087/1087932.png" alt="Local SEO">
-        <h3>Local SEO</h3>
-        <p>For businesses targeting regional audiences, our Local SEO services optimize your Google Business Profile, local citations, and reviews. We ensure your brand dominates local searches and attracts customers from nearby areas effectively.</p>
-    </div>
-    <div class="step step-5">
-        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" alt="On-Page SEO">
-        <h3>On-Page SEO</h3>
-        <p>We optimize every on-page element, including meta tags, headings, images, schema, and content. Our strategies improve user experience, keyword relevance, and content quality, ensuring your website aligns perfectly with search engine algorithms.</p>
-    </div>
-    <div class="step step-6">
-        <img src="https://cdn-icons-png.flaticon.com/512/2917/2917242.png" alt="Off-Page SEO">
-        <h3>Off-Page SEO</h3>
-        <p>We strengthen your brand authority with diverse off-page strategies, including guest posting, press releases, and social bookmarking. Our methods enhance your digital reputation, expand reach, and help you outperform competitors in organic ranking.</p>
-    </div>
-</div>
-</section>
-
-<!-- end -->
-
-
-
-
-<!-- section  -->
-<section class="_61_seo_agency_centered">
-  <div class="_61_seo_card">
-    <h2>Hire The Best SEO Agency in India</h2>
-    <p>
-      If you’re looking for the best SEO Company in India, 
-      <strong>RS Organisation</strong> is your ideal partner. 
-      We combine advanced SEO tools, in-depth market insights, 
-      and years of expertise to deliver measurable results. 
-      From improving search rankings to boosting ROI, 
-      we have helped countless businesses establish a strong online presence. 
-      By choosing us, you gain a trusted SEO partner committed to your growth.
-    </p>
-  </div>
-</section>
-<!-- =====end============ -->
-
-
-
-<!-- ---------------------------- -->
-<h1 style="text-align: center; font-family: 'Segoe UI', sans-serif; color: #0a2540; margin-bottom: 16px;">
-  Our Client Work
-</h1>
-
-<section class="restaurant-overview">
-  <!-- Floating Shapes -->
-  <div class="floating-shape shape1"></div>
-  <div class="floating-shape shape2"></div>
-
-  <div class="grid">
-    <!-- Row 1: Title / Top Stats -->
-    <div class="cell left top fade-in">
-      <h2>Chokhi Dhani</h2>
-      <p class="meta">
-        <i class="fas fa-map-marker-alt"></i> Dubai, Al Seef, UAE<br>
-        <i class="fas fa-utensils"></i> Restaurant
-      </p>
-    </div>
-    <div class="cell right top stats-row fade-in">
-      <div class="stat-card">
-        <div class="stat-label">Organic Traffic</div>
-        <div class="stat-value">45.7K <span class="stat-delta positive">+137.9%</span></div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Backlinks</div>
-        <div class="stat-value">6.4K <span class="stat-delta positive">+30%</span></div>
-      </div>
-    </div>
-
-    <!-- Row 2: Description / Chart -->
-    <div class="cell left mid fade-in">
-      <h3>About the Project</h3>
-      <p class="description">
-        Chokhi Dhani Dubai is an exclusive cultural resort offering a unique blend of traditional Indian hospitality, cuisine, and entertainment. We helped them:
-      </p>
-      <ul class="features">
-        <li>Optimize on‑page SEO for local keywords</li>
-        <li>Revamp site structure for better navigation</li>
-        <li>Implement performance and mobile improvements</li>
-      </ul>
-    </div>
-    <div class="cell right mid chart-card fade-in">
-      <div class="chart-header">
-        <span>Organic Traffic</span>
-        <select id="timeRange">
-          <option value="all">All Time</option>
-          <option value="6">Last 6 Months</option>
-          <option value="12">Last 12 Months</option>
-        </select>
-      </div>
-      <canvas id="trafficChart"></canvas>
-    </div>
-
-    <!-- Row 3: Highlights / Bottom Stats -->
-    <div class="cell left bottom highlight fade-in">
-      <h3>Key Highlights</h3>
-      <p><strong>Traffic Growth:</strong> 26K → 45.7K visitors/mo (76% increase)</p>
-      <p><strong>Domain Authority:</strong> 19 → 27 in 4 months</p>
-    </div>
-    <div class="cell right bottom stats-row fade-in">
-      <div class="stat-card">
-        <div class="stat-label">Authority Score</div>
-        <div class="stat-value positive">27</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Organic Keywords</div>
-        <div class="stat-value">364 <span class="stat-delta positive">+10.2%</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FontAwesome + Chart.js -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<style>
-
-
-  h2, h3 {
-    margin-top: 0;
-    color: #1f2937;
-  }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.25rem; margin-bottom: 8px; }
-  p, li { line-height: 1.6; }
-
-  .restaurant-overview {
-    position: relative;
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: auto;
-    gap: 30px;
-    position: relative;
-    z-index: 2;
-  }
-
-  .cell {
-    background: #fff;
-    padding: 24px;
-    border-radius: 16px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s ease forwards;
-  }
-
-  .fade-in:nth-child(1) { animation-delay: 0.2s; }
-  .fade-in:nth-child(2) { animation-delay: 0.4s; }
-  .fade-in:nth-child(3) { animation-delay: 0.6s; }
-  .fade-in:nth-child(4) { animation-delay: 0.8s; }
-  .fade-in:nth-child(5) { animation-delay: 1s; }
-  .fade-in:nth-child(6) { animation-delay: 1.2s; }
-
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .features {
-    list-style: none;
-    padding: 0;
-    margin-top: 12px;
-  }
-  .features li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 8px;
-  }
-  .features li::before {
-    content: '✔';
-    position: absolute;
-    left: 0;
-    color: #10b981;
-    font-weight: bold;
-  }
-
-  .stats-row {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-  }
-
-  .stat-card {
-    flex: 1;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px;
-    background: #fdfdfd;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-  }
-
-  .stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-  }
-
-  .stat-label {
-    font-size: 0.85rem;
-    color: #6b7280;
-    margin-bottom: 6px;
-  }
-  .stat-value {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: #111827;
-  }
-  .stat-delta {
-    font-size: 0.9rem;
-    margin-left: 4px;
-  }
-  .stat-delta.positive { color: #10b981; }
-
-  .chart-card canvas {
-    width: 100% !important;
-    height: 220px !important;
-  }
-
-  .chart-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-    font-size: 0.9rem;
-    color: #4b5563;
-  }
-
-  .chart-header select {
-    padding: 6px 10px;
-    font-size: 0.9rem;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-    background: #fff;
-  }
-
-  /* Floating Gradient Shapes */
-  .floating-shape {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.4;
-    animation: float 12s ease-in-out infinite alternate;
-    z-index: 1;
-  }
-
-  .shape1 {
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(45deg, #f97316, #facc15);
-    top: -80px;
-    left: -80px;
-  }
-
-  .shape2 {
-    width: 250px;
-    height: 250px;
-    background: linear-gradient(45deg, #60a5fa, #38bdf8);
-    bottom: -60px;
-    right: -60px;
-  }
-
-  @keyframes float {
-    0% { transform: translateY(0px) rotate(0deg); }
-    100% { transform: translateY(-30px) rotate(15deg); }
-  }
-
-  @media (max-width: 800px) {
-    .grid { grid-template-columns: 1fr; }
-    .stats-row { flex-direction: column; }
-  }
-</style>
-
-<script>
-  const ctx = document.getElementById('trafficChart').getContext('2d');
-  const labels = ['Jan','Feb','Mar','Apr','May','Jun','Jul'];
-  const data = [20000,26000,32000,38000,42000,45000,45700];
-
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels,
-      datasets: [{
-        data,
-        borderColor: '#4b6cf2',
-        borderWidth: 3,
-        tension: 0.3,
-        fill: false,
-        pointRadius: 0
-      }]
-    },
-    options: {
-      scales: {
-        x: { grid: { display: false }, ticks: { color: '#6b7280' } },
-        y: { grid: { color: '#e5e7eb' }, ticks: { color: '#6b7280' } }
-      },
-      plugins: { legend: { display: false } }
-    }
-  });
-</script>
-<!-- ----end------------------------- -->
-
-
-<section class="seo-sticky-process">
-  <style>
-    :root {
-      --primary: #ff7b00;
-      --secondary: #ffb347;
-      --muted: #555;
-      --bg: #fff;
-    }
-
-    .seo-sticky-process {
-      background: var(--bg);
-      font-family: "Poppins", sans-serif;
-      padding: 80px 20px;
-    }
-
-    .seo-container {
-      display: flex;
-      max-width: 1200px;
-      margin: 0 auto;
-      gap: 60px;
-      position: relative;
-    }
-
-    /* Left sticky side */
-    .seo-left {
-      flex: 0 0 250px;
-      position: sticky;
-      top: 120px;
-      height: fit-content;
-    }
-
-    .seo-step-label {
-      font-size: 34px;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 30px;
-      transition: all 0.4s ease;
-    }
-
-    /* Vertical timeline */
-    .seo-progress {
-      position: relative;
-      padding-left: 20px;
-      border-left: 3px solid #eee;
-      height: 400px;
-    }
-
-    .progress-dot {
-      position: absolute;
-      left: -9px;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      background: #eee;
-      transition: background 0.4s ease, transform 0.3s ease;
-    }
-
-    .progress-dot.active {
-      background: var(--primary);
-      transform: scale(1.2);
-      box-shadow: 0 0 12px var(--secondary);
-    }
-
-    /* Right side cards */
-    .seo-right {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 120px;
-    }
-
-    .process {
-      background: #fff;
-      border: 1px solid #f0f0f0;
-      border-radius: 18px;
-      padding: 35px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.6s ease;
-    }
-
-    .process.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .process h3 {
-      font-size: 22px;
-      color: var(--primary);
-      margin-bottom: 12px;
-    }
-
-    .process p {
-      font-size: 16px;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    /* Responsive */
-    @media(max-width: 900px) {
-      .seo-container { flex-direction: column; }
-      .seo-left { position: relative; top: 0; margin-bottom: 40px; }
-      .seo-progress { display: none; }
-    }
-  </style>
-
-  <h2 style="text-align:center; font-size:36px; margin-bottom:70px;">Our SEO <span style="color: #00b6ff;">Strategy & Process</span></h2>
-
-  <div class="seo-container">
-    <!-- Left Column -->
-    <div class="seo-left">
-      <div class="seo-step-label" id="processLabel">Process-1</div>
-      <div class="seo-progress" id="progressLine">
-        <div class="progress-dot" style="top:0%" data-step="Process-1"></div>
-        <div class="progress-dot" style="top:20%" data-step="Process-2"></div>
-        <div class="progress-dot" style="top:40%" data-step="Process-3"></div>
-        <div class="progress-dot" style="top:60%" data-step="Process-4"></div>
-        <div class="progress-dot" style="top:80%" data-step="Process-5"></div>
-        <div class="progress-dot" style="top:100%" data-step="Process-6"></div>
-      </div>
-    </div>
-
-    <!-- Right Column -->
-    <div class="seo-right">
-      <div class="process" data-label="Process-1">
-        <h3>In-Depth Website Audit</h3>
-        <p>We begin with a comprehensive audit to identify technical errors, content gaps, and backlink issues. This ensures we build a roadmap for sustainable SEO success tailored to your business needs.</p>
-      </div>
-
-      <div class="process" data-label="Process-2">
-        <h3>Customized SEO Planning</h3>
-        <p>Every business is unique, so we create customized strategies targeting your goals, audience, and industry. Our personalized approach helps us deliver better rankings and consistent traffic growth.</p>
-      </div>
-
-      <div class="process" data-label="Process-3">
-        <h3>Content Optimization</h3>
-        <p>Our team optimizes existing content and creates new SEO-friendly content. By maintaining relevance, keyword integration, and E-E-A-T factors, we ensure your content engages users and ranks higher.</p>
-      </div>
-
-      <div class="process" data-label="Process-4">
-        <h3>Ethical Link Building</h3>
-        <p>We focus on building quality backlinks from authoritative sources. This strengthens your website’s credibility, increases domain authority, and helps achieve long-term visibility in search engine results.</p>
-      </div>
-
-      <div class="process" data-label="Process-5">
-        <h3>Continuous Monitoring & Reporting</h3>
-        <p>We provide detailed reports with keyword rankings, traffic insights, and performance analysis. Regular monitoring allows us to refine strategies and ensure maximum ROI for your business.</p>
-      </div>
-
-      <div class="process" data-label="Process-6">
-        <h3>Long-Term SEO Growth</h3>
-        <p>Our strategies are designed for sustainable growth. By staying updated with Google’s algorithm changes, we ensure your website remains competitive and consistently visible in organic search results.</p>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const processes = document.querySelectorAll(".process");
-    const label = document.getElementById("processLabel");
-    const dots = document.querySelectorAll(".progress-dot");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            label.textContent = entry.target.dataset.label;
-
-            dots.forEach(dot => dot.classList.remove("active"));
-            const activeDot = [...dots].find(dot => dot.dataset.step === entry.target.dataset.label);
-            if (activeDot) activeDot.classList.add("active");
-
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    processes.forEach((p) => observer.observe(p));
-  </script>
-</section>
-
-
-
-
-
-<!-- Our Value Section -->
-<section class="about_section-3">
-  <div class="value-header">
-    <h2>Why Choose RS Organisation <span>Best SEO Services Provider in India?</span>
-    </h2>
-   
-  </div>
-  
-
-<div class="value-cards">
-    <div class="value-card">
-        <div class="corner-bar"></div>
-        <div class="value-card-icon">🏆</div>
-        <h3>Proven Expertise</h3>
-        <p>With years of experience, we have helped businesses across industries achieve outstanding SEO results.</p>
-    </div>
-    <div class="value-card">
-        <div class="corner-bar"></div>
-        <div class="value-card-icon">📈</div>
-        <h3>Result-Driven Approach</h3>
-        <p>We focus on ROI, ensuring every strategy contributes to business growth.</p>
-    </div>
-    <div class="value-card">
-        <div class="corner-bar"></div>
-        <div class="value-card-icon">📊</div>
-        <h3>Transparent Reporting</h3>
-        <p>Our clients receive clear, detailed reports showing progress and improvements.</p>
-    </div>
-    <div class="value-card">
-        <div class="corner-bar"></div>
-        <div class="value-card-icon">🛡️</div>
-        <h3>White-Hat SEO</h3>
-        <p>We strictly follow Google’s guidelines to maintain safe, long-term rankings.</p>
-    </div>
-    <div class="value-card">
-        <div class="corner-bar"></div>
-        <div class="value-card-icon">🎯</div>
-        <h3>Customized Strategies</h3>
-        <p>Every client gets a tailored SEO plan suited to their goals and market.</p>
-    </div>
-    <div class="value-card">
-        <div class="corner-bar"></div>
-        <div class="value-card-icon">🤝</div>
-        <h3>Dedicated Support</h3>
-        <p>Our team provides ongoing consultation and expert support throughout the journey.</p>
-    </div>
-</div>
-</section>
-<!-- end -->
-
-    <!-- tech stack section -->
-    <section class="tech-section">
-      <h2>Latest Cutting edge technologies we use</h2>
-
-      <!-- Tab Buttons -->
-      <div class="tech-tabs" data-aos="fade-up" data-aos-duration="1000">
-        <button class="tab-button active" data-tab="databases">Databases</button>
-        <button class="tab-button" data-tab="languages">Programming Languages</button>
-        <button class="tab-button" data-tab="tools">Development Tools</button>
-        <button class="tab-button" data-tab="design">UI/UX & Design</button>
-      </div>
-
-      <!-- Tab Content -->
-      <div class="tab-content active" id="databases" data-aos="fade-up" data-aos-duration="1000">
-        <div class="tech-grid">
-          <div class="tech-card"><img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="Database">
-          </div>
-          <div class="tech-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968313.png" alt="Firebase">
-          </div>
-          <div class="tech-card"><img src="https://www.sqlite.org/images/sqlite370_banner.gif" alt="SQLite"></div>
-          <div class="tech-card"><img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="MySQL"></div>
-          <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"
-              alt="PostgreSQL"></div>
-        </div>
-      </div>
-
-      <div class="tab-content" id="languages" data-aos="fade-up" data-aos-duration="1000">
-        <div class="tech-grid">
-          <div class="tech-card"><img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java"></div>
-          <div class="tech-card"><img src="https://cdn-icons-png.flaticon.com/512/919/919852.png" alt="Python"></div>
-          <div class="tech-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript">
-          </div>
-          <div class="tech-card"><img src="https://cdn-icons-png.flaticon.com/512/919/919826.png" alt="PHP"></div>
-          <div class="tech-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="C++"></div>
-        </div>
-      </div>
-
-      <div class="tab-content" id="tools" data-aos="fade-up" data-aos-duration="1000">
-        <div class="tech-grid">
-          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" alt="GitHub"></div>
-          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="Git"></div>
-          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg"
-              alt="VS Code"></div>
-          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="Docker"></div>
-          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS"></div>
-        </div>
-      </div>
-
-      <div class="tab-content" id="design" data-aos="fade-up" data-aos-duration="1000">
-        <div class="tech-grid">
-          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/figma-1.svg" alt="Figma"></div>
-          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/adobe-xd-1.svg" alt="Adobe XD"></div>
-          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/adobe-photoshop-2.svg" alt="Photoshop">
-          </div>
-          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/adobe-illustrator-cc-icon.svg"
-              alt="Illustrator"></div>
-          <div class="tech-card"><img src="https://cdn.worldvectorlogo.com/logos/sketch-2.svg" alt="Sketch"></div>
-        </div>
-      </div>
-    </section>
-    <script>
-      const tabs = document.querySelectorAll(".tab-button");
-      const contents = document.querySelectorAll(".tab-content");
-
-      tabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-          tabs.forEach(btn => btn.classList.remove("active"));
-          tab.classList.add("active");
-
-          contents.forEach(c => c.classList.remove("active"));
-          document.getElementById(tab.dataset.tab).classList.add("active");
-        });
-      });
-    </script>
-    <!-- end -->
-<!-- indusrty we sureve -->
- 
-    <section class="iwss-section_020">
-        <!-- Left Industry Cards -->
-        <div class="iwss-left_020">
-          <h2 class="iwss-title_020" st>The Industries We Serve</h2>
-          <p class="iwss-desc_020">
-            We are a web &amp; development and mobile application development
-            agency that has experience in gathering client needs and then
-            developing the best solutions to meet them. After testing, we launch
-            our work in the market and make it taste successful for our clients
-            by providing the best services that are accessible at affordable
-            rates.
-          </p>
-          <div class="iwss-grid_020">
-            <div class="industry-card_020">
-              <div class="card-logo_020">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png"
-                  alt="Healthcare"
-                />
-              </div>
-              <h4>Healthcare</h4>
-              <p class="projects_020">213 Projects</p>
-            </div>
-            <div class="industry-card_020">
-              <div class="card-logo_020">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/3416/3416044.png"
-                  alt="Education"
-                />
-              </div>
-              <h4>Education / e‑Learning</h4>
-              <p class="projects_020">123 Projects</p>
-            </div>
-            <div class="industry-card_020">
-              <div class="card-logo_020">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/2920/2920322.png"
-                  alt="Media"
-                />
-              </div>
-              <h4>Media &amp; Entertainment</h4>
-              <p class="projects_020">2040 Projects</p>
-            </div>
-            <div class="industry-card_020">
-              <div class="card-logo_020">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/891/891462.png"
-                  alt="E‑commerce"
-                />
-              </div>
-              <h4>E‑commerce</h4>
-              <p class="projects_020">103 Projects</p>
-            </div>
-            <div class="industry-card_020">
-              <div class="card-logo_020">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/2933/2933887.png"
-                  alt="Banking"
-                />
-              </div>
-              <h4>Banking &amp; Finance</h4>
-              <p class="projects_020">109 Projects</p>
-            </div>
-            <div class="industry-card_020">
-              <div class="card-logo_020">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/1087/1087929.png"
-                  alt="Travel"
-                />
-              </div>
-              <h4>Tour &amp; Travels</h4>
-              <p class="projects_020">110 Projects</p>
-            </div>
-            <div class="industry-card_020">
-              <div class="card-logo_020">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png"
-                  alt="Logistics"
-                />
-              </div>
-              <h4>Logistics</h4>
-              <p class="projects_020">110 Projects</p>
-            </div>
-            <div class="industry-card_020">
-              <div class="card-logo_020">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
-                  alt="Social"
-                />
-              </div>
-              <h4>Social Networking</h4>
-              <p class="projects_020">110 Projects</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Center Rotating Ring -->
-        <div class="iwss-center_020">
-          <div class="iwss-bg-ring_020"></div>
-          <div class="iwss-ring-container_020">
-            <div class="iwss-icon_020">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png"
-                alt="Healthcare"
-              />
-            </div>
-            <div class="iwss-icon_020">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/3416/3416044.png"
-                alt="Education"
-              />
-            </div>
-            <div class="iwss-icon_020">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/2920/2920322.png"
-                alt="Media"
-              />
-            </div>
-            <div class="iwss-icon_020">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/891/891462.png"
-                alt="E-commerce"
-              />
-            </div>
-            <div class="iwss-icon_020">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/2933/2933887.png"
-                alt="Banking"
-              />
-            </div>
-            <div class="iwss-icon_020">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/1087/1087929.png"
-                alt="Travel"
-              />
-            </div>
-            <div class="iwss-icon_020">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png"
-                alt="Logistics"
-              />
-            </div>
-            <div class="iwss-icon_020">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
-                alt="Social"
-              />
-            </div>
-          </div>
-          <div class="iwss-center-logo_020">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/1148/1148006.png"
-              alt="Industries"
-            />
-            <p>Industries<br />We Serve</p>
-          </div>
-        </div>
-      </section>
-<!-- end -->
-
-
-
-
-
-
-<section class="rev-slider-section" id="testimonials">
-  <div class="rev-slider-header">
-  
-    <h2 class="rev-title" style="color: black;">Our Clients  <span class="rev-highlight">Review</span></h2>
-  </div>
-
-<!-- Elfsight Google Reviews | Untitled Google Reviews -->
-<script src="https://static.elfsight.com/platform/platform.js" async></script>
-<div class="elfsight-app-3bba91a8-67ea-46be-9a2b-299ee3a35c7f" data-elfsight-app-lazy></div>
-
-</section>
-
-
- <!-- Footer section -->
+<!-- Footer section -->
 <footer class="_068_footer">
   <!-- Wave Separator -->
   <div class="_068_footer_wave">
@@ -1650,7 +887,37 @@
 <script src="./assets/js/jquery.js"></script>
 <!-- end -->
 
-<!-- end -->
+  <!-- mvv tab -->
+  <script>
+    document.querySelectorAll('.mvv-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // deactivate all tabs
+        document.querySelectorAll('.mvv-tab').forEach(t => t.classList.remove('active'));
+        // hide all panes
+        document.querySelectorAll('.mvv-pane').forEach(p => p.classList.remove('active'));
+        // activate clicked tab & corresponding pane
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+
+
+    // activate first tab by default
+    document.querySelector('.mvv-tab').click();
+  </script>
+
+  <!-- end -->
+  <script src="./assets/js/script.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
   </div>
+
+
+
+
+
 </body>
+
 </html>

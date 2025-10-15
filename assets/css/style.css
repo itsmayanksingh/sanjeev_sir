@@ -6,12 +6,14 @@
   --blackColor: #000;
   --subTextColor: #bcbcbc;
   --textColor: #222629;
+  overflow-x: hidden !important;
 
 }
 
 /* CUSTOM CSS HERE */
 html {
   scroll-behavior: smooth;
+  
 }
 
 * {
