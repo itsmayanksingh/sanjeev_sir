@@ -1,5 +1,4 @@
- // <div class="request_form_70_overlay" id="requestForm70">
-
+{/* <div class="request_form_70_overlay" id="requestForm70"> */}
 // Show popup after 5 seconds
 setTimeout(function() {
   document.getElementById('requestForm70').classList.add('active');
